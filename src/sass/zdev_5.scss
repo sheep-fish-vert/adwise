@@ -1,23 +1,40 @@
 /*news----------------------------------------------------------*/
     .news{
-        .row{}
+        .row{ display: flex; justify-content: space-between;}
         .col{
-            .place{}
-            .date{}
+            .place{color:#777; font:300 18px/1.2 'Roboto';}
+            .date{color:#777; font:300 18px/1.2 'Roboto';}
 
         }
-        .news-b{
+        .news-b{width: 380px;
+            .big-banner{ text-decoration: none;background-color: rgb(255, 255, 255); box-shadow: 0px 2px 16px 0px rgba(55, 39, 50, 0.25);}
             .img{}
-            .title{}
-            .txt{}
-            .pub-date{}
+            .title{font: 400 26px/1.2 'Roboto Condensed'; color: #525252; border-left: 3px solid #78e5f2;
+                p{ margin: 0;
+                    b{font-weight: 700;}
+                }
+            }
+            .txt{font: 300 16px/1.2 'Roboto Condensed'; color: #010101;
+                p{ margin: 0;}
+            }
+            .pub-date{font: 300 16px/1.2 'Roboto Condensed';color: #b7b7b7;
+                p{ margin: 0;}
+            }
         }
         .event{}
         .careers{}
-        .banner{
-            h5{}
+        .banner{background-color: rgb(255, 255, 255);    box-shadow: 0px 2px 16px 0px rgba(55, 39, 50, 0.25); width: 220px; height: 220px; position: relative; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; color: #808080; text-decoration: none;
+            p{ margin: 0; width: 100%;}
+            h5{ margin: 0; width: 100%; border-bottom:3px solid #aaa;}
         }
-        .button{}
-        .button-col{}
+        .button{ text-align: center; width: 100%;
+            a{ text-decoration: none; color: #fff; font:400 16px/37px 'Roboto'; text-align: center; display: inline-block; max-width: 200px; width: 100%; height: 37px; background-color: #fcc939; }
+        }
+        .button-col{text-align: center; width: 100%;
+            a{ text-decoration: none; text-transform: uppercase; color: #777;font: 300 20px/1.2 'Roboto Condensed';
+                &:after{content: ''; display: inline-block; width: 20px; height: 20px; background-color: transparent; border-top:4px solid #626262;border-right:4px solid #626262; transform:rotate(45deg);}
+            }
+        }
     }
 /*END news----------------------------------------------------------*/
+
