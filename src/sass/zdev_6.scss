@@ -1,0 +1,54 @@
+.video-block{position: relative;overflow: hidden; background: url('../images/video-block-bg.jpg') no-repeat; background-size: cover; position:relative;z-index: 1; 
+	  &:after{content: ''; display: block; position: absolute; -webkit-filter: blur(15px);-moz-filter: blur(15px); -o-filter: blur(15px); -ms-filter: blur(15px);filter: blur(15px); overflow: hidden;  max-width: 100% ;min-width: 100%;max-height: 278px; min-height: 278px; bottom: -20px; left: 0; background: url('../images/video-block-bg.jpg') no-repeat; overflow: hidden; z-index: 2; background-position: 0% 100%; background-size: cover; 
+   		}
+   // .part-for-videoblur{content: ''; display: block; position: absolute;  overflow: hidden;  max-width: 100% ;min-width: 100%;max-height: 278px; min-height: 278px; bottom: -20px; left: 0;  overflow: hidden; z-index: 2; background-position: 0% 100%; background-size: cover; 
+    		
+   //  			#videobcg { 
+			// 	   -webkit-filter: blur(45px);
+			// 	  -moz-filter: blur(45px);
+			// 	  -o-filter: blur(45px);
+			// 	  -ms-filter: blur(45px);
+			// 	  filter: blur(45px);
+			// 	}
+   //  		} 		
+ //   	#videobcg { 
+ //   position: absolute;
+ //   top: 0px;
+ //   left: 0px;
+ //   min-width: 100%;
+ //   min-height: 100%;
+ //   width: auto;
+ //   height: auto;
+ //   z-index: -1000;
+ //   overflow: hidden;
+	// }
+	.heading-wrapper{padding: 180px 0 170px 0;    
+		.mbox{			
+			h2{font-size: 50px; font-weight: bold; text-align:right; line-height: 1.2; color: #fff; text-transform: uppercase;}
+		}
+	}
+	.blur-part{padding-top: 30px; padding-bottom: 60px; position: relative;z-index: 3;
+   		&:after{content: ''; display: block; min-height: 1px; background-color:#8b8883; position: absolute; top: -33px;left: 0; width: 100%;  }
+		.mbox{display: flex; flex-wrap: wrap;
+			.text-conteiner{ width: 100%; max-width: 580px;
+				p{font-family: 'ProximaNovaScOsf'; font-weight: 300; font-size: 18px; color:#fff; line-height: 1.2; 
+					
+				}
+			}
+			.more-link{flex:1; display: flex; justify-content: center; align-items: center;
+				a{text-decoration: none; color: #959595; text-transform: uppercase; font-size: 16px; position: relative; margin: 0 auto;
+					&:after{content: ''; display: inline-block;  width: 26px; height: 26px; background: transparent; border-right: 4px solid #959595; border-top: 4px solid #959595; transform: rotate(45deg); position: absolute; top: -3px; left: -50px;
+					}
+				}
+			}
+			.button-wrapper{width: 100%;
+				.yellow-button{ width: 225px; background: #ecd050;padding: 10px 20px; border: none;
+					.text-container{
+						p{color: #000; font-family: 'ProximaNovaScOsf'; text-transform: uppercase; font-size: 15px; margin: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
