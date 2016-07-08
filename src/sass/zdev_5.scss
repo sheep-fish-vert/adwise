@@ -165,7 +165,7 @@ header{ background-color: #fff; height: 60px; position: relative;
                 }
                 &:last-child{
                     .row{min-height: 320px;}
-                    .txt{width: 518px;box-shadow:inset -150px 0 150px -150px #333;}
+                    .txt{width: 518px;box-shadow:inset -150px 0 150px -150px #333; padding-right: 178px;}
                     .img{ margin-left: -138px;
                         .img-wrap{ height: 320px;}
                     }
@@ -181,11 +181,11 @@ header{ background-color: #fff; height: 60px; position: relative;
                     img{ transform:translate(-50%, -50%) scale(1.2); }
                 }
             }
-            .txt{background-color: #fff;font: 100 18px/1.26 'ProximaNovaScOsf';color: #424346; padding-top: 32px;
+            .txt{background-color: #fff;font: 100 18px/1.26 'ProximaNovaScOsf';color: #424346; padding-top: 32px; padding-bottom: 30px;
                 &.right-col{box-shadow:inset 50px 0 50px -50px #333; padding-left: 80px; padding-right: 75px;}
                 &.left-col{box-shadow:inset -50px 0 50px -50px #333; padding-left: 60px; padding-right: 40px;}
-                p{ margin: 0;}
-                ul{ margin: 19px  0; padding: 0; list-style-type: none;
+                p{ margin: 0 0 19px 0;}
+                ul{ margin: 0 0 19px  0; padding: 0; list-style-type: none;
                     a{ text-decoration: none;}
                     img{ margin-right: 20px;}
                     li{ margin-bottom: 5px;}

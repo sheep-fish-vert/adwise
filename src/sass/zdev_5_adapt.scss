@@ -47,7 +47,37 @@
     }
 }
 @media screen and (max-width: 767px){
+    .expertise {
 
+        .content{
+            .row{flex-wrap: wrap; min-height: 1px;}
+            .img{ width: 100%;
+                img{ position: relative; top: auto; left: auto; transform: none;}
+                .img-wrap{ position: relative; top: auto; height: auto; text-align: center;}
+                &:hover{
+                    img{ transform:none; }
+                }
+            }
+            .row-wrap{
+                &:nth-child(2){
+                    .row{min-height: 1px;}
+                    .img{.img-wrap{ height: auto;}}
+                }
+                &:last-child{
+                    .row{min-height: 1px;}
+                    .txt{width: 100%;box-shadow:none; padding: 30px;}
+                    .img{ margin:0;
+                        .img-wrap{ height: auto;}
+                    }
+                }
+            }
+            .txt{ padding: 30px; width: 100%;
+                &.right-col,
+                &.left-col{ padding: 30px;box-shadow:none;}
+                }
+
+        }
+    }
 }
 @media screen and (max-width: 530px){
     .title-filter {
