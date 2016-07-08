@@ -3,24 +3,24 @@
    		}
    // .part-for-videoblur{content: ''; display: block; position: absolute;  overflow: hidden;  max-width: 100% ;min-width: 100%;max-height: 278px; min-height: 278px; bottom: -20px; left: 0;  overflow: hidden; z-index: 2; background-position: 0% 100%; background-size: cover; 
     		
-   //  			#videobcg { 
-			// 	   -webkit-filter: blur(45px);
-			// 	  -moz-filter: blur(45px);
-			// 	  -o-filter: blur(45px);
-			// 	  -ms-filter: blur(45px);
-			// 	  filter: blur(45px);
-			// 	}
-   //  		} 		
- //   	#videobcg { 
- //   position: absolute;
- //   top: 0px;
- //   left: 0px;
- //   min-width: 100%;
- //   min-height: 100%;
- //   width: auto;
- //   height: auto;
- //   z-index: -1000;
- //   overflow: hidden;
+   	//  	#videobcg { 
+		// 	   -webkit-filter: blur(45px);
+		// 	  -moz-filter: blur(45px);
+		// 	  -o-filter: blur(45px);
+		// 	  -ms-filter: blur(45px);
+		// 	  filter: blur(45px);
+		// 	}
+	//  } 		
+	 //   	#videobcg { 
+	 //   position: absolute;
+	 //   top: 0px;
+	 //   left: 0px;
+	 //   min-width: 100%;
+	 //   min-height: 100%;
+	 //   width: auto;
+	 //   height: auto;
+	 //   z-index: -1000;
+	 //   overflow: hidden;
 	// }
 	.heading-wrapper{padding: 180px 0 170px 0;    
 		.mbox{			
@@ -48,6 +48,41 @@
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+
+.footer{background: #494949;color: #bebebe;
+	.mbox{display: flex; padding: 50px 0 50px 0;
+		.left-side-menu{width: calc(100% / 3);  display: flex; flex-direction: column;
+			.link-wrapper{	display: flex;
+				.images-wrapper{margin-right: 20px;	margin-bottom: 20px;			
+				}
+			}
+			.button-wrapper{
+				button{background:transparent; border: 1px solid #bebebe;padding: 10px 15px;text-transform: uppercase; font-size: 20px;
+					
+				}
+			}
+		}
+		.middle-part-menu{width: calc(100% / 3);
+			.heading{font-size: 23px; text-transform: uppercase;
+				h3{margin: 0 0 50px 0;}
+			}
+			.social-conteiner{
+				a{margin-right: 10px;
+					img{ 
+						
+					}
+				}
+			}
+			
+		}
+		.right-side-menu{width: calc(100% / 3); display: flex; flex-direction: column;
+			.some-links{margin-bottom :25px;
+				a{text-decoration: none; color:#bebebe; font-size: 18px; font-family: "ProximaNovaScOsf"; text-transform: uppercase;  }
 			}
 		}
 	}
