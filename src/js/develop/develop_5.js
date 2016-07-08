@@ -19,24 +19,28 @@ function butter() {
         }
     });
 }
-var slider = $('.slider-partners');
+
 function constructSlides(slides){
+    var slider = $('.slider-partners');
     var filterValue = $('.menu-filter input:checked').val();
     var filteredArray = [];
 
     radioChangeFilter();
     filteringSlds();
+    addSlidesINSlider();
     initSliderPartners(slider);
 
 
     function addSlidesINSlider(){
-        slider.slick('unslick');
+        if(slider.hasClass('slick-initialized')){ slider.slick('unslick');}
+
         slider.find('.item').remove();
+
         for (var i = 0; i < filteredArray.length; i++) {
             var oneSlide = '<a href="'+filteredArray[i].href+'" class="item"><img src="'+filteredArray[i].img+'" alt="'+filteredArray[i].name+'"><span class="hover"></span></a>';
                 slider.append(oneSlide);
         }
-        console.log(slider);
+
         initSliderPartners(slider);
 
     }
@@ -53,8 +57,7 @@ function constructSlides(slides){
             for (var i = 0; i < slides.length; i++) {
                 var catArray = slides[i].category;
                 var needed = false;
-                for (var j = 0; j < catArray.length; j++) {
-
+                for (var j = 0; j < catArray.length; j++) { //оставлена возможность на каждый елемент вешать больше одной категории в JSON файле
                     if (catArray[j] == filterValue) {
                         needed = true;
                     }
@@ -68,7 +71,7 @@ function constructSlides(slides){
         }
 
 
-        console.log(filteredArray);
+
     }
     function initSliderPartners(obj) {
         obj.slick({
@@ -112,7 +115,7 @@ function constructSlides(slides){
         });
     }
 
-}
+};
 function hoverItmes(){
     $('.slider-partners .item').each(function () {
         var obj = $(this);

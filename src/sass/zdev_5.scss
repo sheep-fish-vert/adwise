@@ -102,21 +102,7 @@ header{ background-color: #fff; height: 60px; position: relative;
 
     .partners{ background-color: #dbdbdb;padding: 92px 0 65px;
         .mbox{max-width: 1120px;}
-        .title-filter{ padding: 0 30px 98px;}
-        .title{ position: relative; display: block;width: 29.3%; float: left;
-            h2{ margin: 0;font: 300 40px/1.5 'ProximaNovaScOsf'; color: #343434; text-transform: uppercase;}
-            &:after{ display: block; content: ''; width: 3px; height: 98px; background-color: #505050; right: 0; top: -19px; position: absolute;}
-        }
-        .menu-filter{ display: block; width: 67%; float: right; padding-top: 14px; padding-right: 77px;
-            ul{ list-style-type: none; display: flex; justify-content: space-around; margin: 0; padding: 0;}
-            li{
-                .txt{font: 100 18px/1.5 'ProximaNovaScOsf'; color: #505050; cursor: pointer;
-                    &:hover{ color: #fff;}
-                }
-                input{opacity: 0; visibility: hidden;}
-                input:checked + span{color: #fff;}
-            }
-        }
+
         .slider-wrap{ padding: 0 30px;}
         .slider-partners{
             //display: flex; justify-content: space-around;
@@ -147,6 +133,69 @@ header{ background-color: #fff; height: 60px; position: relative;
         .slick-prev{transform: rotate(-135deg); left: -79px;}
         .slick-next{transform: rotate(45deg); right: -70px;}
     }
+    .title-filter { padding: 0 30px 98px;
+        .title { position: relative; display: block; width: 29.3%; float: left;
+            h2 { margin: 0; font: 300 40px/1.5 'ProximaNovaScOsf'; color: #343434; text-transform: uppercase; }
+            &:after { display: block; content: ''; width: 3px; height: 98px; background-color: #505050; right: 0; top: -19px; position: absolute; }
+        }
+        .menu-filter { display: block; width: 67%; float: right; padding-top: 14px; padding-right: 77px;
+            ul { list-style-type: none; display: flex; justify-content: space-around; margin: 0; padding: 0; }
+            li {
+                a,
+                .txt { font: 100 18px/1.5 'ProximaNovaScOsf'; color: #505050; cursor: pointer;
+                    &:hover { color: #fff; }
+                }
+                input { opacity: 0; visibility: hidden; }
+                input:checked + span { color: #fff; }
+                a{ text-decoration: none;}
+            }
+        }
+    }
 
 /*END partners----------------------------------------------------------*/
+/*expertise----------------------------------------------------------*/
+    .expertise { padding: 92px 0 65px;
+        .title-filter{ padding-bottom: 82px;}
+        .mbox { max-width: 920px; }
+        .content{
+            .row-wrap{padding: 40px 0; display: block; width: 100%;
+                &:nth-child(2){
+                    .row{min-height: 240px}
+                    .img{.img-wrap{ height: 320px;}}
+                }
+                &:last-child{
+                    .row{min-height: 320px;}
+                    .txt{width: 518px;box-shadow:inset -150px 0 150px -150px #333;}
+                    .img{ margin-left: -138px;
+                        .img-wrap{ height: 320px;}
+                    }
+                }
+            }
+            .row{ position: relative; display: flex; justify-content: space-around; min-height: 300px;}
+            .left-col{width: 380px;}
+            .right-col{width: 500px;}
+            .img{ position: relative;
+                .img-wrap{ position: absolute; width: 100%; height: 380px;left: 0; top: -40px;overflow: hidden;}
+                img{ position: absolute;left: 50%; top: 50%; transform:translate(-50%, -50%) scale(1); transition: transform 200ms;}
+                &:hover{
+                    img{ transform:translate(-50%, -50%) scale(1.2); }
+                }
+            }
+            .txt{background-color: #fff;font: 100 18px/1.26 'ProximaNovaScOsf';color: #424346; padding-top: 32px;
+                &.right-col{box-shadow:inset 50px 0 50px -50px #333; padding-left: 80px; padding-right: 75px;}
+                &.left-col{box-shadow:inset -50px 0 50px -50px #333; padding-left: 60px; padding-right: 40px;}
+                p{ margin: 0;}
+                ul{ margin: 19px  0; padding: 0; list-style-type: none;
+                    a{ text-decoration: none;}
+                    img{ margin-right: 20px;}
+                    li{ margin-bottom: 5px;}
+                }
+                b{ font: 600 18px/1.26 'ProximaNovaScOsf';}
+                a{color: #424346;
+                    &:hover{ color: #d7ae00;}
+                }
+            }
+        }
+    }
+/*END expertise----------------------------------------------------------*/
 

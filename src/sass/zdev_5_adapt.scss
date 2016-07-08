@@ -15,7 +15,7 @@
     }
 }
 @media screen and (max-width: 1024px){
-    .partners {
+    .title-filter {
         .title{ padding-right:20px; width: 210px;}
         .menu-filter {width: calc(100% - 210px); padding-right: 0;
             ul {flex-wrap: wrap; }
@@ -50,7 +50,7 @@
 
 }
 @media screen and (max-width: 530px){
-    .partners {
+    .title-filter {
         .title{ float: none; margin-bottom: 20px;}
         .menu-filter {width: 100%;float: none;}
     }
