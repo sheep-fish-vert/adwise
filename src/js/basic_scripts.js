@@ -156,13 +156,25 @@ function headeButer(menuMobile,toggleMenu){
 
 /* /expresion for numbers with spaces */
 
+
+
+
 /* DOCUMENT READY  */
 $(document).ready(function() {
-    //oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
 
     //goTo();
-    //animationBlock($('.setion-animate'));
+
+    // fancybox standart
+    $('.fancybox').fancybox({
+      openEffect  : 'fade',
+      closeEffect : 'fade',
+      autoResize:true,
+      wrapCSS:'fancybox-standart',
+      'closeBtn' : true,
+      fitToView:true,
+      padding:'0'
+    });
 });
 
 $(window).resize(function() {

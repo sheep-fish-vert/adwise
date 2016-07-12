@@ -1,0 +1,96 @@
+// fancy standart skin
+.fancybox-prev span,.fancybox-next span{background-image:none;background-position: 50% 50%;visibility: visible;
+    &:after{width: 25px;height: 25px;background-color: transparent;border-top: 4px solid #626262;border-right: 4px solid #626262;transform: rotate(45deg);position: absolute;content: '';right: 6px;top: 4px;}
+}
+.fancybox-prev span:after{transform: rotate(225deg);}
+.fancybox-close{background-image: none;top: 0;right: 0;
+    &:after,&:before{width: 30px;height: 4px;background-color: #626262;transform: rotate(45deg);position: absolute;content: '';top: 16px;left: 4px;}
+    &:before{transform: rotate(-45deg);}
+}
+
+.fancybox-title-float-wrap{font-family: "Roboto";
+    .child{border-radius: 1px;border-radius: 2px;background:#525252;}
+}
+
+
+
+// button right end left
+a.button-prev,a.button-next{display: inline-block;text-decoration: none;font-size: 18px;font-family: "Roboto";color: #71626e;position: relative;padding-left: 32px;
+    &:after{width: 33px;height: 33px;position: absolute;top: 40%;left: 0;transform: translateY(-50%) rotate(-135deg);border-right: 4px solid #888888;border-top: 4px solid #888888;content: '';transition: all 300ms;}
+    &:hover{
+        &:after{left: -20px;}
+    }
+}
+a.button-next{padding-left: 0;padding-right: 32px;
+    &:after{transform: translateY(-50%) rotate(45deg);left: auto;right: 0;}
+    &:hover{
+        &:after{left: auto;right: -20px;}
+    }
+}
+
+// news page
+.news-page{padding-top: 40px;font-family: "Roboto";
+    .mbox{max-width: 1220px;}
+    .news-page-wrap{background-color: #fff;box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.25);}
+    .news-image{display: block;
+        img{position: relative;left: 50%;transform: translateX(-50%);min-width: 100%;}
+    }
+    .news-images-massonry{margin:0 auto;overflow: hidden;
+        &:after{content: '';display: block;clear: both;}
+        .item-sizer,.item{width: 25%;position: relative;overflow: hidden;float: left;
+            &.item-1{}
+            &.item-2,&.item-5{width: 50%;}
+            &.item-height{height: 300px;}
+            &.item-height-big{height: 600px;}
+            a{display: block;height: 100%;}
+            img{min-width: 100%;min-height: 100%;display: block;max-width: none;position: relative;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+        }
+    }
+    .news-page-title{margin:0 auto;max-width: 1050px;padding: 55px 15px 70px;width: 100%;
+        .news-page-title-wrap{position: relative;padding: 2px;
+            &.blue{background: linear-gradient(to right, rgba(28,220,255,1) 0%,rgba(1,255,144,1) 100%);
+                &>p{background-color: #1cdcff;}
+            }
+            &>p{position: absolute;top: 0;left: 0;margin:0;font-size: 24px;color: white;font-family: "Roboto";z-index: 2;padding: 3px 25px;}
+            .news-page-title-second{background-color: #fff;text-align: center;position: relative;z-index: 1;padding: 28px 10px;
+                .h1,h1,h2,h3{margin:0;font-size: 44px;font-family: "Roboto";color: rgb(82, 82, 82);line-height: 1.3;letter-spacing: 0.5px}
+                p{margin:0;font-size: 44px;font-family: "Roboto";color: rgb(82, 82, 82);line-height: 1.2;font-weight: 300;}
+            }
+        }
+    }
+    .news-page-middle{max-width: 1050px;padding: 0 15px 50px;margin:0 auto 50px;width: 100%;display: flex;justify-content: space-between;flex-wrap: wrap;
+        .news-page-aside{width: 30%;
+            .news-page-aside-title{color: #636363;font-family: 'Roboto Condensed';font-size: 24px;padding-top: 15px;margin-bottom: 30px;
+                a{color: #636363;
+                    &:hover{text-decoration: none;}
+                }
+            }
+            .news-page-aside-items{
+                .item{margin-bottom: 37px;
+                    &:last-child{margin-bottom: 0;}
+                    &:hover{
+                        .item-img img{transform: translate(-50%, -50%) scale(1.2);}
+                    }
+                    a{display: flex;flex-direction: column;text-decoration: none;color: #6c6c6c;font-family: 'Roboto Condensed';}
+                    .item-img{width: 100%;height: 150px;position: relative;margin-bottom: 22px;overflow: hidden;
+                        img{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);transition: transform 200ms;}
+                    }
+                    .item-title{font-size: 18px;line-height: 1.2;margin-bottom: 3px;}
+                    .item-date{font-size: 14px;color: #b9b9b9;}
+                }
+            }
+        }
+        .news-page-text{width: 63%;margin-bottom: 40px;
+            .news-page-text-article{font-family: 'Roboto Condensed';margin-bottom: 70px;
+                p{line-height: 1.2;color: #000000;font-size: 18px;
+                    b,strong{font-size: 20px;color: #000000;font-weight: bold;}
+                }
+                blockquote{font-size: 24px;color: #000000;font-style: italic;margin-left: 20%;position: relative;font-weight: 300;
+                    &:after{content: '';position: absolute;height: calc(100% + 15px);width: 4px;background-color: #1cdcff;left: -5%;top: -5px;}
+                }
+            }
+            .social-conteiner{margin-bottom: 85px;}
+            .news-page-pagination{display: flex;align-items: center;justify-content: space-between;}
+        }
+    }
+}

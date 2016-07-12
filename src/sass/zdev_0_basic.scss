@@ -21,7 +21,6 @@
         h4{font-size: 24px;}
         h5{font-size: 20px;}
         h6{font-size: 16px;}
-        p{margin-bottom: 10px;font-size: 14px;}
     }
 
 /* /ctext */
@@ -82,7 +81,7 @@ input, textarea{
 
 /*fonts*/
 @mixin font-face($style-name, $file:$style-name, $weight:normal, $style:normal) {
-    $filepath: "/fonts/" + $file;
+    $filepath: "../fonts/" + $file;
     @font-face {
         font-family: quote($style-name);
         src: url($filepath + ".eot");
