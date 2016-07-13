@@ -107,9 +107,30 @@
             .advertising-items-href{display: none;}
         }
     }
+
+    // asia market
+    .market .market-middle-text .middle-items .item .item-wrap{width: 230px;}
+    .market .market-middle-text .middle-items .item .item-big-number{font-size: 53px;}
+
+    .market .market-top-text{margin-bottom: 110px;}
+    .market .market-middle-text{margin-bottom: 100px;}
+    .market .middle-text-next{margin: 0 auto 100px;}
 }
 @media screen and (max-width: 767px){
-
+    // asia market
+    .market{
+        .market-top-text{flex-direction: column;align-items: center;margin-bottom: 75px;
+            .item{
+                &.right{width: 100%;padding-left: 0;padding-top: 30px;}
+            }
+        }
+        .market-middle-text{
+            .middle-text{padding: 0;}
+            .middle-items{flex-direction: column;align-items: center;
+                .item{margin-bottom: 20px;}
+            }
+        }
+    }
 }
 @media screen and (max-width: 666px){
     // new page

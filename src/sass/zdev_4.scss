@@ -107,6 +107,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
     .advertising-wrap{
         &>.title{padding-top: 85px;padding-bottom: 85px;}
     }
+    // middle block
     .advertising-middle{margin-bottom: 160px;
         .advertising-items{display: flex;flex-wrap: wrap;justify-content: space-between;
             .item{width: 32.2%;background-color: rgb(238, 238, 238);box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.26);padding: 0 20px;
@@ -126,6 +127,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
             }
         }
     }
+    // bottom block
     .advertising-bottom{margin-bottom: 130px;
         p{margin:0;}
         .advertising-items{max-width: 1060px;margin:0 auto 80px;width: 100%;display: flex;flex-wrap: wrap;
@@ -164,6 +166,64 @@ a.button-next{padding-left: 0;padding-right: 32px;
             a{width: 200px;height: 37px;text-decoration: none;color: white;display: flex;align-items: center;justify-content: center;background-color: #fcc939;transition:all ease .2s;
                 &:hover{opacity: .9;}
             }
+        }
+    }
+}
+
+// asian market
+.market{background-color: #515152;//delete
+    color: white;padding-bottom: 105px;
+    p{margin:0;}
+    .mbox{max-width: 940px;}
+    .market-wrap{
+        &>.title{padding-top: 60px;padding-bottom: 60px;}
+    }
+    .market-top-text{max-width: 740px;margin:0 auto;width: 100%;display: flex;margin-bottom: 170px;
+        .item{
+            &.left{display: flex;align-items: center;background-clip: content-box;flex-wrap: wrap;width: 200px;text-align: center;flex-direction: column;}
+            &.right{width: calc(100% - 200px;);padding-left: 60px;}
+            .item-title{font-weight: 600;font-size: 34px;}
+            .item-text{font-size: 16px;font-family: "Roboto";color: rgb(255, 255, 255);line-height: 1.2;font-weight: 300;
+                p{margin-bottom: 17px;
+                    &:last-child{margin-bottom: 0;}
+                }
+            }
+        }
+    }
+    .middle-text{padding: 0px 40px;
+        .item-title{margin-bottom: 25px;
+            h2{margin:0;font-size: 32px;}
+        }
+        .item-text{font-family: "Roboto";font-weight: 300;max-width: 670px;line-height: 1.2;}
+    }
+    .market-middle-text{margin-bottom: 170px;
+        .middle-items{display: flex;flex-wrap: wrap;justify-content: space-between;padding-top: 80px;
+            .item{
+                .item-wrap{width: 240px;height: 155px;background:transparent url('../images/market-middle-text-bg.png') center top no-repeat;position: relative;}
+                .item-big-number{font-size: 62px;font-family: Roboto Condensed,sans-serif;font-weight: 900;position: absolute;left: -25px;top: 37px;width: 95px;text-align: center;}
+
+                .item-title{position: absolute;top: 40px;right: 32px;
+                    p{font-size: 37px;text-transform: uppercase;font-weight: 300;}
+                    span{text-transform: uppercase;font-weight: 300;font-size: 15px;}
+                }
+                .item-text{padding-left: 30px;padding-top: 15px;font-size: 23px;font-weight: 600;padding-right: 15px;}
+            }
+        }
+    }
+    .middle-text-next{max-width: 740px;margin:0 auto 150px;width: 100%;
+        .middle-text{text-align: center;}
+        .middle-next-images{padding-top: 75px;display: flex;flex-wrap: wrap;justify-content: space-between;
+            .item{width: 100px;text-align: center;}
+            .item-text{padding-top: 30px;font-size: 19px;text-transform: uppercase;font-weight: 300;line-height: 1.3;}
+        }
+    }
+    .bottom-text{
+        .middle-text{text-align: center;}
+        .item-title{margin-bottom: 50px;position: relative;
+            &:after{position: absolute;transform: translateX(-50%);height: 3px;background-color: #fff;width: 86px;bottom: -23px;content: '';}
+        }
+        .item-text{max-width: 100%;font-size: 16px;
+            b{padding-top: 20px;font-weight: 600;font-size: 20px;text-transform: uppercase;display: block;}
         }
     }
 }
