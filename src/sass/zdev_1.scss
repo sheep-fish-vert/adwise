@@ -35,15 +35,41 @@
         .news-list-items-wrap{display: flex;justify-content: space-between;align-items: flex-start;flex-wrap:wrap;
             .news-list-item{width:calc(50% - 20px);background-color:#fff;margin-bottom: 50px;
 
+                a{text-decoration: none;color:#010101;font-size: 16px;font-weight: 300;}
+
                 .news-list-img{overflow: hidden;height:212px;
-                    img{max-width:none;min-width:100%;min-height:100%;position:relative;left:50%;top:50%;transform:translate(-50%, -50%);}
+                    img{max-width:none;min-width:100%;min-height:100%;position:relative;left:50%;top:50%;transform:translate(-50%, -50%);transition:all 300ms ease;}
                 }
 
                 .news-list-item-content-main{box-shadow:0 2px 16px 0 rgba(55, 39, 50, .25);padding:30px 10px 15px 10%;min-height:315px;
                     .news-list-item-title{padding-top: 30px;margin-bottom: 22px;
-                        h6{margin:0;font-family:"Roboto Condensed", sans-serif;font-size:26px;color:#48454f;font-weight: 400;position:relative;padding-left: 20px;
+                        h6{margin:0;font-family:"Roboto Condensed", sans-serif;font-size:26px;color:#48454f;font-weight: 400;position:relative;padding-left: 20px;line-height:1.25;
                             span{position:absolute;width:4px;height:100%;position: absolute;left:0;top:0;}
                             b{font-weight: 700;}
+                        }
+                    }
+
+                    .news-list-item-content-wrap{display:flex;justify-content: space-between;align-items: center;
+                        .news-item-list-content{width:calc(100% - 50px);
+                            .news-item-list-text{margin-bottom: 20px;font-family: 'Roboto Condensed', sans-serif;line-height: 1.25;}
+                            .news-item-list-date{color:#b7b7b7;}
+                        }
+                        .news-list-item-arrow{
+                            span{display: block;width:25px;height:25px;background-color: transparent;border-top:4px solid #626262;border-right:4px solid #626262;transform:rotate(45deg);position:relative;left:-20px;transition:all 300ms ease;}
+                        }
+                    }
+
+                }
+
+                &:hover{
+                    .news-list-img{
+                        img{transform:scale(1.05) translate(-50%, -50%);}
+                    }
+                    .news-list-item-content-main{
+                        .news-list-item-content-wrap{
+                            .news-list-item-arrow{
+                                span{left:-5px;}
+                            }
                         }
                     }
                 }
