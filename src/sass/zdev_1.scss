@@ -27,3 +27,17 @@
     }
 
 /* /column-list */
+
+/* news-list */
+
+    .news-list{
+
+        .news-list-items-wrap{display: flex;justify-content: space-between;align-items: flex-start;flex-wrap:wrap;
+            .news-list-item{width:calc(50% - 20px);background-color:#fff;margin-bottom: 50px;
+                .news-list-item-content-main{box-shadow:0 2px 16px 0 rgba(55, 39, 50, .25);}
+            }
+        }
+
+    }
+
+/* /news-list */
