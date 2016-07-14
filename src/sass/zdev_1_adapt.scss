@@ -39,6 +39,12 @@
 
     /* /column-list */
 
+    /* event-list, careers-list */
+
+        .info-list{padding:30px 0 50px 0;}
+
+    /* /event-list, careers-list */
+
 }
 @media screen and (max-width: 767px){
 
@@ -70,6 +76,21 @@
         }
 
     /* /news-list */
+
+    /* event-list, careers-list */
+
+        .info-list{
+
+            .info-list-wrap{margin-bottom: 20px;
+                .info-list-item{width: 47.5%;margin-right:5%;
+                    &:nth-child(2n){margin-right: 0;}
+                    &:nth-child(3n){margin-right:5%;}
+                }
+            }
+
+        }
+
+    /* event-list, careers-list */
 
 }
 @media screen and (max-width: 666px){
@@ -104,6 +125,27 @@
 
 }
 @media screen and (max-width: 479px){
+
+    /* event-list, careers-list */
+
+        .info-list{
+
+            .info-list-wrap{
+                .info-list-item{width: 100%;margin-right: 0;
+                    &:nth-child(3n){margin-right: 0;}
+                }
+                .info-list-item-wrap{
+                    .info-list-item-bottom{
+                        .info-list-item-content{
+                            p{justify-content: center;}
+                        }
+                    }
+                }
+            }
+
+        }
+
+    /* /event-list, careers-list */
 
 }
 @media screen and (max-width: 320px){

@@ -14,10 +14,12 @@
                 ul{list-style:none;padding:0;margin:0;
                     li{margin-bottom: 10px;
                         &:last-child{margin-bottom: 0;}
-                        a{position:relative;display:block;padding-left: 25px;font-size: 24px;text-transform: uppercase;font-weight: 300;color:#d6d6d6;text-decoration: none;line-height: 1.25;transition:all 300ms ease;
-                            &.active{color:#fff;}
+                        a{position:relative;display:block;padding-left: 25px;font-size: 24px;text-transform: uppercase;font-weight: 100;color:#d6d6d6;text-decoration: none;line-height: 1.25;transition:all 300ms ease;
+                            &.active{color:#fff;
+                                span{display: block;}
+                            }
                             &:hover{color:#969696;text-shadow:0 0 6px rgba(255, 255, 255, .75);}
-                            span{display: block;position:absolute;top:0;left:0;height:100%;width:4px;}
+                            span{display: none;position:absolute;top:0;left:0;height:100%;width:4px;}
                         }
                     }
                 }
@@ -81,6 +83,45 @@
     }
 
 /* /news-list */
+
+/* event-list, careers-list */
+
+    .info-list{padding:180px 0 80px 0;
+        .info-list-wrap{display: flex;justify-content: space-between;align-items: flex-start;flex-wrap:wrap;min-height: calc(100vh - 400px);
+
+            .info-list-item{width:30.33%;margin-right: 4.5%;margin-bottom: 20px;
+                &:nth-child(3n){margin-right: 0px;}
+            }
+
+            .info-list-item-wrap{max-width:220px;width:100%;margin:0 auto;
+                .info-list-item-top{margin-bottom: 50px;
+                    a{height:220px;background-color:#fff;display: flex;justify-content: center;align-items: center;box-shadow:0 6px 21px 0 rgba(0, 0, 0, .26);text-decoration: none;transition:all 300ms ease;
+                        &:hover{box-shadow:0 3px 27px 0 rgba(0, 0, 0, .34);}
+                    }
+                    .info-list-top-text{display: block;padding:15px 20px 15px 20px;color:#808080;min-height:100%;
+                        .info-list-top-title{display:block;min-height:75px;border-bottom:3px solid #aaaaaa;font-size: 25px;font-weight: 600;margin-bottom: 15px;}
+                        .info-list-top-text-wrap{color:#898989;font-size: 18px;font-weight: 300;}
+                    }
+                }
+                .info-list-item-bottom{padding:0 10px;
+                    .info-list-item-content{margin-bottom: 50px;padding-left: 8px;
+                        p{margin: 0 0 25px 0;display: flex;justify-content: flex-start;align-items: center;color:#777777;font-size: 18px;font-family:'Roboto', sans-serif;font-weight: 300;
+                            &:last-child{margin:0;}
+                            .info-list-icon{margin-right: 5%;width: 20px;text-align: center;}
+                        }
+                    }
+                    .info-list-item-button{
+                        .button{display: flex;width:100%;height:38px;background-color: #fcc939;justify-content: center;align-items: center;color:#fff;text-decoration: none;font-family:'Roboto', sans-serif;transition:all 300ms ease;
+                            &:hover{background-color: #daa100;}
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+/* /event-list, careers-list */
 
 /* paginator */
 
