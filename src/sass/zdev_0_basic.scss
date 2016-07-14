@@ -77,6 +77,11 @@ input, textarea{
     &:-ms-input-placeholder {color:#212121;}
 }
 
+.main-wrap{display: flex;justify-content: space-between;align-items: flex-start;
+    .left-column{width:256px;padding-right:30px;}
+    .right-column{width: calc(100% - 256px);}
+}
+
 /*End Layout*/
 
 /*fonts*/
