@@ -1,13 +1,17 @@
 // fancy standart skin
-.fancybox-prev span,.fancybox-next span{background-image:none;background-position: 50% 50%;visibility: visible;
-    &:after{width: 25px;height: 25px;background-color: transparent;border-top: 4px solid #626262;border-right: 4px solid #626262;transform: rotate(45deg);position: absolute;content: '';right: 6px;top: 4px;z-index: 2;}
-
-    &:before{height: 40px;width: 40px;position: absolute;z-index: 1;content: '';background-color: rgba(255, 255, 255, 0.76);top: -3.5px;right: -6px}
+.fancybox-prev span,.fancybox-next span{background-image:none;background-position: 50% 50%;visibility: visible;right: 18px;
+    &:after{width: 25px;height: 25px;background-color: transparent;border-top: 4px solid #fff;border-right: 4px solid #fff;transform: rotate(45deg);position: absolute;content: '';right: 6px;top: 4px;z-index: 2;}
 }
 .fancybox-prev span:after{transform: rotate(225deg);}
 .fancybox-prev span:before{top: -3.5px;right: 2px;}
-.fancybox-close{background-image: none;top: 0;right: 0;background-color: rgba(255, 255, 255, 0.76);
-    &:after,&:before{width: 30px;height: 4px;background-color: #626262;transform: rotate(45deg);position: absolute;content: '';top: 16px;left: 4px;}
+.fancybox-prev span{left: 18px;}
+
+.fancybox-nav{height: 65px;width: 65px;background-color: rgba(255,255,255,.5);border-radius: 50%;top: calc(50% - 32px)}
+.fancybox-prev{left: -45%;}
+.fancybox-next{right: -45%;}
+
+.fancybox-close{background-image: none;top: -50px;right: 0;background-color: rgba(255, 255, 255, 0.50);
+    &:after,&:before{width: 30px;height: 4px;background-color: #fff;transform: rotate(45deg);position: absolute;content: '';top: 16px;left: 4px;}
     &:before{transform: rotate(-45deg);}
 }
 
@@ -276,7 +280,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
         .left-column{position: relative;width: 270px;padding-right: 30px;}
     }
     &.reverse{  // коричневый бок с кор текстом
-        .left-column:after{position: absolute;right: 0;height: 100%;width: 5000px;pointer-events:none;background-color: #d6d6d6;content: '';top: 0;z-index: 1;}
+        .left-column:after{position: absolute;right: 0;height: 3000px;width: 5000px;pointer-events:none;background-color: #d6d6d6;content: '';top: 0;z-index: 1;}
         .right-column{width: calc(100% - 270px);}
         .column-list-wrap{position: relative;z-index: 2;
             .column-title{border-color: #5b5b5b;min-height: 107px;
