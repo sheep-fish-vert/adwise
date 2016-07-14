@@ -227,3 +227,46 @@ a.button-next{padding-left: 0;padding-right: 32px;
         }
     }
 }
+
+// contacts
+.contacts{background-color: #515152;//delete
+    .contacts-wrap{padding-top: 275px;padding-bottom: 70px;}
+    .contact-text{text-align: center;
+        .title{margin-bottom: 35px;}
+        p{margin:0;color: #ffffff;font-size: 18px;text-transform: uppercase;line-height: 1.2;max-width: 465px;margin:0 auto;font-weight: 100;}
+    }
+    .contact-form-row{margin-bottom: 18px;
+        .form_input{position: relative;}
+        .errorText{position: absolute;left: calc(100% + 20px);top: 50%;transform: translateY(-50%);color: #ff7878;white-space: pre;}
+
+        &.submit{padding-top: 50px;display: flex;justify-content: center;align-items: center;
+            button{display: flex;align-items: center;justify-content: center;height: 37px;width: 200px;color: white;font-size: 16px;font-family: "Roboto";background-color: #fcc939;border:none;
+                span{}
+            }
+        }
+    }
+    .contact-form{width: 100%;max-width: 445px;margin: 0 auto;padding-top: 60px;
+        input,textarea{width: 100%;height: 50px;border:none;background-color: transparent;border-bottom: 1px solid #939393;text-align: center;display: flex;align-items: center;justify-content: center;
+            &::-webkit-input-placeholder {color:#939393;}
+            &:-moz-placeholder {color:#939393;opacity:1;}
+            &::-moz-placeholder {color:#939393;opacity:1;}
+            &:-ms-input-placeholder {color:#939393;}
+
+            &:focus{color: #fff;
+                &::-webkit-input-placeholder {color:#fff;}
+                &:-moz-placeholder {color:#fff;opacity:1;}
+                &::-moz-placeholder {color:#fff;opacity:1;}
+                &:-ms-input-placeholder {color:#fff;}
+            }
+            &.error{border-color: #ff7878;}
+        }
+    }
+}
+
+// succes popup
+.call-success{
+    .call_success{padding: 30px 50px;color: #000;text-align: center;
+        .call-title{font-weight: 600;font-size: 45px;margin-bottom: 15px;}
+        .call-subtitle{font-size: 35px;}
+    }
+}
