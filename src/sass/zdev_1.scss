@@ -89,7 +89,7 @@
     .info-list{padding:180px 0 80px 0;
         .info-list-wrap{display: flex;justify-content: space-between;align-items: flex-start;flex-wrap:wrap;min-height: calc(100vh - 400px);
 
-            .info-list-item{width:calc(30.33% - 20px);margin-right: 6%;
+            .info-list-item{width:30.33%;margin-right: 4.5%;margin-bottom: 20px;
                 &:nth-child(3n){margin-right: 0px;}
             }
 
