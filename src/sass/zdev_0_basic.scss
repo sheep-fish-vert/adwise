@@ -60,7 +60,7 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 /* /base styles */
 
 /* wraps styling*/
-
+.global-wrapper{overflow: hidden;}
 .mbox{max-width:980px;width:100%;margin:0 auto;position:relative;z-index:1;padding: 0 20px;
     &.bigger-mbox{max-width:1180px;}
 }
@@ -79,7 +79,7 @@ input, textarea{
     &:-ms-input-placeholder {color:#212121;}
 }
 
-.main-wrap{display: flex;justify-content: space-between;align-items: flex-start;
+.main-wrap{display: flex;justify-content: space-between;align-items: stretch;
     .left-column{width:256px;padding-right:30px;}
     .right-column{width: calc(100% - 256px);}
 }
