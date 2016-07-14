@@ -134,6 +134,13 @@
                 .info-list-item{width: 100%;margin-right: 0;
                     &:nth-child(3n){margin-right: 0;}
                 }
+                .info-list-item-wrap{
+                    .info-list-item-bottom{
+                        .info-list-item-content{
+                            p{justify-content: center;}
+                        }
+                    }
+                }
             }
 
         }

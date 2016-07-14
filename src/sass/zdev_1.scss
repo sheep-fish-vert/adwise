@@ -95,8 +95,12 @@
 
             .info-list-item-wrap{max-width:220px;width:100%;margin:0 auto;
                 .info-list-item-top{margin-bottom: 50px;
-                    a{height:220px;background-color:#fff;display: flex;justify-content: center;align-items: center;box-shadow:0 6px 21px 0 rgba(0, 0, 0, .26);transition:all 300ms ease;
+                    a{height:220px;background-color:#fff;display: flex;justify-content: center;align-items: center;box-shadow:0 6px 21px 0 rgba(0, 0, 0, .26);text-decoration: none;transition:all 300ms ease;
                         &:hover{box-shadow:0 3px 27px 0 rgba(0, 0, 0, .34);}
+                    }
+                    .info-list-top-text{display: block;padding:15px 20px 15px 20px;color:#808080;min-height:100%;
+                        .info-list-top-title{display:block;min-height:75px;border-bottom:3px solid #aaaaaa;font-size: 25px;font-weight: 600;margin-bottom: 15px;}
+                        .info-list-top-text-wrap{color:#898989;font-size: 18px;font-weight: 300;}
                     }
                 }
                 .info-list-item-bottom{padding:0 10px;
