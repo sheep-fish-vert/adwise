@@ -305,10 +305,15 @@ a.button-next{padding-left: 0;padding-right: 32px;
             &.show{position: relative;z-index: 1;opacity: 1;visibility: visible;}
         }
     }
-    .creatives-slider{margin-bottom: 0;margin-right: -190px;padding-left: 100px;position: relative;
+    .creatives-slider{margin-bottom: 0;margin-right: -70px;padding-left: 100px;position: relative;
+        &.left-hide-button{
+            .slick-prev{opacity: 0;visibility: hidden;pointer-events:none;}
+        }
+        &.right-hide-button{
+            .slick-next{opacity: 0;visibility: hidden;pointer-events:none;}
+        }
         &:after{clear: both;display: block;content: '';}
-        .item{float: left;margin-right: 60px;
-
+        .item{float: left;
             .item-wrap{}
             .item-img{margin-bottom: 46px;
                 a{display: block;}
@@ -318,6 +323,28 @@ a.button-next{padding-left: 0;padding-right: 32px;
                 .item-img-wrap{height: 180px;width: 180px;position: relative;overflow: hidden;
                     img{max-width: none;min-height: 100%;min-width: 100%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);transition: all 300ms;}
                 }
+            }
+        }
+
+        .slick-prev, .slick-next{height: 63px;width: 63px;border-radius:50%;background-color: #fff;max-height: 100%;top: 45%;transition:all ease .2s;
+            &:hover{
+                &:after{border-color: #626262;}
+            }
+            &:after{width: 25px;height: 25px;background-color: transparent;border-top: 4px solid #b6b6b6;border-right: 4px solid #b6b6b6;transform: rotate(45deg);content: '';position: absolute;top: 19px;right: 22px;transition:all ease .2s;}
+        }
+        .slick-prev:after{transform: rotate(-135deg);right: 16px;}
+        .slick-prev{left: 19px;}
+        .slick-next {right: -50px;}
+
+        .slick-list{
+            &:after{box-shadow: 10px 0 5px -2px #888;height: 100%;left: 0;position: absolute;top: 0;width: 0px;content: '';background-color: eee;box-shadow: 1px 0 22px 15px #eee;pointer-events:none;transition:all ease .2s;}
+            &:before{height: 100%;right: 0px;position: absolute;top: 0;width: 46px;content: '';box-shadow: -1px 0 22px 15px #eee;background-color: #eee;z-index: 10;pointer-events:none;transition:all ease .2s;}
+
+            &.remove-left{
+                &:after{opacity: 0;}
+            }
+            &.remove-right{
+                &:before{opacity: 0;}
             }
         }
     }
