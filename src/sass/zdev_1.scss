@@ -84,6 +84,41 @@
 
 /* /news-list */
 
+/* event-list, careers-list */
+
+    .info-list{padding:180px 0 80px 0;
+        .info-list-wrap{display: flex;justify-content: space-between;align-items: flex-start;flex-wrap:wrap;min-height: calc(100vh - 400px);
+
+            .info-list-item{width:calc(30.33% - 20px);margin-right: 6%;
+                &:nth-child(3n){margin-right: 0px;}
+            }
+
+            .info-list-item-wrap{max-width:220px;width:100%;margin:0 auto;
+                .info-list-item-top{margin-bottom: 50px;
+                    a{height:220px;background-color:#fff;display: flex;justify-content: center;align-items: center;box-shadow:0 6px 21px 0 rgba(0, 0, 0, .26);transition:all 300ms ease;
+                        &:hover{box-shadow:0 3px 27px 0 rgba(0, 0, 0, .34);}
+                    }
+                }
+                .info-list-item-bottom{padding:0 10px;
+                    .info-list-item-content{margin-bottom: 50px;padding-left: 8px;
+                        p{margin: 0 0 25px 0;display: flex;justify-content: flex-start;align-items: center;color:#777777;font-size: 18px;font-family:'Roboto', sans-serif;font-weight: 300;
+                            &:last-child{margin:0;}
+                            .info-list-icon{margin-right: 5%;width: 20px;text-align: center;}
+                        }
+                    }
+                    .info-list-item-button{
+                        .button{display: flex;width:100%;height:38px;background-color: #fcc939;justify-content: center;align-items: center;color:#fff;text-decoration: none;font-family:'Roboto', sans-serif;transition:all 300ms ease;
+                            &:hover{background-color: #daa100;}
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+/* /event-list, careers-list */
+
 /* paginator */
 
     .paginator{display: flex;justify-content: center;align-items: center;
