@@ -62,7 +62,7 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 /* wraps styling*/
 .global-wrapper{overflow: hidden;}
 .mbox{max-width:980px;width:100%;margin:0 auto;position:relative;z-index:1;padding: 0 20px;
-    &.bigger-mbox{max-width:1180px;}
+    &.bigger-mbox{max-width:1220px;}
 }
 .mbox:after{content:"";clear:both;font-size:1px;line-height:1px;height:0;overflow:hidden;display:block;}
 
@@ -82,6 +82,14 @@ input, textarea{
 .main-wrap{display: flex;justify-content: space-between;align-items: stretch;
     .left-column{width:256px;padding-right:30px;}
     .right-column{width: calc(100% - 256px);}
+}
+
+@media screen and (max-width:992px){
+
+    .main-wrap{display: block;
+        .left-column, .right-column{width:100%;padding-right: 0;}
+    }
+
 }
 
 /*End Layout*/
@@ -107,5 +115,6 @@ input, textarea{
 @include font-face('ProximaNovaScOsf', 'ProximaNovaScOsfRegular', 400);
 @include font-face('ProximaNovaScOsf', 'ProximaNovaScOsfSemibold', 600);
 
+@include font-face('RBNo2', 'RBNo2Light', 300);
 
 /*/fonts*/
