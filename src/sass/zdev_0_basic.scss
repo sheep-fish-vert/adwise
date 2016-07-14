@@ -84,6 +84,14 @@ input, textarea{
     .right-column{width: calc(100% - 256px);}
 }
 
+@media screen and (max-width:992px){
+
+    .main-wrap{display: block;
+        .left-column, .right-column{width:100%;padding-right: 0;}
+    }
+
+}
+
 /*End Layout*/
 
 /*fonts*/
