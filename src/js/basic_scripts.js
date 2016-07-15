@@ -175,6 +175,17 @@ $(document).ready(function() {
       fitToView:true,
       padding:'0'
     });
+
+    // fancybox standart
+    $('.fancy-gallery').fancybox({
+      openEffect  : 'fade',
+      closeEffect : 'fade',
+      autoResize:true,
+      wrapCSS:'fancy-gallery',
+      'closeBtn' : false,
+      fitToView:true,
+      padding:'0'
+    });
 });
 
 $(window).resize(function() {

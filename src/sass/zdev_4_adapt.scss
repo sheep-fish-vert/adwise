@@ -5,10 +5,38 @@
 
 }
 @media screen and (max-width: 1366px){
-
+    // creatives
+    .creatives{
+        .creatives-slider{padding-left: 55px;
+            .slick-prev, .slick-next{height: 41px;width: 41px;
+                &:after{width: 15px;height: 15px;top: 13px;right: 15px;}
+            }
+            .slick-prev{left: 10px;}
+            .slick-prev:after{right: 12px;}
+            .slick-next{right: 9px;}
+        }
+    }
 }
-@media screen and (max-width: 1280px){
-
+@media screen and (max-width: 1295px){
+    // creatives
+    .creatives{
+        .creatives-slider{
+            .slick-prev, .slick-next{top: auto;bottom: -100px;
+                &:after{}
+            }
+            .slick-prev{left: calc(50% - 50px)}
+            .slick-prev:after{}
+            .slick-next{right: calc(50% - 50px)}
+        }
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1280px){
+    // creatives
+    .creatives{
+        .creatives-slider{margin-bottom: 100px;padding-left: 28px;margin-right: 0;
+            .item .item-img .item-img-wrap{height: 140px;width: 140px;}
+        }
+    }
 }
 @media screen and (max-width: 1024px){
     // new page
@@ -38,8 +66,13 @@
             }
         }
     }
+
 }
 @media screen and (max-width: 992px){
+    // fancybox
+    .fancybox-prev{left: -15%;}
+    .fancybox-next{right: -15%;}
+
     // new page
     .news-page{
         .news-images-massonry{
@@ -124,6 +157,49 @@
             .errorText{position: relative;left: auto;top: auto;transform: translateY(0);}
         }
     }
+
+    // creatives page
+    .main-wrap{
+        &.tabs{
+            .left-column{width: 100%;padding-right: 0px;}
+        }
+        &.reverse{  // коричневый бок с кор текстом
+            .left-column:after{display: none;}
+            .right-column{width: 100%;}
+            .column-list-wrap{
+                .column-title{min-height: auto;
+                    h1,h2,.h1,.h2{font-size: 50px;}
+                }
+                .column-list{justify-content: center;
+                    ul{justify-content: center;}
+                    li{margin-right: 10px;margin-left: 10px;
+                        &:last-child{margin-bottom: 0;}
+                        &:after{width: 100%;}
+                        a{height: 40px;padding: 10px;}
+                    }
+                }
+            }
+        }
+    }
+    // creatives page
+    .creatives {padding-top: 35px;padding-bottom: 80px;
+        .creatives-slider{padding-left: 0;margin-right: 0;
+            &.left-hide-button{
+                .slick-prev{opacity: 1;visibility: visible;pointer-events:initial;}
+            }
+            &.right-hide-button{
+                .slick-next{opacity: 1;visibility: visible;pointer-events:initial;}
+            }
+            .slick-prev, .slick-next{bottom: -50px;}
+            .slick-list{
+                &:before{display: none;}
+                &:after{display: none;}
+            }
+            .item{
+                .item-img .item-img-wrap{margin:0 auto;}
+            }
+        }
+    }
 }
 @media screen and (max-width: 767px){
     // asia market
@@ -147,6 +223,11 @@
             }
         }
     }
+
+    // fancybox
+    .fancybox-nav{top: calc(100% + 20px)}
+    .fancybox-prev{left: calc(50% - 75px);}
+    .fancybox-next{right: calc(50% - 75px);}
 }
 @media screen and (max-width: 666px){
     // new page

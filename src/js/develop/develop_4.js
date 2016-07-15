@@ -12,7 +12,12 @@ function creativesSlider(){
     if( $('.creatives').length ){
 
         var slidesToShow = 4;
+        var infinite = false;
 
+        if( $(window).width()<=992 ){
+            slidesToShow = 3;
+            infinite = true;
+        }
 
         $('.creatives-slider').on('init', function(event, slick, direction){
             $('.creatives-wrap').addClass('active');
@@ -38,12 +43,25 @@ function creativesSlider(){
 
             $(this).slick({
                 slidesToShow: slidesToShow,
+                infinite: infinite,
                 slidesToScroll: 1,
                 dots: false,
-                infinite: false,
                 prevArrow:'<button type="button" class="slick-prev"></button>',
-                nextArrow:'<button type="button" class="slick-next"></button>'
-
+                nextArrow:'<button type="button" class="slick-next"></button>',
+                responsive: [
+                  {
+                    breakpoint: 640,
+                    settings: {
+                      slidesToShow: 2
+                    }
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 1
+                    }
+                  }
+                ]
             });
         });
 
