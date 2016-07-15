@@ -9,7 +9,7 @@ function massonryImage(){  // in news page
 }
 
 function creativesSlider(){
-    if( $('.creatives').length ){
+    if( $('.creatives').length || $('.main-wrap.tabs').length){
 
         var slidesToShow = 4;
         var infinite = false;
