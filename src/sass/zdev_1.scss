@@ -158,3 +158,93 @@
     }
 
 /* /paginator */
+
+/* websites */
+
+    .websites-page{
+
+        .column-list-wrap{padding-top: 45px;
+            .column-title{
+                h1, h2, h3{font-size: 42px;font-weight: 300;
+                    b{font-weight: 700;}
+                }
+            }
+            .column-list{padding-top: 25px;}
+        }
+
+        .column-list-sites{
+
+            .column-list-sites-filter{
+                ul{list-style:none;padding:0;margin:0;display: flex;justify-content: space-between;align-items: flex-start;
+                    li{padding:0 2px;
+                        .sites-img{position:relative;text-align: center;height:22px;display: flex;justify-content: center;align-items: center;
+                            img{opacity:1;transition:all 300ms ease;
+                                &.hover-img{opacity: 0;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
+                            }
+                        }
+                        .sites-text{font-size: 16px;color:#000;font-family:'RBNo2', sans-serif;opacity:0;transition:all 300ms ease;}
+
+                        &.active, &:hover{
+                            .sites-img{
+                                img{opacity:0;
+                                    &.hover-img{opacity:1;}
+                                }
+                            }
+                            .sites-text{opacity:1;}
+                        }
+
+                    }
+                }
+            }
+
+            .websites-slider{
+                .websites-slider-wrap{
+                    ul{list-style:none;padding:0;margin:0;}
+                }
+            }
+
+        }
+
+        .websites-content{max-width: 680px;width: 100%;margin:0 auto;padding:95px 0 60px 0;
+            .websites-text{font-family: 'Roboto', sans-serif;color:#fff;font-weight: 300;min-height:160px;}
+
+            .websites-audience{display: flex;justify-content: space-around;align-items: center;font-size:18px;color:#fff;font-family:'Roboto', sans-serif;padding-bottom: 15px;border-bottom:1px solid #b2b2b1;margin-bottom: 33px;
+                .websites-audience-main{display: flex;align-items: center;justify-content: flex-start;
+                    .websites-audience-icon{margin-right:10px;}
+                }
+            }
+
+            .websites-statistic{display: flex;justify-content: space-between;align-items: center;
+
+                .websites-statistic-title{width: 125px;height:150px;display: flex;flex-direction:column;align-items: flex-start;justify-content: space-around;font-family:'Roboto', sans-serif;color:#fff;font-size: 18px;font-weight: 300;
+                    .websites-statistic-title-bottom{text-decoration: underline;}
+                }
+
+                .websites-statistic-params{display: flex;width:calc(100% - 130px);justify-content: space-between;align-items: flex-start;
+                    .websites-statistic-param-item{width: 25%;
+                        &.active{
+                            .websites-statistic-param-item-wrap{border-color:#fff;}
+                        }
+                        .websites-statistic-param-item-wrap{max-width:120px;width:100%;height:150px;display: flex;flex-direction:column;align-items: center;justify-content: space-around;padding-top: 12px;text-align: center;border-radius:25px;border:1px solid #b2b2b2;
+                            &.active{border-color:#fff;}
+                            .websites-statistic-param-title{color:#fff;font-family: 'Roboto',sans-serif;font-size: 18px;font-weight: 300;}
+                            .websites-statistic-param-circle{position: relative;
+                                svg{fill:transparent;
+                                    circle{
+                                        &.circle-background{fill:transparent;stroke:#868681;stroke-width:3px;}
+                                        &.circle-lines{fill:transparent;stroke:#ffffff;stroke-width:3px;stroke-dashoffset: 0;transition: stroke-dashoffset 1s linear;}
+                                    }
+                                }
+                                &:before{content:attr(data-value)"%";position:absolute;width:100%;height:100%;display: flex;justify-content: center;align-items: center;font-family:'Roboto', sans-serif;font-weight:300;color:#fff;font-size: 12px;}
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+/* /websites */
