@@ -172,7 +172,7 @@
             .column-list{padding-top: 25px;}
         }
 
-        .column-list-sites{
+        .column-list-sites{max-width:100%;
 
             .column-list-sites-filter{opacity:1;transition:opacity 300ms ease;
                 &.adding{opacity:0;}
@@ -209,6 +209,7 @@
                     }
                 }
                 .sites-filter-slider{opacity:1;position:relative;z-index: 1;transition:all 300ms ease;
+                    &.slick-slider{margin-bottom: 0;}
                     .sites-filter-slider-item{font-size: 20px;font-weight: 300;font-family: 'Roboto Condensed', sans-serif;color:#fff;padding:12px 10px;line-height: 1.25;cursor:pointer;transition:all 300ms ease;
                         &.active{background-color:rgba(0, 0, 0, .15);}
                         &:hover:not(.active){background-color:rgba(255,255,255, .15);}

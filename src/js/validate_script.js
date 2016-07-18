@@ -232,7 +232,19 @@ function fancyboxForm(){
                 slidesToShow:5,
                 dots:false,
                 arrows:true,
-                vertical:true
+                vertical:true,
+                focusOnSelect:true,
+                responsive: [
+                    {
+                      breakpoint: 992,
+                      settings: {
+                        vertical:false,
+
+                        centerMode: true,
+                        customPadding:0
+                      }
+                    }
+                ]
             });
 
         }

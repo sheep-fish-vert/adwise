@@ -45,6 +45,31 @@
 
     /* /event-list, careers-list */
 
+    /* websites-page */
+
+        .websites-page{
+            .column-list-sites{
+
+                .column-list-sites-filter{
+                    ul{justify-content: space-around;}
+                }
+
+                .websites-slider{
+                    .websites-slider-wrap{min-height: 0;padding:0 0 40px 0;}
+                    .sites-filter-slider{
+                        .slick-arrow{transform-origin:50% 50%;transform:rotate(-90deg);
+                            &.slick-next{bottom:-30px;left:calc(50% + 5px);}
+                            &.slick-prev{bottom:-30px;top:auto;left:calc(50% - 36px);}
+                        }
+                        .sites-filter-slider-item{text-align: center;}
+                    }
+                }
+
+            }
+        }
+
+    /* /websites-page */
+
 }
 @media screen and (max-width: 767px){
 
