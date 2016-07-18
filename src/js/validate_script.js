@@ -228,6 +228,12 @@ function fancyboxForm(){
 
             });
 
+            $('.sites-filter-slider').on('afterChange', function(slick, currentSlide){
+                if($(window).width() < 666){
+                    $('.websites-slider-wrap .slick-current').click();
+                }
+            });
+
             $('.sites-filter-slider').slick({
                 slidesToShow:5,
                 dots:false,
@@ -239,10 +245,17 @@ function fancyboxForm(){
                       breakpoint: 992,
                       settings: {
                         vertical:false,
-
                         centerMode: true,
-                        customPadding:0
+                        customPadding:0,
+                        slidesToShow:3
                       }
+                    },
+                    {
+                        breakpoint:666,
+                        settings:{
+                            slidesToShow:1,
+                            vertical:false
+                        }
                     }
                 ]
             });
@@ -255,14 +268,14 @@ function fancyboxForm(){
             $('.column-list-sites-filter, .websites-slider-wrap').addClass('not-ajax');
 
             $('.sites-filter-slider-item').removeClass('active');
-            clickedItem.addClass('active');
 
             var site = clickedItem.attr('data-site');
+            $('.sites-filter-slider-item[data-site="'+site+'"]').addClass('active');
 
             $('.websites-content').addClass('loading');
 
             setTimeout(function(){
-
+                $('.websites-content').css({'height':$('.websites-content').outerHeight()+'px'});
                 $('.websites-content .loading-by-ajax').remove();
 
                 $.ajax({
@@ -279,7 +292,18 @@ function fancyboxForm(){
 
                         $('.websites-content').append('<div class="websites-text loading-by-ajax loading">'+websiteData.text+'</div><div class="websites-audience loading-by-ajax loading"><div class="websites-audience-title">Audience</div><div class="websites-audience-main"><div clas="websites-audience-icon"><img src="images/female-icon.png" alt="" /></div><div class="websites-audience-text">'+websiteData.audience.female+'</div></div><div class="websites-audience-main"><div clas="websites-audience-icon"><img src="images/male-icon.png" alt="" /></div><div class="websites-audience-text">'+websiteData.audience.male+'</div></div></div><div class="websites-statistic loading-by-ajax loading"><div class="websites-statistic-title"><div class="websites-statistic-title-top">Ad formats</div><div class="websites-statistic-title-bottom">Efficiency</div></div><div class="websites-statistic-params"><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Banners</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.banners+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Branding</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.branding+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Clickunder</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.clickunder+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Pre-roll</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.pre_roll+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div></div></div>');
 
-                        $('.websites-content').removeClass('loading');
+
+                        var contentPaddingTop = parseInt($('.websites-content').css('padding-top'));
+                        var contentPaddingBottom = parseInt($('.websites-content').css('padding-bottom'));
+                        var newHeight = contentPaddingTop + contentPaddingBottom;
+
+                        $('.loading-by-ajax').each(function(){
+
+                            newHeight = newHeight + $(this).outerHeight(true);
+
+                        });
+
+                        $('.websites-content').removeClass('loading').css({'height':newHeight+'px'});
 
                         var time = 300;
 
@@ -292,6 +316,7 @@ function fancyboxForm(){
 
                                 if(item.is('.websites-statistic')){
                                     svgCircles();
+                                    $('.websites-content').css('height', 'auto');
                                 }
 
                             },time);
@@ -322,9 +347,9 @@ function fancyboxForm(){
 
             var chossenFilter = $(this).attr('data-sites');
 
-            $('.websites-slider-wrap').addClass('loading');
+            $('.websites-slider-wrap, .websites-content').addClass('loading');
 
-            setTimeout(function(){
+
 
                 if($('.sites-filter-slider').is('.slick-slider')){
                     $('.sites-filter-slider').slick('destroy');
@@ -342,27 +367,28 @@ function fancyboxForm(){
                         if(typeof data != 'object'){
                             filterData = JSON.parse(data);
                         }
+                        setTimeout(function(){
 
-                        var objectLength = filterData.length;
+                            var objectLength = filterData.length;
 
-                        filterData.forEach(function(item, index){
+                            filterData.forEach(function(item, index){
 
-                            $('.sites-filter-slider').append('<div class="sites-filter-slider-item" data-site='+item.site+'>'+item.name+'</div>');
+                                $('.sites-filter-slider').append('<div class="sites-filter-slider-item" data-site='+item.site+'>'+item.name+'</div>');
 
-                            if(index == (objectLength-1)){
+                                if(index == (objectLength-1)){
 
-                                sliderInit();
+                                    sliderInit();
 
-                            }
+                                }
 
-                        });
+                            });
 
-
+                        }, 1000);
 
                     }
                 });
 
-            }, 300);
+
 
         });
 

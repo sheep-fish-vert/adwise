@@ -50,21 +50,29 @@
         .websites-page{
             .column-list-sites{
 
-                .column-list-sites-filter{
-                    ul{justify-content: space-around;}
+                .column-list-sites-filter{margin-bottom: 10px;
+                    ul{justify-content: space-around;
+                        li{
+                            .sites-text{font-size: 20px;}
+                        }
+                    }
                 }
 
-                .websites-slider{
+                .websites-slider{min-height:95px;
                     .websites-slider-wrap{min-height: 0;padding:0 0 40px 0;}
                     .sites-filter-slider{
+                        .slick-list{height:49px;overflow: hidden;}
                         .slick-arrow{transform-origin:50% 50%;transform:rotate(-90deg);
-                            &.slick-next{bottom:-30px;left:calc(50% + 5px);}
-                            &.slick-prev{bottom:-30px;top:auto;left:calc(50% - 36px);}
+                            &.slick-next{bottom:-35px;top:auto;left:calc(50% + 5px);}
+                            &.slick-prev{bottom:-35px;top:auto;left:calc(50% - 36px);}
                         }
                         .sites-filter-slider-item{text-align: center;}
                     }
                 }
 
+            }
+            .websites-content{padding:50px 0 45px 0;
+                .websites-text{min-height:0;margin-bottom: 30px;text-align: center;}
             }
         }
 
@@ -117,6 +125,19 @@
 
     /* event-list, careers-list */
 
+    /* websites-page */
+
+        .websites-page{
+            .websites-content{
+                .websites-statistic{
+                    .websites-statistic-title{display:none;}
+                    .websites-statistic-params{width: 100%;}
+                }
+            }
+        }
+
+    /* /websites-page */
+
 }
 @media screen and (max-width: 666px){
 
@@ -147,6 +168,26 @@
         }
 
     /* /news-list */
+
+    /* websites-page */
+
+        .websites-page{
+            .websites-content{
+                .websites-audience{flex-wrap:wrap;text-align: center;
+                    .websites-audience-title{width: 100%;margin-bottom: 5px;}
+                    .websites-audience-main{width: 50%;justify-content: center;}
+                }
+                .websites-statistic{
+                    .websites-statistic-params{flex-wrap:wrap;
+                        .websites-statistic-param-item{width: 50%;margin-bottom: 15px;
+                            .websites-statistic-param-item-wrap{height: 120px;}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /websites-page */
 
 }
 @media screen and (max-width: 479px){
