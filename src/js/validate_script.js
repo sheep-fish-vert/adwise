@@ -367,6 +367,7 @@ function fancyboxForm(){
                         if(typeof data != 'object'){
                             filterData = JSON.parse(data);
                         }
+
                         setTimeout(function(){
 
                             var objectLength = filterData.length;
