@@ -159,13 +159,213 @@ function fancyboxForm(){
     'closeBtn' : true,
     fitToView:true,
     padding:'0'
-  })
+  });
 }
+
+/* websites */
+
+    function websitesScript(){
+
+        // loading svg website circles
+        function svgCircles(){
+
+            var circleTime = 0;
+            var websitesParamLenght = $('.websites-statistic-param-circle').length;
+            var maxValue = 0;
+
+            $('.websites-statistic-param-circle').each(function(index){
+
+                var percent = parseInt($(this).attr('data-value'));
+                var circle = $(this).find('.circle-lines');
+                var circleRadius = circle.attr('r');
+                var circleLength = Math.PI*(circleRadius*2);
+
+                circle.css({'stroke-dasharray':circleLength+'px','stroke-dashoffset':circleLength+'px','transition':' stroke-dashoffset 0s linear'});
+                var circleLengthPercent = ((100-percent)/100)*circleLength;
+
+                circleTime = circleTime + 300;
+
+                setTimeout(function(){
+                    circle.css({'stroke-dashoffset':circleLengthPercent+'px','transition':' stroke-dashoffset 1s linear'});
+                },circleTime);
+
+                var textItem = $(this);
+                var textCurrValue = 0;
+                var textTimeValue = 1000/percent;
+
+                var timerId = setInterval(function(){
+                    textItem.find('.circle-value-text').text(textCurrValue+'%');
+                    textCurrValue = textCurrValue + 1;
+                    if(textCurrValue > percent){
+                        clearInterval(timerId);
+                    }
+                },textTimeValue);
+
+                if(percent > maxValue){
+                    maxValue = percent;
+                }
+
+                if(index == (websitesParamLenght - 1)){
+                    $('.websites-statistic-param-circle[data-value='+maxValue+']').each(function(){
+                        $(this).parents('.websites-statistic-param-item-wrap').addClass('active');
+                    });
+                    $('.column-list-sites-filter, .websites-slider-wrap').removeClass('not-ajax');
+                }
+
+            });
+        }
+
+        // website slider initialization
+        function sliderInit(){
+
+            $('.sites-filter-slider').init('init', function(event, slick){
+
+                $('.column-list-sites-filter').removeClass('adding');
+                $('.websites-slider-wrap').removeClass('loading');
+                setTimeout(function(){ // working for ajax. Do not delete it
+                   websitesSliderItemClicking($('.websites-slider-wrap .slick-current'));
+               },0);
+
+            });
+
+            $('.sites-filter-slider').slick({
+                slidesToShow:5,
+                dots:false,
+                arrows:true,
+                vertical:true
+            });
+
+        }
+
+        // clicking by webside slider item
+        function websitesSliderItemClicking(clickedItem){
+
+            $('.column-list-sites-filter, .websites-slider-wrap').addClass('not-ajax');
+
+            $('.sites-filter-slider-item').removeClass('active');
+            clickedItem.addClass('active');
+
+            var site = clickedItem.attr('data-site');
+
+            $('.websites-content').addClass('loading');
+
+            setTimeout(function(){
+
+                $('.websites-content .loading-by-ajax').remove();
+
+                $.ajax({
+                    url:'js/json/website_content.json',
+                    data:{action:'website_content_load', siteName:site},
+                    method:'POST',
+                    success:function(data){
+
+                        var websiteData = data;
+
+                        if(typeof data != 'object'){
+                            websiteData = JSON.parse(data);
+                        }
+
+                        $('.websites-content').append('<div class="websites-text loading-by-ajax loading">'+websiteData.text+'</div><div class="websites-audience loading-by-ajax loading"><div class="websites-audience-title">Audience</div><div class="websites-audience-main"><div clas="websites-audience-icon"><img src="images/female-icon.png" alt="" /></div><div class="websites-audience-text">'+websiteData.audience.female+'</div></div><div class="websites-audience-main"><div clas="websites-audience-icon"><img src="images/male-icon.png" alt="" /></div><div class="websites-audience-text">'+websiteData.audience.male+'</div></div></div><div class="websites-statistic loading-by-ajax loading"><div class="websites-statistic-title"><div class="websites-statistic-title-top">Ad formats</div><div class="websites-statistic-title-bottom">Efficiency</div></div><div class="websites-statistic-params"><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Banners</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.banners+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Branding</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.branding+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Clickunder</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.clickunder+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Pre-roll</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.pre_roll+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div></div></div>');
+
+                        $('.websites-content').removeClass('loading');
+
+                        var time = 300;
+
+                        $('.loading-by-ajax').each(function(){
+
+                            var item = $(this);
+
+                            setTimeout(function(){
+                                item.removeClass('loading');
+
+                                if(item.is('.websites-statistic')){
+                                    svgCircles();
+                                }
+
+                            },time);
+
+                            time = time + 200;
+
+                        });
+
+
+                    }
+                });
+
+            },300);
+
+        }
+
+        $(document).on('click', '.websites-slider-wrap:not(.not-ajax) .sites-filter-slider-item', function(){
+            websitesSliderItemClicking($(this));
+        });
+
+        // clicing by website filter item
+        $(document).on('click', '.column-list-sites-filter:not(.adding):not(.not-ajax) li', function(){
+
+            $('.column-list-sites-filter').addClass('adding');
+
+            $('.column-list-sites-filter li').removeClass('active');
+            $(this).addClass('active');
+
+            var chossenFilter = $(this).attr('data-sites');
+
+            $('.websites-slider-wrap').addClass('loading');
+
+            setTimeout(function(){
+
+                if($('.sites-filter-slider').is('.slick-slider')){
+                    $('.sites-filter-slider').slick('destroy');
+                    $('.sites-filter-slider-item').remove();
+                }
+
+                $.ajax({
+                    url:'js/json/website_slider.json',
+                    data:{action:"websites_slider_filtering", filter:chossenFilter},
+                    method:'POST',
+                    success:function(data){
+
+                        var filterData = data;
+
+                        if(typeof data != 'object'){
+                            filterData = JSON.parse(data);
+                        }
+
+                        var objectLength = filterData.length;
+
+                        filterData.forEach(function(item, index){
+
+                            $('.sites-filter-slider').append('<div class="sites-filter-slider-item" data-site='+item.site+'>'+item.name+'</div>');
+
+                            if(index == (objectLength-1)){
+
+                                sliderInit();
+
+                            }
+
+                        });
+
+
+
+                    }
+                });
+
+            }, 300);
+
+        });
+
+        $('.column-list-sites-filter li').eq(0).click();
+
+    }
+
+/* /websites */
 
 $(document).ready(function(){
 
    validate('.contact-form form', {submitFunction:validationCall});
    Maskedinput();
    fancyboxForm();
+
+   websitesScript();
 
 });
