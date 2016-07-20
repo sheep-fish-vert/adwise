@@ -311,3 +311,22 @@
     }
 
 /* /animations */
+
+/* parallax */
+
+    .blur-filter{display: none;}
+
+    .parallax-block{position: fixed;top:0;left:0;width: 100%;height: 100%;
+        img{max-width: none;min-width:100%;position: relative;top:0;left:50%;transform:translate(-50%, 0);}
+        .parallax-image-top, .parallax-image-bottom{position:absolute;top:0;left:-15px;width: 100%;height:100%;overflow: hidden;}
+        .parallax-image-bottom{top:100%;}
+        .parallax-images{position: fixed;top:0;left:0;width: calc(100% + 30px);height: calc(100% + 30px);}
+        .parallax-blur{position: fixed;top:0;left:0;border-top:1px solid #9b9692;overflow: hidden;width: calc(100% + 30px);height:calc(100% + 30px);transform:translate(0, 400px);
+            img{transform:translate(-50%, -400px);filter:blur(12px);filter:url(#blur);}
+        }
+
+    &~.main{padding-top:400px;}
+
+    }
+
+/* /parallax */
