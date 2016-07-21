@@ -114,7 +114,7 @@
 
         $(window).resize(function(){
 
-            pageParamsWrite()
+            pageParamsWrite();
             parallaxScrolling();
 
         });
@@ -127,11 +127,13 @@
 
 $(document).ready(function(){
 
-    parallaxScroll();
+
 
 });
 
 $(window).load(function(){
+
+    parallaxScroll();
 
 });
 
