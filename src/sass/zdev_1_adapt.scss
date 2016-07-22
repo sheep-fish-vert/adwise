@@ -17,7 +17,7 @@
 
     /* column-list */
 
-        .column-list-wrap{padding-top: 20px;
+        .column-list-wrap{padding-top: 20px;display: block;position: relative;
 
             .column-title{min-height:0;text-align: center;padding-bottom: 5px;}
 
@@ -78,6 +78,24 @@
 
     /* /websites-page */
 
+    /* services */
+
+        .services{
+            .right-column{width: 100%;}
+        }
+
+    /* /services */
+
+    /* parallax */
+
+        .parallax-block{
+            &.second-type{
+                .parallax-blur{display: none;}
+            }
+        }
+
+    /* /parallax */
+
 }
 @media screen and (max-width: 767px){
 
@@ -137,6 +155,35 @@
         }
 
     /* /websites-page */
+
+    /* services */
+
+        .services{
+            .right-column{
+                .creatives-wrap{
+                    .tab-item{
+                        .wrap-more-info{
+                            .more-info-num{margin-top: -10px;}
+                            .more-info-text{margin-top: -10px;}
+                        }
+                        .text-wrap{text-align: center;}
+                        .wrap-flex{flex-wrap:wrap;
+                            .text-wrap{width: 100%;}
+                            &.wrap-text-icon-row{
+                                .text-wrap{width: 100%;}
+                            }
+                            &.align-center{flex-direction:column;justify-content: center;align-items: center;
+                                .wrap-more-info{background-image:url(../images/market-middle-text-bg.png);width: 200px;height:150px;margin-bottom: 25px;}
+                            }
+                            .icon{width: 50%;margin-bottom: 10px;}
+                        }
+                        .wrap-text-icon{margin-bottom: 20px;}
+                    }
+                }
+            }
+        }
+
+    /* /services */
 
 }
 @media screen and (max-width: 666px){

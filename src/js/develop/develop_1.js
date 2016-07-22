@@ -24,10 +24,8 @@
 
                 windowHeight = $(window).height();
 
-                blurParallaxPadding = parseInt($('.main').css('padding-top'));
-                if($('header').css('position') != 'fixed'){
-                    blurParallaxPadding = blurParallaxPadding + $('header').height();
-                }
+                blurParallaxPadding = parseInt($('.main').css('padding-top')) + parseInt($('header').height());
+
                 documentPercScrollForTopImage = $('.global-wrapper').height() / 4;
                 imgTopHeight = $('.parallax-images .parallax-image-top img').height();
 
@@ -68,7 +66,6 @@
                         if((scrolled+windowHeight) > documentPercScrollForBottomImage){
 
                             $('.parallax-image-bottom').removeClass('hide');
-
 
                             var bottomScroller = scrolled+windowHeight - documentPercScrollForBottomImage;
                             var pixForBottomScrolling = (windowHeight * bottomScroller * 2) / bottomImageArea;
@@ -232,6 +229,67 @@
 
 /* /parallax scroll */
 
+/* left column scroll */
+
+    function leftColumnScroll(){
+
+        function leftColumnScrolling(){
+
+            if($(window).width() > 992){
+
+                var minHeight = $('.column-list-wrap').height()+parseInt($('.column-list-wrap').css('padding-top'));
+
+                $('.left-column').css({'min-height':minHeight+'px'});
+
+                var topm = parseInt($('header').height()) - 10;
+
+                if($(window).scrollTop() < topm){
+                    $('.column-list-wrap').css({'top':'-'+$(window).scrollTop()+'px'});
+                }else{
+                    $('.column-list-wrap').css({'top':'-'+topm+'px'});
+                }
+
+                var moreThanFooter = $(window).scrollTop()+$('.column-list-wrap').height();
+                console.log(moreThanFooter, $('.footer').offset().top);
+                if(moreThanFooter > $('.footer').offset().top){
+                    var transp = $('.footer').offset().top - moreThanFooter;
+                    $('.column-list-wrap').css({'transform':'translate(0, '+transp+'px)'});
+                }else{
+                    $('.column-list-wrap').css({'transform':'translate(0, 0)'});
+                }
+
+            }else{
+
+                $('.left-column, .column-list-wrap').removeAttr('style');
+
+            }
+
+        };
+
+        $(document).on('click', '.tabs li', function(){
+
+            leftColumnScrolling();
+
+        });
+
+        leftColumnScrolling();
+
+        $(window).resize(function(){
+
+            leftColumnScrolling();
+
+        });
+
+        $(window).scroll(function(){
+
+            leftColumnScrolling();
+
+        });
+
+    }
+
+/* left column scroll */
+
 /* global-wrapper */
 
     function globalWrapperMinHeight(){
@@ -254,6 +312,8 @@ $(window).load(function(){
     parallaxScroll();
 
     globalWrapperMinHeight();
+
+    leftColumnScroll();
 
 });
 
