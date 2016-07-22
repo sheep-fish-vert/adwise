@@ -24,7 +24,10 @@
 
                 windowHeight = $(window).height();
 
-                blurParallaxPadding = parseInt($('.main').css('padding-top')) + $('header').height();
+                blurParallaxPadding = parseInt($('.main').css('padding-top'));
+                if($('header').css('position') != 'fixed'){
+                    blurParallaxPadding = blurParallaxPadding + $('header').height();
+                }
                 documentPercScrollForTopImage = $('.global-wrapper').height() / 4;
                 imgTopHeight = $('.parallax-images .parallax-image-top img').height();
 
@@ -129,6 +132,8 @@
 
         if($('.second-type').length){
 
+            // page params
+
             var imageHeight = 0;
             var windowHeight = 0;
             var windowWidth = 0;
@@ -136,14 +141,16 @@
             var leftColWidth = 0;
             var rightColWidth = 0;
 
+            // page params write
+
             function secondTypeParamsParallax(){
 
                 windowHeight = $(window).height();
                 windowWidth = $(window).width();
-                imageHeight = $('.parallax-image-top img.active').height();
-                wrapperWidth = $('.main-wrap.tabs').width();
-                leftColWidth = $('.left-column').outerWidth();
-                rightColWidth = $('.right-column').outerWidth();
+
+                wrapperWidth = $('.mbox.bigger-mbox').outerWidth();
+                leftColWidth = $('.left-column').outerWidth() + parseInt($('.mbox').css('padding-left'));
+                rightColWidth = $('.right-column').outerWidth() + parseInt($('.mbox').css('padding-left'));
 
                 var freeSpace = (windowWidth - wrapperWidth) / 2;
 
@@ -155,15 +162,43 @@
 
                 $('.parallax-blur').css({'width':rightParallaxWidth+'px'});
 
+                $('.parallax-blur .parallax-image-top img').css({'left':'-'+leftParallaxWidth+'px'});
+                $('.parallax-block img').css({'min-width':windowWidth+'px'});
+
+                if($('.parallax-tabs').length){
+                    imageHeight = $('.parallax-image-top img.active').height();
+                }else{
+                    imageHeight = $('.parallax-image-top img').height();
+                }
+
             };
 
             secondTypeParamsParallax();
 
+            $(window).resize(function(){
+
+                secondTypeParamsParallax();
+                secondTypeParallaxScrolling();
+
+            });
+
+            // paralax scrolling
+
             function secondTypeParallaxScrolling(){
 
-                var scrolled = $(window).scrollTop();
+                var scrolled = $(window).scrollTop() * 0.4;
 
+                var maxImageParallax = imageHeight - windowHeight;
 
+                if(scrolled > maxImageParallax){
+
+                    $('.parallax-image-top').css({'top':'-'+maxImageParallax+'px'});
+
+                }else{
+
+                    $('.parallax-image-top').css({'top':'-'+scrolled+'px'});
+
+                }
 
             };
 
@@ -172,6 +207,22 @@
             $(window).scroll(function(){
 
                 secondTypeParallaxScrolling();
+
+            });
+
+        }
+
+        // parallax tabs
+
+        if($('.tabs-parallax').length){
+
+            $(document).on('click', '.tabs .parallax-tab-item', function(){
+
+                var index = $(this).index();
+
+                $('.parallax-block img').removeClass('active');
+                $('.parallax-images img').eq(index).addClass('active');
+                $('.parallax-blur img').eq(index).addClass('active');
 
             });
 

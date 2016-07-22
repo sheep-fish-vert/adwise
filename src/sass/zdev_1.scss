@@ -319,7 +319,7 @@
     .parallax-block{position: fixed;top:0;left:0;width: 100%;height: 100%;
 
         img{max-width: none;min-width:100%;position: relative;top:0;left:50%;transform:translate(-50%, 0);}
-        .parallax-image-top, .parallax-image-bottom{position:absolute;top:0;left:-15px;width: 100%;height:100%;transition:opacity 300ms ease;
+        .parallax-image-top, .parallax-image-bottom{position:absolute;top:0;left:0;width: 100%;height:100%;transition:opacity 300ms ease;
             &.hide{opacity: 0;}
         }
         .parallax-images{position: fixed;top:0;left:0;width: calc(100% + 30px);height: calc(100% + 30px);}
@@ -330,13 +330,25 @@
         .parallax-image-top{z-index: 1;}
         .parallax-image-bottom{top:auto;bottom:0;}
 
+        .parallax-blur{transition:filter 300ms ease;
+            .parallax-image-top{
+                img{filter:blur(12px);filter:url(#blur);}
+            }
+            .parallax-image-bottom{
+                img{filter:blur(12px);filter:url(#blur);}
+            }
+        }
+
         &.first-type{
-            .parallax-blur{transform:translate(0, 460px);transition:filter 300ms ease;
+
+            .parallax-image-top, .parallax-image-bottom{left:-15px;}
+
+            .parallax-blur{
                 .parallax-image-top{
-                    img{transform:translate(-50%, -460px);filter:blur(12px);filter:url(#blur);}
+                    img{transform:translate(-50%, -460px);}
                 }
                 .parallax-image-bottom{
-                    img{transform:translate(-50%, 0);filter:blur(12px);filter:url(#blur);}
+                    img{transform:translate(-50%, 0);}
                 }
             }
 
@@ -344,6 +356,23 @@
 
         }
 
+        &.second-type{
+
+            img{left:0;transform:translate(0, 0);}
+
+            .parallax-images{left:0;}
+
+            .parallax-blur{right:0;left:auto;
+
+            }
+
+        }
+
+        &.tabs-parallax{
+            img{opacity: 0;position: absolute;top:0;transition:opacity 300ms ease;
+                &.active{opacity: 1;position: relative;}
+            }
+        }
 
 
     }
