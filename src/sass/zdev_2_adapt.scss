@@ -18,14 +18,21 @@
 }
 @media screen and (max-width: 767px){
 
-    .login{ padding-top: 0;
-        .conteiner{padding-top: 0;}
-    } 
+    /* login */
+
+        .login{ padding-top: 0;
+            .conteiner{padding-top: 0;}
+        } 
+
+    /* login */
 
 }
 @media screen and (max-width: 666px){
+    /* login */
 
-    .login .conteiner .tabber .tab-content{min-height: 450px;}
+        .login .conteiner .tabber .tab-content{min-height: 450px;}
+
+    /* login */
 
 }
 @media screen and (max-width: 479px){
