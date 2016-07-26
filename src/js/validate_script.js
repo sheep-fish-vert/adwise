@@ -402,6 +402,11 @@ function fancyboxForm(){
 $(document).ready(function(){
 
    validate('.contact-form form', {submitFunction:validationCall});
+
+   validate('.get-in-t', {submitFunction:validationCall});
+   validate('.login-form', {submitFunction:validationCall});
+
+   
    Maskedinput();
    fancyboxForm();
 
