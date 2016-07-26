@@ -20,11 +20,11 @@
                     .con{ display: none;
                         &.active{display: block;}
                         form{
-                            .contact-form-title{ padding-bottom: 33px;
+                            .contact-form-title{ 
                                 p{ margin: 0; font-size: 17px; font-weight: 300; font-family: "ProximaNovaScOsf"; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1.2;  text-align: center; padding-top: 50px; }
-                                h5{ margin: 0;  font-weight: 300; font-size: 27px; font-family: "ProximaNovaScOsf";   color: rgb(255, 255, 255); line-height: 1.2; text-align: center; padding-top: 65px;}
+                                h5{ margin: 0;  font-weight: 300; font-size: 27px; font-family: "ProximaNovaScOsf";   color: rgb(255, 255, 255); line-height: 1.2; text-align: center; padding-top: 57px; padding-bottom: 24px; }
                             }
-                            .form_input{ position: relative; width: 100%;margin-bottom: 5px;
+                            .form_input{ position: relative; width: 100%;padding-bottom: 15px;
                                 input{width: 100%; background-color: transparent; border: none; border-bottom: 1px solid white; text-align: center; height: 45px; font-size: 16px; font-family: "Roboto";color: white; line-height: 1; text-align: center;
                                     &::-webkit-input-placeholder {color: rgb(174, 174, 174);}
                                     &:-moz-placeholder {color: rgb(174, 174, 174);opacity:1;}
@@ -34,7 +34,7 @@
                                 }
                                 .errorText{display: none !important; }
                             }
-                            .some-text{font-size: 17px; font-weight: 300; font-family: "ProximaNovaScOsf"; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1.2;  text-align: center; padding-top: 50px;}
+                            .some-text{font-size: 17px; font-weight: 300; font-family: "ProximaNovaScOsf"; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1.2;  text-align: center; padding-top: 5px;}
                             .contact-form-row-submit{ padding-top: 58px;
                                 .contact-submit{ height: 52px; background-color: #f6d241; max-width: 305px; width: 100%; border: none; outline: none; margin: 0 auto; border-radius: 26px; display: block;
                                     span{ font-size: 24px; font-family: "ProximaNovaScOsf"; color: rgb(0, 0, 0);   line-height: 52px;}
