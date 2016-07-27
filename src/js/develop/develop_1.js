@@ -235,32 +235,36 @@
 
         function leftColumnScrolling(){
 
-            if($(window).width() > 992){
+            if($('.column-list-wrap').length){
 
-                var minHeight = $('.column-list-wrap').height()+parseInt($('.column-list-wrap').css('padding-top'));
+                if($(window).width() > 992){
 
-                $('.left-column').css({'min-height':minHeight+'px'});
+                    var minHeight = $('.column-list-wrap').height()+parseInt($('.column-list-wrap').css('padding-top'));
 
-                var topm = parseInt($('header').height()) - 10;
+                    $('.left-column').css({'min-height':minHeight+'px'});
 
-                if($(window).scrollTop() < topm){
-                    $('.column-list-wrap').css({'top':'-'+$(window).scrollTop()+'px'});
+                    var topm = parseInt($('header').height()) - 10;
+
+                    if($(window).scrollTop() < topm){
+                        $('.column-list-wrap').css({'top':'-'+$(window).scrollTop()+'px'});
+                    }else{
+                        $('.column-list-wrap').css({'top':'-'+topm+'px'});
+                    }
+
+                    var moreThanFooter = $(window).scrollTop()+$('.column-list-wrap').height();
+
+                    if(moreThanFooter > $('.footer').offset().top){
+                        var transp = $('.footer').offset().top - moreThanFooter;
+                        $('.column-list-wrap').css({'transform':'translate(0, '+transp+'px)'});
+                    }else{
+                        $('.column-list-wrap').css({'transform':'translate(0, 0)'});
+                    }
+
                 }else{
-                    $('.column-list-wrap').css({'top':'-'+topm+'px'});
+
+                    $('.left-column, .column-list-wrap').removeAttr('style');
+
                 }
-
-                var moreThanFooter = $(window).scrollTop()+$('.column-list-wrap').height();
-                console.log(moreThanFooter, $('.footer').offset().top);
-                if(moreThanFooter > $('.footer').offset().top){
-                    var transp = $('.footer').offset().top - moreThanFooter;
-                    $('.column-list-wrap').css({'transform':'translate(0, '+transp+'px)'});
-                }else{
-                    $('.column-list-wrap').css({'transform':'translate(0, 0)'});
-                }
-
-            }else{
-
-                $('.left-column, .column-list-wrap').removeAttr('style');
 
             }
 
@@ -300,6 +304,127 @@
 
 /* /global-wrapper */
 
+/* event-page */
+
+    function eventPage(){
+
+        // need for calendar
+        var eventsDates = null;
+
+        // event-page slider
+
+        function eventPageSlider(){
+
+            var eventPageSlider = $('.event-page-slider');
+
+            eventPageSlider.on('init', function(slick){
+
+                var wrapWidth = parseInt($('.event-page-slider-wrap').width());
+                var slickLength = $('.event-page-slider-item').length;
+                var wrapItemsWidth = slickLength * wrapWidth;
+                $('.event-page-slider-item').width(wrapWidth);
+                $('.slick-track').css({'opacity':'1', 'width':wrapItemsWidth+'px', 'transform':'translate3d(-'+wrapWidth+'px, 0px, 0px)'});
+
+
+                console.log('s');
+            });
+
+            eventPageSlider.on('afterChange', function(slick, currentSlide){
+                console.log('d');
+            });
+
+            eventPageSlider.slick({
+                arrows:true,
+                dots:false,
+                slidesToShow:1
+            });
+
+        };
+
+        eventPageSlider();
+
+        // /event-page slider
+
+        // event-page calendar
+
+        function eventPageCalendar(){
+
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var dayNames = ['Su','Mo','Tu','We','Th','Fr','Sa'];
+
+            var date = new Date();
+
+            var currentMonth = date.getMonth();
+            var weekDay = date.getDay();
+            var dayDate = date.getDate();
+            var yearDate = date.getFullYear();
+
+            var firstDate = new Date();
+            firstDate.setDate(1);
+            var firstDateWeekDay = firstDate.getDay();
+
+            // var monthLength = new Date(yearDate, currentMonth, 0).getDate();
+
+            function loadCalendar(){
+
+                var firstSliderMonth = currentMonth - 2;
+                var monthNumArray = [];
+
+                for(var i = 0;i < 5;i++){
+
+                        monthNumArray[i] = {};
+
+                    if(firstSliderMonth == (-2)){
+                        monthNumArray[i].month = 10;
+                        monthNumArray[i].year = yearDate-1;
+                        monthNumArray[i].monthDaysLength = new Date(monthArray[i].year, 11, 0).getDate();
+                    }else if(firstSliderMonth == (-1)){
+                        monthNumArray[i].month = 11;
+                        monthNumArray[i].year = yearDate-1;
+                        monthNumArray[i].monthDaysLength = new Date(monthArray[i].year+1, 0, 0).getDate();
+                    }else if(firstSliderMonth == 12){
+                        monthNumArray[i].month = 0;
+                        monthNumArray[i].year = yearDate+1;
+                        monthNumArray[i].monthDaysLength = new Date(monthArray[i].year, monthNumArray[i].month+1, 0).getDate();
+                    }else if(firstSliderMonth == 13){
+                        monthNumArray[i].month = 1;
+                        monthNumArray[i].year = yearDate+1;
+                        monthNumArray[i].monthDaysLength = new Date(monthArray[i].year, monthNumArray[i].month+1, 0).getDate();
+                    }else{
+                        monthNumArray[i].month = firstSliderMonth;
+                        monthNumArray[i].year = yearDate;
+                        var monthNumForCurrentMonth = monthNumArray[i].month + 1;
+                        if(monthNumForCurrentMonth == 12){
+                            monthNumArray[i].monthDaysLength = new Date(monthNumArray[i].year+1, 0, 0).getDate();
+                        }else{
+                            monthNumArray[i].monthDaysLength = new Date(monthNumArray[i].year, monthNumArray[i].month+1, 0).getDate();
+                        }
+
+                    }
+
+                    firstSliderMonth = firstSliderMonth + 1;
+
+                }
+
+
+
+                console.log(monthNumArray);
+
+            };
+
+            loadCalendar();
+
+        };
+
+        eventPageCalendar();
+
+        // /event-page calendar
+
+
+    }
+
+/* /event-page */
+
 
 $(document).ready(function(){
 
@@ -314,6 +439,8 @@ $(window).load(function(){
     globalWrapperMinHeight();
 
     leftColumnScroll();
+
+    eventPage();
 
 });
 

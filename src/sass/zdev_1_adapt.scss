@@ -10,6 +10,24 @@
 @media screen and (max-width: 1280px){
 
 }
+@media screen and (max-width: 1100px){
+
+    /* event-page */
+
+        .event-page{
+            .event-page-main{
+                .event-page-slider-wrap{
+                    .slick-arrow{
+                        &.slick-prev{left:-30px;}
+                        &.slick-next{right:-30px;}
+                    }
+                }
+            }
+        }
+
+    /* /event-page */
+
+}
 @media screen and (max-width: 1024px){
 
 }
@@ -185,6 +203,24 @@
 
     /* /services */
 
+    /* event-page */
+
+        .event-page{
+            .event-page-main{
+                .event-page-slider-main{margin-top:-370px;padding:0 10px;}
+                .event-page-slider-wrap{
+                    .event-page-slider-item-text{font-size: 33px;}
+                    .event-page-slider-item-img{min-height: 175px;}
+                    .slick-arrow{top:-35px;
+                        &.slick-prev{left:calc(50% - 30px);}
+                        &.slick-next{right: calc(50% - 30px);}
+                    }
+                }
+            }
+        }
+
+    /* /event-page */
+
 }
 @media screen and (max-width: 666px){
 
@@ -236,6 +272,25 @@
 
     /* /websites-page */
 
+    /* event-page */
+
+        .event-page{
+            .event-page-main{
+                .event-page-slider-wrap{
+                    .event-page-slider-item-text{font-size: 26px;}
+                    .event-page-slider-item-img{min-height: 105px;width: auto;}
+                    .event-page-slider-item-top{margin-bottom: 20px;}
+                    .event-page-slider-item-bottom{display: block;text-align: center;
+                        .event-page-date-period{margin-bottom: 10px;}
+                        .event-page-date-text{padding-left: 0;}
+                    }
+
+                }
+            }
+        }
+
+    /* /event-page */
+
 }
 @media screen and (max-width: 479px){
 
@@ -259,6 +314,16 @@
         }
 
     /* /event-list, careers-list */
+
+    /* event-page */
+
+        .event-page{
+            .event-page-slider-wrap{
+                .event-page-slider-item-text{font-size: 18px;}
+            }
+        }
+
+    /* /event-page */
 
 }
 @media screen and (max-width: 320px){
