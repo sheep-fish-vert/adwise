@@ -4,7 +4,7 @@
         <div class="event-page-slider-wrap">
             <div class="event-page-slider">
 
-                <div class="event-page-slider-item">
+                <div class="event-page-slider-item" data-event="first">
                     <div class="event-page-slider-item-top">
                         <div class="event-page-slider-item-img">
                             <img src="images/event-page-slider-img.png" alt="" />
@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class="event-page-slider-item">
+                <div class="event-page-slider-item" data-event="second">
                     <div class="event-page-slider-item-top">
                         <div class="event-page-slider-item-img">
                             <img src="images/event-page-slider-img.png" alt="" />
@@ -80,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="event-page-slider-item">
+                <div class="event-page-slider-item" data-event="third">
                     <div class="event-page-slider-item-top">
                         <div class="event-page-slider-item-img">
                             <img src="images/event-page-slider-img.png" alt="" />
@@ -121,28 +121,75 @@
             </div>
         </div>
     </div>
+    <div class="event-page-content-wrap">
+        <div class="mbox">
+            <div class="event-page-content">
 
-    <div class="event-page-content">
+                <div class="event-page-datepicker">
+                    <div class="event-page-title">select the date:</div>
+                    <div class="event-page-datepicker-content">
+                        <div class="event-page-datepicker-wrap">
+                            <div class="event-page-datepicker-top">
+                                <div class="event-page-datepicker-top-wrap">
 
-        <div class="event-page-datepicker">
-            <div class="event-page-datepiker-wrap">
-                <div class="event-page-datepciker-top">
+                                </div>
+                            </div>
+                            <div class="event-page-datepicker-days">
+                                <ul>
 
+                                </ul>
+                            </div>
+                            <div class="event-page-datepicker-bottom">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="event-page-datepicker-bottom">
 
+                <div class="event-page-form">
+                    <div class="event-page-form-content">
+                        <div class="event-page-title">arnage a meeting:</div>
+                        <div class="event-page-form-wrap">
+                            <form action="ajax.php" class="event-page-form-main">
+                                <div class="form_row">
+                                    <div class="form_input">
+                                        <input type="text" name="user_name" placeholder="Name*" required="required" />
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_input">
+                                        <input type="text" name="user_second_name" placeholder="Second name*" required="required" />
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_input">
+                                        <input type="email" name="user_email" placeholder="E-mail*" required="required" />
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_input">
+                                        <textarea type="text" name="user_message" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row hidden-row">
+                                    <div class="form-input">
+                                        <input type="hidden" name="user_chossen_date" value="" />
+                                    </div>
+                                </div>
+                                <div class="form_row form_submit">
+                                    <div class="form_input">
+                                        <button type="submit" class="button button-red">
+                                            <span>Send</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-
-        <div class="event-page-form">
-            <div class="event-page-form-wrap">
-                <form class="event-page-form-main">
-
-                </form>
-            </div>
-        </div>
-
     </div>
 
 </div>
