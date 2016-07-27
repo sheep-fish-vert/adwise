@@ -48,3 +48,62 @@
     }
 
 /* login */
+
+/* vacancy */
+    #svg-image-blur{display: none;}
+
+    .vacancy-wrap{ position: relative; // background-attachment: fixed; min-height: 500px; -webkit-filter: blur(2px); filter: url(#blur-effect-1);
+        .conter-s{position: relative;}
+        .smash{position: absolute; width: 1920px; top: 0; bottom: 0; left: 0; background-repeat: no-repeat;z-index: -1; background-size: 1920px 1080px; background-position: center center ; background-attachment: fixed;
+            &.blur-smash{-webkit-filter: blur(10px); filter: url(#blur-effect-1);}
+        }
+        .left-navi{ z-index: 2; overflow: hidden; position: fixed; left: 0; bottom: 0; top: 60px; border-right: 1px solid rgba(255,255,255,0.3); width: calc( (100% - 1366px)/2 + 415px);
+            .contr{ margin-left: calc(100% - 340px); padding-top: 90px;
+                .top-part{ font-size: 40px;  font-family: "ProximaNovaScOsf"; color: rgb(255, 255, 255); line-height: 1.2; text-transform: uppercase; padding-bottom: 45px;
+                    span{ font-weight: 300; display: block;}
+                    b{  font-weight: 600; display: block; }
+                }
+                .bot-navi{
+                    ul{list-style: none; padding: 0; margin: 0; background-color: rgba(0, 0, 0, 0.2); max-width: 320px;
+                        li{ color: white; padding: 20px; transition: all 0.3s; cursor: pointer; font-size: 18px;  font-family: "ProximaNovaScOsf";  text-transform: uppercase;
+                            &:hover{background-color: rgba(0, 0, 0,0.3);}
+                            &.curr{background-color: rgba(0, 0, 0,0.3);}
+                        }
+                    }
+                }
+
+            }
+
+        }
+        .right-conetein{ position: relative; z-index: 1;overflow: hidden;
+            .converter{margin-left: calc( (100% - 1366px)/2 + 415px);
+                .radi{max-width: 720px;
+                    .boxer{ max-width: 535px; margin: 0 auto; padding: 110px 0;}
+                }
+            }
+            .topper{ border-bottom: 1px solid white;
+                .ext{ display: flex; align-items: center; justify-content: flex-start; padding-bottom: 22px;
+                    img{ width: 22px; margin-right:25px; }
+                    span{ font-size: 18px; font-family: "Roboto"; color: rgb(255, 255, 255); font-weight: 300;}
+                } 
+            }
+            .boxer{
+                &>ul{ list-style: none; padding: 0; margin: 0;
+                    &>li{ padding-top: 75px;
+                        .t-page{padding-bottom: 40px; font-size: 18px; font-family: "Roboto"; color: rgb(255, 255, 255); line-height: 1.2; font-weight: 500;}
+                        .after-block{
+                            p{ margin: 0; font-size: 18px; font-family: "Roboto"; color: rgb(255, 255, 255); line-height: 1.2; font-weight: 300;}
+                            ul{ list-style: none;padding: 0; margin: 0;
+                                li{padding-left: 25px; position: relative; font-size: 18px; font-family: "Roboto";   color: rgb(255, 255, 255); line-height: 1.2; font-weight: 300; padding-bottom: 15px;
+                                    &:before{content: ''; position: absolute; top: 4px; left: 0; width: 15px; height: 15px; border-top: 1px solid #62ec5e; border-left: 1px solid #62ec5e; transform: rotate(135deg); }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+/* vacancy */
