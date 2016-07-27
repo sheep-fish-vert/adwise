@@ -67,7 +67,7 @@
                     ul{list-style: none; padding: 0; margin: 0; background-color: rgba(0, 0, 0, 0.2); max-width: 320px;
                         li{ color: white; padding: 20px; transition: all 0.3s; cursor: pointer; font-size: 18px;  font-family: "ProximaNovaScOsf";  text-transform: uppercase;
                             &:hover{background-color: rgba(0, 0, 0,0.3);}
-                            &.curr{background-color: rgba(0, 0, 0,0.3);}
+                            &.curr{background-color: rgba(0, 0, 0,0.3); }
                         }
                     }
                 }
@@ -78,7 +78,7 @@
         .right-conetein{ position: relative; z-index: 1;overflow: hidden;
             .converter{margin-left: calc( (100% - 1366px)/2 + 415px);
                 .radi{max-width: 720px;
-                    .boxer{ max-width: 535px; margin: 0 auto; padding: 110px 0;}
+                    .boxer{ max-width: 535px; margin: 0 auto; padding: 110px 0 400px;}
                 }
             }
             .topper{ border-bottom: 1px solid white;

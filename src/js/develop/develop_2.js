@@ -40,9 +40,9 @@ $(window).scroll(function(){
 
         var wt = $(window).scrollTop();
         $('.boxer>ul>li').each( function(){
-            
-            var fff = $(this).offset().top ;
-            if( (wt - fff < 150) && (wt - fff > -150) ){
+            var heCurr =  $(this).height() ;      
+            var fff = $(this).offset().top - 60 ;
+            if( (wt - fff < heCurr ) && (wt - fff > -1) ){
                 $('.bot-navi>ul>li').removeClass('curr').eq($(this).index()).addClass('curr');
             }
             
