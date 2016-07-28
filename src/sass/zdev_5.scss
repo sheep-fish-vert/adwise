@@ -52,14 +52,14 @@
             }
             &:hover{box-shadow: 0px 4px 32px 0px rgba(55, 39, 50, 0.25);}
         }
-        .button{ text-align: center; width: 100%; padding-top: 29px;
+        .button{ text-align: center; width: 100%; /*padding-top: 29px;*/
             a{ text-decoration: none; color: #fff; font:400 16px/37px 'Roboto'; text-align: center; display: inline-block; max-width: 200px; width: 100%; height: 37px; background-color: #fcc939; }
         }
-        .button-col{text-align: right; width: 100%; margin-top: 72px; padding-right: 61px;
-            a{ text-decoration: none;  color: #777;font: 300 20px/1.2 'ProximaNovaScOsf'; position: relative;
-                &:after{content: ''; display: inline-block; width: 25px; height: 25px; background-color: transparent; border-top:4px solid #626262;border-right:4px solid #626262; transform:rotate(45deg); position: absolute; right: -37px;transition: all 300ms;}
+        .button-col{text-align: right; width: 100%; margin-top: 72px; /*padding-right: 61px;*/
+            a{ text-decoration: none;  color: #777;font: 300 20px/1.2 'ProximaNovaScOsf'; position: relative;display: block;padding-right: 61px;
+                &:after{content: ''; display: inline-block; width: 25px; height: 25px; background-color: transparent; border-top:4px solid #626262;border-right:4px solid #626262; transform:rotate(45deg); position: absolute; right: 4px;transition: all 300ms;}
                 &:hover{
-                    &:after{right: -57px;}
+                    &:after{right: -23px;}
                 }
             }
         }
@@ -67,7 +67,7 @@
 /*END news----------------------------------------------------------*/
 /* header----------------------------------------------------------*/
 header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-index: 100; top:0;backface-visibility: hidden;
-    .mbox{max-width: 940px;}
+    .mbox{max-width: 1060px;}
     .header{ display: flex; justify-content: space-between; position: relative; padding-top: 20px;}
 
     .menu{ display: flex; justify-content: space-between; margin: 0; padding: 0;
