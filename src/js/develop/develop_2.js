@@ -31,11 +31,11 @@ $(document).ready(function(){
 
     /* incredable page vacancy */
 
-    if ( ($( ".vacancy-wrap" ).length == 1) && (($(window).width() - $.scrollbarWidth())< 992)  ){
-        $('.blur-smash').css('top', $('.left-navi').height() );
-    } else {
-        $('.blur-smash').css('top', 0 );
-    }
+        if ( ($( ".vacancy-wrap" ).length == 1) && (($(window).width() - $.scrollbarWidth())< 992)  ){
+            $('.blur-smash').css('top', $('.left-navi').height() );
+        } else {
+            $('.blur-smash').css('top', 0 );
+        }
 
 });
 
