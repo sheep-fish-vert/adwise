@@ -27,12 +27,16 @@
     header{z-index: 10;
         .header{ display: block;}
         .menu{ display: none; background-color: #fff; z-index: 10; padding-bottom: 30px; width: 100%; position: absolute; top: 60px; left: 0;
-            li{ width: 100%; text-align: center; padding: 0;
-                a{font: 300 28px/1.5 'ProximaNovaScOsf'; padding: 7px 0;
+            li{ width: 100%; text-align: center; padding: 0;text-align: center;
+                a{font: 300 28px/1.25 'ProximaNovaScOsf'; padding: 7px 0;display: inline-block;vertical-align: middle;
                     &:nth-child(2){ padding-left: 7px; margin-left: 7px;
                         &:before{ top: 12px; height: calc(100% - 24px); }
                     }
                 }
+            }
+            .second-level{
+                ul{border-width: 1px 0;border-style:solid;border-color:#ccc transparent;width: 100%;left:0;padding:10px 10px 10px 10px;}
+                .mobile-arrow{position: relative;display: inline-block;top:auto;left: 5px;transform:translate(0, 0);}
             }
         }
         .butter{ display: block;}
