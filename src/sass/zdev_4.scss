@@ -307,6 +307,9 @@ a.button-next{padding-left: 0;padding-right: 32px;
 }
 
 // creatives page
+.creatives-global{
+    &.global-wrapper{background-color:#eee;background-image:none;}
+}
 .creatives{padding-top: 105px;
     .creatives-wrap{position: relative;opacity: 0;transition:all ease .2s .5s;
         &.active{opacity: 1;}
