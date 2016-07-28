@@ -21,7 +21,7 @@
     // creatives
     .creatives{
         .creatives-slider{
-            .slick-prev, .slick-next{top: auto;bottom: -100px;
+            .slick-prev, .slick-next{top: auto;bottom: -50px;
                 &:after{}
             }
             .slick-prev{left: calc(50% - 50px)}
