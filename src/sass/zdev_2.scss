@@ -1,7 +1,7 @@
 /* login */
 
-    .login{ background-image: url(../images/login-bg.jpg); background-size: cover; background-position: center; padding-top: 80px;
-        .conteiner{ padding-top: 340px;
+    .login{
+        .conteiner{
             .mbox-s{ max-width: 500px; padding: 0 15px; margin: 0 auto; }
             .tabber{ padding-top: 50px; padding-bottom: 110px;
                 .tab-row{ width: 100%; display: flex; align-items: center; justify-content: space-around;
@@ -20,7 +20,7 @@
                     .con{ display: none;
                         &.active{display: block;}
                         form{
-                            .contact-form-title{ 
+                            .contact-form-title{
                                 p{ margin: 0; font-size: 17px; font-weight: 300; font-family: "ProximaNovaScOsf"; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1.2;  text-align: center; padding-top: 50px; }
                                 h5{ margin: 0;  font-weight: 300; font-size: 27px; font-family: "ProximaNovaScOsf";   color: rgb(255, 255, 255); line-height: 1.2; text-align: center; padding-top: 57px; padding-bottom: 24px; }
                             }
@@ -43,7 +43,7 @@
                         }
                     }
                 }
-            }        
+            }
         }
     }
 
@@ -85,7 +85,7 @@
                 .ext{ display: flex; align-items: center; justify-content: flex-start; padding-bottom: 22px;
                     img{ width: 22px; margin-right:25px; }
                     span{ font-size: 18px; font-family: "Roboto"; color: rgb(255, 255, 255); font-weight: 300;}
-                } 
+                }
             }
             .boxer{
                 &>ul{ list-style: none; padding: 0; margin: 0;
@@ -124,7 +124,7 @@
                      p{font-size: 16px; font-weight: 300; }
                      a{color: white; text-decoration: underline;}
                  }
-             } 
+             }
         }
         .left-navi .contr{
             .top-part { padding-bottom: 40px; border-bottom: 1px solid white; max-width: 320px; }
