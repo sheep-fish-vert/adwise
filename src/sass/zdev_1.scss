@@ -163,7 +163,7 @@
 
     .websites-page{
 
-        .column-list-wrap{padding-top: 45px;
+        .column-list-wrap{padding-top: 70px;width: 256px;display: block;
             .column-title{
                 h1, h2, h3{font-size: 42px;font-weight: 300;
                     b{font-weight: 700;}
@@ -369,12 +369,19 @@
 
     .event-page{
 
+        .event-page-title{font-size: 24px;color:#fff;font-weight: 500;text-transform: uppercase;text-align: center;padding:15px 0 25px 0;}
+
         .event-page-main{
 
-            .event-page-slider-main{padding:0 35px;margin-top: -385px;}
+            .event-page-slider-main{padding:0 35px;margin-top: -385px;height: 350px;position: relative;overflow: hidden;
+                &.loading{
+                    &:before{content:'';display: block;position: absolute;width: 100%;height: 100%;top:0;left:0;z-index: 2;}
+                }
+            }
 
-            .event-page-slider-wrap{max-width: 900px;width: 100%;margin:0px auto;
-
+            .event-page-slider-wrap{max-width: 900px;width: 100%;margin:0px auto;position: relative;z-index: 1;
+                .event-page-slider{margin-bottom: 0;}
+                .slick-list{max-height: 306px;}
                 .event-page-slider-item-top{overflow: hidden;border:1px solid #fff;display: flex;justify-content: space-between;align-items: stretch;margin-bottom: 40px;}
                 .event-page-slider-item-img{width: 200px;min-height:205px;position: relative;background-color: #fff;display: flex;justify-content: center;align-items: center;padding:10px 10px;}
                 .event-page-slider-item-text{color:#fff;font-size: 49px;font-family: 'Roboto', sans-serif;width: calc(100% - 200px);width: 100%;display: flex;align-items: center;justify-content: flex-end;flex-wrap:wrap;padding:10px 20px;line-height:1.25;
@@ -412,11 +419,105 @@
 
             }
 
+            .event-page-content{display: flex;justify-content: space-between;align-items: flex-start;padding: 40px 0 40px 0;
+
+                .event-page-datepicker{width: 320px;
+                    .event-page-datepicker-content{padding:30px 35px;background-color: #494949;transition:all 300ms ease;position: relative;
+                        &.loading{opacity: 0;
+                            &:before{content:'';display: block;position: absolute;width: 100%;height: 100%;z-index: 2;}
+                        }
+                    }
+
+                    .event-page-datepicker-top{overflow: hidden;margin-bottom: 30px;}
+                    .event-page-datepicker-top-wrap{width: calc(1000% / 6);display: flex;justify-content: space-between;align-items: center;position:relative;left:calc(100% / -3);transition:all 0ms ease;
+                        .event-page-datepicker-top-item{width: 20%;text-align: center;cursor:pointer;border-bottom:3px solid #6d6d6d;font-family: 'Roboto', sans-serif;font-weight: 300;font-size: 16px;padding-bottom: 10px;transition:all 300ms ease;
+                            &.active-month{color:#fff;border-color:#fff;}
+                        }
+                        &.moving{transition:all 300ms ease;
+                            &.moving-left{left:calc(100% / -1.5);}
+                            &.moving-right{left:0;}
+                        }
+                    }
+
+                    .event-page-datepicker-days{overflow:hidden;margin-bottom: 20px;
+                        ul{display: flex;justify-content: flex-start;align-items: stretch;list-style:none;padding:5px 0;margin:0;
+                            li{width: calc(100% / 7);font-family: 'Proxima Nova Condensed', 'ProximaNovaScOsf', sans-serif;text-transform: uppercase;color:#fff;font-weight: 300;font-size: 16px;text-align: center;}
+                        }
+                    }
+                    .event-page-datepicker-bottom{position: relative;transition:all 300ms ease;
+                        .calendar{position: absolute;left:0;top:0;opacity: 0;width: 100%;transition:all 300ms ease;z-index: 1;
+                            &.active-month{position: relative;opacity: 1;z-index:2;}
+                            .calendar-row{display: flex;justify-content: space-around;align-items: center;padding:8px 0;
+                                .calendar-col{width: calc(100% / 7);text-align: center;
+                                    .outside-date-wrap{font-family: 'Proxima Nova Condensed', 'ProximaNovaScOsf', sans-serif;font-weight: 300;color:#fff;font-size: 16px;position: relative;cursor: pointer;
+                                        &:before{content:'';display: block;position: absolute;left:50%;top:50%;z-index:0;width:30px;height: 30px;border-radius: 50%;background-color:rgba(138, 138, 138, .5);transform:translate(-50%, -50%) scale(0);transition:all 300ms ease;}
+                                        .inside-date-wrap{position: relative;z-index: 1;}
+                                        &:not(.current-day):not(.event-day):hover{
+                                            &:before{transform:translate(-50%, -50%) scale(1);}
+                                        }
+                                        &.current-day{
+                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: rgba(235, 87, 118, .5);}
+                                        }
+                                        &.event-day{
+                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: #edc142;}
+                                            &.chossen-day{
+                                                &:before{background-color: #58c446;}
+                                            }
+                                        }
+                                        &.chossen-day{
+                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: #00b0f9;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .event-page-form{width:calc(100% - 320px);padding-left: 19px;text-align: right;
+                    .event-page-form-content{max-width: 500px;width: 100%;display: inline-block;}
+
+                    input, textarea{border:1px solid #aaaaac;background-color:transparent;font-size: 16px;color:#fff;font-family: 'Roboto Condenced', arial;font-weight: 300;width: 100%;transition:all 300ms ease;
+                        &::-webkit-input-placeholder {color:#fff;font-family: 'Roboto Condenced', arial;font-weight: 300;}
+                        &:-moz-placeholder {color:#fff;opacity:1;font-family: 'Roboto Condenced', arial;font-weight: 300;}
+                        &::-moz-placeholder {color:#fff;opacity:1;font-family: 'Roboto Condenced', arial;font-weight: 300;}
+                        &:-ms-input-placeholder {color:#fff;font-family: 'Roboto Condenced', arial;font-weight: 300;}
+                        &.error{border-color:#ff0000;
+                            &::-webkit-input-placeholder {color:#ff0000;}
+                            &:-moz-placeholder {color:#ff0000;opacity:1;}
+                            &::-moz-placeholder {color:#ff0000;opacity:1;}
+                            &:-ms-input-placeholder {color:#ff0000;}
+                        }
+                        &+.errorText{display: none!important;}
+                        &:focus{border-color:#fff;}
+                    }
+                    input{padding:0px 13px 0px 13px;line-height: 40px;}
+                    textarea{padding:10px 13px 10px 13px;height:135px;resize:none;}
+
+                    .form_row{margin-bottom: 20px;
+                        &.hidden-row{display: none;}
+                        &:last-child{margin-bottom: 0;}
+                        &.form_submit{text-align: center;padding-top: 30px;}
+                    }
+
+                }
+
+            }
+
         }
 
     }
 
 /* /event-page */
+
+/* geo */
+
+    .geo-page{
+
+    }
+
+/* /geo */
 
 /* loading-circle */
 
@@ -425,6 +526,17 @@
     }
 
 /* /loading-circle */
+
+/* buttons */
+
+    .button{display: inline-block;max-width: 200px;width: 100%;line-height: 37px;height: 37px;background-color: #ccc;text-align: center;cursor: pointer;color:#fff;font-family: 'Roboto', sans-serif;font-size: 16px;border:none;border-radius:0;transition:all 300ms ease;
+        &:hover{background-color: #000;}
+        &.button-red{background-color: #eb5776;
+            &:hover{background-color: #ff0000;}
+        }
+    }
+
+/* /buttons */
 
 /* parallax */
 
@@ -467,7 +579,7 @@
             }
 
             &~.main{padding-top:400px;
-                &.event-page{padding-top: 435px;}
+                &.event-page{padding-top: 435px;position:relative;z-index: 1;}
             }
 
         }

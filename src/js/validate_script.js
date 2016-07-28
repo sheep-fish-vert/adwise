@@ -399,17 +399,387 @@ function fancyboxForm(){
 
 /* /websites */
 
+/* event-page */
+
+    function eventPage(){
+
+        // conteing events dates
+
+            var eventsDates = null;
+
+        // conteing events dates
+
+        // conteing chossen date
+
+            var chossenDate = null;
+
+        // contein chossen date
+
+        function eventPageSlider(){
+
+            var eventPageSlider = $('.event-page-slider');
+
+            eventPageSlider.on('init', function(slick){
+
+                var wrapWidth = parseInt($('.event-page-slider-wrap').width());
+                var slickLength = $('.event-page-slider-item').length;
+                var wrapItemsWidth = slickLength * wrapWidth;
+                $('.event-page-slider-item').width(wrapWidth);
+                $('.slick-track').css({'opacity':'1', 'width':wrapItemsWidth+'px', 'transform':'translate3d(-'+wrapWidth+'px, 0px, 0px)'});
+
+                var eventName = $('.event-page-slider-item.slick-current').attr('data-event');
+
+                changeCalendarEvents(eventName);
+
+            });
+
+            eventPageSlider.on('afterChange', function(slick, currentSlide){
+
+                var eventName = $('.event-page-slider-item.slick-current').attr('data-event');
+
+                changeCalendarEvents(eventName);
+
+            });
+
+            eventPageSlider.slick({
+                arrows:true,
+                dots:false,
+                slidesToShow:1
+            });
+
+        };
+
+        eventPageSlider();
+
+        // /event-page slider
+
+        // change calendar events by ajax
+
+            function changeCalendarEvents(eventName){
+
+                $('.event-page-slider-main, .event-page-datepicker-content').addClass('loading');
+
+                $.ajax({
+                    url:'js/json/data_events_'+eventName+'.json', // ajaxUrl
+                    method:"POST",
+                    data:{'action':'load_event_info_calendar','event_name':eventName},
+                    success:function(data){
+
+                        setTimeout(function(){
+
+                            eventsDates = data;
+                            if(typeof data != 'object'){
+                                eventsDates = JSON.parse(data);
+                            }
+
+                            loadCalendarInfo(eventsDates[0].year, eventsDates[0].month);
+
+                            loadingCalendarByLoop();
+
+                            lookingCurrentEventChossenDate();
+
+                            $('.event-page-slider-main, .event-page-datepicker-content').removeClass('loading');
+
+                        },300);
+
+                    }
+                });
+
+            }
+
+        // /change calendar events by ajax
+
+        // event-page calendar
+
+            dayNames.forEach(function(item, index){
+                if(index != 0){
+                    $('.event-page-datepicker-days ul').append('<li>'+item+'</li>');
+                }
+                if(index == (dayNames.length - 1)){
+                    $('.event-page-datepicker-days ul').append('<li>'+dayNames[0]+'</li>');
+                }
+            });
+
+            // showing calendar length
+
+                var calendarLength = 0;
+
+                function calendarLengthFunc(){
+                    calendarLength = 5;
+                    if($(window).width() < 768){
+                        calendarLength = 5; // change if on adaptation want arrows
+                    }
+                }
+
+                calendarLengthFunc();
+
+                $(window).resize(function(){
+                    calendarLengthFunc();
+                });
+
+            // /showing calendar length
+
+            var date = new Date();
+
+            var currentMonth = date.getMonth();
+            var weekDay = date.getDay();
+            var dayDate = date.getDate();
+            var yearDate = parseInt(date.getFullYear());
+
+            // loading calendar info into array
+
+            var monthNumArray = [];
+
+            function loadCalendarInfo(year, month){
+
+                var firstSliderMonth = month - 2;
+
+                for(var i = 0;i < calendarLength;i++){
+
+                        monthNumArray[i] = {};
+
+                    if(firstSliderMonth == (-2)){
+                        monthNumArray[i].month = 10;
+                        monthNumArray[i].year = +year- +1;
+                        monthNumArray[i].monthDaysLength = new Date(monthNumArray[i].year, 11, 0).getDate();
+                        monthNumArray[i].firstDate = new Date(monthNumArray[i].year, 10, 1).getDay();
+                    }else if(firstSliderMonth == (-1)){
+                        monthNumArray[i].month = 11;
+                        monthNumArray[i].year = +year- +1;
+                        monthNumArray[i].monthDaysLength = new Date(monthNumArray[i].year+1, 0, 0).getDate();
+                        monthNumArray[i].firstDate = new Date(monthNumArray[i].year, 11, 1).getDay();
+                    }else if(firstSliderMonth == 12){
+
+                        monthNumArray[i].month = 0;
+                        monthNumArray[i].year = +year+ +1;
+                        monthNumArray[i].monthDaysLength = new Date(monthNumArray[i].year, monthNumArray[i].month+1, 0).getDate();
+                        monthNumArray[i].firstDate = new Date(monthNumArray[i].year, 0, 1).getDay();
+                    }else if(firstSliderMonth == 13){
+                        monthNumArray[i].month = 1;
+                        monthNumArray[i].year = +year+ +1;
+                        monthNumArray[i].monthDaysLength = new Date(monthNumArray[i].year, monthNumArray[i].month+1, 0).getDate();
+                        monthNumArray[i].firstDate = new Date(monthNumArray[i].year, monthNumArray[i].month, 1).getDay();
+                    }else{
+                        monthNumArray[i].month = firstSliderMonth;
+                        monthNumArray[i].year = year;
+                        var monthNumForCurrentMonth = monthNumArray[i].month + 1;
+                        if(monthNumForCurrentMonth == 12){
+                            monthNumArray[i].monthDaysLength = new Date(monthNumArray[i].year+1, 0, 0).getDate();
+                        }else{
+                            monthNumArray[i].monthDaysLength = new Date(monthNumArray[i].year, monthNumArray[i].month+1, 0).getDate();
+                        }
+                        monthNumArray[i].firstDate = new Date(monthNumArray[i].year, monthNumArray[i].month, 1).getDay();
+
+                    }
+
+                    firstSliderMonth = firstSliderMonth + 1;
+
+                }
+
+            };
+
+            loadCalendarInfo(yearDate, currentMonth);
+
+            // /loading calendar info into array
+
+            // loading calendars on page
+
+                function loadingCalendarsOnPage(item, index){
+
+                    var dayPoint = 1;
+
+                    for(var i=0;i<5;i++){
+
+                        $('.calendar').eq(index).append('<div class="calendar-row"></div>');
+
+                        for(var j=1;j<8;j++){
+                            if(i == 0){
+                                if(j >= item.firstDate && item.firstDate != 0){
+                                    $('.calendar').eq(index).find('.calendar-row').eq(i).append('<div class="calendar-col"><span class="outside-date-wrap" data-date='+dayPoint+'><span class="inside-date-wrap">'+dayPoint+'</span></span></div>');
+                                    dayPoint++;
+                                }else{
+                                    if($('.calendar').eq(index).find('.calendar-row').eq(i).find('.calendar-col').length < 6){
+                                        $('.calendar').eq(index).find('.calendar-row').eq(i).append('<div class="calendar-col"></div>');
+                                    }else{
+                                        $('.calendar').eq(index).find('.calendar-row').eq(i).append('<div class="calendar-col"><span class="outside-date-wrap" data-date='+dayPoint+'><span class="inside-date-wrap">'+dayPoint+'</span></span></div>');
+                                        dayPoint++;
+                                    }
+                                }
+                            }else if(i == 4){
+                                if(dayPoint < item.monthDaysLength){
+                                    $('.calendar').eq(index).find('.calendar-row').eq(i).append('<div class="calendar-col"><span class="outside-date-wrap" data-date='+dayPoint+'><span class="inside-date-wrap">'+dayPoint+'</span></span></div>');
+                                    dayPoint++;
+                                }else{
+                                    $('.calendar').eq(index).find('.calendar-row').eq(i).append('<div class="calendar-col"></div>');
+                                }
+                            }else{
+                                $('.calendar').eq(index).find('.calendar-row').eq(i).append('<div class="calendar-col"><span class="outside-date-wrap" data-date='+dayPoint+'><span class="inside-date-wrap">'+dayPoint+'</span></span></div>');
+                                dayPoint++;
+                            }
+                        }
+                    }
+                }
+
+            // /loading calendars on page
+
+            // loading calendar on page by loop
+
+            function loadingCalendarByLoop(){
+
+                $('.event-page-datepicker-top-item, .calendar').remove();
+
+                monthNumArray.forEach(function(item, index){
+
+                    $('.event-page-datepicker-top-wrap').append('<div class="event-page-datepicker-top-item" data-year='+item.year+' data-month='+item.month+'>'+monthNames[item.month]+'</div>');
+
+                    $('.event-page-datepicker-bottom').append('<div class="calendar" data-year='+item.year+' data-month='+item.month+'></div>');
+                    if(index+1 == Math.round(calendarLength/2)){
+                        $('.calendar:last-child').addClass('active-month');
+                        $('.event-page-datepicker-top-item:last-child').addClass('active-month');
+                    }
+
+                    loadingCalendarsOnPage(item, index);
+
+                });
+            };
+
+            loadingCalendarByLoop();
+
+            // loading calendar on page by loop
+
+            // looking current date func
+
+                function lookingCurrentEventChossenDate(){
+
+                    $('.calendar[data-month='+currentMonth+'][data-year='+yearDate+'] .outside-date-wrap[data-date ='+dayDate+']').addClass('current-day');
+
+                    if(eventsDates != null){
+                        eventsDates.forEach(function(item, index){
+                            $('.calendar[data-year='+item.year+'][data-month='+item.month+'] .outside-date-wrap[data-date='+item.day+']').addClass('event-day');
+                        });
+                    }
+
+                    if(chossenDate != null){
+                        $('.calendar[data-month='+chossenDate.month+'][data-year='+chossenDate.year+'] .outside-date-wrap[data-date ='+chossenDate.day+']').addClass('chossen-day');
+                    }
+
+                };
+                lookingCurrentEventChossenDate();
+
+            // /looking current date func
+
+            // change month by click
+
+                var newYear = 0;
+                var newMonth = 0;
+
+                function changeMonth(){
+
+                    $(document).on('click', '.event-page-datepicker-top-wrap:not(.moving) .event-page-datepicker-top-item:not(.active-month)', function(){
+
+                        var thisIndex = $(this).index();
+                        var currentIndex = $('.event-page-datepicker-top-item.active-month').index();
+                        $('.event-page-datepicker-top-wrap').addClass('moving');
+
+                        var newYear = $(this).attr('data-year');
+                        var newMonth = $(this).attr('data-month');
+
+                        loadCalendarInfo(newYear, newMonth);
+
+                        if(thisIndex > currentIndex){
+
+                            $('.event-page-datepicker-top-wrap').addClass('moving-left');
+                        }else{
+                            $('.event-page-datepicker-top-wrap').addClass('moving-right');
+                        }
+
+                        $('.event-page-datepicker-top-item.active-month').removeClass('active-month');
+                        $(this).addClass('active-month');
+
+                        $('.calendar').removeClass('active-month');
+                        $('.calendar').eq(thisIndex).addClass('active-month');
+
+                        setTimeout(function(){
+                            if(thisIndex > currentIndex){
+
+                                $('.event-page-datepicker-top-wrap .event-page-datepicker-top-item:first-child').remove();
+                                $('.event-page-datepicker-top-wrap').append('<div class="event-page-datepicker-top-item" data-year='+monthNumArray[calendarLength-1].year+' data-month='+monthNumArray[calendarLength-1].month+'>'+monthNames[monthNumArray[calendarLength-1].month]+'</div>')
+
+                                $('.calendar:first-child').remove();
+                                $('.event-page-datepicker-bottom').append('<div class="calendar" data-year='+monthNumArray[calendarLength-1].year+' data-month='+monthNumArray[calendarLength-1].month+'></div>');
+
+                                loadingCalendarsOnPage(monthNumArray[calendarLength-1], calendarLength-1);
+
+                            }else{
+                                $('.event-page-datepicker-top-wrap .event-page-datepicker-top-item:last-child').remove();
+
+                                $('.event-page-datepicker-top-wrap').prepend('<div class="event-page-datepicker-top-item" data-year='+monthNumArray[0].year+' data-month='+monthNumArray[0].month+'>'+monthNames[monthNumArray[0].month]+'</div>')
+
+                                $('.calendar:last-child').remove();
+                                $('.event-page-datepicker-bottom').prepend('<div class="calendar" data-year='+monthNumArray[0].year+' data-month='+monthNumArray[0].month+'></div>');
+
+                                loadingCalendarsOnPage(monthNumArray[0], 0);
+                            }
+                            $('.event-page-datepicker-top-wrap').removeClass('moving moving-left moving-right');
+
+                            lookingCurrentEventChossenDate();
+
+                        }, 300);
+
+                    });
+
+                }
+
+                changeMonth();
+
+            // /change month by click
+
+            // chosse day for something
+
+                $(document).on('click', '.outside-date-wrap:not(.current-day)', function(){
+
+                    if(!$(this).is('.chossen-day')){
+                        chossenDate = {};
+                        chossenDate.day = $(this).attr('data-date');
+                        chossenDate.year = $(this).parents('.calendar').attr('data-year');
+                        chossenDate.month = $(this).parents('.calendar').attr('data-month');
+
+                        $('.chossen-day').removeClass('chossen-day');
+                        $(this).addClass('chossen-day');
+
+                        var chossenDateString = chossenDate.day+'.'+chossenDate.month+'.'+chossenDate.year;
+                        $('.event-page-form-main input[type="hidden"]').val(chossenDateString);
+
+                    }else{
+                        chossenDate = null;
+                        $('.chossen-day').removeClass('chossen-day');
+                        $('.event-page-form-main input[type="hidden"]').val('');
+                    }
+
+                });
+
+            // chosse day for something
+
+        // /event-page calendar
+
+
+    }
+
+/* /event-page */
+
 $(document).ready(function(){
 
    validate('.contact-form form', {submitFunction:validationCall});
 
    validate('.get-in-t', {submitFunction:validationCall});
    validate('.login-form', {submitFunction:validationCall});
+   validate('.event-page-form-main', {submitFunction:validationCall});
 
-   
    Maskedinput();
    fancyboxForm();
 
    websitesScript();
+
+    eventPage();
 
 });
