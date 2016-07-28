@@ -130,14 +130,28 @@ function constructSlides(slides){
     }
 }
 
+function menuSecondLevelHover(){
 
+    $('.second-level').hover(
+        function(){
+            $(this).addClass('hovered').find('ul').slideDown(300);
+        },
+        function(){
+            $(this).removeClass('hovered').find('ul').slideUp(300);
+        }
+    );
+
+};
 
 $(document).ready(function(){
+
     butter();
-      $.getJSON('data.json',function (data) {
+
+    menuSecondLevelHover();
+
+    $.getJSON('data.json',function (data) {
         constructSlides(data);
     });
-
 
 
 });
