@@ -28,9 +28,12 @@ $(document).ready(function(){
             return false;
         });
 
-        $( ".vacancy-wrap" )
 
     /* incredable page vacancy */
+
+    if ( ($( ".vacancy-wrap" ).length == 1) && (($(window).width() - $.scrollbarWidth())< 992)  ){
+        $('.blur-smash').css('top', $('.left-navi').height() );
+    }
 
 });
 
@@ -66,9 +69,11 @@ $(window).scroll(function(){
 
     /* vacancy */
 
+
 });
 
 $(window).load(function(){
+
 
 });
 
@@ -92,5 +97,9 @@ $(window).resize(function(){
         }
 
     /* vacancy */
+
+    if ( ($( ".vacancy-wrap" ).length == 1) && (($(window).width() - $.scrollbarWidth())< 992)  ){
+        $('.blur-smash').css('top', $('.left-navi').height() );
+    }
 
 });
