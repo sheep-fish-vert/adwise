@@ -456,10 +456,10 @@
                                             &:before{transform:translate(-50%, -50%) scale(1);}
                                         }
                                         &.current-day{
-                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: rgba(235, 87, 118, .5);}
+                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: #edc142;}
                                         }
                                         &.event-day{
-                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: #edc142;}
+                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: rgba(235, 87, 118, .5);}
                                             &.chossen-day{
                                                 &:before{background-color: #58c446;}
                                             }
