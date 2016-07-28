@@ -122,7 +122,7 @@ function popNext(popupId, popupWrap){
 
     $.fancybox.open(popupId,{
         padding:0,
-        fitToView:false,
+        fitToView:true,
         wrapCSS:popupWrap,
         autoSize:true,
         'closeBtn' : false,
@@ -133,12 +133,12 @@ function popNext(popupId, popupWrap){
     });
 
     var timer = null;
-
-    // timer = setTimeout(function(){
-    //     $('form').trigger("reset");
-    //     $.fancybox.close(popupId);
-    // },2000);
-
+    /*
+     timer = setTimeout(function(){
+         $('form').trigger("reset");
+         $.fancybox.close(popupId);
+     },2000);
+    */
 }
 
 
