@@ -33,10 +33,10 @@
         .vacancy-wrap{
             .left-navi{ position: static; width: 100%; 
                 .contr{display: flex; align-items: center; justify-content: space-between; padding: 20px;
-                    .top-part{padding: 0; width: 30%;}
+                    .top-part{padding: 0; width: 30%; border: none; }
                     .bot-navi{ width: 60%;
-                        ul{width: 100%; max-width: none; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-                            li{width: 50%;}
+                        ul{width: 100%; max-width: none; display: flex; align-items: stretch; justify-content: space-between; flex-wrap: wrap; padding: 0;
+                            li{width: 50%; display: flex; align-items: center; justify-content: center; text-align: center;}
                         }
                     }
                 }

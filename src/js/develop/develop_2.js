@@ -53,8 +53,6 @@ $(window).scroll(function(){
 
         if ( ($( ".vacancy-wrap" ).length == 1) && (($(window).width() - $.scrollbarWidth())> 992)  ){
 
-            console.log( $(window).height() + $(window).scrollTop() - $('.footer_placeholder').offset().top   );
-
             if ( ( $(window).height() + $(window).scrollTop() - $('.footer_placeholder').offset().top  ) > 0 ){
 
                 if( $(window).height() - $('.footer_placeholder').height() - $('.left-navi>.contr').height() < 100 ) {
