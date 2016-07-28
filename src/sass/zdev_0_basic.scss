@@ -29,7 +29,7 @@
 *,*:before, *:after{box-sizing:border-box;outline:none;}
 *,body,html{-webkit-text-size-adjust: none;-webkit-appearance: none;max-height: 9001em;}
 html{height:100%;}
-body{min-height:100%; background-color: #eee;width:100%;min-width:320px;font-family:'ProximaNovaScOsf', arial,sans-serif;color:#777;position:relative;font-size: 16px;line-height: 1;
+body{min-height:100%; background-color: #515151;width:100%;min-width:320px;font-family:'ProximaNovaScOsf', arial,sans-serif;color:#777;position:relative;font-size: 16px;line-height: 1;
 
     /* styles for wp-admin panel */
 
@@ -60,7 +60,9 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 /* /base styles */
 
 /* wraps styling*/
-.global-wrapper{overflow: hidden;padding-top:60px;}
+.global-wrapper{overflow: hidden;padding-top:60px;background-image:url(../images/body-background.png);
+    &.index-global{background-image:none;background-color:#eee;}
+}
 .mbox{max-width:980px;width:100%;margin:0 auto;position:relative;z-index:1;padding: 0 20px;
     &.bigger-mbox{max-width:1220px;}
 }
