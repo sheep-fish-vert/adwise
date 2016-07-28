@@ -767,19 +767,89 @@ function fancyboxForm(){
 
 /* /event-page */
 
+/* geo-page */
+
+    function geoPage(){
+
+        //init slider
+
+        var geoSlider = $('.column-list-countries-wrap');
+        geoSlider.slick({
+            slidesToShow:5,
+            dots:false,
+            arrows:true,
+            vertical:true,
+            focusOnSelect:true,
+            responsive:[
+                {
+                    breakpoint:992,
+                    settings:{
+                        vertical:false,
+                        centerMode:true,
+                        customPadding:0,
+                        slidesToShow:3
+                    }
+                },
+                {
+                    breakpoint:666,
+                    settings:{
+                        slidesToShow:1,
+                        vertical:false
+                    }
+                }
+            ]
+        });
+
+        // init slider
+
+        // loading svg geo circles
+        function svgCirclesGeo(){
+
+            var circleTime = 0;
+            var websitesParamLenght = $('.geo-svg').length;
+            var maxValue = 0;
+
+            $('.geo-svg').each(function(index){
+
+                var percent = parseInt($(this).find('svg').attr('data-value'));
+                var circle = $(this).find('.circle-lines');
+                var circleRadius = circle.attr('r');
+                var circleLength = Math.PI*(circleRadius*2);
+
+                circle.css({'stroke-dasharray':circleLength+'px','stroke-dashoffset':circleLength+'px','transition':' stroke-dashoffset 0s linear'});
+                var circleLengthPercent = ((100-percent)/100)*circleLength;
+
+                circleTime = circleTime + 300;
+
+                setTimeout(function(){
+                    circle.css({'stroke-dashoffset':circleLengthPercent+'px','transition':' stroke-dashoffset 1s linear'});
+                },circleTime);
+
+            });
+        }
+
+        svgCirclesGeo();
+
+        // /loading svg geo circles
+
+    }
+
+/* /geo-page */
+
 $(document).ready(function(){
 
-   validate('.contact-form form', {submitFunction:validationCall});
+    validate('.contact-form form', {submitFunction:validationCall});
 
-   validate('.get-in-t', {submitFunction:validationCall});
-   validate('.login-form', {submitFunction:validationCall});
-   validate('.event-page-form-main', {submitFunction:validationCall});
+    validate('.get-in-t', {submitFunction:validationCall});
+    validate('.login-form', {submitFunction:validationCall});
+    validate('.event-page-form-main', {submitFunction:validationCall});
 
-   Maskedinput();
-   fancyboxForm();
+    Maskedinput();
+    fancyboxForm();
 
-   websitesScript();
+    websitesScript();
 
     eventPage();
+    geoPage();
 
 });
