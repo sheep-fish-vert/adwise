@@ -83,6 +83,7 @@ input, textarea{
     .left-column{width:256px;padding-right:30px;}
     .right-column{width: calc(100% - 256px);}
 }
+.main{position: relative;z-index: 0;}
 
 @media screen and (max-width:992px){
 
