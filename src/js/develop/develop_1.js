@@ -256,7 +256,7 @@
                         $('.column-list-wrap').css({'top':'-'+topm+'px'});
                     }
 
-                    var moreThanFooter = $(window).scrollTop()+$('.column-list-wrap').height();
+                    var moreThanFooter = $(window).scrollTop()+$('.column-list-wrap').outerHeight();
 
                     if(moreThanFooter > $('.footer').offset().top){
                         var transp = $('.footer').offset().top - moreThanFooter;

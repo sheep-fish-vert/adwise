@@ -66,7 +66,7 @@
     }
 /*END news----------------------------------------------------------*/
 /* header----------------------------------------------------------*/
-header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-index: 2;top:0;backface-visibility: hidden;
+header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-index: 100; top:0;backface-visibility: hidden;
     .mbox{max-width: 940px;}
     .header{ display: flex; justify-content: space-between; position: relative; padding-top: 20px;}
 

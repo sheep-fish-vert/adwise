@@ -259,8 +259,24 @@
     // asia market
     .market .middle-text .item-title h2{font-size: 29px;}
 
+    // succes popup
+    .call-success{
+        .call_success{padding: 20px 30px;
+            .call-title{font-size: 32px;margin-bottom: 10px;}
+            .call-subtitle{font-size: 24px;}
+        }
+    }
+
 }
 @media screen and (max-width: 479px){
+
+    // succes popup
+    .call-success{
+        .call_success{
+            .call-title{font-size: 26px;}
+            .call-subtitle{font-size: 20px;}
+        }
+    }
 
 }
 @media screen and (max-width: 390px){

@@ -93,6 +93,9 @@
     /* websites-page */
 
         .websites-page{
+
+            .column-list-wrap{width: 100%;padding-top: 30px;}
+
             .column-list-sites{
 
                 .column-list-sites-filter{margin-bottom: 10px;
@@ -130,6 +133,30 @@
         }
 
     /* /services */
+
+    /* geo */
+
+        .geo-page{
+
+            .left-column{
+                .column-list-wrap{width: 100%;
+                    .column-list{
+                        .column-list-countries{width: 100%;}
+                        .column-list-country{text-align: center;}
+                        .slick-list{height: 49px;}
+                        .slick-arrow{transform-origin:50% 50%;transform:rotate(-90deg);
+                            &.slick-prev{top:auto;bottom:-35px;left:calc(50% - 36px);}
+                            &.slick-next{top:auto;bottom:-35px;left:calc(50% + 5px);}
+                        }
+                    }
+                }
+            }
+
+            .right-column{padding:30px 0 30px 0;}
+
+        }
+
+    /* /geo */
 
     /* parallax */
 
@@ -326,6 +353,20 @@
         }
 
     /* /event-page */
+
+    /* geo */
+
+        .geo-page{
+            .right-column{
+                .geo-map{margin-bottom: 20px;}
+                .geo-content{display: block;
+                    &:before{display: none;}
+                    .geo-content-left, .geo-content-right{width: 100%;}
+                }
+            }
+        }
+
+    /* /geo */
 
 }
 @media screen and (max-width: 479px){
