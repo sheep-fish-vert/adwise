@@ -458,6 +458,7 @@ function fancyboxForm(){
             function changeCalendarEvents(eventName){
 
                 $('.event-page-slider-main, .event-page-datepicker-content').addClass('loading');
+                chossenDate = [];
 
                 $.ajax({
                     url:'js/json/data_events_'+eventName+'.json', // ajaxUrl
