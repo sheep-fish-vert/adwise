@@ -635,8 +635,10 @@
         &.first-type{
 
             .parallax-image-top, .parallax-image-bottom{left:-15px;}
-
-            .parallax-blur{transform:translate(0, 460px);
+            .parallax-images{
+                .parallax-image-top{top:20px;}
+            }
+            .parallax-blur{transform:translate(0, 480px);
                 .parallax-image-top{
                     img{transform:translate(-50%, -460px);}
                 }
