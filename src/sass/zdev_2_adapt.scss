@@ -29,7 +29,7 @@
 @media screen and (max-width: 992px){
 
     /* vacancy */
-
+        .legal-wrap .left-navi .contr .top-part{max-width: none;}
         .vacancy-wrap{
             .left-navi{ position: static; width: 100%; 
                 .contr{display: flex; align-items: center; justify-content: space-between; padding: 20px;
@@ -53,7 +53,9 @@
             }
         }
 
-
+        .vacancy-wrap .smash {background-size: 3000px 3000px !important; background-position: top center; 
+            &.blur-smash{ background-position:top center; }
+        }
     /* vacancy */
 
 }
