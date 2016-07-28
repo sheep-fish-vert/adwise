@@ -107,3 +107,33 @@
     }
 
 /* vacancy */
+
+/* legal-wrap */
+
+    .legal-wrap{
+        .smash{opacity: 0.8;
+            .blur-smash{opacity: 1;}
+        }
+        .right-conetein .converter .radi .boxer{padding-top: 0;
+             &>ul > li{
+                 .t-page {text-transform: uppercase; font-weight: 600; font-size: 24px; font-family: "ProximaNovaScOsf";  color: rgb(255, 255, 255);}
+                 .after-block{
+                     b{display: block; font-weight: 700; font-family: 'Roboto'; color: white; font-size: 16px; padding-top: 25px;
+                        &:first-child{padding-top: 0;}
+                     }
+                     p{font-size: 16px; font-weight: 300; }
+                     a{color: white; text-decoration: underline;}
+                 }
+             } 
+        }
+        .left-navi .contr{
+            .top-part { padding-bottom: 40px; border-bottom: 1px solid white; max-width: 320px; }
+            .bot-navi ul{background-color: transparent; padding-top: 55px;
+                li{ font-family: "Roboto"; font-size: 20px;
+                    &:hover{background-color: rgba(255,255,255,0.3); }
+                }
+            }
+        }
+    }
+
+/* legal-wrap */
