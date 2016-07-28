@@ -103,6 +103,19 @@
                 }
             }
 
+            .row-for-all{ display: flex; align-items: center; justify-content: space-between; padding-top: 80px;
+                .button-part{ width: 50%; 
+                    a{display: flex; align-items: center; justify-content: center; text-decoration: none; max-width: 200px; width: 100%; margin: 0 auto; font-size: 16px;  font-family: "ProximaNovaScOsf"; color: rgb(0, 0, 0); background-color: #ecd050; height: 37px; transition: all 0.3s;
+                        &:hover{background-color: #d4b217; }
+                    }
+                }
+                .soc-part{width: 50%;
+                    .social-conteiner{display: flex; align-items: center; justify-content: flex-end; 
+                        a{display: block; width: 37px; height: 37px; }
+                    }
+                }
+            }
+
         }
     }
 
