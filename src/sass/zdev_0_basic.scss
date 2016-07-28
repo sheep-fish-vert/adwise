@@ -60,7 +60,9 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 /* /base styles */
 
 /* wraps styling*/
-.global-wrapper{overflow: hidden;padding-top:60px;background-image:url(../images/body-background.png);}
+.global-wrapper{overflow: hidden;padding-top:60px;background-image:url(../images/body-background.png);
+    &.index-global{background-image:none;background-color:#eee;}
+}
 .mbox{max-width:980px;width:100%;margin:0 auto;position:relative;z-index:1;padding: 0 20px;
     &.bigger-mbox{max-width:1220px;}
 }
