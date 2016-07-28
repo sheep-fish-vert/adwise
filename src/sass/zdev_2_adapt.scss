@@ -9,11 +9,52 @@
 }
 @media screen and (max-width: 1280px){
 
+    /* vacancy */
+        .vacancy-wrap{
+            .left-navi{width: 30%;
+                .contr {margin: 0 auto; width: 90%;}
+            }
+            .right-conetein{
+                .converter {margin-left: 30%;
+                    .radi{max-width: 100%;}
+                }
+            }
+        }
+    /* vacancy */
+
 }
 @media screen and (max-width: 1024px){
 
 }
 @media screen and (max-width: 992px){
+
+    /* vacancy */
+
+        .vacancy-wrap{
+            .left-navi{ position: static; width: 100%; 
+                .contr{display: flex; align-items: center; justify-content: space-between; padding: 20px;
+                    .top-part{padding: 0; width: 30%;}
+                    .bot-navi{ width: 60%;
+                        ul{width: 100%; max-width: none; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+                            li{width: 50%;}
+                        }
+                    }
+                }
+            }
+            .right-conetein .converter{ margin-left: 0;
+                .radi .boxer{padding: 30px 15px;
+                    &>ul>li { padding-top: 40px;
+                        .after-block{
+                            ul li { font-size: 16px; }
+                            p {font-size: 16px;}
+                        } 
+                    }
+                }
+            }
+        }
+
+
+    /* vacancy */
 
 }
 @media screen and (max-width: 767px){
@@ -26,6 +67,19 @@
 
     /* login */
 
+    /* vacancy */
+
+        .vacancy-wrap .left-navi{
+            .contr{flex-wrap: wrap; 
+                .top-part{width: 100%; text-align: center; padding-bottom: 20px; }
+                .bot-navi { width: 100%;
+                    ul li{text-align: center;}
+                }
+            }
+        }
+
+    /* vacancy */
+
 }
 @media screen and (max-width: 666px){
     /* login */
@@ -33,6 +87,13 @@
         .login .conteiner .tabber .tab-content{min-height: 450px;}
 
     /* login */
+
+    /* vacancy */
+
+        .vacancy-wrap .left-navi .contr .bot-navi ul li {  width: 100%; }
+
+    /* vacancy */
+    
 
 }
 @media screen and (max-width: 479px){
