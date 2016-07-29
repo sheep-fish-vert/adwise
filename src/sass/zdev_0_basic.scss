@@ -120,5 +120,7 @@ input, textarea{
 
 @include font-face('RBNo2', 'RBNo2Light', 300);
 @include font-face('Proxima Nova Condenced', 'proximanovacond-light', 300);
+@include font-face('CoreSans', 'CoreSansD65Heavy');
+@include font-face('CoreSansCn', 'CoreSansD67CnHeavy');
 
 /*/fonts*/
