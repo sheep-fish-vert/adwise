@@ -212,7 +212,7 @@ function oneSizeForMainNews(){
                 if((sampleMaxHeight-buttonHeight) < mainSampleHeight){
                     $('.col-wrap-sample').height(mainSampleHeight - buttonHeight);
                 }else{
-                    $('.col-wrap-sample').height(samplesMaxHeight-buttonHeight);
+                    $('.col-wrap-sample').height(sampleMaxHeight-buttonHeight);
                 }
 
             }, 300);
