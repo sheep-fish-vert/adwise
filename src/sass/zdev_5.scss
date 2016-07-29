@@ -123,7 +123,9 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
 /*partners----------------------------------------------------------*/
 
     .partners{ background-color: #dbdbdb;padding: 92px 0 65px;
-        .mbox{max-width: 1120px;}  //was 1120px, changed to make this one similar with previous
+        .mbox{max-width: 1120px;
+            .title-filter{padding-left: 30px;}
+        }  
 
         .slider-wrap{ padding: 0 30px;}
         .slider-partners{
@@ -165,7 +167,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
             li {
                 a,
                 .txt { font: 100 18px/1.5 'ProximaNovaScOsf'; color: #505050; cursor: pointer;
-                    &:hover { color: #fff; }
+                    &:hover { color: #ca8000; }
                 }
                 input { opacity: 0; visibility: hidden; }
                 input:checked + span { color: #fff; }
