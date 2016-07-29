@@ -803,74 +803,122 @@ function fancyboxForm(){
 
         //init slider
 
-        var geoSlider = $('.column-list-countries-wrap');
+            var geoSlider = $('.column-list-countries-wrap');
 
-        geoSlider.on('init',function(slick){
+            geoSlider.on('init',function(slick){
 
-            var dataCountry =
+                var country = $('.slick-current').attr('data-country');
 
-        });
+                callingAjax(country);
 
-        geoSlider.slick({
-            slidesToShow:5,
-            dots:false,
-            arrows:true,
-            vertical:true,
-            focusOnSelect:true,
-            responsive:[
-                {
-                    breakpoint:992,
-                    settings:{
-                        vertical:false,
-                        centerMode:true,
-                        customPadding:0,
-                        slidesToShow:3
+            });
+
+            geoSlider.slick({
+                slidesToShow:5,
+                dots:false,
+                arrows:true,
+                vertical:true,
+                focusOnSelect:true,
+                responsive:[
+                    {
+                        breakpoint:992,
+                        settings:{
+                            vertical:false,
+                            centerMode:true,
+                            customPadding:0,
+                            slidesToShow:3
+                        }
+                    },
+                    {
+                        breakpoint:666,
+                        settings:{
+                            slidesToShow:1,
+                            vertical:false
+                        }
                     }
-                },
-                {
-                    breakpoint:666,
-                    settings:{
-                        slidesToShow:1,
-                        vertical:false
-                    }
-                }
-            ]
-        });
+                ]
+            });
 
-        geoSlider.on('afterChange', function(slick, currentSlide){
-            console.log(currentSlide);
+            geoSlider.on('afterChange', function(slick, currentSlide){
 
-        });
+                var country = $('.slick-current').attr('data-country');
+
+                callingAjax(country);
+
+            });
 
         // init slider
 
+        // calling ajax and reset params
+
+            function callingAjax(country){
+
+                $('.geo-page .column-list, .geo-map, .geo-content').addClass('loading');
+
+                $.ajax({
+                    url:'js/json/country_circle_params.json', // ajax.php
+                    data:{action:'load_geo_circles', country:country},
+                    method:'POST',
+                    success:function(data){
+
+                        setTimeout(function(){
+
+                            var dataCountry = data;
+
+                            if(typeof data != 'object'){
+                                dataCountry = JSON.parse(data);
+                            }
+
+                            var dataLength = dataCountry.length;
+
+                            dataCountry.forEach(function(item, index){
+                                $('.geo-svg-circle').eq(index).find('.geo-svg-value').text(item.text);
+                                $('.geo-svg-circle').eq(index).find('svg').attr('data-value', item.value);
+                                if(index == (dataLength - 1)){
+                                    svgCirclesGeo();
+                                }
+                            });
+
+                        }, 300);
+
+                    }
+                });
+
+            };
+
+        // calling ajax and reset params
+
         // loading svg geo circles
-        function svgCirclesGeo(){
 
-            var circleTime = 0;
-            var websitesParamLenght = $('.geo-svg').length;
-            var maxValue = 0;
+            function svgCirclesGeo(){
 
-            $('.geo-svg').each(function(index){
+                $('.geo-content').removeClass('loading');
 
-                var percent = parseInt($(this).find('svg').attr('data-value'));
-                var circle = $(this).find('.circle-lines');
-                var circleRadius = circle.attr('r');
-                var circleLength = Math.PI*(circleRadius*2);
+                var circleTime = 0;
+                var geoParamLength = $('.geo-svg').length;
+                var maxValue = 0;
 
-                circle.css({'stroke-dasharray':circleLength+'px','stroke-dashoffset':circleLength+'px','transition':' stroke-dashoffset 0s linear'});
-                var circleLengthPercent = ((100-percent)/100)*circleLength;
+                $('.geo-svg').each(function(index){
 
-                circleTime = circleTime + 300;
+                    var percent = parseInt($(this).find('svg').attr('data-value'));
+                    var circle = $(this).find('.circle-lines');
+                    var circleRadius = circle.attr('r');
+                    var circleLength = Math.PI*(circleRadius*2);
 
-                setTimeout(function(){
-                    circle.css({'stroke-dashoffset':circleLengthPercent+'px','transition':' stroke-dashoffset 1s linear'});
-                },circleTime);
+                    circle.css({'stroke-dasharray':circleLength+'px','stroke-dashoffset':circleLength+'px','transition':' stroke-dashoffset 0s linear'});
+                    var circleLengthPercent = ((100-percent)/100)*circleLength;
 
-            });
-        }
+                    circleTime = circleTime + 300;
 
-        svgCirclesGeo();
+                    setTimeout(function(){
+                        circle.css({'stroke-dashoffset':circleLengthPercent+'px','transition':' stroke-dashoffset 1s linear'});
+                        if(index == (geoParamLength - 1)){
+                             $('.geo-page .column-list, .geo-map').removeClass('loading');
+                        }
+                    },circleTime);
+
+                });
+            }
 
         // /loading svg geo circles
 
