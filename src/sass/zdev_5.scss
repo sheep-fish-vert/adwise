@@ -74,7 +74,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
         li{ display: inline-block;padding: 0 30px;
             a{font: 300 18px/1.5 'ProximaNovaScOsf'; color: #000;text-decoration: none; position: relative;
                 &.active{color: #807f7f;text-decoration: underline;}
-                &:hover{ color: #d7ae00;text-decoration: underline;}
+                &:hover{ color: #ca8000;text-decoration: underline;}
                 &:nth-child(2){ padding-left: 7px; margin-left: 7px;
                     &:before{ top: 5px; left: 0; position: absolute; content:''; display: block; width: 1px; height: 12px; background-color: #000; }
                 }
