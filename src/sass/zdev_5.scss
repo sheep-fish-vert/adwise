@@ -18,11 +18,11 @@
         .news-b{width: 380px;
             .big-banner{ display: block; text-decoration: none;background-color: rgb(255, 255, 255); box-shadow: 0px 2px 16px 0px rgba(55, 39, 50, 0.25);
                 .img{ position: relative; width: 100%; height: 190px;overflow: hidden;
-                    img{ position: absolute; left: 50%; top: 50%; transform:translate(-50%, -50%) scale(1); max-width: none; transition: transform 300ms;}
+                    img{ position: absolute; left: 50%; top: 50%; transform:translate(-50%, -50%) scale(1);  transition: transform 300ms;}
                 }
                 &:hover{
                     .img{
-                        img{transform:translate(-50%, -50%) scale(1.27);}
+                        img{transform:translate(-50%, -50%) scale(1.1);}
                     }
                     .txt{
                         &:after{ right: 24px;}
@@ -52,8 +52,10 @@
             }
             &:hover{box-shadow: 0px 4px 32px 0px rgba(55, 39, 50, 0.25);}
         }
-        .button{ text-align: center; width: 100%; /*padding-top: 29px;*/
-            a{ text-decoration: none; color: #fff; font:400 16px/37px 'Roboto'; text-align: center; display: inline-block; max-width: 200px; width: 100%; height: 37px; background-color: #fcc939; }
+        .button{ text-align: center; width: 100%; display: block;margin:0 auto;
+            a{ text-decoration: none; color: #fff; font:400 15px/37px 'Roboto';line-height:40px;text-transform: uppercase; text-align: center; display: inline-block; max-width: 200px; width: 100%; height: 37px; background-color: #fcc939;transition:all 300ms ease;
+                &:hover{background-color:#ca8000;}
+            }
         }
         .button-col{text-align: right; width: 100%; margin-top: 72px; /*padding-right: 61px;*/
             a{ text-decoration: none;  color: #777;font: 300 20px/1.2 'ProximaNovaScOsf'; position: relative;display: block;padding-right: 61px;
@@ -125,7 +127,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
     .partners{ background-color: #dbdbdb;padding: 92px 0 65px;
         .mbox{max-width: 1120px;
             .title-filter{padding-left: 30px;}
-        }  
+        }
 
         .slider-wrap{ padding: 0 30px;}
         .slider-partners{
@@ -222,8 +224,8 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
             }
 
             .txt{background-color: #fff;font: 100 18px/1.26 'ProximaNovaScOsf';color: #424346; padding-top: 32px; padding-bottom: 19px;
-                &.right-col{box-shadow:inset 50px 0 50px -50px #333; padding-left: 80px; padding-right: 75px;}
-                &.left-col{box-shadow:inset -50px 0 50px -50px #333; padding-left: 60px; padding-right: 40px;}
+                &.right-col{/*box-shadow:inset 50px 0 50px -50px #333;*/ padding-left: 50px; padding-right: 50px;}
+                &.left-col{/*box-shadow:inset -50px 0 50px -50px #333;*/ padding-left: 50px; padding-right: 50px;}
                 p{ margin: 0 0 19px 0;}
                 ul{ margin: 0 0 19px  0; padding: 0; list-style-type: none;
                     a{ text-decoration: none;}
@@ -231,7 +233,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                     li{ margin-bottom: 5px;}
                 }
                 b{ font: 600 18px/1.26 'ProximaNovaScOsf';}
-                a{color: #424346;
+                a{color: #424346;display: flex;justify-content: flex-start;align-items: center;
                     &:hover{ color: #ca8000;
                         .col-icon{
                             img{opacity: 0;
@@ -239,8 +241,8 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                             }
                         }
                     }
-                    .col-icon, .col-text{display: inline-block;}
-
+                    .col-icon, .col-text{display: block;}
+                    .col-text{max-width: calc(100% - 40px);}
                     .col-icon{position: relative;
                         img{opacity: 1;transition:all 300ms ease;
                             &.hover-img{opacity:0;position: absolute;left:0;top:2px;}

@@ -82,6 +82,7 @@
 
 }
 @media screen and (max-width: 767px){
+
     .expertise {
 
         .content{
@@ -118,6 +119,16 @@
 
         }
     }
+
+    .news{
+        .col{margin-bottom: 0;}
+        .button-col{margin-top: 30px;}
+        .banner{margin-bottom: 30px;}
+        .row{display:block;text-align: center;}
+        .news-b{margin:0 auto 70px auto;width:100%;max-width: 380px;}
+        .event, .careers{display:inline-block;margin:0 20px 70px 20px;}
+    }
+
 }
 @media screen and (max-width: 530px){
     .title-filter {
