@@ -172,6 +172,7 @@
 }
 @media screen and (max-width: 767px){
 
+
     /* column-list */
 
         .column-list-wrap{
@@ -275,6 +276,8 @@
         }
 
     /* /event-page */
+
+    .news-list .news-list-items-wrap .news-list-item{ max-width: none; max-height: none;}
 
 }
 @media screen and (max-width: 666px){
