@@ -229,7 +229,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                     li{ margin-bottom: 5px;}
                 }
                 b{ font: 600 18px/1.26 'ProximaNovaScOsf';}
-                a{color: #424346;
+                a{color: #424346;display: flex;justify-content: flex-start;align-items: center;
                     &:hover{ color: #ca8000;
                         .col-icon{
                             img{opacity: 0;
@@ -237,7 +237,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                             }
                         }
                     }
-                    .col-icon, .col-text{display: inline-block;}
+                    .col-icon, .col-text{display: block;}
 
                     .col-icon{position: relative;
                         img{opacity: 1;transition:all 300ms ease;
