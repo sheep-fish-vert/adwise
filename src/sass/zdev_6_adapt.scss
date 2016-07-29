@@ -9,12 +9,12 @@
         .video-block{
             .part-for-videoblur{
                 #videobcg-blur{
-                    
+
                     min-width: 1263px;
-                    min-height:717px; 
+                    min-height:717px;
                 }
             }
-            
+
         }
     /* /video block*/
 }
@@ -29,12 +29,12 @@
         .video-block{
             .part-for-videoblur{
                 #videobcg-blur{
-                    
+
                     min-width: 1369px;
-                    min-height:777px; 
+                    min-height:777px;
                 }
             }
-            
+
         }
     /* /video block*/
 
@@ -65,24 +65,28 @@
     /* video block*/
         .video-block{background: url('../images/video-block-bg.jpg') no-repeat; position: relative;background-size: cover;
             &:after{display:none;}
-            
+
             .part-for-videoblur{display:none;
                 #videobcg-blur{
-                    
-                   
+
+
                 }
             }
             #videobcg{display: none;}
-           
-            .blur-part{  position: relative; 
+
+            .blur-part{  position: relative;
                 &:after{top: 0;}
                 .mbox{
                     .backgroud-image-blur-wrapper{display:block; position: absolute; overflow: hidden;max-height: 100%; min-height:100%; max-width: 100% ;min-width: 100%; left: 0; bottom: 0;
-                    
+
                         .backgroud-image-blur{content: ''; display: block; position: absolute; -webkit-filter: blur(10px);-moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px);filter: blur(10px); overflow: hidden;  max-width: calc(100% + 20px) ;min-width: calc(100% + 20px); max-height: 698px; min-height:698px ;bottom: -20px; left: 0; overflow: hidden; z-index: -2; background-position: bottom; background-size: cover;
-                             
+
 
                         }
+                    }
+                    .button-wrapper{display: flex;justify-content: space-around;flex-wrap:wrap;
+                        button{margin-bottom: 10px;}
+                        .gray-button, .yellow-button{margin-left:5px;margin-right:5px;}
                     }
                 }
             }
@@ -129,7 +133,7 @@
         }
 
     /* footer */
-    
+
     /*video-blog*/
         .video-block{
             .heading-wrapper{
@@ -137,15 +141,15 @@
                     h2{font-size: 40px;
                     }
                 }
-                
+
             }
-            .blur-part{  position: relative; 
+            .blur-part{  position: relative;
                 &:after{top: 0;}
                 .mbox{
                     .text-conteiner{ width: 100%;}
-                    .more-link{width: 100%; padding: 0px 10px 30px 0; 
+                    .more-link{width: 100%; padding: 0px 10px 30px 0;
                         a{margin: 0 0 0 auto;}
-                        
+
                     }
                 }
             }

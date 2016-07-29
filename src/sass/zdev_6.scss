@@ -5,7 +5,7 @@
 	//   &:after{content: ''; display: block; position: absolute; -webkit-filter: blur(10px);-moz-filter: blur(10px); -o-filter: blur(05px); -ms-filter: blur(05px);filter: blur(10px); overflow: hidden;  max-width: 100% ;min-width: 100%;max-height: 698px; min-height: 698px; bottom: -20px; left: 0; background: url('../images/video-block-bg.jpg') no-repeat; overflow: hidden; z-index: 2; background-position: 0% 100%; background-size: 100% auto;
  //   		}
  //   	}3
-   .part-for-videoblur{content: ''; display: block; position: absolute;  overflow: hidden;  max-width: calc(100% + 60px);min-width: calc(100% + 60px);max-height: 278px; min-height: 278px; bottom: -20px; left: 0;  overflow: hidden; z-index: 2;  
+   .part-for-videoblur{content: ''; display: block; position: absolute;  overflow: hidden;  max-width: calc(100% + 60px);min-width: calc(100% + 60px);max-height: 278px; min-height: 278px; bottom: -20px; left: 0;  overflow: hidden; z-index: 2;
 
    	 	#videobcg-blur {
 			   -webkit-filter: blur(10px);
@@ -27,7 +27,7 @@
 	   z-index: -1000;
 	   overflow: hidden;
 	}
-	#videobcg-blur  {	
+	#videobcg-blur  {
 	   backface-visibility: hidden ;
 	   position: absolute;
 	   top: -453px;
@@ -44,7 +44,7 @@
 			h2{font-size: 50px; font-weight: bold; text-align:right; line-height: 1.2; color: #fff; text-transform: uppercase;}
 		}
 	}
-	.blur-part{padding-top: 30px; padding-bottom: 60px; position: relative;z-index: 3; 
+	.blur-part{padding-top: 30px; padding-bottom: 60px; position: relative;z-index: 3;
    		 &:after{content: ''; display: block; min-height: 1px; background-color:#8b8883; position: absolute; top: -33px;left: 0; width: 100%;  }
 		.mbox{display: flex; flex-wrap: wrap; position: static;
 			.text-conteiner{ width: calc(100% - 100px); max-width: 580px; padding-right: 20px;
@@ -60,6 +60,12 @@
 			}
 			.button-wrapper{width: 100%;
 				.yellow-button{ width: 225px; background: #ecd050;padding: 10px 20px; border: none;
+					.text-container{
+						p{color: #000; font-family: 'ProximaNovaScOsf'; text-transform: uppercase; font-size: 15px; margin: 0;
+						}
+					}
+				}
+				.gray-button{width: 225px; background: #d6d6d6;padding: 10px 20px; border: none;margin-left: 10px;
 					.text-container{
 						p{color: #000; font-family: 'ProximaNovaScOsf'; text-transform: uppercase; font-size: 15px; margin: 0;
 						}
