@@ -183,7 +183,9 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
             .row-wrap{padding: 40px 0; display: block; width: 100%;
                 &:nth-child(2){
                     .row{min-height: 240px}
-                    .img{.img-wrap{ height: 320px;}}
+                    .img{
+                        .img-wrap{ height: 320px;}
+                    }
                 }
                 &:last-child{
                     .row{min-height: 320px;}
@@ -197,13 +199,21 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
             .left-col{width: 380px;}
             .right-col{width: 500px;}
             .img{ position: relative;
-                .img-wrap{ position: absolute; width: 100%; height: 380px;left: 0; top: -40px;overflow: hidden;}
-                img{ position: absolute;left: 50%; top: 50%; transform:translate(-50%, -50%) scale(1); transition: transform 200ms;}
+                .img-wrap{ position: absolute; width: 100%; height: 380px;left: 0; top: -40px;overflow: hidden;
+                    &:before{content:'';display: block;position: absolute;width: 100%;height:100%;top:0;left:0;z-index: 1;background-color: rgba(201, 173, 61, .5);opacity:0;transition:all 300ms ease;}
+                }
+                img{ position: absolute;left: 50%; top: 50%; transform:translate(-50%, -50%) scale(1); transition: transform 200ms;z-index: 2;}
                 &:hover{
-                    img{ transform:translate(-50%, -50%) scale(1.2); }
+                    .img-wrap{
+                        &:before{opacity:1;}
+                    }
+                    img{
+                        &.col-img-bg{transform:translate(-50%, -50%) scale(1.2); z-index: 0;}
+                    }
                 }
             }
-            .txt{background-color: #fff;font: 100 18px/1.26 'ProximaNovaScOsf';color: #424346; padding-top: 32px; padding-bottom: 30px;
+
+            .txt{background-color: #fff;font: 100 18px/1.26 'ProximaNovaScOsf';color: #424346; padding-top: 32px; padding-bottom: 19px;
                 &.right-col{box-shadow:inset 50px 0 50px -50px #333; padding-left: 80px; padding-right: 75px;}
                 &.left-col{box-shadow:inset -50px 0 50px -50px #333; padding-left: 60px; padding-right: 40px;}
                 p{ margin: 0 0 19px 0;}
@@ -213,8 +223,20 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                     li{ margin-bottom: 5px;}
                 }
                 b{ font: 600 18px/1.26 'ProximaNovaScOsf';}
-                a{color: #424346;
-                    &:hover{ color: #d7ae00;}
+                a{color: #424346;display: flex;justify-content: flex-start;align-items: flex-start;
+                    &:hover{ color: #ca8000;
+                        .col-icon{
+                            img{opacity: 0;
+                                &.hover-img{opacity:1;}
+                            }
+                        }
+                    }
+                    .col-icon, .col-text{display: block;}
+                    .col-icon{position: relative;
+                        img{opacity: 1;transition:all 300ms ease;
+                            &.hover-img{opacity:0;position: absolute;left:0;top:2px;}
+                        }
+                    }
                 }
             }
         }
