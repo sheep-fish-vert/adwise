@@ -804,6 +804,13 @@ function fancyboxForm(){
         //init slider
 
         var geoSlider = $('.column-list-countries-wrap');
+
+        geoSlider.on('init',function(slick){
+
+            var dataCountry =
+
+        });
+
         geoSlider.slick({
             slidesToShow:5,
             dots:false,
@@ -828,6 +835,11 @@ function fancyboxForm(){
                     }
                 }
             ]
+        });
+
+        geoSlider.on('afterChange', function(slick, currentSlide){
+            console.log(currentSlide);
+
         });
 
         // init slider
