@@ -24,6 +24,7 @@
     }
  }
 @media screen and (max-width: 992px){
+
     header{z-index: 10;
         .header{ display: block;}
         .menu{ display: none; background-color: #fff; z-index: 10; padding-bottom: 30px; width: 100%; position: absolute; top: 60px; left: 0;
@@ -45,6 +46,31 @@
         }
         .butter{ display: block;}
     }
+
+    .expertise{
+        .content{
+            .img{
+                .img-wrap{height: 280px;
+                    .img-wrap-text{
+                        p{font-size: 38px;
+                            b{font-size: 26px;}
+                        }
+                    }
+                }
+            }
+            .row-wrap{
+                .left-col{width:280px;height: 280px;}
+                .right-col{width: calc(100% - 280px);}
+                &.row-reverse{
+                    .left-col{width: calc(100% - 400px);}
+                    .right-col{width: 400px;height: 260px;
+                        .img-wrap{height: 260px;}
+                    }
+                }
+            }
+        }
+    }
+
     .partners {
         .slider-partners {
 
@@ -53,6 +79,7 @@
             }
         }
     }
+
 }
 @media screen and (max-width: 767px){
     .expertise {
@@ -63,19 +90,24 @@
                 img{ position: relative; top: auto; left: auto; transform: none;}
                 .img-wrap{ position: relative; top: auto; height: auto; text-align: center;}
                 &:hover{
-                    img{ transform:none; }
+                    img{
+                        &.col-img-bg{transform:none; }
+                    }
                 }
             }
             .row-wrap{
-                &:nth-child(2){
+                &:nth-child(2n){
                     .row{min-height: 1px;}
                     .img{.img-wrap{ height: auto;}}
                 }
-                &:last-child{
-                    .row{min-height: 1px;}
-                    .txt{width: 100%;box-shadow:none; padding: 30px;}
-                    .img{ margin:0;
-                        .img-wrap{ height: auto;}
+                .row{flex-direction:column;
+                    .left-col{height: auto;width: auto;}
+                    .right-col{width: 100%;}
+                }
+                &.row-reverse{
+                    .row{flex-direction:column-reverse;
+                        .left-col{width: 100%;}
+                        .right-col{height: auto;width: auto;}
                     }
                 }
             }
