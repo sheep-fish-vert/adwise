@@ -87,7 +87,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                         .log-in-text{color: #d7ae00;}
                     }
                 }
-                .fa-exclamation-circle{ font-size: 22px; color:#ffa025; }
+                .fa-exclamation-circle{ font-size: 14px; color:#ffa025; }
             }
             &:last-child{ padding-right: 0;}
             &:first-child{ padding-left: 0;}
@@ -123,7 +123,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
 /*partners----------------------------------------------------------*/
 
     .partners{ background-color: #dbdbdb;padding: 92px 0 65px;
-        .mbox{max-width: 1120px;}
+        .mbox{max-width: 1120px;}  //was 1120px, changed to make this one similar with previous
 
         .slider-wrap{ padding: 0 30px;}
         .slider-partners{
@@ -155,9 +155,9 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
         .slick-prev{transform: rotate(-135deg); left: -79px;}
         .slick-next{transform: rotate(45deg); right: -70px;}
     }
-    .title-filter { padding: 0 30px 98px;
-        .title { position: relative; display: block; width: 29.3%; float: left;
-            h2 { margin: 0; font: 300 40px/1.5 'ProximaNovaScOsf'; color: #343434; text-transform: uppercase; }
+    .title-filter { padding: 0 0px 98px;
+        .title { position: relative; display: block; width: 27.3%; float: left;
+            h2 { margin: 0; font: 300 40px/1.5 'ProximaNovaScOsf'; color: #343434; text-transform: uppercase; text-align: left; }
             &:after { display: block; content: ''; width: 3px; height: 98px; background-color: #505050; right: 0; top: -19px; position: absolute; }
         }
         .menu-filter { display: block; width: 67%; float: right; padding-top: 14px; padding-right: 77px;
