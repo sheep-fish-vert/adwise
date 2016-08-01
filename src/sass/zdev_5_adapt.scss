@@ -87,7 +87,7 @@
 
         .content{
             .row{flex-wrap: wrap; min-height: 1px;}
-            .img{ width: 100%;
+            .img{ width: 100%; height: auto;
                 img{ position: relative; top: auto; left: auto; transform: none;}
                 .img-wrap{ position: relative; top: auto; height: auto; text-align: center;}
                 &:hover{
@@ -102,8 +102,8 @@
                     .img{.img-wrap{ height: auto;}}
                 }
                 .row{flex-direction:column;
-                    .left-col{height: auto;width: auto;}
-                    .right-col{width: 100%;}
+                    .left-col{height: auto;width: auto; img{height: auto;}}
+                    .right-col{width: 100%; img{height: auto;}}
                 }
                 &.row-reverse{
                     .row{flex-direction:column-reverse;

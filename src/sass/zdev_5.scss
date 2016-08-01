@@ -185,6 +185,11 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
         .mbox { max-width: 920px; }
         .content{
             .row-wrap{padding: 0px 0; display: block; width: 100%;
+  background-image: -moz-linear-gradient( 180deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+  background-image: -webkit-linear-gradient( 180deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+  background-image: -ms-linear-gradient( 180deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+  box-shadow: 0px 6px 46px 0px rgba(0, 0, 0, 0.22);
+
                 &:nth-child(2n){
                     .row{min-height: 240px}
                     .img{
@@ -192,16 +197,28 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                     }
                 }
 
-                .left-col{width: 380px;}
-                .right-col{width: calc(100% - 380px);}
+                .left-col{width: 380px;
+                img{
+                               height: 100%;
+                           }
+                }
+                .right-col{width: calc(100% - 380px); 
+                           img{
+                               height: 100%;
+                           }
+                }
 
                 &.row-reverse{
                     .left-col{width: calc(100% - 500px);}
-                    .right-col{width: 500px;}
+                    .right-col{width: 500px;
+                               img{
+                                   float: right;
+                               }
+                    }
                 }
 
             }
-            .row{ position: relative; display: flex; justify-content: space-around;align-items: center; min-height: 300px;}
+            .row{ position: relative; display: flex; justify-content: space-around;align-items: center; min-height: 300px; background-color: #fff; margin-bottom: 70px;}
 
             .img{ position: relative;
                 .img-wrap{ position: relative; width: 100%; height: 380px;left: 0; top: 0px;overflow: hidden;backface-visibility: hidden;
@@ -212,7 +229,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                         }
                     }
                 }
-                img{ position: absolute;left: 50%; top: 50%; transform:translate(-50%, -50%) translateZ(0px) scale(1); backface-visibility: hidden; transition: transform 200ms;z-index: 2;}
+                /*img{ position: absolute;left: 50%; top: 50%; transform:translate(-50%, -50%) translateZ(0px) scale(1); backface-visibility: hidden; transition: transform 200ms;z-index: 2;}
                 &:hover{
                     .img-wrap{
                         &:before{opacity:1;}
@@ -220,7 +237,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                     img{
                         &.col-img-bg{transform:translate(-50%, -50%) translateZ(0px) scale(1.2); z-index: 0;backface-visibility: hidden;}
                     }
-                }
+                }*/
             }
 
             .txt{background-color: #fff;font: 100 18px/1.26 'ProximaNovaScOsf';color: #424346; padding-top: 32px; padding-bottom: 19px;
@@ -232,7 +249,7 @@ header{ background-color: #fff; height: 60px; position: fixed;width: 100%;z-inde
                     img{ margin-right: 20px;}
                     li{ margin-bottom: 5px;}
                 }
-                b{ font: 600 18px/1.26 'ProximaNovaScOsf';}
+                b{ font: 600 24px/1.26 'ProximaNovaScOsf';}
                 a{color: #424346;display: flex;justify-content: flex-start;align-items: center;
                     &:hover{ color: #ca8000;
                         .col-icon{
