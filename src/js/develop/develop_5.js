@@ -1,4 +1,5 @@
 function butter() {
+
     $('.butter').click(function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
@@ -8,6 +9,7 @@ function butter() {
             $('.menu').stop().slideUp();
         }
     });
+
     $(document).on('click touchstart',function (event){
         if($('.butter').css('display') == 'block') {
             var div = $('.menu');
@@ -18,6 +20,13 @@ function butter() {
             }
         }
     });
+
+    $(window).resize(function(){
+        if($(window).width() > 992){
+            $('header .menu').removeAttr('style');
+        }
+    });
+
 }
 
 function constructSlides(slides){

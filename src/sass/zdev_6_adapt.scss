@@ -111,6 +111,20 @@
 
     /* footer */
 
+    /* video-block */
+
+        .video-block{
+            .blur-part{padding-bottom: 50px;
+                .mbox{
+                    .button-wrapper{
+                        .yellow-button, .gray-button{margin-bottom:10px;}
+                    }
+                }
+            }
+        }
+
+    /* /video-block */
+
 }
 @media screen and (max-width: 479px){
 

@@ -26,10 +26,21 @@
 @media screen and (max-width: 992px){
 
     header{z-index: 10;
-        .header{ display: block;}
+        .header{align-items: center;justify-content: center;height: 60px;}
+
+        .logo{width: auto;}
+
         .menu{ display: none; background-color: #fff; z-index: 10; padding-bottom: 30px; width: 100%; position: absolute; top: 60px; left: 0;
-            li{ width: 100%; text-align: center; padding: 0;text-align: center;
+            li{ width: 100%; padding: 0;text-align: center;margin-bottom: 10px;
+                &:first-child{
+                    a{
+                        &:not(.log-in):not(.language-choose){padding:0;display: inline-block;}
+                    }
+                }
                 a{font: 300 28px/1.25 'ProximaNovaScOsf'; padding: 7px 0;display: inline-block;vertical-align: middle;
+                    &:not(.log-in):not(.language-choose){padding:0;display: inline-block;
+                        span{display: block;}
+                    }
                     &:nth-child(2){ padding-left: 7px; margin-left: 7px;
                         &:before{ top: 12px; height: calc(100% - 24px); }
                     }
@@ -37,10 +48,17 @@
                         .log-in-text{font-size: 24px;display: inline-block;margin-top: -7px;}
                         .log-in-icon{display: inline-block;}
                     }
+                    &.language-choose{
+                        &:first-child{margin-left:0;}
+                        &:last-child{margin-right: 0;}
+                    }
+                    &.log-in{margin-left: 0;}
                 }
             }
             .second-level{
-                ul{border-width: 1px 0;border-style:solid;border-color:#ccc transparent;width: 100%;left:0;padding:0;}
+                ul{border-width: 1px 0;border-style:solid;border-color:#ccc transparent;width: 100%;left:0;padding:0;
+                    li{margin-bottom: 0;}
+                }
                 .mobile-arrow{position: relative;display: inline-block;top:auto;left: 5px;transform:translate(0, 0);}
             }
         }
@@ -127,6 +145,19 @@
         .row{display:block;text-align: center;}
         .news-b{margin:0 auto 70px auto;width:100%;max-width: 380px;}
         .event, .careers{display:inline-block;margin:0 20px 70px 20px;}
+    }
+
+}
+@media screen and (max-width: 666px){
+
+    .expertise{
+        .title-filter{
+            .title{float: none;width: 100%;margin-bottom: 20px;padding-right: 0;
+                h2{text-align: center;}
+                &:after{width: 100%;height: 3px;top:100%;}
+            }
+            .menu-filter{width: 100%;}
+        }
     }
 
 }
