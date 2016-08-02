@@ -568,11 +568,14 @@
                 }
 
                 svg{
-                    path{fill:#e5e5e4;
+
+                    g{fill:#e5e5e4;transition:all 300ms ease;
                         &.work-with{fill:#8e8e8e;cursor:pointer;
                             &.active{fill:#ffcab2;}
+                            &:hover{fill:red;}
                         }
                     }
+
                 }
 
             }
