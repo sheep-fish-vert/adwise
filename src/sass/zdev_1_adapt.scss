@@ -131,6 +131,19 @@
 
         .services{
             .right-column{width: 100%;}
+            .column-list-wrap{
+                .column-list{
+                    .column-list-main{
+                        ul{
+                            li{
+                                a{color:#fff;
+                                    &:hover{color:#cecece;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
     /* /services */
@@ -164,6 +177,7 @@
         .parallax-block{
             &.second-type{
                 .parallax-blur{display: none;}
+                .parallax-images{width: 100%!important;}
             }
         }
 
