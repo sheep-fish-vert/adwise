@@ -801,13 +801,16 @@ function fancyboxForm(){
 
     function geoPage(){
 
-        //init slider
+        //init slider & events on map
 
             var geoSlider = $('.column-list-countries-wrap');
 
             geoSlider.on('init',function(slick){
 
                 var country = $('.slick-current').attr('data-country');
+
+                $('.work-with').removeClass('active');
+                $('.work-with[data-country='+country+']').addClass('active');
 
                 callingAjax(country);
 
@@ -843,11 +846,28 @@ function fancyboxForm(){
 
                 var country = $('.slick-current').attr('data-country');
 
+                $('.work-with').removeClass('active');
+                $('.work-with[data-country='+country+']').addClass('active');
+
                 callingAjax(country);
 
             });
 
-        // init slider
+            $(document).on('click','.work-with:not(.active)',function(){
+
+                $('.work-with').removeClass('active');
+                $(this).addClass('active');
+
+                var country = $(this).attr('data-country');
+                var countryId = $('.column-list-country:not(.slick-cloned)[data-country='+country+']').attr('data-slick-index');
+
+                geoSlider.slick('slickGoTo',countryId);
+
+                callingAjax(country);
+
+            });
+
+        // init slider & events on map
 
         // calling ajax and reset params
 
@@ -892,11 +912,9 @@ function fancyboxForm(){
 
             function svgCirclesGeo(){
 
-                $('.geo-content').removeClass('loading');
+                $('.geo-content, .geo-page .column-list, .geo-map').removeClass('loading');
 
                 var circleTime = 0;
-                var geoParamLength = $('.geo-svg').length;
-                var maxValue = 0;
 
                 $('.geo-svg').each(function(index){
 
@@ -912,9 +930,6 @@ function fancyboxForm(){
 
                     setTimeout(function(){
                         circle.css({'stroke-dashoffset':circleLengthPercent+'px','transition':' stroke-dashoffset 1s linear'});
-                        if(index == (geoParamLength - 1)){
-                             $('.geo-page .column-list, .geo-map').removeClass('loading');
-                        }
                     },circleTime);
 
                 });
