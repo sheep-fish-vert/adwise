@@ -30,6 +30,7 @@ function butter() {
 }
 
 function constructSlides(slides){
+
     var slider = $('.slider-partners');
     var filterValue = $('.menu-filter input:checked').val();
     var filteredArray = [];
@@ -37,107 +38,149 @@ function constructSlides(slides){
     radioChangeFilter();
     filteringSlds();
     addSlidesINSlider();
+    hoverItmes();
+    /*
     setTimeout(function () {
-        hoverItmes();
+
     },500);
+    */
+    // reinit & markuping slider
 
-
-
-    function addSlidesINSlider(){
-        if(slider.hasClass('slick-initialized')){ slider.slick('unslick');}
-
-        slider.find('.item').remove();
-
-        for (var i = 0; i < filteredArray.length; i++) {
-            var oneSlide = '<a href="'+filteredArray[i].href+'" class="item"><img src="'+filteredArray[i].img+'" alt="'+filteredArray[i].name+'"><span class="hover"></span></a>';
-                slider.append(oneSlide);
-        }
-
-        initSliderPartners(slider);
-
-    }
-    function radioChangeFilter() {
-        $('.menu-filter').on('change','input',function () {
-            filterValue = $('.menu-filter input:checked').val();
-            filteredArray=[];
-            filteringSlds();
-            addSlidesINSlider();
-            hoverItmes();
-        });
-    }
-    function filteringSlds(){
-        if(filterValue != "all") {
-            for (var i = 0; i < slides.length; i++) {
-                var catArray = slides[i].category;
-                var needed = false;
-                for (var j = 0; j < catArray.length; j++) { //оставлена возможность на каждый елемент вешать больше одной категории в JSON файле
-                    if (catArray[j] == filterValue) {
-                        needed = true;
-                    }
-                }
-                if (needed == true) {
-                    filteredArray.push(slides[i])
-                }
+        function addSlidesINSlider(){
+            if(slider.hasClass('slick-initialized')){
+                slider.slick('unslick');
             }
-        }else{
-            filteredArray = slides;
-        }
 
+            slider.find('.item').remove();
 
+            for (var i = 0; i < filteredArray.length; i++) {
+                var oneSlide = '<div class="item"><a href="'+filteredArray[i].href+'" class="item-link"><img src="'+filteredArray[i].img+'" alt="'+filteredArray[i].name+'"><span class="hover"></span></a></div>';
+                    slider.append(oneSlide);
+            }
 
-    }
-    function initSliderPartners(obj) {
-        obj.slick({
-            infinite: false,
+            initSliderPartners(slider);
 
-            slidesToScroll: 1,
-            swipeToSlide:true,
-            slidesPerRow:5,
-            rows:3,
-            responsive: [
-                {
-                    breakpoint: 1140,
-                    settings: {
-                        slidesPerRow:4
+        };
 
+    // /reinit & markuping slider
 
+    // radio change func
+
+        function radioChangeFilter() {
+            $('.menu-filter').on('change','input',function () {
+                filterValue = $('.menu-filter input:checked').val();
+                filteredArray=[];
+                filteringSlds();
+                addSlidesINSlider();
+                //hoverItmes();
+            });
+        };
+
+    // /radio change func
+
+    // adding slides in array
+
+        function filteringSlds(){
+            if(filterValue != "all") {
+                for (var i = 0; i < slides.length; i++) {
+                    var catArray = slides[i].category;
+                    var needed = false;
+                    for (var j = 0; j < catArray.length; j++) { //оставлена возможность на каждый елемент вешать больше одной категории в JSON файле
+                        if (catArray[j] == filterValue) {
+                            needed = true;
+                        }
                     }
-                },
-                {
-                    breakpoint: 940,
-                    settings: {
-                        slidesPerRow: 3
-
-                    }
-                },
-                {
-                    breakpoint: 730,
-                    settings: {
-                        slidesPerRow: 2
-
-                    }
-                },
-                {
-                    breakpoint: 530,
-                    settings: {
-                        slidesPerRow:1
-
+                    if (needed == true) {
+                        filteredArray.push(slides[i]);
                     }
                 }
-            ]
-        });
-    }
-    function hoverItmes(){
-        $('.slider-partners .item').each(function () {
-            var obj = $(this);
-            obj.on("mousemove",function (e) {
-                var x = e.offsetX==undefined?e.layerX:e.offsetX;
-                var y = e.offsetY==undefined?e.layerY:e.offsetY;
-                obj.find('.hover').attr('style','left:'+x+'px;top:'+y+'px;');
+            }else{
+                filteredArray = slides;
+            }
+        };
+
+    // /adding slides in array
+
+    // init slider when filter change
+
+        function initSliderPartners(obj) {
+
+            obj.slick({
+                infinite: false,
+                slidesToScroll: 1,
+                swipeToSlide:true,
+                slidesPerRow:5,
+                rows:3,
+                responsive: [
+                    {
+                        breakpoint: 1140,
+                        settings: {
+                            slidesPerRow:4
+                        }
+                    },
+                    {
+                        breakpoint: 940,
+                        settings: {
+                            slidesPerRow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 730,
+                        settings: {
+                            slidesPerRow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 530,
+                        settings: {
+                            slidesPerRow:1
+                        }
+                    }
+                ]
             });
-        });
-    }
-}
+
+        };
+
+    // /init slider when filter change
+
+    // hover items anim
+
+        function hoverItmes(){
+
+            $(document).on('mouseenter', '.item-link', function(){
+                $(this).addClass('hovered');
+            });
+
+            $(document).on('mousemove','.item-link', function(e){
+
+                var link = $(this);
+                var offsetX = e.offsetX;
+                var offsetY = e.offsetY;
+                var linkParams = this.getBoundingClientRect();
+                var linkWidth = linkParams.width/2;
+                var linkHeight = linkParams.height/2;
+                var titlLimit = 15;
+                var positionX = (linkHeight - offsetY) * (titlLimit / linkHeight);
+                var positionY = (linkWidth - offsetX) * (titlLimit / linkWidth) * (-1);
+
+                link.css({'transform': 'rotateX( ' + positionX + 'deg ) rotateY( ' + positionY + 'deg )'});
+
+                link.find('.hover').css({'transform': 'translate3d( ' + offsetX + 'px, ' + offsetY + 'px, '  + '0 )'});
+
+            });
+
+            $(document).on('mouseleave', '.item-link', function(){
+
+                $(this).removeClass('hovered');
+                $(this).removeAttr('style');
+
+            });
+
+        };
+
+    // /hover items anim
+
+};
 
 function menuSecondLevelHover(){
 
