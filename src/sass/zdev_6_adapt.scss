@@ -79,10 +79,7 @@
                 .mbox{
                     .backgroud-image-blur-wrapper{display:block; position: absolute; overflow: hidden;max-height: 100%; min-height:100%; max-width: 100% ;min-width: 100%; left: 0; bottom: 0;
 
-                        .backgroud-image-blur{content: ''; display: block; position: absolute; -webkit-filter: blur(10px);-moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px);filter: blur(10px); overflow: hidden;  max-width: calc(100% + 20px) ;min-width: calc(100% + 20px); max-height: 698px; min-height:698px ;bottom: -20px; left: 0; overflow: hidden; z-index: -2; background-position: bottom; background-size: cover;
-
-
-                        }
+                        .backgroud-image-blur{content: ''; display: block; position: absolute; -webkit-filter: blur(10px);-moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px);filter: blur(10px); overflow: hidden;  max-width: calc(100% + 20px) ;min-width: calc(100% + 20px); max-height: 698px; min-height:698px ;bottom: -20px; left: 0; overflow: hidden; z-index: -2; background-position: left bottom; background-size: cover;}
                     }
                     .button-wrapper{display: flex;justify-content: space-around;flex-wrap:wrap;
                         button{margin-bottom: 10px;}
