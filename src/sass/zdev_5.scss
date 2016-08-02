@@ -169,9 +169,8 @@
             //.slide{  width: 200px;  }
             .item{ background-color: transparent; display: block; width: 200px; margin-bottom: 6px; position: relative;
 
-                .item-link{display: block;height: 110px;background-color:#fff;width:calc(100% - 10px);margin:0 auto;background-color:#fff;position:relative; overflow: hidden;transition:all 300ms ease;
+                .item-link{display: block;height: 110px;background-color:#fff;width:calc(100% - 10px);margin:0 auto;background-color:#fff;position:relative; overflow: hidden;transition:all 200ms ease;
                     .hover{ position: absolute; left: 0%; top: 0%; width: 1px; height: 1px; box-shadow: 0 0 80px 20px rgba(0,0,0,0.3);opacity: 0; transition: opacity 200ms ease;z-index: -1;}
-                    &:hover{transition:all 0ms ease;}
                     &.hovered{
                         .hover{opacity: 1;}
                     }
