@@ -863,8 +863,6 @@ function fancyboxForm(){
 
                 geoSlider.slick('slickGoTo',countryId);
 
-                callingAjax(country);
-
             });
 
         // init slider & events on map

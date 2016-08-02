@@ -571,7 +571,7 @@
 
                     g{fill:#e5e5e4;transition:all 300ms ease;
                         &.work-with{fill:#8e8e8e;cursor:pointer;
-                            &.active{fill:#ffcab2;}
+                            &.active{fill:#ffcab2;cursor: default;}
                             &:hover{
                                 &:not(.active){fill:#ffa025;}
                             }
