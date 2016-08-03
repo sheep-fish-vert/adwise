@@ -156,8 +156,8 @@ function constructSlides(slides){
                 var linkWidth = linkParams.width/2;
                 var linkHeight = linkParams.height/2;
                 var titlLimit = 15;
-                var positionY = (linkHeight - offsetY) * (titlLimit / linkHeight);
-                var positionX = (linkWidth - offsetX) * (titlLimit / linkWidth) * (-1);
+                var positionX = (linkHeight - offsetY) * (titlLimit / linkHeight);
+                var positionY = (linkWidth - offsetX) * (titlLimit / linkWidth) * (-1);
 
                 linkWrap.find('.item-link').css({'transform': 'rotateX( ' + positionX + 'deg ) rotateY( ' + positionY + 'deg )'});
 
