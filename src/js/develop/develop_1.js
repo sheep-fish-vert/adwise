@@ -1,4 +1,4 @@
-/* parallax scroll */
+/* parallax scroll (if you try fix some thing here - you have problems :) Good luck! ) */
 
     function parallaxScroll(){
 
@@ -96,7 +96,7 @@
                     }
 
                     // "if" for scrolled more than 33.33% of page
-                    if(scrolled > documentPercScrollForTopImage && $('.global-wrapper').height() > $(window).height()*1.75){
+                    if(scrolled > documentPercScrollForTopImage && scrolled > blurParallaxPadding && $('.global-wrapper').height() > $(window).height()*1.75){
                         $('.parallax-image-top').addClass('hide');
                     }else{
                         $('.parallax-image-top').removeClass('hide');

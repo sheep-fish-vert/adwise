@@ -684,22 +684,22 @@
 
         &.first-type{
 
-            img{min-width: calc(100% + 185px);}
+            img{min-width: calc(100% + 185px);} /* for blur on adges */
 
             .parallax-image-top, .parallax-image-bottom{left:-15px;}
             .parallax-images{
                 .parallax-image-top{top:20px;}
             }
-            .parallax-blur{transform:translate(0, 480px);
+            .parallax-blur{transform:translate(0, 580px);
                 .parallax-image-top{
-                    img{transform:translate(-50%, -460px);}
+                    img{transform:translate(-50%, -560px);}
                 }
                 .parallax-image-bottom{
                     img{transform:translate(-50%, 0);}
                 }
             }
 
-            &~.main{padding-top:400px;
+            &~.main{padding-top:500px;
                 &.event-page{padding-top: 435px;position:relative;z-index: 1;}
             }
 
