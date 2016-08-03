@@ -3,9 +3,9 @@
     .login{
         .conteiner{
             .mbox-s{ max-width: 500px; padding: 0 15px; margin: 0 auto; }
-            .tabber{ padding-top: 50px; padding-bottom: 110px;
+            .tabber{ padding-top: 97px; padding-bottom: 110px;
                 .tab-row{ width: 100%; display: flex; align-items: center; justify-content: space-around;
-                    .tab{ padding-bottom: 15px; position: relative; color: #9d9d9d; font-size: 33px;   font-family: "ProximaNovaScOsf"; cursor: pointer; font-weight: 600; text-transform: uppercase;
+                    .tab{ padding-bottom: 15px; position: relative; color: #9d9d9d; font-size: 30px; font-family: "ProximaNovaScOsf"; cursor: pointer; font-weight: 400;letter-spacing: 1.5px;
                         &:before{content: ''; position: absolute; bottom: 0; left: 50%; right: 50%; height: 3px; background-color: #9d9d9d; transition: all 0.3s; }
                         &:hover{
                             &:before{ left: 0; right: 0;}
@@ -21,23 +21,34 @@
                         &.active{display: block;}
                         form{
                             .contact-form-title{
-                                p{ margin: 0; font-size: 17px; font-weight: 300; font-family: "ProximaNovaScOsf"; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1.2;  text-align: center; padding-top: 50px; }
+                                p{ margin: 0; font-size: 15px; font-weight: 200; font-family: "ProximaNovaScOsf"; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1.35;  text-align: center; padding-top: 50px; }
                                 h5{ margin: 0;  font-weight: 300; font-size: 27px; font-family: "ProximaNovaScOsf";   color: rgb(255, 255, 255); line-height: 1.2; text-align: center; padding-top: 57px; padding-bottom: 24px; }
                             }
                             .form_input{ position: relative; width: 100%;padding-bottom: 15px;
-                                input{width: 100%; background-color: transparent; border: none; border-bottom: 1px solid white; text-align: center; height: 45px; font-size: 16px; font-family: "Roboto";color: white; line-height: 1; text-align: center;
-                                    &::-webkit-input-placeholder {color: rgb(174, 174, 174);}
-                                    &:-moz-placeholder {color: rgb(174, 174, 174);opacity:1;}
-                                    &::-moz-placeholder {color: rgb(174, 174, 174);opacity:1;}
-                                    &:-ms-input-placeholder {color: rgb(174, 174, 174);}
+                                input{width: 100%; background-color: transparent; border: none; border-bottom: 1px solid white; text-align: center; height: 31px; font-size: 16px; font-family: "Roboto";color: white; line-height: 1; text-align: center;
+                                    &::-webkit-input-placeholder {color: rgba(174, 174, 174, 0);}
+                                    &:-moz-placeholder {color: rgba(174, 174, 174, 0);opacity:1;}
+                                    &::-moz-placeholder {color: rgba(174, 174, 174, 0);opacity:1;}
+                                    &:-ms-input-placeholder {color: rgba(174, 174, 174, 0);}
                                     &.error{border-color: red;}
                                 }
                                 .errorText{display: none !important; }
                             }
-                            .some-text{font-size: 17px; font-weight: 300; font-family: "ProximaNovaScOsf"; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1.2;  text-align: center; padding-top: 20px;}
+                            .some-text{font-size: 15px; font-weight: 200; font-family: "ProximaNovaScOsf"; color: rgba(255, 255, 255, 1); text-transform: uppercase; line-height: 1.2;  text-align: center; padding-top: 20px;max-width: 340px;margin:0 auto;}
                             .contact-form-row-submit{ padding-top: 58px;
-                                .contact-submit{ height: 52px; background-color: #f6d241; max-width: 305px; width: 100%; border: none; outline: none; margin: 0 auto; border-radius: 26px; display: block;
+                                .contact-submit{ height: 52px; background-color: #f6d241; max-width: 305px; width: 100%; border: none; outline: none; margin: 0 auto; border-radius: 26px; display: block;transition:all 300ms ease;
+                                    &:hover{background-color: #ffe373;}
                                     span{ font-size: 24px; font-family: "ProximaNovaScOsf"; color: rgb(0, 0, 0);   line-height: 52px;}
+                                }
+                            }
+                            &.login-form{
+                                .form_input{
+                                    input{
+                                       &::-webkit-input-placeholder {color: rgba(174, 174, 174, 1);}
+                                        &:-moz-placeholder {color: rgba(174, 174, 174, 1);opacity:1;}
+                                        &::-moz-placeholder {color: rgba(174, 174, 174, 1);opacity:1;}
+                                        &:-ms-input-placeholder {color: rgba(174, 174, 174, 1);}
+                                    }
                                 }
                             }
                         }
@@ -104,13 +115,13 @@
             }
 
             .row-for-all{ display: flex; align-items: center; justify-content: space-between; padding-top: 80px;
-                .button-part{ width: 50%; 
+                .button-part{ width: 50%;
                     a{display: flex; align-items: center; justify-content: center; text-decoration: none; max-width: 200px; width: 100%; margin: 0 auto; font-size: 16px;  font-family: "ProximaNovaScOsf"; color: rgb(0, 0, 0); background-color: #ecd050; height: 37px; transition: all 0.3s;
                         &:hover{background-color: #d4b217; }
                     }
                 }
                 .soc-part{width: 50%;
-                    .social-conteiner{display: flex; align-items: center; justify-content: flex-end; 
+                    .social-conteiner{display: flex; align-items: center; justify-content: flex-end;
                         a{display: block; width: 37px; height: 37px; }
                     }
                 }
