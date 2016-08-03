@@ -74,7 +74,7 @@
             }
             #videobcg{display: none;}
 
-            .blur-part{  position: relative;
+            .blur-part{  position: relative;padding-top: 30px;padding-bottom: 60px;
                 &:after{top: 0;}
                 .mbox{
                     .backgroud-image-blur-wrapper{display:block; position: absolute; overflow: hidden;max-height: 100%; min-height:100%; max-width: 100% ;min-width: 100%; left: 0; bottom: 0;
