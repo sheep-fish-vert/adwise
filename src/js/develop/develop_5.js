@@ -39,11 +39,7 @@ function constructSlides(slides){
     filteringSlds();
     addSlidesINSlider();
     hoverItmes();
-    /*
-    setTimeout(function () {
 
-    },500);
-    */
     // reinit & markuping slider
 
         function addSlidesINSlider(){
@@ -54,7 +50,7 @@ function constructSlides(slides){
             slider.find('.item').remove();
 
             for (var i = 0; i < filteredArray.length; i++) {
-                var oneSlide = '<div class="item"><a href="'+filteredArray[i].href+'" class="item-link"><img src="'+filteredArray[i].img+'" alt="'+filteredArray[i].name+'"><span class="hover"></span></a></div>';
+                var oneSlide = '<div class="item"><div class="item-link-wrap"><a href="'+filteredArray[i].href+'" class="item-link"><img src="'+filteredArray[i].img+'" alt="'+filteredArray[i].name+'"><span class="hover"></span></a></div></div>';
                     slider.append(oneSlide);
             }
 
@@ -147,13 +143,13 @@ function constructSlides(slides){
 
         function hoverItmes(){
 
-            $(document).on('mouseenter', '.item-link', function(){
-                $(this).addClass('hovered');
+            $(document).on('mouseenter', '.item-link-wrap', function(){
+                $(this).find('.item-link').addClass('hovered');
             });
 
-            $(document).on('mousemove','.item-link', function(e){
+            $(document).on('mousemove','.item-link-wrap', function(e){
 
-                var link = $(this);
+                var linkWrap = $(this);
                 var offsetX = e.offsetX;
                 var offsetY = e.offsetY;
                 var linkParams = this.getBoundingClientRect();
@@ -163,16 +159,16 @@ function constructSlides(slides){
                 var positionY = (linkHeight - offsetY) * (titlLimit / linkHeight);
                 var positionX = (linkWidth - offsetX) * (titlLimit / linkWidth) * (-1);
 
-                link.css({'transform': 'rotateX( ' + positionX + 'deg ) rotateY( ' + positionY + 'deg )'});
+                linkWrap.find('.item-link').css({'transform': 'rotateX( ' + positionX + 'deg ) rotateY( ' + positionY + 'deg )'});
 
-                link.find('.hover').css({'transform': 'translate3d( ' + offsetX + 'px, ' + offsetY + 'px, '  + '0 )'});
+                linkWrap.find('.hover').css({'transform': 'translate3d( ' + offsetX + 'px, ' + offsetY + 'px, '  + '0 )'});
 
             });
 
-            $(document).on('mouseleave', '.item-link', function(){
+            $(document).on('mouseleave', '.item-link-wrap', function(){
 
-                $(this).removeClass('hovered');
-                $(this).removeAttr('style');
+                $(this).find('.item-link').removeClass('hovered');
+                $(this).find('.item-link').removeAttr('style');
 
             });
 
