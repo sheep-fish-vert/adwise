@@ -5,12 +5,12 @@
             .mbox-s{ max-width: 500px; padding: 0 15px; margin: 0 auto; }
             .tabber{ padding-top: 97px; padding-bottom: 110px;
                 .tab-row{ width: 100%; display: flex; align-items: center; justify-content: space-around;
-                    .tab{ padding-bottom: 15px; position: relative; color: #9d9d9d; font-size: 30px; font-family: "ProximaNovaScOsf"; cursor: pointer; font-weight: 400;letter-spacing: 1.5px;
+                    .tab{ padding-bottom: 15px; position: relative; color: rgba(255,255,255,.5); font-size: 30px; font-family: "ProximaNovaScOsf"; cursor: pointer; font-weight: 400;letter-spacing: 1.5px;
                         &:before{content: ''; position: absolute; bottom: 0; left: 50%; right: 50%; height: 3px; background-color: #9d9d9d; transition: all 0.3s; }
                         &:hover{
                             &:before{ left: 0; right: 0;}
                         }
-                        &.active{ color: white;;
+                        &.active{ color: white;
                             &:before{ background-color: white; left: 0; right: 0;}
                         }
                     }
