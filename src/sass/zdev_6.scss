@@ -6,18 +6,28 @@
 	//   &:after{content: ''; display: block; position: absolute; -webkit-filter: blur(10px);-moz-filter: blur(10px); -o-filter: blur(05px); -ms-filter: blur(05px);filter: blur(10px); overflow: hidden;  max-width: 100% ;min-width: 100%;max-height: 698px; min-height: 698px; bottom: -20px; left: 0; background: url('../images/video-block-bg.jpg') no-repeat; overflow: hidden; z-index: 2; background-position: 0% 100%; background-size: 100% auto;
  //   		}
  //   	}3
-   .part-for-videoblur{content: ''; display: block; position: absolute;  overflow: hidden;  max-width: calc(100%);min-width: calc(100%);max-height: 278px; min-height: 278px; bottom: -20px; left: 0;  overflow: hidden; z-index: 2;
+   .part-for-videoblur{display: block; position: absolute;  overflow: hidden;  max-width: calc(100%);min-width: calc(100%);max-height: 278px; min-height: 278px; bottom: -16px; left: 0;  overflow: hidden; z-index: 2;
 
-   	 	#videobcg-blur {
-			   -webkit-filter: blur(10px);
-			  -moz-filter: blur(10px);
-			  -o-filter: blur(10px);
-			  -ms-filter: blur(10px);
-			  filter: blur(10px);
-			}
-	 }
-	   	#videobcg  {
-	   		backface-visibility: hidden ;
+	 	#videobcg-blur {
+	 		backface-visibility: hidden ;
+	   		position: absolute;
+	   		top: -517px;
+	   		left: 0px;
+	   		min-width: 100%;
+	   		min-height: 100%;
+	   		width: auto;
+	   		height: auto;
+	   		z-index: -1000;
+	   		overflow: hidden;
+		   -webkit-filter: blur(10px);
+		   -moz-filter: blur(10px);
+		   -o-filter: blur(10px);
+		   -ms-filter: blur(10px);
+		   filter: blur(10px);
+		}
+	}
+	#videobcg{
+	   backface-visibility: hidden ;
 	   position: absolute;
 	   top: 0px;
 	   left: 0px;
@@ -29,16 +39,7 @@
 	   overflow: hidden;
 	}
 	#videobcg-blur  {
-	   backface-visibility: hidden ;
-	   position: absolute;
-	   top: -517px;
-	   left: 0px;
-	   min-width: 100%;
-	   min-height: 100%;
-	   width: auto;
-	   height: auto;
-	   z-index: -1000;
-	   overflow: hidden;
+
 	}
 	.heading-wrapper{padding: 180px 0 170px 0;
 		.mbox{
@@ -50,7 +51,7 @@
    		 &:after{content: ''; display: block; min-height: 1px; background-color:#8b8883; position: absolute; top: -33px;left: 0; width: 100%;  }
 		.mbox{display: flex; flex-wrap: wrap; position: static;
 			.text-conteiner{ width: calc(100% - 100px); max-width: 580px; padding-right: 20px;
-				p{font-family: 'ProximaNovaScOsf'; font-weight: 300; font-size: 18px; color:#fff; line-height: 1.2;
+				p{font-family: 'ProximaNovaScOsf'; font-weight: 300; font-size: 18px; color:#fff; line-height: 1.2;margin:0 0 40px 0;
 
 				}
 			}
