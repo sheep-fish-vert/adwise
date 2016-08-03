@@ -667,7 +667,7 @@
         }
         .parallax-images{position: fixed;top:0;left:0;width: calc(100% + 30px);height: calc(100% + 30px);}
         .parallax-blur{position: fixed;top:0;left:0;border-top:1px solid #9b9692;overflow: hidden;width: calc(100% + 30px);height:calc(100% + 30px);
-            &.blur{filter:blur(30px);filter:url(#blur);}
+            &.blur{filter:blur(50px);filter:url(#blur);}
         }
 
         .parallax-image-top{z-index: 1;}
@@ -675,14 +675,16 @@
 
         .parallax-blur{transition:filter 300ms ease;
             .parallax-image-top{
-                img{filter:blur(30px);filter:url(#blur);}
+                img{filter:blur(50px);filter:url(#blur);}
             }
             .parallax-image-bottom{
-                img{filter:blur(30px);filter:url(#blur);}
+                img{filter:blur(50px);filter:url(#blur);}
             }
         }
 
         &.first-type{
+
+            img{min-width: calc(100% + 185px);}
 
             .parallax-image-top, .parallax-image-bottom{left:-15px;}
             .parallax-images{
@@ -712,7 +714,7 @@
             .parallax-blur{right:0;left:auto;
                 &:after{content:'';display: block;position: absolute;top:0;left:0;width: 1px;height: 100%;background-image: url(../images/second-type-parallax-shadow.png);z-index: 1;}
                 .parallax-image-top, .parallax-image-bottom{
-                    img{filter:blur(30px);filter:url(#blur);transform:translate(50px , 0);}
+                    img{filter:blur(50px);filter:url(#blur);transform:translate(50px , -25px);}
                 }
             }
 

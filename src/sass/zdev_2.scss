@@ -19,7 +19,7 @@
                 .tab-content{ min-height: 395px;
                     .con{ display: none;
                         &.active{display: block;}
-                        form{
+                        form, .get-in-t{
                             .contact-form-title{
                                 p{ margin: 0; font-size: 15px; font-weight: 200; font-family: "ProximaNovaScOsf"; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1.35;  text-align: center; padding-top: 50px; }
                                 h5{ margin: 0;  font-weight: 300; font-size: 27px; font-family: "ProximaNovaScOsf";   color: rgb(255, 255, 255); line-height: 1.2; text-align: center; padding-top: 57px; padding-bottom: 24px; }
@@ -36,7 +36,7 @@
                             }
                             .some-text{font-size: 15px; font-weight: 200; font-family: "ProximaNovaScOsf"; color: rgba(255, 255, 255, 1); text-transform: uppercase; line-height: 1.2;  text-align: center; padding-top: 20px;max-width: 340px;margin:0 auto;}
                             .contact-form-row-submit{ padding-top: 58px;
-                                .contact-submit{ height: 52px; background-color: #f6d241; max-width: 305px; width: 100%; border: none; outline: none; margin: 0 auto; border-radius: 26px; display: block;transition:all 300ms ease;
+                                .contact-submit{ height: 52px; background-color: #f6d241; max-width: 305px; width: 100%; border: none; outline: none; margin: 0 auto; border-radius: 26px; display: block;text-decoration: none;text-align: center;transition:all 300ms ease;
                                     &:hover{background-color: #ffe373;}
                                     span{ font-size: 24px; font-family: "ProximaNovaScOsf"; color: rgb(0, 0, 0);   line-height: 52px;}
                                 }
@@ -51,6 +51,9 @@
                                     }
                                 }
                             }
+                        }
+                        .get-in-t{
+                            .contact-form-title{padding-bottom: 30px;border-bottom:1px solid #fff;}
                         }
                     }
                 }
