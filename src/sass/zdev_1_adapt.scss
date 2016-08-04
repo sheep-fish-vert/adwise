@@ -1,3 +1,23 @@
+
+/* parallax medias */
+
+    @media screen and (max-width: 1366px), screen and (max-height:768){
+
+        /* contacts parallax */
+
+            .contacts-page{
+                .parallax-block{
+
+                }
+            }
+
+        /* /contacts parallax */
+
+    }
+
+/* /parallax medias */
+
+
 @media screen and (max-width: 1920px){
 
 }
@@ -32,16 +52,18 @@
 
     /* parallax */
 
-        .parallax-block{
+        .parallax-page{
             &.first-type{
-                .parallax-blur{transform:translate(0,0);
-                    .parallax-image-top{
-                        img{transform:translate(-50%, 0);}
+                &.main{padding-top: 0!important;}
+
+                .parallax-block{
+                    .parallax-blur{transform:translate(0,0)!important;
+                        .parallax-image-top{
+                            img{transform:translate(-50%, 0)!important;}
+                        }
                     }
                 }
-                &~.main{padding-top: 0;
-                    &.event-page{padding-top: 0;}
-                }
+
             }
         }
 
@@ -129,7 +151,7 @@
 
     /* services */
 
-        .services{
+        .services-page{
             .right-column{width: 100%;}
             .column-list-wrap{
                 .column-list{
@@ -174,10 +196,12 @@
 
     /* parallax */
 
-        .parallax-block{
+        .parallax-page{
             &.second-type{
-                .parallax-blur{display: none;}
-                .parallax-images{width: 100%!important;}
+                .parallax-block{
+                    .parallax-blur{display: none;}
+                    .parallax-images{width: 100%!important;}
+                }
             }
         }
 
@@ -204,7 +228,7 @@
 
         .news-list{padding-top: 30px;margin-bottom: 50px;
             .news-list-items-wrap{margin-bottom: 20px;
-                .news-list-item{width:calc(50% - 10px);margin-bottom: 20px;
+                .news-list-item{width:calc(50% - 10px);margin-bottom: 20px;max-width: none; max-height: none;
                     .news-list-item-content-main{padding:30px 10px 15px 15px;
                         .news-list-item-title{padding-top: 0;
                             h6{padding-left: 15px;}
@@ -246,7 +270,7 @@
 
     /* services */
 
-        .services{
+        .services-page{
             .right-column{
                 .creatives-wrap{
                     .tab-item{
@@ -290,8 +314,6 @@
         }
 
     /* /event-page */
-
-    .news-list .news-list-items-wrap .news-list-item{ max-width: none; max-height: none;}
 
 }
 @media screen and (max-width: 666px){
