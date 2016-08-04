@@ -1,17 +1,31 @@
 
 /* parallax medias */
 
-    @media screen and (max-width: 1366px), screen and (max-height:768){
+    @media screen and (max-width: 1366px), screen and (max-height:768px){
 
-        /* contacts parallax */
+        .parallax-page{
 
-            .contacts-page{
-                .parallax-block{
+            /* contacts parallax */
 
+                &.contacts-page{
+                    &.first-type{
+
+                        &.main{padding-top: 300px;}
+
+                        .parallax-block{
+                            .parallax-blur{transform:translate(0, 270px);
+                                .parallax-image-top{
+                                    img{transform:translate(-50%, -250px);}
+                                }
+                            }
+                        }
+                    }
                 }
-            }
 
-        /* /contacts parallax */
+
+            /* /contacts parallax */
+
+        }
 
     }
 
