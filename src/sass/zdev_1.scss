@@ -746,6 +746,8 @@
 
             &.first-type{
 
+                &.main{padding-top: 480px;}
+
                 .parallax-block{
                     .parallax-blur{transform:translate(0, 400px);height: calc(100% + 50px);
                         .parallax-image-top{
