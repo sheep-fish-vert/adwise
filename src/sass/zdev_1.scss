@@ -682,7 +682,7 @@
 
                 .topper{border-bottom: 1px solid #fff;margin-bottom: 75px;
                     .ext{margin-bottom: 22px;
-                        img{width: 22px;margin-right: 25px;opacity: .5;}
+                        img{width: 22px;margin-right: 25px;}
                         span{font-family: 'Roboto', sans-serif;font-weight: 300;font-size: 18px;color:#fff;}
                     }
                 }
@@ -705,7 +705,7 @@
                 .row-for-all{display: flex;justify-content: space-between;align-items: center;
                     .button-part{
                         .buttoner{display:flex;justify-content: center;align-items: center;width: 200px;height: 37px;text-decoration: none;  font-size: 16px;color:#000;background-color: #ecd050;transition:all 300ms ease;
-                            &:hover{background-color: #fce166;color:#fff;}
+                            &:hover{background-color: #fce166;}
                         }
                     }
                 }
@@ -800,7 +800,7 @@
                 .parallax-images{left:0;}
 
                 .parallax-blur{right:0;left:auto;
-                    &:after{content:'';display: block;position: absolute;top:0;left:0;width: 1px;height: 100%;background-image: url(../images/second-type-parallax-shadow.png);z-index: 1;}
+                    &:after{content:'';display: block;position: absolute;top:0;left:0;width: 1px;height: 100%;background-image: url(../images/second-type-parallax-shadow.png);z-index: 1;opacity:.5;}
                     .parallax-image-top, .parallax-image-bottom{
                         img{filter:blur(50px);filter:url(#blur);transform:translate(50px , -25px);}
                     }
