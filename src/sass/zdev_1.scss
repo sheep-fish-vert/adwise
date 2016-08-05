@@ -677,7 +677,7 @@
             }
         }
 
-        .content-wrap{padding:100px 0 40px 20px;
+        .content-wrap{padding:100px 0 300px 20px;
             .content-wrap-main{max-width: 525px;width: 100%;margin:0 auto;
 
                 .topper{border-bottom: 1px solid #fff;margin-bottom: 75px;
@@ -705,7 +705,7 @@
                 .row-for-all{display: flex;justify-content: space-between;align-items: center;
                     .button-part{
                         .buttoner{display:flex;justify-content: center;align-items: center;width: 200px;height: 37px;text-decoration: none;  font-size: 16px;color:#000;background-color: #ecd050;transition:all 300ms ease;
-                            &:hover{background-color: orange;color:#fff;}
+                            &:hover{background-color: #fce166;color:#fff;}
                         }
                     }
                 }
