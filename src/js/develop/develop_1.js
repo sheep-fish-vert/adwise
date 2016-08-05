@@ -309,6 +309,78 @@
 
 /* /global-wrapper */
 
+/* scrolling tabs (like on vacancy) */
+
+    function scrollingTabs(){
+
+        if($('.scroll-content').length){
+
+            function scrolling(){
+
+                var scrolledValue = $(window).scrollTop() + $(window).height()/2;
+                var footerScroll = $(document).height() - $(window).height()/2;
+
+                if($(window).width() > 992){
+
+                    $('.scroll-content>li').each(function(index, el) {
+
+                        if(scrolledValue < $(this).offset().top && scrolledValue < footerScroll){
+                            $('.scroll-list li').removeClass('active');
+                            if(index > 0){
+                                $('.scroll-list li').eq(index-1).addClass('active');
+                            }else if(index == 0){
+                                $('.scroll-list li').eq(0).addClass('active');
+                            }
+                            return false;
+                        }else if(scrolledValue == footerScroll || scrolledValue > $('.scroll-content>li').eq($('.scroll-content>li').length-1).offset().top){
+                            $('.scroll-list li').removeClass('active');
+                            $('.scroll-list li').eq($('.scroll-list li').length-1).addClass('active');
+                            return false;
+                        }
+                    });
+
+                }
+
+            };
+
+            scrolling();
+
+            $(document).on('click', '.scroll-list li', function(){
+
+                var index = $(this).index();
+                $('.scroll-list li').removeClass('active');
+
+                var target = $('.scroll-content>li').eq(index).offset().top - $(window).height()/4;
+                $(scroller).stop().animate({scrollTop:target},800,function(){
+                    scrolling();
+                });
+
+            });
+
+            $(window).load(function(){
+
+                scrolling();
+
+            });
+
+            $(window).resize(function(){
+
+                scrolling();
+
+            });
+
+            $(window).scroll(function(){
+
+                scrolling();
+
+            });
+
+        }
+
+    };
+
+/* /scrolling tabs (like on vacancy) */
+
 
 $(document).ready(function(){
 
@@ -323,6 +395,8 @@ $(window).load(function(){
     globalWrapperMinHeight();
 
     leftColumnScroll();
+
+    scrollingTabs();
 
 });
 
