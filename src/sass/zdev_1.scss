@@ -105,8 +105,8 @@
 
 /* event-list, careers-list */
 
-    .info-list{padding:180px 0 80px 10px;
-        .info-list-wrap{display: flex;justify-content: space-between;align-items: flex-start;flex-wrap:wrap;min-height: calc(100vh - 400px);
+    .info-list{padding:180px 0 80px 20px;
+        .info-list-wrap{display: flex;justify-content: space-between;align-items: flex-start;flex-wrap:wrap;min-height: calc(100vh - 400px);max-width: 800px;margin:0 auto 30px auto;position: relative;left:-9px;
 
             .info-list-item{width:30.33%;margin-right: 4.5%;margin-bottom: 20px;
                 &:nth-child(3n){margin-right: 0px;}
