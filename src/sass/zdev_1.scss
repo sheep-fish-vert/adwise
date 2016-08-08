@@ -849,8 +849,8 @@
             &.first-type{padding-top: 435px;position:relative;z-index: 1; /*some new */
                 .parallax-block{
                     &:after{content: '';position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0,0,0, .35);}
-                    .parallax-blur{transform:translate(0, 524px);
-                        img{transform:translate(-50%, -430px);}
+                    .parallax-blur{transform:translate(0, 524px);border-top: 1px solid #fff;
+                        img{transform:translate(-50%, -430px);top: -487px;}
                     }
                     // new fix
                     .parallax-images{
