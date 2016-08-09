@@ -118,6 +118,11 @@ input, textarea{
 @include font-face('ProximaNovaScOsf', 'ProximaNovaScOsfRegular', 400);
 @include font-face('ProximaNovaScOsf', 'ProximaNovaScOsfSemibold', 600);
 
+
+@include font-face('ProximaNovaNew', 'Proxima Nova ScOsf Extra Condensed Bold', 700);
+@include font-face('ProximaNovaNew', 'Proxima Nova ScOsf Extra Condensed Light', 300);
+@include font-face('ProximaNovaNew', 'Proxima Nova ScOsf Extra Condensed Thin', 100);
+
 @include font-face('RBNo2', 'RBNo2Light', 300);
 @include font-face('Proxima Nova Condenced', 'proximanovacond-light', 300);
 @include font-face('CoreSans', 'CoreSansD65Heavy');

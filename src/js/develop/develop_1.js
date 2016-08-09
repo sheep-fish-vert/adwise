@@ -17,6 +17,7 @@
             var documentPercScrollForBottomImage = 0;
             var bottomImageArea = 0;
 
+            var bidloFix = 1;
 
             // page params write
 
@@ -26,7 +27,11 @@
 
                 blurParallaxPadding = parseInt($('.main').css('padding-top')) + parseInt($('header').height());
 
-                documentPercScrollForTopImage = $('.global-wrapper').height() / 4;
+                if ( $('.monetization-page').length ){
+                    bidloFix = 1.6;
+                }
+                documentPercScrollForTopImage = $('.global-wrapper').height() / 4 * bidloFix;
+
                 imgTopHeight = $('.parallax-images .parallax-image-top img').height();
 
                 if($('.parallax-image-bottom').length){

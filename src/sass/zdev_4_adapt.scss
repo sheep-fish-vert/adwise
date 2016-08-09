@@ -200,6 +200,21 @@
             }
         }
     }
+
+    // monetization
+    .monetization{
+        .monetization-middle {
+            .monetization-items{flex-direction: column;
+                .item{width: 100%;margin-bottom: 30px;}
+            }
+        }
+        .monetization-bottom {
+            .monetization-list ul li:after{border-color: white;}
+            .monetization-button{flex-direction: column;align-items: center;
+                a{margin-bottom: 20px;}
+            }
+        }
+    }
 }
 @media screen and (max-width: 767px){
     // asia market
@@ -276,6 +291,13 @@
             .call-title{font-size: 26px;}
             .call-subtitle{font-size: 20px;}
         }
+    }
+
+    // monetization
+    .monetization{
+        .title h1, .title h2, .title h3, .title .h1, .title .h2, .title .h3{font-size: 40px;}
+        .monetization-wrap .title{padding-top: 75px;}
+        .monetization-bottom .monetization-list ul li{padding-left: 30px;}
     }
 
 }

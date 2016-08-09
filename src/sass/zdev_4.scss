@@ -374,3 +374,61 @@ a.button-next{padding-left: 0;padding-right: 32px;
     }
 }
 
+// monetization page
+.monetization-page{
+    .parallax-block .parallax-blur{border-top: 1px solid rgba(255,255,255,0.5);}
+}
+.monetization{
+    p{margin: 0;color: white;}
+    .mbox{max-width: 1060px;}
+    .monetization-wrap{padding-bottom: 120px;
+        .title{padding-top: 105px;position: relative;
+            &:after{position: absolute;content: '';background-color: #fff;height: 3px;max-width: 300px;width: 100%;bottom: -40px;left: 50%;transform: translateX(-50%);}
+        }
+    }
+    .monetization-middle{padding-top: 100px;
+        .monetization-text,.monetization-bottom-text{max-width: 600px;padding: 0 10px;width: 100%;margin:0 auto;font-size: 16px;line-height: 1.2;text-align: center;padding-bottom: 60px;font-weight: 300;
+        }
+        .monetization-bottom-text{font-size: 17px;font-weight: 100;padding-top: 115px;padding-bottom: 80px;max-width: 445px;
+            p{position: relative;
+                &:after,&:before{position: absolute;top: -40px;max-width: 300px;width: 100%;left: 50%;transform: translateX(-50%);height: 3px;border-radius: 5px;content: '';background-color: #fff;border-radius: 17%;}
+                &:before{top: auto;bottom: -40px;}
+            }
+        }
+        .monetization-items{display: flex;justify-content: space-between;
+            .item{width: 29%;background-color: #fff;display: flex;flex-direction: column;align-items: center;justify-content: center;border-radius: 10px;box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.45);padding: 0 20px;text-align: center;
+                &.item-2 .item-title:after{background-color: #a9a9af;}
+                &.item-3 .item-title:after{background-color: #917763;}
+            }
+            .item-img{width: 100%;height: 320px;display: flex;align-items: center;justify-content: center;}
+            .item-title{color: #000;font-size: 27px;font-weight: 700;font-family: 'ProximaNovaNew';padding-bottom: 50px;position: relative;
+                &:after{content: '';height: 4px;width: 40px;position: absolute;left: 50%;transform: translateX(-50%);bottom: 25px;background-color: #fff;background-color: #a28e59;}
+            }
+            .sub-title {font-weight: 300;font-family: 'ProximaNovaNew';font-size: 20px;margin-bottom: 35px;padding: 0 8px;
+                p{color: #000;}
+            }
+        }
+    }
+    .monetization-bottom{display: flex;flex-direction: column;align-items: center;
+        .title{
+            h1, h2, h3, .h1, .h2, .h3{font-size: 34px;}
+            &:after{display: none;}
+        }
+        .monetization-list{padding-top: 40px;
+            ul{list-style-type: none;padding-left: 0px;margin-top: 10px;margin-bottom: 10px;
+                li{font-size: 17px;color: white;font-weight: 300;line-height: 1.5;padding-left: 40px;position: relative;
+                    &:after{position: absolute;height: 6px;width: 6px;border-left: 2px solid #c1c2c3;border-bottom: 2px solid #c1c2c3;content: '';left: 0;transform: translateY(-50%) rotate(-136deg);top: 50%;}
+                }
+            }
+        }
+        .monetization-button{padding-top: 50px;margin:0 auto;width: 100%;max-width: 440px;display: flex;justify-content: space-between;
+            .button{text-decoration: none;font-size: 14px;text-transform: uppercase;line-height: 41px;background-color: #dea88e;background-color: #d6c688;
+                span{text-shadow:0px 0px 16px #2a2a2a;}
+                &:hover{background-color: #b5a76e;}
+                &.button-red{background-color: #dea88e;
+                    &:hover{background-color: #c49279;}
+                }
+            }
+        }
+    }
+}
