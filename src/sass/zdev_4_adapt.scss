@@ -18,6 +18,10 @@
     }
     //adversting
     .advertising-page{background:#f2f4f8 url('../images/some-bg-img-notebook.png') center 131% no-repeat;}
+
+    .advertising-page{padding-top: 320px !important;
+        &.parallax-page.first-type .parallax-block .parallax-blur{transform: translate(0, 400px);}
+    }
 }
 @media screen and (max-width: 1295px){
     // creatives
