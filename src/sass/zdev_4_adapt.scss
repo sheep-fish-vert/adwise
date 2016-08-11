@@ -17,10 +17,24 @@
         }
     }
     //adversting
-    .advertising-page{background:#f2f4f8 url('../images/some-bg-img-notebook.png') center 131% no-repeat;}
+
 
     .advertising-page{padding-top: 320px !important;
         &.parallax-page.first-type .parallax-block .parallax-blur{transform: translate(0, 400px);}
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1450px) {
+    // advertising
+    .advertising-page{
+        .parallax-block .parallax-blur img{width: 100%;top: 54px;}
+        .parallax-block .parallax-images img{width: 100%;top: -45px;}
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    // advertising
+    .advertising-page{
+        .parallax-block .parallax-blur img{top: 85px;width: 100%;}
+        .parallax-block .parallax-images img{top: -20px;width: 100%;}
     }
 }
 @media screen and (max-width: 1295px){
@@ -73,6 +87,14 @@
         }
     }
 
+    // advertising
+    .advertising{
+        .advertising-bottom{
+            &:after{position: absolute;content: '';background:transparent url('../images/some-bg-img.png') center top no-repeat;top: -137px;left: -20px;width: calc(100% + 40px);height: calc(100% + 137px);content: '';z-index: 1;pointer-events:none;}
+            &>div{position: relative;z-index: 2}
+        }
+    }
+
 }
 @media screen and (max-width: 992px){
     // fancybox
@@ -108,7 +130,7 @@
         .advertising-wrap{
             &>.title{}
         }
-        .advertising-middle{margin-bottom: 50px;
+        .advertising-middle{margin-bottom: 100px;
             .advertising-items{
                 .item{width: 100%;margin-bottom: 40px;
                     &.item-1{
@@ -119,9 +141,7 @@
                 }
             }
         }
-        .advertising-bottom{
-            &:after{position: absolute;content: '';background:transparent url('../images/some-bg-img.png') center top no-repeat;top: 0;left: -20px;width: calc(100% + 40px);height: 100%;content: '';z-index: 1;pointer-events:none;}
-            &>div{position: relative;z-index: 2}
+        .advertising-bottom{padding-top: 80px;
             .advertising-big-text{flex-wrap: wrap;flex-direction: column;
                 .item{
                     &.item-1{width: 100%;margin-bottom: 20px;text-align: center;
