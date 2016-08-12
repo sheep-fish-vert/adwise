@@ -29,6 +29,11 @@
         .parallax-block .parallax-blur img{width: 100%;top: 54px;}
         .parallax-block .parallax-images img{width: 100%;top: -45px;}
     }
+    // advertising
+    .asian-market-page{
+        .parallax-block .parallax-blur img{width: 100%;}
+        .parallax-block .parallax-images img{width: 100%;}
+    }
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
     // advertising
@@ -93,6 +98,12 @@
             &:after{position: absolute;content: '';background:transparent url('../images/some-bg-img.png') center top no-repeat;top: -137px;left: -20px;width: calc(100% + 40px);height: calc(100% + 137px);content: '';z-index: 1;pointer-events:none;}
             &>div{position: relative;z-index: 2}
         }
+    }
+
+    // asian-market-page
+    .asian-market-page{
+        .title{padding-top: 70px;}
+        .market-middle-text-wrapper:before{display: none;}
     }
 
 }
@@ -185,12 +196,12 @@
     }
 
     // asia market
-    .market .market-middle-text .middle-items .item .item-wrap{width: 230px;}
-    .market .market-middle-text .middle-items .item .item-big-number{font-size: 53px;}
+    .market-old .market-middle-text .middle-items .item .item-wrap{width: 230px;}
+    .market-old .market-middle-text .middle-items .item .item-big-number{font-size: 53px;}
 
-    .market .market-top-text{margin-bottom: 110px;}
-    .market .market-middle-text{margin-bottom: 100px;}
-    .market .middle-text-next{margin: 0 auto 100px;}
+    .market-old .market-top-text{margin-bottom: 110px;}
+    .market-old .market-middle-text{margin-bottom: 100px;}
+    .market-old .middle-text-next{margin: 0 auto 100px;}
 
     // contacts
     .contacts{
@@ -259,9 +270,52 @@
         }
     }
 }
+@media screen and (max-width: 800px){
+    // asian-market-page
+    .asian-market-page{
+        .market-middle-text-wrapper:after{height: calc(100% + 74px);}
+        .market-middle-text{margin-bottom: 50px;
+            .middle-text{padding: 0;text-align: center;padding-top: 125px !important;}
+            .middle-items{flex-direction: column;align-items: center;padding-top: 80px !important;
+
+                .item{margin-bottom: 20px;
+                    .item-text{text-align: center;padding-left: 0;padding-right: 0;}
+                }
+            }
+        }
+        .market-top-text{flex-wrap: wrap;
+            .item{
+                &.left{width: 100%;
+                    .market-top-img img{display: block;margin:0 auto;}
+                }
+                &.right{width: 100%;padding-left: 40px;padding-right: 40px;text-align: center;}
+            }
+        }
+
+        .market-bottom{
+            &.first{
+                .items-list{margin-bottom: 100px;
+                    .item-center{width: 100%;height: auto;background:none;text-align: center;
+                        b{position: static;transform:none;font-size: 22px;}
+                    }
+                    .item-list{display: flex;justify-content: center;padding-top: 20px;margin-bottom: 40px;
+                        ul{list-style-type: decimal;}
+                        li{position: static;max-width: 100%;text-align: left;font-size: 22px;line-height: 1.5;}
+                    }
+                }
+            }
+            .bottom-text{padding-top: 45px;flex-wrap: wrap;
+                .middle-img{width: 100%;
+                    img{margin: 0 auto;display: block;}
+                }
+                .middle-text{width: 100%;padding-top: 30px;text-align: center;}
+            }
+        }
+    }
+}
 @media screen and (max-width: 767px){
     // asia market
-    .market{
+    .market-old{
         .market-top-text{flex-direction: column;align-items: center;margin-bottom: 75px;
             .item{
                 &.right{width: 100%;padding-left: 0;padding-top: 30px;}
@@ -315,7 +369,7 @@
     }
 
     // asia market
-    .market .middle-text .item-title h2{font-size: 29px;}
+    .market-old .middle-text .item-title h2{font-size: 29px;}
 
     // succes popup
     .call-success{
@@ -361,6 +415,13 @@
             .advertising-bottom-text{font-size: 20px;}
 
         }
+    }
+
+    // asian-market-page
+    .asian-market-page{
+        .title h1, .title h2, .title h3, .title .h1, .title .h2, .title .h3{font-size: 40px;}
+        .market-middle-text-wrapper .market-middle-text .middle-text .item-title h2,.market-bottom.first .item-title h2,.market-bottom .bottom-text .middle-text .item-title h2{font-size: 36px;}
+        .market-bottom.first .items-list{margin-bottom: 70px;}
     }
 
 }
