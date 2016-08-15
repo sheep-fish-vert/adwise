@@ -64,6 +64,11 @@
 /* login */
 
 /* vacancy */
+
+    // .vacancy-page{
+    //     &.second-type .parallax-block .parallax-blur .parallax-image-top img, .parallax-page.second-type .parallax-block .parallax-blur .parallax-image-bottom img{transform: translate(0px, 0px);filter: none;}
+    // }
+
     #svg-image-blur{display: none;}
 
     .vacancy-wrap{ position: relative; // background-attachment: fixed; min-height: 500px; -webkit-filter: blur(2px); filter: url(#blur-effect-1);

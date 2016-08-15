@@ -247,7 +247,13 @@
                     .parallax-images{width: 100%!important;}
                 }
             }
+            //  fix 12.08
+            &.vacancy-page{
+                .parallax-block .parallax-blur{right: 0;left: 0;width: 100% !important;display: block !important;border-left: none;}
+            }
         }
+
+
 
     /* /parallax */
 
