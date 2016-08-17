@@ -81,19 +81,26 @@
 
         .menu{ display: flex; justify-content: space-between; margin: 0; padding: 0;align-items: center;
             li{ display: inline-block;
+                &:nth-child(6){padding-left: 20px;
+                    &.active a{color: #807f7f;text-decoration: underline;}
+                }
+                &:nth-child(7){padding-right: 20px;
+                    &.active a{color: #807f7f;text-decoration: underline;}
+                    a:before{top: 8px;left: 0;position: absolute;content: '';display: block;width: 1px;height: 12px;background-color: #000;}
+                }
+                &.language-choose{margin-top: -1px;
+                    a{padding:0 7px !important;}
+                }
                 a{font: 300 18px/1.5 'ProximaNovaScOsf'; color: #000;text-decoration: none; position: relative;
                     &:not(.log-in):not(.language-choose){padding:16px 30px 17px 30px;display: block;
                         span{display: flex;align-items: flex-start;justify-content: center;}
                     }
-                    &.active{color: #807f7f;text-decoration: underline;}
+
                     &:hover{ color: #ca8000;text-decoration: underline;}
                     &:nth-child(2){ padding-left: 7px; margin-left: 7px;
                         &:before{ top: 5px; left: 0; position: absolute; content:''; display: block; width: 1px; height: 12px; background-color: #000; }
                     }
-                    &.language-choose{
-                        &:first-child{margin-left: 30px;}
-                        &:last-child{margin-right: 30px;}
-                    }
+
                     &.log-in{display: flex;justify-content: flex-start;align-items: center;margin-left: 30px;
                         .log-in-icon{margin-right: 5px;display:block;
                             img{display: block;}

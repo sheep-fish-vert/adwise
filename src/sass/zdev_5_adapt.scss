@@ -37,6 +37,10 @@
                         &:not(.log-in):not(.language-choose){padding:0;display: inline-block;}
                     }
                 }
+                &:nth-child(6){padding-left: 0;}
+                &:nth-child(7){padding-right: 0;
+                    a:before{display: none;}
+                }
                 a{font: 300 28px/1.25 'ProximaNovaScOsf'; padding: 7px 0;display: inline-block;vertical-align: middle;
                     &:not(.log-in):not(.language-choose){padding:0;display: inline-block;
                         span{display: block;}
