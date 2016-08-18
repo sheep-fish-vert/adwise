@@ -16,11 +16,17 @@
             .slick-next{right: 9px;}
         }
     }
+
+
     //adversting
-
-
     .advertising-page{padding-top: 320px !important;
         &.parallax-page.first-type .parallax-block .parallax-blur{transform: translate(0, 400px);}
+    }
+
+    // ad formats
+    .ad-formats-page.parallax-page.first-type{
+        .parallax-image-top img{top: -180px;}
+
     }
 }
 @media screen and (min-width: 1200px) and (max-width: 1450px) {
