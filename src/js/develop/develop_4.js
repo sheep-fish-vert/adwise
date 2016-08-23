@@ -97,23 +97,27 @@ function creativesSlider(){
 
 
         // tabs on slider
-        $('.tab-item').not(':first').removeClass('show');
-        $('.main-wrap.tabs .column-list-main li').click(function(event){
-            event.preventDefault();
-            $('.main-wrap.tabs .column-list-main li').removeClass('active').eq($(this).index()).addClass('active');
-            $('.tab-item').removeClass('show').eq($(this).index()).addClass('show');
-        }).eq(0).addClass('active');
+
     }
+}
+function tabsCreativePae() {
+    $('.tab-item').not(':first').removeClass('show');
+    $('.main-wrap.tabs .column-list-main li').click(function(event){
+        event.preventDefault();
+        $('.main-wrap.tabs .column-list-main li').removeClass('active').eq($(this).index()).addClass('active');
+        $('.tab-item').removeClass('show').eq($(this).index()).addClass('show');
+    }).eq(0).addClass('active');
 }
 
 
 $(document).ready(function(){
-
+  
 });
 
 $(window).load(function(){
     massonryImage();
-    creativesSlider();
+    //creativesSlider();
+    tabsCreativePae();
 });
 
 $(window).resize(function(){

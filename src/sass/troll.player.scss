@@ -1,0 +1,15 @@
+.vid-ctrls{ position: absolute; height: 45px; background-color: #000; bottom: 0; width: 100%; padding: 20px 10px 0;
+    .play_ctrl{ position: relative; display: block; cursor: pointer; width: 16px; height: 16px;
+        &:before,
+        &:after{ content: ''; width: 0; height: 0; display: block;  position: absolute; top: -4px; transform: rotate(90deg); left: 8px; transition: all 200ms;}
+        &:before{border-top: 8px solid transparent; border-right: 4px solid #fff;border-bottom: 8px solid #fff;border-left: 4px solid transparent;}
+        &:after{border-top: 8px solid transparent; border-left: 4px solid #fff;border-bottom: 8px solid #fff;border-right: 4px solid transparent; top: 4px;}
+        &.paused{
+            &:after,
+            &:before{ left: 0; top: 0; border-top: 8px solid #fff; border-right: 4px solid #fff;border-bottom: 8px solid #fff;border-left: 4px solid #fff; transform: rotate(0deg); }
+            &:before{   }
+            &:after{ left: 16px;}
+        }
+    }
+
+}

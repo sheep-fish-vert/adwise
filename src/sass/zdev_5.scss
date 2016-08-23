@@ -304,4 +304,62 @@
     }
 
 /*END expertise----------------------------------------------------------*/
+/* creatives page----------------------------------------------------------*/
+
+.creatives-global{
+    .mbox.bigger-mbox{max-width: 1270px;}
+    &.global-wrapper{background-color:#eee;background-image:none;}
+    .main-wrap.reverse{
+        .column-list-wrap{
+            .column-list{
+                li{
+                    a{
+                        &:before{display: none;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+.creatives{padding-top: 105px;
+
+    .item{ background-color: transparent; display: block; width: 320px; margin-bottom: 46px; position: relative;
+        .item-link-wrap{width:calc(100% - 20px); margin:0 auto;perspective: 500px; perspective-origin: 50% 50%;transform-style: preserve-3d;
+            .item-link{display: block;height: 154px;background-color:#fff;width:100%;background-color:#fff;position:relative; overflow: hidden;transform-origin: center center;transform-style: preserve-3d;transition:all 200ms ease;
+                .hover{ position: absolute; left: 0; top: 0; width: 1px; height: 1px; box-shadow: 0 0 80px 20px rgba(0,0,0,0.3);opacity: 0; transition: opacity 200ms ease;}
+                &.hovered{
+                    .hover{opacity: 1;}
+                }
+                .hover{pointer-events:none;}
+            }
+        }
+
+        img{ position: absolute; left: 50%; top: 50%;transform:translate(-50%, -50%);pointer-events: none;z-index: 0;}
+
+    }
+    .creatives-wrap{position: relative;opacity: 0;transition:all ease .2s .5s;
+        &.active{opacity: 1;}
+        .tab-item{opacity: 0;visibility: hidden;z-index: -10;position: absolute;left: 0;top: 0;height: 100%;transition:opacity ease .3s;width: 100%; display: flex; justify-content: flex-start; flex-wrap: wrap;
+            &.show{position: relative;z-index: 1;opacity: 1;visibility: visible;}
+        }
+    }
+    .item-preroll{width: 320px; margin-bottom: 46px;
+        a{ width: 300px; height: 154px; display: block; margin: 0 auto; position: relative;
+            &:hover{
+                &:before{opacity: 1;}
+            }
+            &:before{ width: 71px; height: 76px; content: ''; display: block; background-image: url(../images/video-hover.png); position: absolute; left: calc(50% - 38px); top:40px; opacity: 0; transition: opacity 300ms;}
+            .title-item{ height: 30px; text-align: center; background-color: rgba(0,0,0,0.5); position: absolute; width: 100%; bottom: 0; left: 0; font: 100 14px/30px 'ProximaNovaScOsf'; color: #fff;
+                p{ margin: 0;}
+            }
+        }
+    }
+    .video-wrap{ width: 100%; position: relative;
+        video{ width: 100%; height: 100%;}
+    }
+}
+
+
+/*END creatives page----------------------------------------------------------*/
 

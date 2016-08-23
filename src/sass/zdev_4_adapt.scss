@@ -265,6 +265,7 @@
                 .item-img .item-img-wrap{margin:0 auto;}
             }
         }
+
     }
 
     // monetization
@@ -351,6 +352,8 @@
     // fancybox
     .fancybox-nav{top: calc(100% + 20px)}
     .fancybox-prev{left: calc(50% - 75px);}
+    .fancy-gallery .fancybox-prev{left: calc(50% - 75px);}
+    .fancy-gallery .fancybox-next{right: calc(50% - 75px);}
     .fancybox-next{right: calc(50% - 75px);}
 
     //ad-formats

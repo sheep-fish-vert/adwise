@@ -101,7 +101,9 @@
             }
         }
     }
-
+    .creatives{ padding-top: 20px;
+         .creatives-wrap .tab-item{justify-content: space-around;}
+    }
 }
 @media screen and (max-width: 767px){
 

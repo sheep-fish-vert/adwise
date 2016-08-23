@@ -9,7 +9,13 @@
 .fancybox-nav{height: 65px;width: 65px;background-color: rgba(255,255,255,.5);border-radius: 50%;top: calc(50% - 32px)}
 .fancybox-prev{left: -45%;}
 .fancybox-next{right: -45%;}
-
+.fancy-gallery{
+    .fancybox-prev{left: -35px; background-color: #fff;}
+    .fancybox-next{right: -35px; background-color: #fff;}
+    .fancybox-prev span,.fancybox-next span {
+        &:after { border-top: 4px solid #000;border-right: 4px solid #000;}
+    }
+}
 .fancybox-close{background-image: none;top: -50px;right: 0;background-color: rgba(255, 255, 255, 0.50);
     &:after,&:before{width: 30px;height: 4px;background-color: #fff;transform: rotate(45deg);position: absolute;content: '';top: 16px;left: 4px;}
     &:before{transform: rotate(-45deg);}
@@ -472,7 +478,8 @@ a.button-next{padding-left: 0;padding-right: 32px;
     }
 }
 
-// creatives page
+// creatives page/*
+/*
 .creatives-global{
     &.global-wrapper{background-color:#eee;background-image:none;}
     .main-wrap.reverse{
@@ -538,7 +545,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
         }
     }
 }
-
+*/
 // monetization page
 .monetization-page{
     .parallax-block .parallax-blur{border-top: 1px solid rgba(255,255,255,0.5);}

@@ -277,8 +277,16 @@ function oneSizeForMainNews(){
 
 };
 
-$(document).ready(function(){
 
+
+//video creatives---------------------------------------------------------------------------------
+
+    
+
+//END video creatives---------------------------------------------------------------------------------
+
+$(document).ready(function(){
+    $('.trollPlayer').trollPlayer();
     butter();
 
     menuSecondLevelHover();
