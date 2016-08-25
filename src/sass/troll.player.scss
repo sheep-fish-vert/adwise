@@ -1,5 +1,5 @@
-.vid-ctrls{ position: absolute; height: 45px; background-color: #000; bottom: 0; width: 100%; padding: 20px 10px 0;
-    .play_ctrl{ position: relative; display: block; cursor: pointer; width: 16px; height: 16px;
+.vid-ctrls{ position: absolute; height: 45px; background-color: #000; bottom: 0; left: 0; right: 0; width: 100%; padding: 18px 10px 0;z-index: 2147483647;
+    .play_ctrl{ position: relative; display: block; cursor: pointer; width: 16px; height: 16px; float: left;
         &:before,
         &:after{ content: ''; width: 0; height: 0; display: block;  position: absolute; top: -4px; transform: rotate(90deg); left: 8px; transition: all 200ms;}
         &:before{border-top: 8px solid transparent; border-right: 4px solid #fff;border-bottom: 8px solid #fff;border-left: 4px solid transparent;}
@@ -11,5 +11,52 @@
             &:after{ left: 16px;}
         }
     }
+    .stop_ctrl{display: block; cursor: pointer; width: 16px; height: 16px; background-color: #fff; float: left; margin-left: 20px;}
+    .timeline_ctrl{ position: absolute; width: 100%; height: 8px; background-color: #ccc; top: 0; left:0; white-space: nowrap; overflow: hidden; cursor: pointer;
+        .time_buffer{ width: 0; height: 8px; background-color: #444; display: none; margin-left: -4px; vertical-align: top; line-height: 0;pointer-events: none;}
+        .time_current{ width: 0; height: 8px; background-color: #f00; display: inline-block; vertical-align: top; line-height: 0; pointer-events: none; position: relative; z-index: 10;
+            &:before{content: ''; display: block; width: 16px; height: 16px; border:2px solid #fff; background-color: #e0e1e1; border-radius: 50%; position: absolute; top: -4px; right: -8px;}
+        }
+        .time_voiceover{ width: 0; height: 8px; background-color: #fff000; z-index:5; display: block; top: 0; position: absolute; pointer-events: none;}
+        .time_voiceover-border{ width: 0; height: 8px; background-color: transparent; z-index:15; display: block; top: 0; position: absolute; pointer-events: none;
+            &:before,
+            &:after{ content: ''; display: block; width: 3px; height: 100%; position: absolute; left: 0; top: 0; background-color: #fff;}
+            &:before{ right: 0; left: auto;}
+        }
+    }
+    .time_ctrl{ margin-left: 20px; display: block; position: relative; float: left; color: #fff;}
+    .fullscreen_ctrl{ width: 24px; height: 18px; position: relative; float: right; margin-right: 20px; border: 2px solid #fff; cursor: pointer;
+        &:before,
+        &:after{ z-index:999; content: ''; display: block; background-color: #000; position: absolute; width: 24px; height: 8px; top: 3px; left: -2px;}
+        &:before{ height: 18px; width: 14px; left: 3px; top: -2px;}
 
+    }
+    .sound_ctrl{ width: 22px; height: 19px; background-image: url(../images/mute.png); display: block; float: right; background-size:cover; margin-right: 20px; position: relative; cursor: pointer;
+        &:before,
+        &:after{content: ''; width: 20px; height: 3px; background-color: #f00; position: absolute; display: block; top: 8px; opacity: 0;}
+        &:before{transform:rotate(45deg); }
+        &:after{transform:rotate(-45deg); }
+        &.muted{
+            &:before,
+            &:after{ opacity: 1;}
+        }
+    }
 }
+
+.big-play{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 1;  transition: all 300ms;
+    &:before{ content: ''; display: block; position: absolute; width: 122px; height: 122px; border-radius: 50%; background-color: #000; left:calc(50% - 61px); top:calc(50% - 61px); cursor:pointer;}
+    &:after{ content: ''; display: block; position: absolute; width: 0; height: 0;  background-color: transparent; left:calc(50% - 17px); top:calc(50% - 17px); cursor:pointer; border-top: 17px solid transparent; border-left: 34px solid #fff;border-bottom: 17px solid transparent; transition: all 300ms;}
+    &.paused{opacity:0;
+        &:before,
+        &:after{transform:scale(1.5); cursor: auto;}
+    }
+}
+.trollPlayer{overflow: hidden;}
+
+
+.trollPlayer:-moz-full-screen {    width: 100%;    height: 100%; background-color: rgba(0,0,0,0);}
+
+.trollPlayer:-webkit-full-screen {    width: 100%;    height: 100%;background-color: rgba(0,0,0,0);}
+.trollPlayer:fullscreen {    width: 100%;    height: 100%;}
+video::-webkit-media-controls {    display:none !important;}
+video::-webkit-media-controls-enclosure {    display:none !important;}
