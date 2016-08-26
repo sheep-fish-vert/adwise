@@ -83,16 +83,29 @@
                     objects.player.currentTime = x * objects.player.duration;
                 });
                 objects.ctrl.fullScr.click(function () {
-                    objects.main.toggleClass('fullscreen');
-                    if(objects.main.hasClass('fullscreen')){
-                        methods.fullscreen($('.trollPlayer'));
-                        objects.player.controls = false;
+                    togFS();
+                });
+                $(document).bind('webkitfullscreenchange mozfullscreenchange fullscreenchange',function(){
+                    var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
+
+                    if(fullscreenElement){objects.ctrlWrap.addClass('fullscreen');
+                    }else{    objects.ctrlWrap.removeClass('fullscreen'); }
+                });
+
+                function togFS() {
+                    var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
+
+                    if(fullscreenElement){
+                        methods.exitFullscreen();
+                        objects.ctrlWrap.removeClass('fullscreen');
 
                     }else{
-                        methods.exitFullscreen();
+
+                        methods.fullscreen(objects.player);
+                        objects.player.controls = false;
+                        objects.ctrlWrap.addClass('fullscreen');
                     }
-                });
-                
+                }
 
                 // функция для форматирования времени
                 function formatTime(time, hours) {
@@ -173,12 +186,10 @@
         },
         fullscreen:function (elem) {
 
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.mozRequestFullScreen) {
-                elem.mozRequestFullScreen();
-            } else if (elem.webkitRequestFullscreen) {
-                elem.webkitRequestFullscreen();
+            if (!elem.fullscreenElement &&    // alternative standard method
+                !elem.mozFullScreenElement && !elem.webkitFullscreenElement && !elem.msFullscreenElement ) {  // current working methods
+                var requestFullScreen = elem.requestFullscreen || elem.msRequestFullscreen || elem.mozRequestFullScreen || elem.webkitRequestFullscreen;
+                requestFullScreen.call(elem);
             }
             
         },
@@ -211,3 +222,4 @@
         }
     };
 })(jQuery);
+

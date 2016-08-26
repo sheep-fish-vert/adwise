@@ -285,7 +285,7 @@ function prerollFancyOpen() {
         var src = $(this).data('src');
         var poster = $(this).data('poster');
         var title = $(this).find('.title-item').text();
-        $('#video-popup .trollPlayer').trollPlayer({
+        var wrap = $('#video-popup .trollPlayer').trollPlayer({
             src:src,
             poster:poster
         });
@@ -297,7 +297,10 @@ function prerollFancyOpen() {
             wrapCSS:'fancybox-standart',
             'closeBtn' : false,
             fitToView:true,
-            padding:'0'
+            padding:'0',
+            afterClose: function () {
+                     wrap.trollPlayer('destroy');
+                            }
         });
         e.preventDefault();
         return false;
@@ -306,7 +309,7 @@ function prerollFancyOpen() {
 }
     prerollFancyOpen();
 
-var wavesurfer
+
 function audioFancyOpen() {
     $(document).on('click', '.item-audio a', function (e) {
         if($(this).hasClass('initialized')){
@@ -327,7 +330,7 @@ function audioFancyOpen() {
 
             $('#waveform').html('');
 
-            wavesurfer = WaveSurfer.create({
+            var wavesurfer = WaveSurfer.create({
                 container: '#waveform',
                 waveColor: 'violet',
                 progressColor: 'purple'
@@ -479,6 +482,8 @@ $(document).ready(function(){
     $.getJSON('data.json',function (data) {
         constructSlides(data);
     });
+
+       
 
 
 });
