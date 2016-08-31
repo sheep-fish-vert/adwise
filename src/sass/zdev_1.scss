@@ -29,6 +29,25 @@
 
         }
 
+        &.black{
+            .column-title{border-color: #000;
+                h1,h2,h3{color:#000;}
+            }
+            .column-list{
+                .column-list-title{color: #000;}
+                    .column-list-main{
+                    ul{
+                        li{
+                            a{color: #000 !important;text-shadow: 0 0 0 #000;;
+                                &.active{color:#000 !important;}
+                                &:hover:not(.active){color:#000;text-shadow:0 0 2px rgba(000, 000, 000, .75);}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     .news-list-page, .events-list-page, .careers-list-page{
