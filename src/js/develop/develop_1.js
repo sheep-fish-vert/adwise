@@ -386,6 +386,26 @@
 
 /* /scrolling tabs (like on vacancy) */
 
+/* video-block new fon slider */
+
+    function videoBackgroundSlider(){
+
+        $('.slider-class').slick({
+            dots:false,
+            arrows:false,
+            infinite:true,
+            speed:500,
+            fade:true,
+            cssEase:'linear',
+            autoplay:true,
+            autoplaySpeed:3000,
+            pauseOnHover:false
+        });
+
+    };
+
+/* /video-block new fon slider */
+
 
 $(document).ready(function(){
 
@@ -395,6 +415,8 @@ $(document).ready(function(){
 
 $(window).load(function(){
 
+    videoBackgroundSlider();
+
     parallaxScroll();
 
     globalWrapperMinHeight();
@@ -402,6 +424,7 @@ $(window).load(function(){
     leftColumnScroll();
 
     scrollingTabs();
+
 
 });
 

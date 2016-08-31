@@ -324,13 +324,14 @@
 .creatives-global{
     .main-wrap.reverse .left-column:after{ background-color: #eee;}
     .column-list-wrap{ padding-top: 50px;}
+    .main-wrap.reverse .column-list-wrap .column-list li:after{ background-color: #f7f7f7;}
 }
 .creatives{padding-top: 59px;
 
     .item{ background-color: transparent; display: block; width: 320px; margin-bottom: 46px; position: relative;
         .item-link-wrap{width:calc(100% - 20px); margin:0 auto;perspective: 500px; perspective-origin: 50% 50%;transform-style: preserve-3d;
-            .item-link{display: block;height: 154px;background-color:#fff;width:100%;background-color:#fff;position:relative; overflow: hidden;transform-origin: center center;transform-style: preserve-3d;transition:all 200ms ease;
-                .hover{ position: absolute; left: 0; top: 0; width: 1px; height: 1px; box-shadow: 0 0 80px 20px rgba(0,0,0,0.3);opacity: 0; transition: opacity 200ms ease;}
+            .item-link{display: block;height: 154px;background-color:#fff;width:100%;position:relative; overflow: hidden;transform-origin: center center;transform-style: preserve-3d;transition:all 200ms ease;
+                .hover{ position: absolute; left: 0; top: 0; width: 1px; height: 1px; box-shadow: 0 0 80px 20px rgba(255,255,255,0.4);opacity: 0; transition: opacity 200ms ease;}
                 &.hovered{
                     .hover{opacity: 1;}
                 }
@@ -425,10 +426,71 @@
 .voiceover-container{ width: 100%;
     .waves{ position: relative; background-color: #fff472;
         #waveformAudio{ position: absolute; top: 0; pointer-events: none; background-color: rgba(255,125,0,0.5); height: 100%;}
+
     }
     .title-audio{ width: 100%; font:300 16px/37px 'ProximaNovaScOsf'; color: #000; height: 37px; background-color: #ffe400; padding-left:20px;}
 }
+.wavepreloader{position: absolute;   top: 0; left: 0;  width: 100%;  height: 100%;   background-color: rgba(0,0,0,0.9); display: flex; justify-content:center; align-items: center;  z-index: 999;}
+.preload-1 {
+    position: relative;
+    margin-left: -40px;
 
+    span {
+        display: block;
+        position: absolute;
+        bottom: 0px;
+
+        width: 9px; height: 5px;
+
+        background: #810000;
+
+        animation: preload-1 1.5s infinite ease-in-out;
+
+        &:nth-child(2) {
+            left: 11px;
+
+            animation-delay: .2s;
+        }
+        &:nth-child(3) {
+            left: 22px;
+
+            animation-delay: .4s;
+        }
+        &:nth-child(4) {
+            left: 33px;
+
+            animation-delay: .6s;
+        }
+        &:nth-child(5) {
+            left: 44px;
+
+            animation-delay: .8s;
+        }
+    }
+}
+
+@keyframes preload-1 {
+    0% {
+        height: 5px;
+        transform: translateY(0px);
+        background: #810000;
+    }
+    25% {
+        height: 30px;
+        transform: translateY(15px);
+        background:purple;
+    }
+    50% {
+        height: 5px;
+        transform: translateY(0px);
+        background: purple;
+    }
+    100% {
+        height: 5px;
+        transform: translateY(0px);
+        background: #810000;
+    }
+}
 
 /*END creatives page----------------------------------------------------------*/
 

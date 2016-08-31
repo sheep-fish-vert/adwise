@@ -741,6 +741,40 @@
 
 /* /vacancy */
 
+/* video-block new */
+
+    .video-block{position: relative;overflow: hidden;
+
+        .slider-background{position: absolute;left:0;top:0;width: 100%;height: 100%;
+            .slider-class{position: absolute;left:0;top:0;width: 100%;height: 100%;z-index: 0;
+                &.slick-slider{margin-bottom: 0;}
+                .slider-item{
+                    img{min-width: 100%;min-height: 100%;max-width: none;}
+                }
+
+                &.second-slider{left:25%;top:10%;
+                    img{z-index: 1;clip-path:url(#eagle);position: relative;left:-25%;top:-10%;}
+                }
+
+            }
+        }
+
+        .video-block-info{position: relative;z-index: 2;text-align: right;
+            .video-block-info-wrap{display: flex;justify-content: flex-end;align-items: center;min-height: 690px;
+                .video-block-info-main{width: calc(100% - 405px);
+                    .video-block-title{margin:0 0 20px 0;font-size: 60px;font-weight: 700;color:#202020;}
+                    .video-block-text{font-size: 17px;color:#202020;line-height: 1.25;margin-bottom: 65px;}
+                    .video-block-buttons{display: flex;justify-content: space-between;align-items: center;
+                        .button{text-transform: uppercase;font-size: 17px;width: calc(50% - 10px);max-width: none;text-shadow:0 3px 7px rgba(0,0,0, .35);}
+                    }
+                }
+            }
+        }
+
+    }
+
+/* /video-block new */
+
 /* loading-circle */
 
     .loading-circle{
@@ -754,6 +788,12 @@
     .button{display: inline-block;max-width: 200px;width: 100%;line-height: 38px;height: 37px;background-color: #ccc;text-align: center;cursor: pointer;color:#fff;font-family: 'Roboto', sans-serif;font-size: 16px;border:none;border-radius:0;transition:all 300ms ease;text-decoration: none;
         &:hover{background-color: #000;}
         &.button-red{background-color: #eb5776;
+            &:hover{background-color: #c34660;}
+        }
+        &.button-yellow{background-color: #ffb400;
+            &:hover{background-color: #c34660;}
+        }
+        &.button-orange{background-color: #ff4600;
             &:hover{background-color: #c34660;}
         }
     }
@@ -908,10 +948,7 @@
 
     /* /news-list, events-list, careers-list */
 
-
-
     }
-
 
 /* /parallax */
 
