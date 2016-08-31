@@ -390,17 +390,20 @@
 
     function videoBackgroundSlider(){
 
-        $('.slider-class').slick({
-            dots:false,
-            arrows:false,
-            infinite:true,
-            speed:500,
-            fade:true,
-            cssEase:'linear',
-            autoplay:true,
-            autoplaySpeed:3000,
-            pauseOnHover:false
-        });
+        var point = 1;
+        var maxLength = $('.slider-class.first-slider .slider-item').length;
+
+        setInterval(function(){
+            $('.slider-class.first-slider .slider-item').removeClass('active');
+            $('.slider-class.first-slider .slider-item').eq(point).addClass('active');
+            $('.slider-class.second-slider .slider-item').removeClass('active');
+            $('.slider-class.second-slider .slider-item').eq(point).addClass('active');
+
+            point++;
+            if(point >= maxLength){
+                point = 0;
+            }
+        }, 4000);
 
     };
 
@@ -415,8 +418,6 @@ $(document).ready(function(){
 
 $(window).load(function(){
 
-    videoBackgroundSlider();
-
     parallaxScroll();
 
     globalWrapperMinHeight();
@@ -425,6 +426,7 @@ $(window).load(function(){
 
     scrollingTabs();
 
+    videoBackgroundSlider();
 
 });
 
