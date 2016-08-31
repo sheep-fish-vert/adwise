@@ -398,7 +398,7 @@ function voiceoverFancyOpen() {
 
             var player = wrap.find('video')[0];
 
-
+        $('.voiceover-container .wavepreloader').removeAttr('style');
             setTimeout(function () {
 
                 $.fancybox.open('#voiceover-popup',{
@@ -418,11 +418,14 @@ function voiceoverFancyOpen() {
                         var wavesurferV = WaveSurfer.create({
                             container: '#waveformVideo',
                             waveColor: '#810000',
-                            progressColor: 'purple',
-                            backend: 'MediaElement'
+                            progressColor: 'purple'
+
                         });
                         wavesurferV.load(srcVideo);
                         wavesurferV.setVolume(0);
+                        wavesurferV.on('ready', function () {    //ивент определения  возможности проигрования
+                            $('.voiceover-container .wavepreloader').attr('style','display:none;');
+                        });
                         player.addEventListener("timeupdate", function () {
                             var progress = Math.floor(player.currentTime) / Math.floor(player.duration);
                             wavesurferV.seekTo(progress);
@@ -431,7 +434,6 @@ function voiceoverFancyOpen() {
                     afterClose: function () {
                         $('#waveformVideo').html('');
                         wrap.trollPlayer('destroy');
-
                         $('#waveformAudio').removeAttr('style');
 
                     }
@@ -471,8 +473,153 @@ Number.prototype.lead0 = function(n) {
     return nz;
 };
 // конец функции для форматирования времени
-//END video creatives---------------------------------------------------------------------------------
 
+
+
+//END video creatives---------------------------------------------------------------------------------
+var creatives =[
+    {
+        tab:1,
+        page:1
+    },
+    {
+        tab:2,
+        page:1
+    },
+    {
+        tab:3,
+        page:1
+    },
+    {
+        tab:4,
+        page:1
+    },
+    {
+        tab:5,
+        page:1
+    },
+    {
+        tab:6,
+        page:1
+    },
+    {
+        tab:7,
+        page:1
+    }
+];
+function loadTab() {
+
+    if(!$('.tab-item.show').hasClass('full')){
+        ajaxFunc($('.tab-item.show').data('tab'));
+    }
+
+    setTimeout(function () {
+        var cont = $('.main-wrap').height();
+        var win = $(window).height() - $('header').height() - $('footer').outerHeight();
+        if(win > cont && !$('.tab-item.show').hasClass('full')){
+            loadTab();
+        }else{
+            return false;
+        }
+    },100);
+}
+function scrollUpload() {
+    if($('.creatives-wrap').length>0){
+        $(window).scroll(function () {
+            var minus = (($(document).height() - $('footer').outerHeight()) - ($(window).height()+$(window).scrollTop()));
+
+            if(minus < 200){
+                if(!$('.tab-item.show').hasClass('full')){
+                    ajaxFunc($('.tab-item.show').data('tab'));
+                }
+            }
+
+        });
+        loadTab();
+    }
+
+}
+function ajaxFunc(tab) {
+    var page;
+
+    for (var i=0; i < creatives.length; i++){
+        if(creatives[i].tab == tab){page = creatives[i].page}
+    }
+
+
+    var data = {
+        tab:tab,
+        page:page,
+        count:3
+    };
+    $.ajax({
+        url : '/creatives.php',
+        data: data,
+        dataType:'json',
+        type:'POST',
+        success : function(data){
+
+            switch (tab){
+                case 1:
+                case 2:
+                case 4:
+                case 5:
+                    var content ='';
+
+                    for (var i=0; i<data.items.length; i++){
+                        content = content + '<div class="item"><div class="item-link-wrap"><a href="'+data.items[i].imgBig+'"  data-fancybox-group="'+data.items[i].fancyGroup+'" class="item-link fancy-gallery"><img src="'+data.items[i].img+'" alt=""><span class="hover"></span></a></div></div>';
+                    }
+                    break;
+                case 3:
+                    var content ='';
+
+                    for (var i=0; i<data.items.length; i++){
+                        content = content + '<div class="item-preroll"><a href="#" data-src="'+data.items[i].video+'" data-poster="'+data.items[i].poster+'" ><img src="'+data.items[i].img+'" alt=""><div class="title-item">'+data.items[i].title+'</div></a></div>';
+                    }
+                    break;
+                case 6:
+                    var content ='';
+
+                    for (var i=0; i<data.items.length; i++){
+                        content = content + ' <div class="item-audio"><a href="#" data-src="'+data.items[i].audio+'" ><img src="'+data.items[i].img+'" alt=""></a></div>';
+                    }
+                    break;
+                case 7:
+                    var content ='';
+
+                    for (var i=0; i<data.items.length; i++){
+                        content = content + '<div class="item-voiceover"><a href="#" data-start="'+data.items[i].startTime+'"  data-stop="'+data.items[i].stopTime+'" data-srcvideo="'+data.items[i].video+'" data-poster="'+data.items[i].poster+'"><img src="'+data.items[i].img+'" alt=""><div class="title-item">'+data.items[i].title+'</div></a></div>';
+                    }
+                    break;
+                default:
+                    var content = 'missmach data-tab attribute in showed container';
+            }
+            $('.tab-item[data-tab='+tab+']').append(content);
+            for (var j=0; j < creatives.length; j++){
+                if(creatives[j].tab == tab){creatives[j].page++;}
+            }
+            if(data.meta.count_left<1){$('.tab-item[data-tab='+tab+']').addClass('full');}
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr);
+            $('.tab-item[data-tab=' + tab + ']').addClass('full');
+            var content = xhr.responseText+';    status:'+xhr.status+';    '+xhr.statusText ;
+            $('.tab-item[data-tab=' + tab + ']').append(content);
+        }
+
+    });
+}
+function tabsCreativePae() {
+    $('.tab-item').not(':first').removeClass('show');
+    $('.main-wrap.tabs .column-list-main li').click(function(event){
+        event.preventDefault();
+        $('.main-wrap.tabs .column-list-main li').removeClass('active').eq($(this).index()).addClass('active');
+        $('.tab-item').removeClass('show').eq($(this).index()).addClass('show');
+        setTimeout(function () {
+            loadTab();
+        },100);
+    }).eq(0).addClass('active');
+}
 $(document).ready(function(){
     audioFancyOpen();
     butter();
@@ -482,6 +629,7 @@ $(document).ready(function(){
     $.getJSON('data.json',function (data) {
         constructSlides(data);
     });
+    
 
        
 
@@ -489,8 +637,9 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
-
+    tabsCreativePae();
     oneSizeForMainNews();
+    scrollUpload();
 
 });
 
