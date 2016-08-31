@@ -109,9 +109,18 @@ function tabsCreativePae() {
     }).eq(0).addClass('active');
 }
 
+function tabsLoginPage() {
+    $('.login-items .item').not(':first').hide();
+    $('.login-buttons a').click(function(event){
+        event.preventDefault();
+        $('.login-buttons a').removeClass('active').eq($(this).index()).addClass('active');
+        $('.login-items .item').hide().eq($(this).index()).fadeIn();
+    }).eq(0).addClass('active');
+}
+
 
 $(document).ready(function(){
-  
+    tabsLoginPage();
 });
 
 $(window).load(function(){

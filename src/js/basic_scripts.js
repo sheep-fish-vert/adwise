@@ -187,6 +187,15 @@ $(document).ready(function() {
       fitToView:true,
       padding:'0'
     });
+
+    // fancybox standart
+    $('.fancy-login').fancybox({
+      autoResize:true,
+      wrapCSS:'fancy-login',
+      'closeBtn' : false,
+      fitToView:true,
+      padding:'0'
+    });
 });
 
 $(window).load(function(){
