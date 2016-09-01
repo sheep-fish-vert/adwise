@@ -752,10 +752,13 @@
                     &.active{opacity: 1;position: relative;}
                     img{min-width: 100%;min-height: 100%;position:absolute;max-width: none;animation-duration:5s;animation-iteration-count:infinite;animation-direction:alternate;animation-name:videoBlockPulsing;}
                 }
-
-                &.second-slider{left:25%;top:10%;clip-path:url(#eagle);overflow: hidden;min-width: 570px;
-                    img{z-index: 1;position: absolute;left:-25%;top:-10%;}
+                &.second-slider{display: none;}
+                @supports(-webkit-background-clip: text){
+                    &.second-slider{display: block;left:25%;top:10%;clip-path:url(#eagle);overflow: hidden;min-width: 570px;
+                        img{z-index: 1;position: absolute;left:-25%;top:-10%;}
+                    }
                 }
+
 
             }
         }
