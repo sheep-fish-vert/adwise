@@ -744,20 +744,17 @@
 /* video-block new */
 
     .video-block{position: relative;overflow: hidden;
-        &:after{content:'';display: block;position: absolute;left: 0;bottom:0;z-index: 3;width: 100%;height: 140px;background: -moz-linear-gradient(top, rgba(167,199,220,0) 0%, rgba(238,238,238,0.7) 60%, rgba(238,238,238,1) 100%);background: -webkit-linear-gradient(top, rgba(167,199,220,0) 0%,rgba(238,238,238,0.7) 60%,rgba(238,238,238,1) 100%);background: linear-gradient(to bottom, rgba(167,199,220,0) 0%,rgba(238,238,238,0.7) 60%,rgba(238,238,238,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a7c7dc', endColorstr='#eeeeee',GradientType=0 );}
+        &:after{content:'';display: block;position: absolute;left: 0;bottom:0;z-index: 3;width: 100%;height: 140px;pointer-events:none;background: -moz-linear-gradient(top, rgba(167,199,220,0) 0%, rgba(238,238,238,0.7) 60%, rgba(238,238,238,1) 100%);background: -webkit-linear-gradient(top, rgba(167,199,220,0) 0%,rgba(238,238,238,0.7) 60%,rgba(238,238,238,1) 100%);background: linear-gradient(to bottom, rgba(167,199,220,0) 0%,rgba(238,238,238,0.7) 60%,rgba(238,238,238,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a7c7dc', endColorstr='#eeeeee',GradientType=0 );}
 
         .slider-background{position: absolute;left:0;top:0;width: 100%;height: 100%;
             .slider-class{position: absolute;left:0;top:0;width: 100%;height: 100%;z-index: 0;transform:translate3d(0,0,0);
-                .slider-item{position: absolute;left:0;top:0;opacity: 0;width: 100%;height: 100%;transition:all 500ms ease;
+                .slider-item{position: absolute;left:0;top:0;opacity: 0;width: 100%;height: 100%;transition:all 1000ms ease;
                     &.active{opacity: 1;position: relative;}
-                    img{min-width: 100%;min-height: 100%;position:absolute;max-width: none;animation-duration:4s;animation-iteration-count:infinite;animation-direction:alternate;}
+                    img{min-width: 100%;min-height: 100%;position:absolute;max-width: none;animation-duration:5s;animation-iteration-count:infinite;animation-direction:alternate;animation-name:videoBlockPulsing;}
                 }
 
-                &.first-slider{
-                    img{animation-name:videoBlockPulsing;}
-                }
-                &.second-slider{left:25%;top:10%;
-                    img{clip-path:url(#eagle);z-index: 1;position: absolute;left:-25%;top:-10%;animation-name:videoBlockPulsingBird;}
+                &.second-slider{left:25%;top:10%;clip-path:url(#eagle);overflow: hidden;min-width: 570px;
+                    img{z-index: 1;position: absolute;left:-25%;top:-10%;}
                 }
 
             }
@@ -965,13 +962,8 @@
     }
 
     @keyframes videoBlockPulsing{
-        0%{min-width: 100%;min-height: 100%;left:0;top:0;}
-        100%{min-width: 120%;min-height: 120%;left:-10%;top:-10%;}
-    }
-
-    @keyframes videoBlockPulsingBird{
-        0%{min-width: 100%;min-height: 100%;left:-25%;top:-10%;}
-        100%{min-width: 120%;min-height: 120%;left:-35%;top:-20%;}
+        0%{transform:scale(1) translateZ(0px);}
+        100%{transform:scale(1.3) translateZ(0px);}
     }
 
 /* /animations */
