@@ -289,19 +289,22 @@ function prerollFancyOpen() {
             src:src,
             poster:poster
         });
-        $.fancybox.open('#video-popup',{
-            openEffect  : 'fade',
-            closeEffect : 'fade',
-            width:'80%',
-            autoResize:true,
-            wrapCSS:'fancybox-standart',
-            'closeBtn' : false,
-            fitToView:true,
-            padding:'0',
-            afterClose: function () {
-                     wrap.trollPlayer('destroy');
-                            }
-        });
+        setTimeout(function () {
+            $.fancybox.open('#video-popup',{
+                openEffect  : 'fade',
+                closeEffect : 'fade',
+                width:'80%',
+                autoResize:true,
+                wrapCSS:'fancybox-standart',
+                'closeBtn' : false,
+                fitToView:true,
+                padding:'0',
+                afterClose: function () {
+                    wrap.trollPlayer('destroy');
+                }
+            });
+        },200);
+
         e.preventDefault();
         return false;
 
@@ -439,7 +442,7 @@ function voiceoverFancyOpen() {
                     }
                 });
 
-            }, 300);
+            }, 400);
 
 
 
