@@ -52,13 +52,20 @@
 
     .news-list-page, .events-list-page, .careers-list-page{
         .column-list-wrap{
+            .column-title{border-width: 0;}
             .column-list{
+                .column-list-title{font-weight: 600;}
                 .column-list-main{
                     ul{
-                        li{
-                            a{color:#fff;
-                                &.active{color:#fff;}
-                                &:hover:not(.active){color:#969696;}
+                        li{margin-bottom: 0;
+                            a{font-weight: 600;
+                                &:before{transition:all 300ms ease;}
+                                &.active{
+                                    &:before{background-color: rgba(255, 255, 255, .6);}
+                                }
+                                &:hover:not(.active){color:#969696;text-shadow:none;
+                                    &:before{background-color: rgba(255, 255, 255, .4);}
+                                }
                             }
                         }
                     }
