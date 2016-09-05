@@ -395,6 +395,7 @@
                         .icon{width: 25%;}
                         .wrap-more-info+.text-wrap{font-style: italic;}
                         &.align-center{align-items: center;}
+                        &.align-top{align-items:flex-start;}
                         &.wrap-text-icon-row{
                             h3{text-transform: uppercase;font-size: 34px;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: 400;margin:0 0 20px 0;}
                             .text-wrap{width: calc(100% - 160px);}
@@ -426,7 +427,7 @@
             }
 
             .services-websites{display: flex;justify-content: flex-start;align-items: flex-start;
-                .left{width: 260px;
+                .left{width: 260px;position: relative;z-index: 1;
 
                     .slider-wrap{padding:40px 0 40px 0;margin-bottom: 60px;
                         .slider{
@@ -434,7 +435,7 @@
                                 .slider-item{transition:all 300ms ease;padding:15px 10px 15px 10px;border-radius:5px 0 0 5px;display: flex;justify-content: flex-start;align-items: center;cursor:pointer;transition:all 300ms ease;
                                     .slider-img{width: 45px;}
                                     .slider-text{font-size: 20px;font-weight: 600;color:rgba(1,1,1,1);}
-                                    &.slick-current, &:hover{background-color: rgba(255,255,255,.5);}
+                                    &.slick-current, &:hover{background-color: rgba(255,255,255,.85);}
                                 }
                                 .slick-arrow{width: 36px;height: 20px;font-size: 0;max-height: none;
                                     &:before, &:after{content:'';display: block;position:absolute;top:0;left:0;background-image: url(../images/services-websites-arrows.png);background-repeat: no-repeat;width: 100%;height: 100%;transition:all 300ms ease;}
@@ -464,7 +465,7 @@
                     }
 
                 }
-                .right{width: calc(100% - 260px);position:relative;
+                .right{width: calc(100% - 260px);position:relative;z-index:0;
 
                     .loading-circle{position: absolute;left:calc(50% - 34px);top:50px;opacity: 0;z-index: 0;transition:all 300ms ease;}
 

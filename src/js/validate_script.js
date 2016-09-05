@@ -397,6 +397,8 @@ function fancyboxForm(){
 
     function servicesWebsitesScripts(){
 
+        var timer = [];
+
         $('.services-websites').each(function(){
 
             var slider = $(this).find('.slider');
@@ -406,37 +408,7 @@ function fancyboxForm(){
                 var parent = slider.parents('.services-websites');
                 var siteName = slider.find('.slick-current .slider-text').text();
 
-                parent.find('.right').addClass('loading');
-
-                setTimeout(function(){
-                    parent.find('.img-item').remove();
-                    $.ajax({
-                        url:'js/json/services_websites_info.json',
-                        data:{'action':'loadServicesWebsitesContent', 'siteName':siteName, contentNum:parent.attr('data-services')},
-                        method:'POST',
-                        success:function(data){
-
-                            var dataParsed = data;
-
-                            if(typeof data != 'object'){
-                                dataParsed = JSON.parse(data);
-                            }
-
-                            dataParsed.images.forEach(function(item){
-                                var itemWrap = '<div class="img-item"><div class="img-item-wrap">'+item.image+'</div><div class="img-item-text">'+item.text+'</div></div>';
-                                parent.find('.img-wrap').append(itemWrap);
-                            });
-
-                            parent.find('.value-item.people .value-item-text').text(dataParsed.people_value);
-                            parent.find('.value-item.female .value-item-text').text(dataParsed.female_value);
-                            parent.find('.value-item.male .value-item-text').text(dataParsed.male_value);
-                            parent.find('.right-text').text(dataParsed.main_text);
-
-                            parent.find('.right').removeClass('loading');
-
-                        }
-                    });
-                },600);
+                reloadServicesWebsitesContent(parent, siteName);
 
             });
 
@@ -455,24 +427,53 @@ function fancyboxForm(){
                 vertical:true,
                 arrows:true,
                 dots:false,
-                focusOnSelect: true
+                focusOnSelect: true,
+                responsive:[
+                    {
+                        breakpoint:767,
+                        settings:{
+                            slidesToShow:3,
+                            slidesToScroll:1,
+                            vertical:false
+                        }
+                    },
+                    {
+                        breakpoint:666,
+                        settings:{
+                            slidesToShow:2,
+                            slidesToScroll:1,
+                            vertical:false
+                        }
+                    },
+                    {
+                        breakpoint:479,
+                        settings:{
+                            slidesToShow:3,
+                            slidesToScroll:1,
+                            vertical:true
+                        }
+                    }
+                ]
             });
 
         });
 
 
-        var timer = null;
+
 
         function reloadServicesWebsitesContent(parent, siteName){
 
             parent.find('.right').addClass('loading');
-            clearTimeout(timer);
 
-            timer = setTimeout(function(){
+            var contentNumId = parent.attr('data-services');
+
+            clearTimeout(timer[contentNumId]);
+
+            timer[contentNumId] = setTimeout(function(){
                 parent.find('.img-item').remove();
                 $.ajax({
                     url:'js/json/services_websites_info.json',
-                    data:{'action':'loadServicesWebsitesContent', 'siteName':siteName, contentNum:parent.attr('data-services')},
+                    data:{'action':'loadServicesWebsitesContent', 'siteName':siteName, 'contentNum':contentNumId},
                     method:'POST',
                     success:function(data){
 
