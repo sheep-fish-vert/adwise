@@ -223,13 +223,18 @@
 
         if($('.tabs-parallax').length){
 
-            $(document).on('click', '.tabs .parallax-tab-item', function(){
+            $(document).on('click', '.tabs .parallax-tab-item', function(e){
+
+                e.preventDefault();
 
                 var index = $(this).index();
 
                 $('.parallax-block img').removeClass('active');
                 $('.parallax-images img').eq(index).addClass('active');
                 $('.parallax-blur img').eq(index).addClass('active');
+
+                $('.parallax-tab-item').removeClass('active');
+                $(this).addClass('active');
 
             });
 

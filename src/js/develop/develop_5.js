@@ -310,7 +310,8 @@ function prerollFancyOpen() {
 
     })
 }
-    prerollFancyOpen();
+
+prerollFancyOpen();
 
 
 function audioFancyOpen() {
@@ -480,6 +481,7 @@ Number.prototype.lead0 = function(n) {
 
 
 //END video creatives---------------------------------------------------------------------------------
+
 var creatives =[
     {
         tab:1,
@@ -510,6 +512,7 @@ var creatives =[
         page:1
     }
 ];
+
 function loadTab() {
 
     if(!$('.tab-item.show').hasClass('full')){
@@ -526,7 +529,9 @@ function loadTab() {
         }
     },100);
 }
+
 function scrollUpload() {
+
     if($('.creatives-wrap').length>0){
         $(window).scroll(function () {
             var minus = (($(document).height() - $('footer').outerHeight()) - ($(window).height()+$(window).scrollTop()));
@@ -538,11 +543,15 @@ function scrollUpload() {
             }
 
         });
+
         loadTab();
+
     }
 
 }
+
 function ajaxFunc(tab) {
+
     var page;
 
     for (var i=0; i < creatives.length; i++){
@@ -555,6 +564,7 @@ function ajaxFunc(tab) {
         page:page,
         count:3
     };
+
     $.ajax({
         url : '/creatives.php',
         data: data,
@@ -613,15 +623,17 @@ function ajaxFunc(tab) {
     });
 }
 function tabsCreativePae() {
-    $('.tab-item').not(':first').removeClass('show');
-    $('.main-wrap.tabs .column-list-main li').click(function(event){
-        event.preventDefault();
-        $('.main-wrap.tabs .column-list-main li').removeClass('active').eq($(this).index()).addClass('active');
-        $('.tab-item').removeClass('show').eq($(this).index()).addClass('show');
-        setTimeout(function () {
-            loadTab();
-        },100);
-    }).eq(0).addClass('active');
+
+        $('.tab-item').not(':first').removeClass('show');
+        $('.main-wrap.tabs .column-list-main li').click(function(event){
+            event.preventDefault();
+            $('.main-wrap.tabs .column-list-main li').removeClass('active').eq($(this).index()).addClass('active');
+            $('.tab-item').removeClass('show').eq($(this).index()).addClass('show');
+            setTimeout(function () {
+                loadTab();
+            },100);
+        }).eq(0).addClass('active');
+
 }
 $(document).ready(function(){
     audioFancyOpen();
@@ -632,17 +644,20 @@ $(document).ready(function(){
     $.getJSON('data.json',function (data) {
         constructSlides(data);
     });
-    
 
-       
+
+
 
 
 });
 
 $(window).load(function(){
-    tabsCreativePae();
+    if($('.creatives-global').length){
+        tabsCreativePae();
+        scrollUpload();
+    }
     oneSizeForMainNews();
-    scrollUpload();
+
 
 });
 
