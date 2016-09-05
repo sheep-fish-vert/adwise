@@ -292,7 +292,6 @@ function fancyboxForm(){
 
                         $('.websites-content').append('<div class="websites-text loading-by-ajax loading">'+websiteData.text+'</div><div class="websites-audience loading-by-ajax loading"><div class="websites-audience-title">Audience</div><div class="websites-audience-main"><div clas="websites-audience-icon"><img src="images/female-icon.png" alt="" /></div><div class="websites-audience-text">'+websiteData.audience.female+'</div></div><div class="websites-audience-main"><div clas="websites-audience-icon"><img src="images/male-icon.png" alt="" /></div><div class="websites-audience-text">'+websiteData.audience.male+'</div></div></div><div class="websites-statistic loading-by-ajax loading"><div class="websites-statistic-title"><div class="websites-statistic-title-top">Ad formats</div><div class="websites-statistic-title-bottom">Efficiency</div></div><div class="websites-statistic-params"><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Banners</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.banners+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Branding</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.branding+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Clickunder</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.clickunder+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div><div class="websites-statistic-param-item"><div class="websites-statistic-param-item-wrap"><div class="websites-statistic-param-title">Pre-roll</div><div class="websites-statistic-param-circle" data-value='+websiteData.statistic.pre_roll+'><span class="circle-value-text">0%</span><svg width="47" height="47" viewBox="0 0 47 47"><circle class="circle-background" cx="23.5" cy="23.5" r="20.5"></circle><circle class="circle-lines" cx="23.5" cy="23.5" r="20.5"></circle></svg></div></div></div></div></div>');
 
-
                         var contentPaddingTop = parseInt($('.websites-content').css('padding-top'));
                         var contentPaddingBottom = parseInt($('.websites-content').css('padding-bottom'));
                         var newHeight = contentPaddingTop + contentPaddingBottom;
@@ -325,7 +324,6 @@ function fancyboxForm(){
 
                         });
 
-
                     }
                 });
 
@@ -348,8 +346,6 @@ function fancyboxForm(){
             var chossenFilter = $(this).attr('data-sites');
 
             $('.websites-slider-wrap, .websites-content').addClass('loading');
-
-
 
                 if($('.sites-filter-slider').is('.slick-slider')){
                     $('.sites-filter-slider').slick('destroy');
@@ -389,8 +385,6 @@ function fancyboxForm(){
                     }
                 });
 
-
-
         });
 
         $('.column-list-sites-filter li').eq(0).click();
@@ -398,6 +392,87 @@ function fancyboxForm(){
     }
 
 /* /websites */
+
+/* services-websites */
+
+    function servicesWebsitesScripts(){
+
+        $('.services-websites').each(function(){
+
+            var slider = $(this).find('.slider');
+
+            slider.on('init', function(){
+
+                var parent = slider.parents('.services-websites');
+                var siteName = slider.find('.slick-current .slider-text').text();
+
+                reloadServicesWebsitesContent(parent, siteName);
+
+            });
+
+            slider.on('afterChange', function(slick, currentSlide){
+
+                var parent = slider.parents('.services-websites');
+                var siteName = slider.find('.slick-current .slider-text').text();
+
+                reloadServicesWebsitesContent(parent, siteName);
+
+            });
+
+            slider.slick({
+                slidesToShow:5,
+                slidesToScroll:1,
+                vertical:true,
+                arrows:true,
+                dots:false,
+                focusOnSelect: true
+            });
+
+        });
+
+
+        var timer = null;
+
+        function reloadServicesWebsitesContent(parent, siteName){
+
+            parent.find('.right').addClass('loading');
+            clearTimeout(timer);
+
+            timer = setTimeout(function(){
+                parent.find('.img-item').remove();
+                $.ajax({
+                    url:'js/json/services_websites_info.json',
+                    data:{'action':'loadServicesWebsitesContent', 'siteName':siteName, contentNum:parent.attr('data-services')},
+                    method:'POST',
+                    success:function(data){
+
+                        var dataParsed = data;
+
+                        if(typeof data != 'object'){
+                            dataParsed = JSON.parse(data);
+                        }
+
+                        dataParsed.images.forEach(function(item){
+                            var itemWrap = '<div class="img-item"><div class="img-item-wrap">'+item.image+'</div><div class="img-item-text">'+item.text+'</div></div>';
+                            parent.find('.img-wrap').append(itemWrap);
+                        });
+
+                        parent.find('.value-item.people .value-item-text').text(dataParsed.people_value);
+                        parent.find('.value-item.female .value-item-text').text(dataParsed.female_value);
+                        parent.find('.value-item.male .value-item-text').text(dataParsed.male_value);
+                        parent.find('.right-text').text(dataParsed.main_text);
+
+                        parent.find('.right').removeClass('loading');
+
+                    }
+                });
+            },600);
+
+        };
+
+    };
+
+/* /services-websites */
 
 /* event-page */
 
@@ -955,5 +1030,7 @@ $(document).ready(function(){
 
     eventPage();
     geoPage();
+
+   servicesWebsitesScripts();
 
 });

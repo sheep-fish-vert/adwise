@@ -379,7 +379,7 @@
 
                 &:before{content:'';display: block;position: absolute;width: 100%;height:100%;z-index: 1;}
 
-                .tab-item{position: absolute;z-index: 0;top:0;left:50%;transform:translate(-50%, 0);opacity: 0;max-width:580px;width:100%;padding-top: 55px;padding-bottom: 70px;font-size:18px;color:#fff;font-weight: 300;line-height: 1.25;transition:all 300ms ease;
+                .tab-item{position: absolute;z-index: 0;top:0;left:50%;transform:translate(-50%, 0);opacity: 0;max-width:800px;width:100%;padding-top: 55px;padding-bottom: 70px;font-size:18px;color:#fff;font-weight: 300;line-height: 1.25;transition:all 300ms ease;
                     &.show{position: relative;opacity: 1;z-index: 2;}
 
                     a{color:#fff;
@@ -424,6 +424,85 @@
                 }
 
             }
+
+            .services-websites{display: flex;justify-content: flex-start;align-items: flex-start;
+                .left{width: 260px;
+
+                    .slider-wrap{padding:40px 0 40px 0;margin-bottom: 60px;
+                        .slider{
+                            &.slick-slider{margin-bottom: 0;
+                                .slider-item{transition:all 300ms ease;padding:15px 10px 15px 10px;border-radius:5px 0 0 5px;display: flex;justify-content: flex-start;align-items: center;cursor:pointer;transition:all 300ms ease;
+                                    .slider-img{width: 45px;}
+                                    .slider-text{font-size: 20px;font-weight: 600;color:rgba(1,1,1,1);}
+                                    &.slick-current, &:hover{background-color: rgba(255,255,255,.5);}
+                                }
+                                .slick-arrow{width: 36px;height: 20px;font-size: 0;max-height: none;
+                                    &:before, &:after{content:'';display: block;position:absolute;top:0;left:0;background-image: url(../images/services-websites-arrows.png);background-repeat: no-repeat;width: 100%;height: 100%;transition:all 300ms ease;}
+                                    &:before{opacity: 1;}
+                                    &:after{opacity: 0;}
+                                    &:hover{
+                                        &:before{opacity: 0;}
+                                        &:after{opacity: 1;}
+                                    }
+                                    &.slick-prev, &.slick-next{right:auto;left:calc(50% -18px);right:auto;left:calc(50% - 18px);transform:translate(0,0);}
+                                    &.slick-prev{top:auto;bottom:calc(100% + 5px);
+                                        &:before{background-position:left top;}
+                                        &:after{background-position: right top;}
+                                    }
+                                    &.slick-next{bottom:auto;top:calc(100% + 5px);
+                                        &:before{background-position: left bottom;}
+                                        &:after{background-position: right bottom;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .services-websites-count{display: flex;justify-content: flex-start;align-items: center;color:rgba(0,0,0,1);
+                        .service-websites-num{font-size: 62px;width: 40%;font-family: 'CoreSansCn', sans-serif;}
+                        .service-websites-text{font-size: 24px;font-weight: 300;text-transform: uppercase;width: 60%;}
+                    }
+
+                }
+                .right{width: calc(100% - 260px);position:relative;
+
+                    .loading-circle{position: absolute;left:calc(50% - 34px);top:50px;opacity: 0;z-index: 0;transition:all 300ms ease;}
+
+                    &.loading{
+                        .loading-circle{opacity: 1;}
+                        .right-wrap{opacity: 0;}
+                    }
+
+                    .right-wrap{position: relative;z-index: 1;transition:all 300ms ease;
+                        .white-block{background-color: #fff;border-radius: 10px;box-shadow: 0 3px 16px 0 rgba(0, 0, 0, .25);padding:50px 0 40px 0;margin-bottom: 55px;
+                            .img-wrap{display: flex;justify-content: flex-start;align-items: flex-start;flex-wrap:wrap;
+                                .img-item{padding:0 5px;text-align: center;width: 33.33%;margin-bottom: 25px;
+                                    .img-item-wrap{margin-bottom: 10px;}
+                                    .img-item-text{color:rgba(0,0,0,1);text-transform: uppercase;font-size: 18px;font-weight: 300;}
+                                }
+                            }
+                            .value-wrap{background-color: #f5eeda;padding:5px 0px;
+                                .value-main{max-width:460px;width: 100%;margin:0 auto;display: flex;justify-content: space-between;
+                                    .value-item{padding:0 10px;display: flex;justify-content: flex-start;align-items: center;
+                                        .value-item-img{margin-right: 5px;}
+                                        .value-item-text{font-size: 18px;color:rgba(0,0,0,1);font-weight: 300;font-family: 'Roboto', sans-serif;}
+                                    }
+                                }
+                            }
+                        }
+                        .right-text{font-size: 16px;color:rgba(0,0,0,1);font-weight: 300;line-height: 1.25;margin-bottom: 40px;}
+                        .right-button{
+                            .button{
+                                &.button-cofee{max-width: 200px;width: 100%;height: 37px;text-transform: uppercase;line-height: 38px;font-size: 16px;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: 400;letter-spacing: 0.5px;
+                                    &:hover{color:#fff;}
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
         }
 
     }
@@ -806,6 +885,9 @@
         }
         &.button-orange{background-color: #ff4600;
             &:hover{background-color: #c34660;}
+        }
+        &.button-cofee{background-color: #ddc886;
+                &:hover{background-color: #aa9861;}
         }
     }
 

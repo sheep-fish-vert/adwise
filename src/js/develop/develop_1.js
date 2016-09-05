@@ -233,6 +233,9 @@
                 $('.parallax-images img').eq(index).addClass('active');
                 $('.parallax-blur img').eq(index).addClass('active');
 
+                $('.tab-item').removeClass('show');
+                $('.tab-item').eq(index).addClass('show');
+
                 $('.parallax-tab-item').removeClass('active');
                 $(this).addClass('active');
 
