@@ -416,10 +416,38 @@
 
 /* /video-block new fon slider */
 
+/* services-geo */
+
+    function servicesGeoScripts(){
+
+        var slider = $('.services-geos-slider .slider-wrap');
+
+        slider.slick({
+            slidesToShow:1,
+            slidesToScroll:1,
+            arrows:true,
+            dots:false,
+            speed:500,
+            fade:true,
+            cssEase:'linear'
+        });
+
+        slider.on('afterChange', function(){
+
+
+
+        });
+
+    };
+
+/* services-geo */
+
 
 $(document).ready(function(){
 
     globalWrapperMinHeight();
+
+    servicesGeoScripts();
 
 });
 
