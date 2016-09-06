@@ -422,6 +422,14 @@
 
         var slider = $('.services-geos-slider .slider-wrap');
 
+        slider.on('init', function(){
+
+            var country = $('.services-geos-slider .slick-current').attr('data-country');
+
+            changeCountryOnMap(country);
+
+        });
+
         slider.slick({
             slidesToShow:1,
             slidesToScroll:1,
@@ -429,12 +437,32 @@
             dots:false,
             speed:500,
             fade:true,
-            cssEase:'linear'
+            cssEase:'linear',
+            adaptiveHeight:true
         });
+
 
         slider.on('afterChange', function(){
 
+            var country = $('.services-geos-slider .slick-current').attr('data-country');
 
+            changeCountryOnMap(country);
+
+        });
+
+        function changeCountryOnMap(country){
+
+            $('.services-geos-map svg .active').removeClass('active');
+            $('.services-geos-map svg g[data-country='+country+']').addClass('active');
+
+        };
+
+        $(document).on('click', '.services-geos-map svg .work-with:not(.active)', function(){
+
+            var country = $(this).attr('data-country');
+            var countryId = $('.services-geos-slider .slider-item[data-country='+country+']').attr('data-slick-index');
+
+            slider.slick('slickGoTo',countryId);
 
         });
 
