@@ -389,7 +389,19 @@
                         &:last-child{margin-bottom: 0;}
                         p{margin:0 0 0px 0;}
                     }
-                    .text-wrap{font-family: 'Roboto', sans-serif;font-weight: 300;}
+                    .text-wrap{font-family: 'Roboto', sans-serif;font-weight: 300;color:#000000;font-size: 18px;font-family: 'ProximaNovaScOsf', sans-serif;
+                        h4{font-weight: 600;font-size: 24px;margin:0 0 10px 0;text-transform: uppercase;}
+                        ul{list-style:none;margin:0 0 20px 0;padding:0;
+                            li{position: relative;padding-left: 20px;margin-bottom: 5px;
+                                &:before{content:'';position: absolute;left:2px;top:7px;width: 8px;height: 11px;background-image: url(../images/black-small-arrow.png);background-repeat: no-repeat;}
+                            }
+                        }
+                        .button-wrap{
+                            .button{color:16px;text-transform: uppercase;font-weight: 400;letter-spacing: .5px;
+                                &:hover{color:#fff;}
+                            }
+                        }
+                    }
                     .wrap-flex{display: flex;justify-content: space-between;align-items: flex-start;
                         .text-wrap{width:calc(100% - 215px);}
                         .icon{width: 25%;}
@@ -398,7 +410,7 @@
                         &.align-top{align-items:flex-start;}
                         &.wrap-text-icon-row{
                             h3{text-transform: uppercase;font-size: 34px;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: 400;margin:0 0 20px 0;}
-                            .text-wrap{width: calc(100% - 160px);}
+                            .text-wrap{width: calc(100% - 200px);}
                         }
                     }
                     .wrap-more-info{width: 195px;height: 144px;background-image:url(../images/more-info-right-bg.png);background-repeat:no-repeat;background-position:left top;display: flex;justify-content: flex-end;align-items: center;padding:0 20px 0 55px;position: relative;
@@ -888,7 +900,10 @@
             &:hover{background-color: #c34660;}
         }
         &.button-cofee{background-color: #ddc886;
-                &:hover{background-color: #aa9861;}
+            &:hover{background-color: #aa9861;}
+        }
+        &.button-blue{background-color: #7d8ed8;
+            &:hover{background-color: #4a5ba6;}
         }
     }
 
