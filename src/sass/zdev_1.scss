@@ -388,9 +388,10 @@
                     .wrap-info{margin-bottom: 55px;
                         &:last-child{margin-bottom: 0;}
                         p{margin:0 0 0px 0;}
+                        h3{text-transform: uppercase;font-size: 34px;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: 400;margin:0 0 20px 0;}
+                        h4{font-weight: 600;font-size: 24px;margin:0 0 10px 0;text-transform: uppercase;font-family: 'ProximaNoveNew', sans-serif;}
                     }
                     .text-wrap{font-family: 'Roboto', sans-serif;font-weight: 300;color:#000000;font-size: 18px;font-family: 'ProximaNovaScOsf', sans-serif;
-                        h4{font-weight: 600;font-size: 24px;margin:0 0 10px 0;text-transform: uppercase;}
                         ul{list-style:none;margin:0 0 20px 0;padding:0;
                             li{position: relative;padding-left: 20px;margin-bottom: 5px;
                                 &:before{content:'';position: absolute;left:2px;top:7px;width: 8px;height: 11px;background-image: url(../images/black-small-arrow.png);background-repeat: no-repeat;}
@@ -409,7 +410,7 @@
                         &.align-center{align-items: center;}
                         &.align-top{align-items:flex-start;}
                         &.wrap-text-icon-row{
-                            h3{text-transform: uppercase;font-size: 34px;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: 400;margin:0 0 20px 0;}
+
                             .text-wrap{width: calc(100% - 200px);}
                         }
                     }
@@ -424,11 +425,14 @@
                     }
 
                     &.pr-reputation{
-                        .wrap-text-icon{
-                            img{max-width: 95px;}
-                        }
-                    }
 
+                        .wrap-info{
+                            .text-wrap{font-family: 'Proxima Nova', sans-serif;font-weight: 300;}
+                            h3{font-weight: 600;font-family: 'Proxima Nova', sans-serif;}
+                        }
+                        .wrap-text-icon{text-align: center;width: 180px;}
+
+                    }
 
                 }
 
