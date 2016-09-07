@@ -400,17 +400,18 @@
 
         var point = 1;
         var maxLength = $('.slider-class.first-slider .slider-item').length;
+        if(maxLength > 1){
+            setInterval(function(){
 
-        setInterval(function(){
+                $('.slider-class.first-slider .slider-item').removeClass('active').eq(point).addClass('active');
+                $('.slider-class.second-slider .slider-item').removeClass('active').eq(point).addClass('active');
 
-            $('.slider-class.first-slider .slider-item').removeClass('active').eq(point).addClass('active');
-            $('.slider-class.second-slider .slider-item').removeClass('active').eq(point).addClass('active');
-
-            point++;
-            if(point >= maxLength){
-                point = 0;
-            }
-        }, 5000);
+                point++;
+                if(point >= maxLength){
+                    point = 0;
+                }
+            }, 5000);
+        }
 
     };
 
