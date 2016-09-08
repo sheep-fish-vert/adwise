@@ -533,12 +533,12 @@
 
                 .services-geos-map{width: 100%;position: relative;z-index:0;
                     svg{
-                        g{fill:#b1b1b1;transition:all 300ms ease;
-                            &.work-with{fill:#e5c200;cursor: pointer;
+                        g{fill:#dbdcde;transition:all 300ms ease;
+                            &.work-with{fill:#edd58a;cursor: pointer;
                                 &:hover{
-                                    &:not(.active){fill:#ebda7b;}
+                                    &:not(.active){fill:#ffb549;}
                                 }
-                                &.active{fill:#fbdf43;}
+                                &.active{fill:#ff8a00;}
                             }
                         }
                     }
