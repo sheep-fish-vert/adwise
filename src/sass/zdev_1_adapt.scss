@@ -235,7 +235,24 @@
     /* services */
 
         .services-page{
-            .right-column{width: 100%;}
+            .left-column{
+                .column-list-wrap{width: 100%;padding-top: 50px;
+                    .column-list{padding-top: 0;}
+                }
+            }
+            .right-column{width: 100%;
+                .creatives-wrap{
+                    .tab-item{padding-top: 50px;
+                        &.pr-reputation{
+                            .wrap-info{
+                                .text-wrap{width: 100%;}
+                            }
+                            .button-wrap{padding:0;text-align: center;}
+                        }
+                    }
+                }
+                .services-websites{margin-left: 0;}
+            }
             .column-list-wrap{
                 .column-list{
                     .column-list-main{
