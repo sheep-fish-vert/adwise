@@ -66,6 +66,30 @@
 }
 @media screen and (max-width: 1280px){
 
+    /* services */
+
+        .services-page{
+
+            .left-column{
+                .column-list-wrap{
+                    .column-list{
+                        .column-list-main{
+                            ul{margin-left: 0;}
+                        }
+                    }
+                }
+            }
+
+            .right-column{
+                .services-geos{
+                    .services-geos-slider{transform:none;}
+                }
+            }
+
+        }
+
+    /* /services */
+
 }
 @media screen and (max-width: 1100px){
 

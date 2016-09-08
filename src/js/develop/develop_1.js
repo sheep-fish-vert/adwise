@@ -398,8 +398,11 @@
 
     function videoBackgroundSlider(){
 
+        $('.video-block').addClass('loaded');
+
         var point = 1;
         var maxLength = $('.slider-class.first-slider .slider-item').length;
+
         if(maxLength > 1){
             setInterval(function(){
 
@@ -478,6 +481,8 @@ $(document).ready(function(){
 
     servicesGeoScripts();
 
+    videoBackgroundSlider();
+
 });
 
 $(window).load(function(){
@@ -489,8 +494,6 @@ $(window).load(function(){
     leftColumnScroll();
 
     scrollingTabs();
-
-    videoBackgroundSlider();
 
 });
 
