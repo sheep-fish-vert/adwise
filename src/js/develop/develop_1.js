@@ -167,7 +167,7 @@
 
                 var rightParallaxWidth = freeSpace + rightColWidth;
 
-                $('.parallax-blur').css({'width':rightParallaxWidth+'px'});
+                $('.parallax-blur').css({'width':rightParallaxWidth+'px','left':leftParallaxWidth+'px'});
 
                 $('.parallax-blur .parallax-image-top img').css({'left':'-'+leftParallaxWidth+'px'});
                 $('.parallax-block img').css({'min-width':windowWidth+'px'});

@@ -384,6 +384,7 @@
                 .tab-item{position: absolute;z-index: 0;top:0;left:50%;transform:translate(-50%, 0);opacity: 0;max-width:760px;width:100%;padding-top: 100px;padding-bottom: 70px;font-size:18px;color:#fff;font-weight: 300;line-height: 1.25;transition:all 300ms ease;
                     &.show{position: relative;opacity: 1;z-index: 2;}
                     &.websites{max-width: 840px;}
+                    &.web-mobile{padding-bottom: 200px;}
 
                     a{color:#fff;
                         &:hover{color:#fcd053;}
@@ -451,7 +452,7 @@
 
             }
 
-            .services-websites{display: flex;justify-content: flex-start;align-items: flex-start;padding-top: 30px;margin-left: 40px;
+            .services-websites{display: flex;justify-content: flex-start;align-items: flex-start;padding-top: 30px;margin-left: 40px;margin-bottom: 100px;
                 .left{width: 260px;position: relative;z-index: 1;padding-top: 25px;
 
                     .slider-wrap{padding:54px 0 54px 0;margin-bottom: 87px;
@@ -529,7 +530,7 @@
                 }
             }
 
-            .services-geos{display: flex;flex-direction: column;justify-content: flex-start;align-items: center;
+            .services-geos{display: flex;flex-direction: column;justify-content: flex-start;align-items: center;margin-bottom: 100px;
 
                 .services-geos-map{width: 100%;position: relative;z-index:0;
                     svg{
@@ -1091,7 +1092,7 @@
 
                 .parallax-images{left:0;}
 
-                .parallax-blur{right:0;left:auto;
+                .parallax-blur{
                     &:after{content:'';display: block;position: absolute;top:0;left:0;width: 1px;height: 100%;background-image: url(../images/second-type-parallax-shadow.png);z-index: 1;opacity:.5;}
                     .parallax-image-top, .parallax-image-bottom{
                         img{filter:blur(50px);filter:url(#blur);transform:translate(50px , -25px);}
