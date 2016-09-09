@@ -113,15 +113,21 @@ a.button-next{padding-left: 0;padding-right: 32px;
 }
 
 // advertising
-.advertising-page{background:#f2f4f8 url('../images/some-bg-img.png') center 131% no-repeat;padding-top: 360px !important;
+.advertising-page{background:#f2f4f8 url('../images/some-bg-img.png') center 131% no-repeat;
+    &.parallax-page.first-type{
+        &.main{padding-top: 680px;}
+        .parallax-block{
+            .parallax-blur{transform:translate(0, 700px);}
+        }
+    }
     .parallax-block .parallax-blur{border-top: 1px solid rgba(255,255,255, .5);}
     .parallax-block .parallax-images img{top: -75px;}
-    &.parallax-page.first-type .parallax-block .parallax-blur{transform: translate(0, 440px);}
+
 }
 .advertising{
     .mbox{max-width: 1220px;}
     .advertising-wrap{
-        &>.title{padding-top: 85px;padding-bottom: 85px;}
+        &>.title{padding-top: 0px;padding-bottom: 85px;}
     }
     // middle block
     .advertising-middle{margin-bottom: 290px;
@@ -205,48 +211,6 @@ a.button-next{padding-left: 0;padding-right: 32px;
             }
         }
     }
-
-    // // bottom block
-    // .advertising-bottom{margin-bottom: 130px;
-    //     p{margin:0;}
-    //     .advertising-items{max-width: 1060px;margin:0 auto 80px;width: 100%;display: flex;flex-wrap: wrap;
-    //         .item{width: 50%;display: flex;flex-wrap: wrap;flex-direction: column;
-    //             &.right{
-    //                 .item-bottom{padding-right: 0;}
-    //                 .item-bottom .item-bottom-rows{padding-top: 30px;
-    //                     .item-bottom-row{align-items: flex-start;margin-bottom: 15px;height: 60px;
-    //                         .item-bottom-row-mini{width: 50%;display: flex;
-    //                             .row-img{padding-top: 9px;}
-    //                             .row-text{padding-left: 24px;}
-    //                         }
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //         .item-top{padding-left: 50px;position: relative;display: flex;flex-wrap: wrap;flex-direction: column;padding-right: 15px;
-    //             &:after{background-color: #fff;left: 0;width: 3px;content: '';position:absolute;height: 100%;top: 0;}
-    //             .item-top-title{padding-top: 23px;padding-bottom: 25px;
-    //                 .title h2{text-align: left;}
-    //             }
-    //             .item-top-text{color: white;font-size: 17px;font-weight: 300;display: flex;flex-direction: column;flex-wrap: wrap;line-height: 1.2;margin-bottom: 25px;max-width: 430px;min-height: 120px;}
-    //         }
-    //         .item-bottom{display: flex;flex-direction: column;flex-wrap: wrap;padding-top: 50px;padding-right: 15px;
-    //             .item-bottom-rows{display: flex;flex-direction: column;flex-wrap: wrap;}
-    //             .item-bottom-row{display: flex;align-items: center;margin-bottom: 35px;
-    //                 &:last-child{margin-bottom: 0;}
-    //                 .row-text{padding-left: 50px;color: white;max-width: 360px;line-height: 1.2;}
-    //             }
-    //             &+.item-href{display: none;}
-    //         }
-    //     }
-    //     .advertising-items-href{display: flex;}
-    //     .item-href{width: 50%;display: flex;align-items: center;justify-content: center;
-    //         &:first-child a{background-color: #eb5776;}
-    //         a{width: 200px;height: 37px;text-decoration: none;color: white;display: flex;align-items: center;justify-content: center;background-color: #fcc939;transition:all ease .2s;
-    //             &:hover{opacity: .9;}
-    //         }
-    //     }
-    // }
 }
 
 
@@ -313,10 +277,12 @@ a.button-next{padding-left: 0;padding-right: 32px;
 
 // asian-market-page
 .asian-market-page{padding-top: 350px;background-color: #d2dce5;
-    &.parallax-page.first-type .parallax-block .parallax-blur{transform: translate(0, 444px);border-top: 1px solid rgba(255,255,255,.5);height: calc(100% + 116px);
-        img{transform: translate(-50%, -441px);}
+    &.parallax-page.first-type{
+        &.main{padding-top: 680px;}
+        .parallax-block .parallax-blur{transform: translate(0, 700px);border-top: 1px solid rgba(255,255,255,.5);height: calc(100% + 116px);
+            img{transform: translate(-50%, -441px);}
+        }
     }
-    &.parallax-page.first-type .parallax-block img{}
 
     .button.button-yellow{font-size: 16px;background-color: #dfc24f;text-decoration: none;font-family: 'ProximaNovaScOsf';font-weight: normal;
         &:hover{background-color: #c5aa3e;}
@@ -566,7 +532,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
     p{margin: 0;color: white;}
     .mbox{max-width: 1060px;}
     .monetization-wrap{padding-bottom: 120px;
-        .title{padding-top: 105px;position: relative;
+        .title{padding-top: 0px;position: relative;
             &:after{position: absolute;content: '';background-color: #fff;height: 3px;max-width: 300px;width: 100%;bottom: -40px;left: 50%;transform: translateX(-50%);}
         }
     }

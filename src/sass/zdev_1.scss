@@ -946,6 +946,19 @@
 
 /* /vacancy */
 
+/* monetization */
+
+    .monetization-page{
+        &.parallax-page.first-type{
+            &.main{padding-top: 680px;}
+            .parallax-block{
+                .parallax-blur{transform:translate(0, 700px);}
+            }
+        }
+    }
+
+/* /monetization */
+
 /* video-block new */
 
     .video-block{position: relative;overflow: hidden;
