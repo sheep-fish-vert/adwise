@@ -61,9 +61,9 @@
                         $('.parallax-blur').css({'top':'-'+scrolled+'px'});
                         $('.parallax-blur .parallax-image-top').css({'top':scrolledDiference+'px'});
                     }else{
-
+                        console.log(blurParallaxPadding);
                         $('.parallax-images .parallax-image-top').css({'top':'-'+blurParallaxPadding*0.6+'px'});
-                        $('.parallax-blur').css({'top':'-'+blurParallaxPadding+'px'});
+                        $('.parallax-blur').css({'top':'-'+(blurParallaxPadding - parseInt($('header').height()))+'px'});
                         $('.parallax-blur .parallax-image-top').css({'top':blurParallaxPadding*0.4+'px'});
 
                         if(hasBottomImg && scrolled > documentPercScrollForTopImage){
@@ -85,7 +85,7 @@
 
                                 var bottomParallaxDiference = pixForBottomScrolling - blurImageParallaxMoving;
 
-                                $('.parallax-blur').css({'top':'-'+blurBottomParallax+'px'});
+                                $('.parallax-blur').css({'top':'-' + blurBottomParallax + 'px'});
                                 $('.parallax-images .parallax-image-bottom').css({'bottom':blurImageParallaxMoving+'px'});
                                 $('.parallax-blur .parallax-image-bottom').css({'bottom':'-'+bottomParallaxDiference+'px'});
 
@@ -101,7 +101,9 @@
                     }
 
                     // "if" for scrolled more than 33.33% of page
-                    if(scrolled > documentPercScrollForTopImage && scrolled > blurParallaxPadding && $('.global-wrapper').height() > $(window).height()*1.75){
+                    console.log(scrolled, 1000);
+                    if(scrolled > 1000){
+                    //if(scrolled > documentPercScrollForTopImage && scrolled > blurParallaxPadding && $('.global-wrapper').height() > $(window).height()*1.75){
                         $('.parallax-image-top').addClass('hide');
                     }else{
                         $('.parallax-image-top').removeClass('hide');

@@ -24,17 +24,23 @@
     }
 
     //advertising, asian-market, monetization-page
-    .advertising-page, .asian-market-page, .monetization-page{
+    .advertising-page, .asian-market-page, .monetization-page, .contacts-page{
         &.parallax-page.first-type{
-            &.main{padding-top: 420px;}
+            &.main{padding-top: 630px;}
             .parallax-block{
-                .parallax-blur{transform:translate(0, 450px);
+                .parallax-blur{transform:translate(0, 610px);
+                    &:before{content:'';display: block;position: absolute;left:0;top:0;width: 100%;height: 100%;background-color: rgba(255,255,255,.2);z-index: 2;}
                     .parallax-image-top{
-                        img{transform:translate(-50%, -430px);}
+                        img{transform:translate(-50%, -590px);}
                     }
                 }
             }
         }
+
+        .title{
+            h1{color:#000;}
+        }
+
     }
 
 }
