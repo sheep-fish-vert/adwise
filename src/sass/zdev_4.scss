@@ -599,13 +599,13 @@ a.button-next{padding-left: 0;padding-right: 32px;
 
 // ad formats
 .ad-formats-page.parallax-page.first-type{padding: 365px 0 0px;background-color: #ffffff;
-    &.parallax-page.first-type .parallax-block .parallax-blur{transform: translate(0, 425px);border-top: 1px solid rgba(255,255,255,.5);
+    .parallax-block .parallax-blur{transform: translate(0, 425px);border-top: 1px solid rgba(255,255,255,.5);
         img{transform: translate(-50%, -436px);}
     }
     .parallax-image-top img{top: -290px;width: 100%;}
 
 }
-.ad-formats{position: relative;background-color: rgba(255,255,255,0.5);
+.ad-formats{position: relative;
     .mbox{max-width: 900px;}
     .ad-formats-text{padding-top: 112px;font-family: 'ProximaNovaScOsf';text-align: center;color: #000;margin-bottom: 45px;
         .title{margin-bottom: 65px;

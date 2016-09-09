@@ -61,7 +61,7 @@
                         $('.parallax-blur').css({'top':'-'+scrolled+'px'});
                         $('.parallax-blur .parallax-image-top').css({'top':scrolledDiference+'px'});
                     }else{
-                        console.log(blurParallaxPadding);
+
                         $('.parallax-images .parallax-image-top').css({'top':'-'+blurParallaxPadding*0.6+'px'});
                         $('.parallax-blur').css({'top':'-'+(blurParallaxPadding - parseInt($('header').height()))+'px'});
                         $('.parallax-blur .parallax-image-top').css({'top':blurParallaxPadding*0.4+'px'});
