@@ -63,7 +63,7 @@
                     }else{
 
                         $('.parallax-images .parallax-image-top').css({'top':'-'+blurParallaxPadding*0.6+'px'});
-                        $('.parallax-blur').css({'top':'-'+(blurParallaxPadding - parseInt($('header').height()))+'px'});
+                        $('.parallax-blur').css({'top':'-'+(blurParallaxPadding - 100)+'px'});  // -100 for notebooks hotfix
                         $('.parallax-blur .parallax-image-top').css({'top':blurParallaxPadding*0.4+'px'});
 
                         if(hasBottomImg && scrolled > documentPercScrollForTopImage){
