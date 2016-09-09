@@ -26,12 +26,12 @@
     //advertising-page, asian-market-page, monetization-page, contacts-page, ad-formats
     .advertising-page, .asian-market-page, .monetization-page, .contacts-page, .ad-formats-page{
         &.parallax-page.first-type{
-            &.main{padding-top: 680px;}
+            &.main{padding-top: 620px;}
             .parallax-block{
-                .parallax-blur{transform:translate(0, 610px);
+                .parallax-blur{transform:translate(0, 550px);
                     &:before{content:'';display: block;position: absolute;left:0;top:0;width: 100%;height: 100%;background-color: rgba(255,255,255,.2);z-index: 2;}
                     .parallax-image-top{
-                        img{transform:translate(-50%, -590px);}
+                        img{transform:translate(-50%, -530px);}
                     }
                 }
             }
