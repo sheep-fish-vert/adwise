@@ -22,6 +22,21 @@
         .parallax-image-top img{top: -180px;}
 
     }
+
+    //advertising, asian-market, monetization-page
+    .advertising-page, .asian-market-page, .monetization-page{
+        &.parallax-page.first-type{
+            &.main{padding-top: 420px;}
+            .parallax-block{
+                .parallax-blur{transform:translate(0, 450px);
+                    .parallax-image-top{
+                        img{transform:translate(-50%, -430px);}
+                    }
+                }
+            }
+        }
+    }
+
 }
 @media screen and (min-width: 1200px) and (max-width: 1450px) {
     // advertising
