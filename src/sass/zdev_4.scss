@@ -117,7 +117,11 @@ a.button-next{padding-left: 0;padding-right: 32px;
     &.parallax-page.first-type{
         &.main{padding-top: 680px;}
         .parallax-block{
-            .parallax-blur{transform:translate(0, 700px);}
+            .parallax-blur{transform:translate(0, 700px);
+                .parallax-image-top{
+                    img{transform:translate(-50%, -680px);}
+                }
+            }
         }
     }
     .parallax-block .parallax-blur{border-top: 1px solid rgba(255,255,255, .5);}
@@ -276,11 +280,11 @@ a.button-next{padding-left: 0;padding-right: 32px;
 
 
 // asian-market-page
-.asian-market-page{padding-top: 350px;background-color: #d2dce5;
+.asian-market-page{background-color: #d2dce5;
     &.parallax-page.first-type{
         &.main{padding-top: 680px;}
         .parallax-block .parallax-blur{transform: translate(0, 700px);border-top: 1px solid rgba(255,255,255,.5);height: calc(100% + 116px);
-            img{transform: translate(-50%, -441px);}
+            img{transform: translate(-50%, -680px);}
         }
     }
 

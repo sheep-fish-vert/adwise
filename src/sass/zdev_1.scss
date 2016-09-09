@@ -952,7 +952,11 @@
         &.parallax-page.first-type{
             &.main{padding-top: 680px;}
             .parallax-block{
-                .parallax-blur{transform:translate(0, 700px);}
+                .parallax-blur{transform:translate(0, 700px);
+                    .parallax-image-top{
+                        img{transform:translate(-50%, -680px);}
+                    }
+                }
             }
         }
     }
