@@ -1,0 +1,28 @@
+{
+    "images":[
+        {
+            "image":"<img src='images/services-websites-img1.png' alt=''>",
+            "text":"banners"
+        },
+        {
+            "image":"<img src='images/services-websites-img2.png' alt=''>",
+            "text":"brandings"
+        },
+        {
+            "image":"<img src='images/services-websites-img3.png' alt=''>",
+            "text":"clickunders"
+        },
+        {
+            "image":"<img src='images/services-websites-img4.png' alt=''>",
+            "text":"pre-rolls"
+        },
+        {
+            "image":"<img src='images/services-websites-img5.png' alt=''>",
+            "text":"mobile"
+        }
+    ],
+    "people_value":"350,000",
+    "female_value":"100,000",
+    "male_value":"150,000",
+    "main_text":"We see a long-term partnership as our fundamental way of doing business. This all serves us with exclusive terms of cooperation with TOP web-platforms, consequently providing you with a benefit of a best prices on the market."
+}

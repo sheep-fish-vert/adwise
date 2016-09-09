@@ -126,6 +126,9 @@ input, textarea{
 @include font-face('ProximaNovaNew', 'Proxima Nova ScOsf Extra Condensed Thin', 100);
 // @include font-face('ProximaNovaNew', 'Proxima Nova ScOsf Extra Condensed Black', 900);
 
+@include font-face('Proxima Nova', 'proximanova-light', 300);
+@include font-face('Proxima Nova', 'ProximaNova-Semibold', 600);
+
 @include font-face('RBNo2', 'RBNo2Light', 300);
 @include font-face('Proxima Nova Condenced', 'proximanovacond-light', 300);
 @include font-face('CoreSans', 'CoreSansD65Heavy');
@@ -134,5 +137,7 @@ input, textarea{
 @include font-face('BIRCH', 'BIRCH');
 
 @include font-face('NotoSans','NotoSans-Bold', 700);
+
+@include font-face('ProximaNovaAltExtraCondensedExtrabold', 'Proxima Nova Alt Extra Condensed Extrabold', 900);
 
 /*/fonts*/
