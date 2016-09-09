@@ -1177,6 +1177,20 @@
 
     /* /news-list, events-list, careers-list */
 
+    /* no-blur */
+
+        &.services-page, &.ad-formats-page, &.advertising-page, &.asian-market-page, &.event-page, &.monetization-page, &.news-list-page, &.vacancy-page{
+            .parallax-block{
+                .parallax-blur{
+                    .parallax-image-top{
+                        img{filter:none;}
+                    }
+                }
+            }
+        }
+
+    /* /no-blur */
+
     }
 
 /* /parallax */
