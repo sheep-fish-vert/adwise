@@ -101,7 +101,6 @@
                     }
 
                     // "if" for scrolled more than 33.33% of page
-                    console.log(scrolled, 1000);
                     if(scrolled > 1000){
                     //if(scrolled > documentPercScrollForTopImage && scrolled > blurParallaxPadding && $('.global-wrapper').height() > $(window).height()*1.75){
                         $('.parallax-image-top').addClass('hide');
