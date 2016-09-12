@@ -1042,7 +1042,7 @@
                 &.hide{opacity: 0;}
             }
             .parallax-images{position: fixed;top:0;left:0;width: calc(100% + 30px);height: calc(100% + 30px);}
-            .parallax-blur{position: fixed;top:0;left:0;border-top:1px solid #9b9692;overflow: hidden;width: calc(100% + 30px);height:calc(100% + 30px);
+            .parallax-blur{position: fixed;top:0;left:0;border-top:1px solid #9b9692;overflow: hidden;width: calc(100% + 30px);height:calc(100% + 150px);
                 &.blur{filter:blur(50px);filter:url(#blur);}
             }
 
@@ -1125,7 +1125,7 @@
                 &.main{padding-top: 420px;}
 
                 .parallax-block{
-                    .parallax-blur{transform:translate(0, 400px);height: calc(100% + 50px);
+                    .parallax-blur{transform:translate(0, 400px);height: calc(100% + 95px);
                         .parallax-image-top{
                             img{transform:translate(-50%, -380px);}
                         }
@@ -1179,7 +1179,7 @@
 
     /* no-blur */
 
-        &.services-page, &.ad-formats-page, &.advertising-page, &.asian-market-page, &.event-page, &.monetization-page, &.news-list-page, &.vacancy-page{
+        &.services-page, &.ad-formats-page, &.advertising-page, &.asian-market-page, &.event-page, &.monetization-page, &.news-list-page:not(.offers-list), &.vacancy-page, &.contacts-page{
             .parallax-block{
                 .parallax-blur{
                     .parallax-image-top{
