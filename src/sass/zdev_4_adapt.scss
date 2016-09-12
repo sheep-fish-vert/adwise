@@ -4,24 +4,7 @@
 @media screen and (max-width: 1600px){
 
 }
-@media screen and (max-width: 1366px){
-    // creatives
-    .creatives{
-        .creatives-slider{padding-left: 55px;
-            .slick-prev, .slick-next{height: 41px;width: 41px;
-                &:after{width: 15px;height: 15px;top: 13px;right: 15px;}
-            }
-            .slick-prev{left: 10px;}
-            .slick-prev:after{right: 12px;}
-            .slick-next{right: 9px;}
-        }
-    }
-
-    // ad formats
-    .ad-formats-page.parallax-page.first-type{
-        .parallax-image-top img{top: -180px;}
-
-    }
+@media screen and (max-width: 1450px){
 
     //advertising-page, asian-market-page, monetization-page, contacts-page, ad-formats
     .advertising-page, .asian-market-page, .monetization-page, .contacts-page, .ad-formats-page{
@@ -56,6 +39,26 @@
     // add-formats
 
     .ad-formats .ad-formats-text{padding-top: 0;}
+
+}
+@media screen and (max-width: 1366px){
+    // creatives
+    .creatives{
+        .creatives-slider{padding-left: 55px;
+            .slick-prev, .slick-next{height: 41px;width: 41px;
+                &:after{width: 15px;height: 15px;top: 13px;right: 15px;}
+            }
+            .slick-prev{left: 10px;}
+            .slick-prev:after{right: 12px;}
+            .slick-next{right: 9px;}
+        }
+    }
+
+    // ad formats
+    .ad-formats-page.parallax-page.first-type{
+        .parallax-image-top img{top: -180px;}
+
+    }
 
 }
 @media screen and (min-width: 1200px) and (max-width: 1450px) {
