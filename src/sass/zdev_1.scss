@@ -1160,7 +1160,7 @@
 
     /* /event-page parallax */
 
-    /* news-list, events-list, careers-list */
+    /* events-list, careers-list */
 
         &.events-list-page, &.careers-list-page{
             &.second-type{
@@ -1175,7 +1175,23 @@
             }
         }
 
-    /* /news-list, events-list, careers-list */
+    /* /events-list, careers-list */
+
+    /* news-list */
+
+        &.news-list-page{
+            &.second-type{
+                .parallax-block{
+                    .parallax-blur{
+                        .parallax-image-top{
+                            &:after{content:'';display: block;position: absolute;left:0;top:0;width: 100%;height: 100%;background-color: rgba(255,255,255,.5);}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /news-list */
 
     /* no-blur */
 
