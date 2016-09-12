@@ -45,26 +45,6 @@
     // monetization
     .monetization{
         .monetization-wrap .title:after{bottom:-30px;}
-        p{color:#000;}
-        .monetization-middle{
-            .monetization-bottom-text{
-                p{
-                    &:before, &:after{background-color: #000;}
-                }
-            }
-        }
-        .monetization-bottom{
-            .title{
-                h2{color:#000;}
-            }
-            .monetization-list{
-                ul{
-                    li{color:#000;
-                        &:after{border-color:#000;}
-                    }
-                }
-            }
-        }
     }
 
     // asian-market
