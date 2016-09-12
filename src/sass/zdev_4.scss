@@ -115,7 +115,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 // advertising
 .advertising-page{background:#f2f4f8 url('../images/some-bg-img.png') center 131% no-repeat;
     &.parallax-page.first-type{
-        &.main{padding-top: 680px;}
+        &.main{padding-top: 750px;}
         .parallax-block{
             .parallax-blur{transform:translate(0, 700px);
                 .parallax-image-top{
@@ -282,7 +282,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 // asian-market-page
 .asian-market-page{background-color: #d2dce5;
     &.parallax-page.first-type{
-        &.main{padding-top: 680px;}
+        &.main{padding-top: 750px;}
         .parallax-block .parallax-blur{transform: translate(0, 700px);border-top: 1px solid rgba(255,255,255,.5);height: calc(100% + 116px);
             img{transform: translate(-50%, -680px);}
         }
@@ -531,7 +531,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 // monetization page
 .monetization-page{
     &.parallax-page.first-type{
-        &.main{padding-top: 680px;}
+        &.main{padding-top: 750px;}
         .parallax-block{
             .parallax-blur{transform:translate(0, 700px);
                 .parallax-image-top{
@@ -598,7 +598,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 }
 
 // ad formats
-.ad-formats-page.parallax-page.first-type{padding: 680px 0 0px;background-color: #ffffff;
+.ad-formats-page.parallax-page.first-type{padding: 750px 0 0px;background-color: #ffffff;
     .parallax-block .parallax-blur{transform: translate(0, 700px);border-top: 1px solid rgba(255,255,255,.5);
         img{transform: translate(-50%, -680px);}
     }
