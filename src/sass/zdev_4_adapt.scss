@@ -141,7 +141,6 @@
     // asian-market-page
     .asian-market-page{
         .title{padding-top: 70px;}
-        .market-middle-text-wrapper:before{display: none;}
     }
 
     //ad-formats
@@ -498,8 +497,17 @@
     // asian-market-page
     .asian-market-page{
         .title h1, .title h2, .title h3, .title .h1, .title .h2, .title .h3{font-size: 40px;}
-        .market-middle-text-wrapper .market-middle-text .middle-text .item-title h2,.market-bottom.first .item-title h2,.market-bottom .bottom-text .middle-text .item-title h2{font-size: 36px;}
+        .market-middle-text-wrapper .market-middle-text .middle-text .item-title h2,.market-bottom.first .item-title h2,.market-bottom .bottom-text .middle-text .item-title h2{font-size: 28px;}
         .market-bottom.first .items-list{margin-bottom: 70px;}
+
+        .market-middle-text-wrapper{
+            .market-middle-text{
+                .middle-text{
+                    .item-text{font-size: 16px;}
+                }
+            }
+        }
+
     }
 
     //ad-formats
