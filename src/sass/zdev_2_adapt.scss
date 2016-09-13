@@ -4,6 +4,26 @@
 @media screen and (max-width: 1600px){
 
 }
+@media screen and (max-width: 1450px){
+
+    /* login */
+
+        .login-page{
+            &.parallax-page.first-type{
+                &.main{padding-top: 600px;}
+                .parallax-block{
+                    .parallax-blur{transform:translate(0, 550px);
+                        .parallax-image-top{
+                            img{transform:translate(-50%, -530px);}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /login */
+
+}
 @media screen and (max-width: 1366px){
 
 }
@@ -25,13 +45,23 @@
 }
 @media screen and (max-width: 1024px){
 
+    /* login */
+
+        .login-page{
+            .login{
+                .conteiner{padding-top: 150px;}
+            }
+        }
+
+    /* /login */
+
 }
 @media screen and (max-width: 992px){
 
     /* vacancy */
         .legal-wrap .left-navi .contr .top-part{max-width: none;}
         .vacancy-wrap{
-            .left-navi{ position: static; width: 100%; 
+            .left-navi{ position: static; width: 100%;
                 .contr{display: flex; align-items: center; justify-content: space-between; padding: 20px;
                     .top-part{padding: 0; width: 30%; border: none; }
                     .bot-navi{ width: 60%;
@@ -47,13 +77,13 @@
                         .after-block{
                             ul li { font-size: 16px; }
                             p {font-size: 16px;}
-                        } 
+                        }
                     }
                 }
             }
         }
 
-        .vacancy-wrap .smash {background-size: 3000px 3000px !important; background-position: top center; 
+        .vacancy-wrap .smash {background-size: 3000px 3000px !important; background-position: top center;
             &.blur-smash{ background-position:top center; }
         }
     /* vacancy */
@@ -65,14 +95,14 @@
 
         .login{ padding-top: 0;
             .conteiner{padding-top: 0;}
-        } 
+        }
 
     /* login */
 
     /* vacancy */
 
         .vacancy-wrap .left-navi{
-            .contr{flex-wrap: wrap; 
+            .contr{flex-wrap: wrap;
                 .top-part{width: 100%; text-align: center; padding-bottom: 20px; }
                 .bot-navi { width: 100%;
                     ul li{text-align: center;}
@@ -101,7 +131,7 @@
         .vacancy-wrap .left-navi .contr .bot-navi ul li {  width: 100%; }
 
     /* vacancy */
-    
+
 
 }
 @media screen and (max-width: 479px){

@@ -294,8 +294,8 @@ a.button-next{padding-left: 0;padding-right: 32px;
     }
     p{margin:0;}
     .mbox{max-width: 940px;z-index: 2;}
-    .title {margin-bottom: 50px;position: relative;
-        &:after{height: 3px;padding: 0 10px;max-width: 560px;width: 100%;position: absolute;bottom: -20px;left: 50%;transform: translateX(-50%);content: '';background-color: #000;}
+    .title{margin-bottom: 35px;position: relative;padding-bottom: 30px;
+        &:after{height: 3px;padding: 0 10px;max-width: 560px;width: 100%;position: absolute;bottom: 0px;left: 50%;transform: translateX(-50%);content: '';background-color: #000;}
     }
     .title h1, .title h2, .title h3, .title .h1, .title .h2, .title .h3{color: #000;}
     .sub-title{max-width: 570px;margin:0 auto;width: 100%;font-size: 18px;color: #000000;font-weight: 100;font-family: 'ProximaNovaScOsf';line-height: 1.2;text-align: center;margin-bottom: 70px;}
@@ -546,11 +546,11 @@ a.button-next{padding-left: 0;padding-right: 32px;
     p{margin: 0;color: #000;}
     .mbox{max-width: 1060px;}
     .monetization-wrap{padding-bottom: 120px;
-        .title{padding-top: 0px;position: relative;
-            &:after{position: absolute;content: '';background-color: #000;height: 3px;max-width: 300px;width: 100%;bottom: -40px;left: 50%;transform: translateX(-50%);}
+        .title{padding-top: 0px;padding-bottom: 30px;margin-bottom: 35px;position: relative;
+            &:after{position: absolute;content: '';background-color: #000;height: 3px;max-width: 300px;width: 100%;bottom: 0px;left: 50%;transform: translateX(-50%);}
         }
     }
-    .monetization-middle{padding-top: 100px;
+    .monetization-middle{padding-top: 0px;
         .monetization-text,.monetization-bottom-text{max-width: 600px;padding: 0 10px;width: 100%;margin:0 auto;font-size: 16px;line-height: 1.2;text-align: center;padding-bottom: 60px;font-weight: 300;
         }
         .monetization-bottom-text{font-size: 17px;font-weight: 100;padding-top: 115px;padding-bottom: 80px;max-width: 445px;
@@ -608,7 +608,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 .ad-formats{position: relative;
     .mbox{max-width: 900px;}
     .ad-formats-text{font-family: 'ProximaNovaScOsf';text-align: center;color: #000;margin-bottom: 45px;
-        .title{margin-bottom: 65px;
+        .title{margin-bottom: 35px;
             h1,.h1,h2,.h2{color: #000000;}
         }
         p{max-width: 550px;margin:0 auto;width: 100%;font-size: 16px;}
