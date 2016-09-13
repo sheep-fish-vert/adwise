@@ -113,7 +113,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 }
 
 // advertising
-.advertising-page{background:#f2f4f8 url('../images/some-bg-img.png') center 131% no-repeat;
+.advertising-page{background-color:#f2f4f8;
     &.parallax-page.first-type{
         &.main{padding-top: 750px;}
         .parallax-block{
@@ -126,12 +126,20 @@ a.button-next{padding-left: 0;padding-right: 32px;
     }
     .parallax-block .parallax-blur{border-top: 1px solid rgba(255,255,255, .5);}
     .parallax-block .parallax-images img{top: -75px;}
+    .fut-background{position:absolute;left:0;bottom:-290px;width: 100%;
+        img{max-width: none;position: relative;left:50%;transform:translate(-50%, 0);}
+    }
 
 }
 .advertising{
     .mbox{max-width: 1220px;}
     .advertising-wrap{
-        &>.title{padding-top: 0px;padding-bottom: 85px;}
+        &>.title{padding-top: 0px;padding-bottom: 30px;margin-bottom: 35px;position: relative;
+            &:after{content: '';position: absolute;bottom: 0px;left: 50%;background-color: #000;height: 3px;max-width: 300px;width: 100%;transform: translateX(-50%);}
+        }
+        .advertising-text{max-width: 600px;padding: 0 10px;width: 100%;margin: 0 auto;font-size: 16px;line-height: 1.2;text-align: center;padding-bottom: 60px;font-weight: 300;
+            p{color:#000;margin:0;}
+        }
     }
     // middle block
     .advertising-middle{margin-bottom: 290px;
