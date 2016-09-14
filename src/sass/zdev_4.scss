@@ -396,7 +396,8 @@ a.button-next{padding-left: 0;padding-right: 32px;
 .contacts{color: #000;
     .contacts-wrap{padding-bottom: 70px;}
     .contact-text{text-align: center;
-        .title{margin-bottom: 35px;
+        .title{margin-bottom: 35px;padding-bottom: 30px;position: relative;
+            &:after{content: '';height: 3px;padding: 0 10px;max-width: 260px;width: 100%;position: absolute;bottom: 0px;left: 50%;transform: translateX(-50%);background-color: #000;}
             h1,.h1{color: #000;}
         }
         p{margin:0;color: #000;font-size: 18px;text-transform: uppercase;line-height: 1.2;max-width: 465px;margin:0 auto;font-weight: 100;}
@@ -616,7 +617,8 @@ a.button-next{padding-left: 0;padding-right: 32px;
 .ad-formats{position: relative;
     .mbox{max-width: 900px;}
     .ad-formats-text{font-family: 'ProximaNovaScOsf';text-align: center;color: #000;margin-bottom: 45px;
-        .title{margin-bottom: 35px;
+        .title{margin-bottom: 35px;padding-bottom: 30px;position: relative;
+            &:after{content: '';height: 3px;padding: 0 10px;max-width: 330px;width: 100%;position: absolute;bottom: 0px;left: 50%;transform: translateX(-50%);background-color: #000;}
             h1,.h1,h2,.h2{color: #000000;}
         }
         p{max-width: 550px;margin:0 auto;width: 100%;font-size: 16px;}
