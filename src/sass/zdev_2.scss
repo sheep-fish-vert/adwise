@@ -84,7 +84,7 @@
 
     .vacancy-wrap{ position: relative; // background-attachment: fixed; min-height: 500px; -webkit-filter: blur(2px); filter: url(#blur-effect-1);
         .conter-s{position: relative;}
-        .smash{position: absolute; width: 1920px; top: 0; bottom: 0; left: 0; background-repeat: no-repeat;z-index: -1; background-size: 1920px 1080px; background-position: center center ; background-attachment: fixed;
+        .smash{position: absolute; width: 1920px; top: 0; bottom: 0; left: 0; background-repeat: no-repeat;z-index: -1; background-size: cover; background-position: center center ; background-attachment: fixed;
             &.blur-smash{/*-webkit-filter: blur(10px); filter: url(#blur-effect-1);*/}
         }
         .left-navi{ z-index: 2; overflow: hidden; position: fixed; left: 0; bottom: 0; top: 60px; border-right: 1px solid rgba(255,255,255,0.3); width: calc( (100% - 1366px)/2 + 415px); transition: all 0.3s;
