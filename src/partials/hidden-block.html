@@ -70,6 +70,33 @@
             </div>
             <div class="login-items">
                 <div class="item active">
+
+                    <div class="item-form">
+                        <div class="item-form-title">
+                            to get your login/password to the system please contact us
+                        </div>
+                        <form class="popup-join-us-form" action="ajax.php">
+                            <div class="contact-form-row">
+                                <div class="form_input">
+                                    <input type="text" name="login[name]" required="required" value="" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="contact-form-row">
+                                <div class="form_input">
+                                    <input type="password" name="login[pass]" required="required" value="" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="contact-form-row submit">
+                                <div class="contact-form-item">
+                                    <button type="submit" class="contact-submit button-round">
+                                        <span>enter</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--
                     <p>becoming our partner meens getting more possibilities from the different sources, and what’s more important - boost your profit</p>
                     <div class="item-hr"></div>
                     <p>to get your login/password to the system <br> please contact us</p>
@@ -77,6 +104,7 @@
                     <div class="item-button">
                         <a href="#" class="button-round"><span>get in touch</span></a>
                     </div>
+                    -->
 
                 </div>
                 <div class="item">
@@ -84,7 +112,7 @@
                         <div class="item-form-title">
                             Welcome back!
                         </div>
-                        <form action="ajax.php">
+                        <form class="popup-login-form" action="ajax.php">
                             <div class="contact-form-row">
                                 <div class="form_input">
                                     <input type="text" name="login[name]" required="required" value="" placeholder="Name">
