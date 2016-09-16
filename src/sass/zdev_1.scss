@@ -61,7 +61,7 @@
             .column-list{padding-top: 29px;
                 .column-list-title{font-weight: 600;font-size: 24px;padding-left: 0;}
                 .column-list-main{
-                    ul{margin-left: 10px;
+                    ul{margin-left: 0px;
                         li{margin-bottom: 0;
                             a{font-weight: 600;padding-left: 18px;line-height: 1;padding:14px 5px 17px 18px;
                                 &:before{transition:all 300ms ease;border-radius: 0;}
@@ -362,7 +362,7 @@
 
                 .column-list{padding-top: 29px;
                     .column-list-main{
-                        ul{margin-left:10px;
+                        ul{margin-left:0px;
                             li{position: relative;border-radius:0;
                                 &:before{content:'';display:block;position: absolute;top:0;left:0;width: calc(100% + 10px);height:100%;background-color: rgba(255, 255, 255, 1);opacity:0;border-radius:0;transition:opacity 300ms ease;}
                                 &.active{
@@ -1109,8 +1109,6 @@
                 }
             }
 
-
-
         }
 
         &.tabs-parallax{
@@ -1170,9 +1168,6 @@
         &.events-list-page, &.careers-list-page{
             &.second-type{
                 .parallax-block{
-                    .parallax-images{
-                        &:before{background-color: rgba(0,0,0, .15);}
-                    }
                     .parallax-blur{
                         &:before{background-color:rgba(255,255,255, .5);}
                     }
