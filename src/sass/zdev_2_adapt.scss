@@ -32,7 +32,11 @@
     /* vacancy */
         .vacancy-wrap{
             .left-navi{width: 30%;
-                .contr {margin: 0 auto; width: 90%;}
+                .contr {margin: 0 auto; width: 90%;
+                    .bot-navi{
+                        ul{margin-left: 0;}
+                    }
+                }
             }
             .right-conetein{
                 .converter {margin-left: 30%;
@@ -62,11 +66,13 @@
         .legal-wrap .left-navi .contr .top-part{max-width: none;}
         .vacancy-wrap{
             .left-navi{ position: static; width: 100%;
-                .contr{display: flex; align-items: center; justify-content: space-between; padding: 20px;
-                    .top-part{padding: 0; width: 30%; border: none; }
-                    .bot-navi{ width: 60%;
-                        ul{width: 100%; max-width: none; display: flex; align-items: stretch; justify-content: space-between; flex-wrap: wrap; padding: 0;
-                            li{width: 50%; display: flex; align-items: center; justify-content: center; text-align: center;}
+                .contr{display: flex; align-items: center; justify-content: space-between;flex-direction:column; padding: 50px 20px 0 20px;width: 100%;
+                    .top-part{padding: 0; width: 100%; border: none; text-align: center;
+                        b, span{display: inline;}
+                    }
+                    .bot-navi{ width: 100%;
+                        ul{width: 100%; max-width: none; display: flex; align-items: stretch; justify-content: flex-start; flex-wrap: wrap; padding: 0;
+                            li{width: auto; display: flex; align-items: center; justify-content: center; text-align: center;padding:14px 12px 17px 14px;margin-right: 10px;margin-bottom: 10px;}
                         }
                     }
                 }
@@ -83,7 +89,7 @@
             }
         }
 
-        .vacancy-wrap .smash {background-size: 3000px 3000px !important; background-position: top center;
+        .vacancy-wrap .smash { background-position: top center;background-image: url(../images/legal-blur.png)!important;
             &.blur-smash{ background-position:top center;display: none;}
         }
     /* vacancy */
@@ -105,7 +111,9 @@
             .contr{flex-wrap: wrap;
                 .top-part{width: 100%; text-align: center; padding-bottom: 20px; }
                 .bot-navi { width: 100%;
-                    ul li{text-align: center;}
+                    ul{justify-content: center;
+                        li{text-align: center;}
+                    }
                 }
             }
         }
@@ -120,18 +128,12 @@
 
 }
 @media screen and (max-width: 666px){
+
     /* login */
 
         .login .conteiner .tabber .tab-content{min-height: 450px;}
 
     /* login */
-
-    /* vacancy */
-
-        .vacancy-wrap .left-navi .contr .bot-navi ul li {  width: 100%; }
-
-    /* vacancy */
-
 
 }
 @media screen and (max-width: 479px){

@@ -90,6 +90,20 @@
 
     /* /services */
 
+    /* column-list */
+
+        .news-list-page, .events-list-page, .careers-list-page, .services-page, .vacancy-page{
+            .column-list-wrap{
+                .column-list{
+                    .column-list-main{
+                        ul{margin-left: 0;}
+                    }
+                }
+            }
+        }
+
+    /* /column-list */
+
 }
 @media screen and (max-width: 1100px){
 
@@ -178,6 +192,35 @@
                 }
             }
 
+        }
+
+        .news-list-page, .events-list-page, .careers-list-page, .services-page, .vacancy-page{
+            &.parallax-page.second-type{
+                .parallax-block{
+                    .parallax-blur{display: block;left:0!important;width: 100%!important;
+                        .parallax-image-top{top:0!important;
+                            img{left:0!important;transform:translate(0, 0);}
+                        }
+                    }
+                }
+            }
+            .main-wrap{
+                .left-column{width: 100%;}
+            }
+            .column-list-wrap{width: 100%;padding-top: 50px;
+                .column-list{
+                    .column-list-main{
+                        ul{
+                            li{
+                                a{
+                                    &:before{width: calc(100% + 10px);}
+                                    span{width: calc(100% + 10px);}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
     /* /column-list */
@@ -309,8 +352,8 @@
                 .column-list{
                     .column-list-main{
                         &.scroll-list{width: 100%;
-                            ul{justify-content: center;
-                                li{margin-bottom: 20px;margin-left:10px;margin-right:10px;}
+                            ul{
+                                li{margin-bottom: 10px;margin-right:10px;padding: 14px 12px 17px 12px;}
                             }
                         }
                     }
