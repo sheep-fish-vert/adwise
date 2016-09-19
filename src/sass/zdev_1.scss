@@ -161,7 +161,7 @@
                         }
                     }
                     .info-list-item-button{
-                        .button{display: flex;width:100%;height:38px;background-color: #fcc939;justify-content: center;align-items: center;color:#fff;text-decoration: none;font-family:'Roboto', sans-serif;transition:all 300ms ease;
+                        .button{display: flex;font-size: 16px;width:100%;height:38px;background-color: #fcc939;justify-content: center;align-items: center;color:#fff;text-decoration: none;font-family:'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);transition:all 300ms ease;
                             &:hover{background-color: #daa100;}
                         }
                     }
@@ -766,7 +766,9 @@
                     .form_row{margin-bottom: 20px;
                         &.hidden-row{display: none;}
                         &:last-child{margin-bottom: 0;}
-                        &.form_submit{text-align: center;padding-top: 30px;}
+                        &.form_submit{text-align: center;padding-top: 30px;
+                            .button{font-family: 'ProximaNovaScOsf', sans-serif;line-height: 33px;font-size: 16px;text-shadow:0 3px 7px rgba(0, 0, 0, 0.35);}
+                        }
                     }
 
                 }

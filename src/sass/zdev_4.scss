@@ -217,7 +217,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
             }
         }
         .advertising-bottom-button{padding-top: 90px;padding-bottom: 90px;display: flex;align-items: center;justify-content: center;
-            .button{text-decoration: none;background-color: #fcc939;line-height: 40px;text-transform: uppercase;
+            .button{text-decoration: none;background-color: #fcc939;line-height: 37px;font-family: 'ProximaNovaScOsf', sans-serif;text-transform: none;text-shadow:0 3px 7px rgba(0, 0, 0, 0.35);
                 &:hover{background-color: #daad2e;}
                 span{}
             }
@@ -407,7 +407,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
         .errorText{position: absolute;left: calc(100% + 20px);top: 50%;transform: translateY(-50%);color: #ff7878;white-space: pre;}
 
         &.submit{padding-top: 50px;display: flex;justify-content: center;align-items: center;
-            button{display: flex;align-items: center;justify-content: center;height: 37px;width: 200px;color: white;font-size: 16px;font-family: "Roboto";background-color: #fcc939;border:none;transition:all 300ms ease;
+            button{display: flex;align-items: center;justify-content: center;height: 37px;width: 200px;color: white;font-size: 16px;font-family: 'ProximaNovaScOsf', sans-serif;background-color: #fcc939;text-shadow:0 3px 7px rgba(0, 0, 0, 0.35);border:none;transition:all 300ms ease;
                 &:hover{background-color: #ddad24;}
             }
         }
@@ -595,8 +595,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
             }
         }
         .monetization-button{padding-top: 50px;margin:0 auto;width: 100%;max-width: 430px;display: flex;justify-content: space-between;
-            .button{text-decoration: none;font-size: 14px;text-transform: uppercase;line-height: 41px;background-color: #dea88e;background-color: #d6c688;max-width: 201px;font-size: 12px;letter-spacing: 1.1px;
-                span{text-shadow:0px 0px 16px #2a2a2a;}
+            .button{text-decoration: none;font-size: 16px;line-height: 37px;height: 37px;background-color: #d6c688;max-width: 201px;font-family: 'ProximaNovaScOsf', sans-serif;text-transform: none;text-shadow:0 3px 7px rgba(0, 0, 0, 0.35);
                 &:hover{background-color: #b5a76e;}
                 &.button-red{background-color: #dea88e;
                     &:hover{background-color: #c49279;}
