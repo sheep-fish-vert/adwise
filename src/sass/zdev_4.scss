@@ -649,7 +649,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
                         p{margin:0}
                     }
                     .item-button{padding-top: 60px;
-                        a{background-color: #f22546;font-family: 'ProximaNovaScOsf';text-transform: uppercase;font-size: 16px;font-weight: 300px;
+                        a{background-color: #f22546;font-family: 'ProximaNovaScOsf', sans-serif;text-transform: none;font-size: 16px;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
                             &:hover{background-color: #db2744;}
                         }
                     }
