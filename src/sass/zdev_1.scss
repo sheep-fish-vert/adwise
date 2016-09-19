@@ -407,7 +407,7 @@
                             }
                         }
                         .button-wrap{padding-top: 35px;
-                            .button{color:16px;text-transform: uppercase;font-weight: 400;letter-spacing: .5px;
+                            .button{font-size:16px;text-transform: none;font-weight: 400;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);font-family: 'ProximaNovaScOsf', sans-serif;line-height: 37px;
                                 &:hover{color:#fff;}
                             }
                         }
@@ -442,7 +442,7 @@
                         .wrap-text-icon{text-align: center;width: 70px;}
 
                         .button-wrap{padding:35px 0 0 90px;margin-bottom: 100px;
-                            .button{text-transform: uppercase;font-size: 14px;color:#fff;font-weight: 400;
+                            .button{text-transform: none;font-size: 16px;color:#fff;font-weight: 400;line-height: 37px;font-family: 'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
                                 &:hover{color:#fff;}
                             }
                         }
@@ -525,7 +525,7 @@
                         .right-text{font-size: 16px;color:rgba(0,0,0,1);font-weight: 300;line-height: 1.2;margin-bottom: 40px;padding-left: 34px;}
                         .right-button{padding-left: 32px;
                             .button{
-                                &.button-cofee{max-width: 200px;width: 100%;height: 37px;text-transform: uppercase;line-height: 38px;font-size: 14px;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: 400;letter-spacing: 0.5px;
+                                &.button-cofee{max-width: 200px;width: 100%;height: 37px;text-transform: none;line-height: 37px;font-size: 16px;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: 400;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
                                     &:hover{color:#fff;}
                                 }
                             }
@@ -618,7 +618,7 @@
                             }
                         }
                         .button-wrap{padding-left: 8px;
-                            .button{text-transform: uppercase;font-weight: 400;font-size: 14px;line-height: 40px;
+                            .button{text-transform: none;font-weight: 400;font-size: 16px;line-height: 37px;height: 37px;font-family: 'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
                                 &:hover{color:#fff;}
                             }
                         }

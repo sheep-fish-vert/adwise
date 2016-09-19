@@ -296,9 +296,8 @@ a.button-next{padding-left: 0;padding-right: 32px;
         }
     }
 
-    .button.button-yellow{font-size: 16px;background-color: #dfc24f;text-decoration: none;font-family: 'ProximaNovaScOsf';font-weight: normal;
+    .button.button-yellow{font-size: 16px;background-color: #dfc24f;text-decoration: none;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: normal;line-height: 37px;height: 37px;text-shadow:  0 3px 7px rgba(0, 0, 0, 0.35);
         &:hover{background-color: #c5aa3e;}
-        span{text-shadow: 0px 0px 19px #2a2a2a;}
     }
     p{margin:0;}
     .mbox{max-width: 940px;z-index: 2;}
@@ -374,16 +373,14 @@ a.button-next{padding-left: 0;padding-right: 32px;
                     b{font-family: 'ProximaNovaScOsf';font-weight: 500;font-size: 20px;}
                 }
                 .item-button{padding-top: 55px;
-                    .button{background-color: #f75757;font-family: 'ProximaNovaScOsf';font-weight: 400;line-height: 38px;
+                    .button{background-color: #f75757;font-family: 'ProximaNovaScOsf';font-weight: 400;line-height: 37px;height: 37px;text-shadow:  0 3px 7px rgba(0, 0, 0, 0.35);
                         &:hover{background-color: #be4848;}
-                        span{text-shadow: 0px 0px 16px #2a2a2a;}
                     }
                 }
             }
 
         }
     }
-
 
 }
 
