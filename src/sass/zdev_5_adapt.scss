@@ -25,48 +25,35 @@
  }
 @media screen and (max-width: 992px){
 
-    header{z-index: 10;
-        .header{align-items: center;justify-content: center;height: 60px;}
+    header{
 
-        .logo{width: auto;}
+        .header{height: 60px;}
 
-        .menu{ display: none; background-color: #fff; z-index: 10; padding-bottom: 30px; width: 100%; position: absolute; top: 60px; left: 0;
-            li{ width: 100%; padding: 0;text-align: center;margin-bottom: 10px;
-                &:first-child{
-                    a{
-                        &:not(.log-in):not(.language-choose){padding:0;display: inline-block;}
-                    }
+        .logo{width: calc(100% - 550px);max-width: 230px;}
+
+        .menu{
+            .menu-wrap{
+                li{
+                    a{padding:10px 15px 10px 15px;font-size: 14px;}
                 }
-                &:nth-child(6){padding-left: 0;}
-                &:nth-child(7){padding-right: 0;
-                    a:before{display: none;}
+                .second-level{
+                    .mobile-arrow{right: 0;}
                 }
-                a{font: 300 28px/1.25 'ProximaNovaScOsf'; padding: 7px 0;display: inline-block;vertical-align: middle;
-                    &:not(.log-in):not(.language-choose){padding:0;display: inline-block;
-                        span{display: block;}
-                    }
-                    &:nth-child(2){ padding-left: 7px; margin-left: 7px;
-                        &:before{ top: 12px; height: calc(100% - 24px); }
-                    }
-                    &.log-in{display: inline-block;
-                        .log-in-text{font-size: 24px;display: inline-block;margin-top: -7px;}
-                        .log-in-icon{display: inline-block;}
-                    }
-                    &.language-choose{
-                        &:first-child{margin-left:0;}
-                        &:last-child{margin-right: 0;}
-                    }
-                    &.log-in{margin-left: 0;}
-                }
-            }
-            .second-level{
-                ul{border-width: 1px 0;border-style:solid;border-color:#ccc transparent;width: 100%;left:0;padding:0;
-                    li{margin-bottom: 0;}
-                }
-                .mobile-arrow{position: relative;display: inline-block;top:auto;left: 5px;transform:translate(0, 0);}
             }
         }
-        .butter{ display: block;}
+
+        .laguages-wrap{
+            .language-choose{
+                a{font-size: 14px;}
+            }
+        }
+
+        .login-wrap{
+            a{font-size: 14px;
+                .log-in-icon{}
+            }
+        }
+
     }
 
     .expertise{
@@ -155,6 +142,41 @@
 
 }
 @media screen and (max-width: 666px){
+
+    header{z-index: 10;height: 90px;
+        .header{align-items: center;justify-content: space-between;height: 90px;}
+
+        .logo{width: 280px;}
+
+        .menu{ display: none; background-color: rgba(0, 0, 0, .9); z-index: 10; padding-bottom: 30px; width: calc(100% + 40px);position: absolute; top: 90px; left: -20px;height: 999px;
+            li{ width: 100%; padding: 0;text-align: center;margin-bottom: 10px;
+                &:first-child{
+                    a{padding:0;display: inline-block;}
+                }
+
+                a{font: 300 28px/1.25 'ProximaNovaScOsf'; padding: 7px 0;display: inline-block;vertical-align: middle;padding:0;display: inline-block;
+                    span{display: block;}
+                }
+            }
+            .second-level{
+                ul{border-width: 1px 0;border-style:solid;border-color:#ccc transparent;width: 100%;left:0;padding:0;
+                    li{margin-bottom: 0;}
+                }
+                .mobile-arrow{position: relative;display: inline-block;top:auto;left: 5px;transform:translate(0, 0);}
+            }
+        }
+
+        .login-wrap{
+            a{
+                .log-in-icon{margin-right: 0;
+                    img{max-width: none;}
+                }
+                .log-in-text{display: none;}
+            }
+        }
+
+        .butter{ display: block;}
+    }
 
     .expertise{
         .title-filter{

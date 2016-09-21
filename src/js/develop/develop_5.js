@@ -22,7 +22,7 @@ function butter() {
     });
 
     $(window).resize(function(){
-        if($(window).width() > 992){
+        if($(window).width() > 666){
             $('header .menu').removeAttr('style');
         }
     });
