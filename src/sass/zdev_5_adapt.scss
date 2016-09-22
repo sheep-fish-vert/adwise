@@ -39,6 +39,7 @@
         .slick-next{ right: -18px;}
     }
 }
+
 @media screen and (max-width: 1024px){
     .title-filter {
         .title{ padding-right:20px; width: 210px;}
@@ -47,7 +48,8 @@
             li{ padding: 0 15px;}
         }
     }
- }
+}
+
 @media screen and (max-width: 992px){
 
     header{
@@ -118,6 +120,7 @@
          .creatives-wrap .tab-item{justify-content: space-around;}
     }
 }
+
 @media screen and (max-width: 767px){
 
     .expertise {
@@ -167,6 +170,7 @@
     }
 
 }
+
 @media screen and (max-width: 666px){
 
     header{z-index: 10;height: 90px;
@@ -248,13 +252,40 @@
         .butter{ display: block;}
     }
 
-    .expertise{
+    .expertise{padding:0 0 65px 0;position:relative;z-index: 2;margin-top: -75px;
         .title-filter{
             .title{float: none;width: 100%;margin-bottom: 20px;padding-right: 0;
-                h2{text-align: center;}
-                &:after{width: 100%;height: 3px;top:100%;}
+                h2{text-align: center;font-size: 60px;}
+                &:after{width: 100%;height: 3px;top:100%;max-width: 390px;left:50%;transform:translate(-50%, 0);}
             }
-            .menu-filter{width: 100%;}
+            .menu-filter{width: 100%;max-width: 390px;margin:0 auto;float:none;
+                li{
+                    a{font-size: 24px;}
+                }
+            }
+        }
+        .content{max-width: 460px;margin:0 auto;
+            .row-wrap{
+                .row{
+                    .left-col{width: 100%;}
+                }
+            }
+            .img{
+                .img-wrap{text-align: left;}
+            }
+            .txt{
+                &.right-col, &.left-col{padding:50px 10px 10px 60px;}
+                b{font-size: 40px;line-height: 1;}
+                p{font-size: 22px;font-weight: 100;}
+                ul{font-size: 24px;
+                    a{padding-left: 20px;
+                        .fa{top:9px;}
+                    }
+                }
+                p{
+                    a{display: inline-block;font-size: 22px;margin-left:20px;}
+                }
+            }
         }
     }
 
@@ -266,6 +297,35 @@
     }
 }
 @media screen and (max-width: 479px){
+
+    .expertise{
+        .title-filter{
+            .title{
+                h2{font-size: 36px;}
+            }
+            .menu-filter{
+                li{
+                    a{font-size: 18px;}
+                }
+            }
+        }
+        .content{
+            .txt{
+                &.right-col, &.left-col{padding:30px 10px 20px 10px;}
+                b{font-size: 28px;}
+                p{font-size: 18px;
+                    a{font-size: 18px;}
+                }
+                ul{
+                    li{font-size: 18px;
+                        a{
+                            .fa{top:6px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
 @media screen and (max-width: 320px){

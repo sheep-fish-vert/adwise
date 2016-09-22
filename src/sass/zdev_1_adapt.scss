@@ -780,7 +780,7 @@
 
     /* video-block new */
 
-        .video-block{
+        .video-block{position: relative;z-index: 1;
 
             .slider-background{
                 .slider-class{
