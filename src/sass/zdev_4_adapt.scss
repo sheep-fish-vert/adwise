@@ -444,9 +444,51 @@
         }
     }
 
-        // login popup
+    // login popup
     #login{width: 390px;
         .login-buttons a{margin:0 18px;}
+    }
+
+    // contacts
+
+    .contacts-page.parallax-page{
+        &.first-type{
+            .parallax-block{
+                .parallax-blur{
+                    .parallax-image-top{
+                        img{width: 250%;}
+                    }
+                }
+            }
+        }
+    }
+
+    .contacts{
+        .contacts-wrap{padding-top: 115px;padding-bottom: 175px;}
+        .contact-text{
+            .title{margin-bottom: 40px;padding-bottom: 0;
+                &:after{display: none;}
+                h1{font-size: 60px;}
+            }
+            p{font-weight: 100;font-size: 28px;line-height: 1.5;max-width: none;}
+        }
+        .contact-form-row{margin-bottom: 25px;
+            &:last-child{margin-bottom: 0;}
+            .form_input{text-align: center;
+                input{font-size: 24px;font-weight: 300;font-family: 'Roboto', sans-serif;
+                    &::-webkit-input-placeholder {font-weight: 100;}
+                    &:-moz-placeholder {font-weight: 100;opacity:1;}
+                    &::-moz-placeholder {font-weight: 100;opacity:1;}
+                    &:-ms-input-placeholder {font-weight: 100;}
+                }
+            }
+            .errorText{position: relative;left: auto;top: auto;transform: translateY(0px);}
+
+            &.submit{padding-top: 97px;
+                button{width: 300px;height: 67px;font-size: 27px;}
+            }
+
+        }
     }
 }
 @media screen and (max-width: 479px){
@@ -516,6 +558,26 @@
             }
             .login-items{
                 p,.item-hr{margin-bottom: 23px;}
+            }
+        }
+    }
+
+    //contacts
+    .contacts{
+        .contacts-wrap{padding-top: 75px;padding-bottom: 100px;}
+        .contact-text{
+            .title{margin-bottom: 25px;
+                h1{font-size: 40px;}
+            }
+            p{font-size: 18px;line-height: 1.25;}
+        }
+        .contact-form{padding-top: 40px;}
+        .contact-form-row{margin-bottom: 10px;
+            .form_input{
+                input{font-size: 18px;}
+            }
+            &.submit{padding-top: 40px;
+                button{width: 200px;height: 37px;font-size: 16px;}
             }
         }
     }
