@@ -289,6 +289,16 @@
         }
     }
 
+    .partners{
+        .title-filter{
+            .title, .menu-filter{width: 100%;}
+            .title{padding-right: 0;padding-bottom: 44px;
+                h2{text-align: center;}
+                &:after{height: 3px;max-width: 400px;width: 100%;top:100%;right:50%;transform:translate(50%, 0);}
+            }
+        }
+    }
+
 }
 @media screen and (max-width: 530px){
     .title-filter {
