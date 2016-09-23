@@ -133,6 +133,9 @@
     // asian-market-page
     .asian-market-page{
         .title{padding-top: 70px;}
+        .market-middle-text-wrapper{
+            &:before{background-color: transparent;}
+        }
     }
 
     //ad-formats
@@ -435,6 +438,29 @@
 
     // asia market
     .market-old .middle-text .item-title h2{font-size: 29px;}
+
+    // asia market new
+    .asian-market-page{
+
+        .title{padding-bottom:15px;
+            h1{font-size: 60px;}
+            &:after{display: none;}
+        }
+
+        .sub-title{font-size: 28px;max-width: 500px;}
+
+        .market-top-text{
+            .item{
+                &.left{margin-bottom: 65px;}
+                &.right{font-size: 28px;padding-top: 0;max-width: 500px;padding-left: 0;padding-right: 0;margin:0 auto;}
+            }
+        }
+
+        .button{
+            &.button-yellow{max-width: 300px;height: 65px;font-size: 24px;line-height: 65px;}
+        }
+
+    }
 
     // succes popup
     .call-success{
