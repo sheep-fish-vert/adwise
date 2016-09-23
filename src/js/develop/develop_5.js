@@ -128,7 +128,7 @@ function constructSlides(slides){
                         }
                     },
                     {
-                        breakpoint: 530,
+                        breakpoint: 666,
                         settings: {
                             slidesPerRow:1
                         }

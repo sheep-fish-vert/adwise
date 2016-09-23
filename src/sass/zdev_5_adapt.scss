@@ -290,23 +290,112 @@
     }
 
     .partners{
-        .title-filter{
-            .title, .menu-filter{width: 100%;}
-            .title{padding-right: 0;padding-bottom: 44px;
-                h2{text-align: center;}
-                &:after{height: 3px;max-width: 400px;width: 100%;top:100%;right:50%;transform:translate(50%, 0);}
+        .mbox{
+            .title-filter{padding-left:0;padding:0 0 50px;
+                .title, .menu-filter{width: 100%;float:none;}
+                .title{padding-right: 0;padding-bottom: 44px;margin-bottom: 40px;
+                    h2{text-align: center;line-height: 1;}
+                    &:after{height: 3px;max-width: 400px;width: 100%;top:auto;bottom:0;right:50%;transform:translate(50%, 0);}
+                }
+                .menu-filter{padding-top: 0;max-width: 400px;margin:0 auto;
+                    li{padding:0 5px;margin-bottom: 15px;
+                        .txt{font-size: 24px;line-height: 1.25;}
+                        input{
+                            &:checked{
+                                &+span{color:#505050;text-decoration: underline;}
+                            }
+                        }
+                    }
+                }
+            }
+
+            .slider-wrap{max-width: 380px;margin:0 auto;
+                .slick-arrow{width: 33px;height: 33px;border-color:#626262;border-width:5px 5px 0 0;transition:all 300ms ease;
+                    &:hover{opacity:.8;}
+                }
+                .slick-next{right:-42px;}
+                .slick-prev{left:-42px;}
+            }
+
+            .slider-partners{
+                .item{
+                    .item-link-wrap{
+                        .item-link{height: 165px;}
+                    }
+                }
             }
         }
     }
 
+    .news{background-color: #dbdbdb;padding-top: 0px;
+
+        .news-b{max-width: 500px;margin:0 auto 120px auto;
+            .big-banner{
+                .img{height: 240px;}
+                &:hover{
+                    .txt{
+                        &:after{right:-10px;}
+                    }
+                }
+            }
+            .big-banner-wrap{padding:40px 35px 70px 45px;text-align: left;
+                .title{margin:0;max-width: none;font-size: 40px;margin-bottom: 30px;}
+                .txt{padding: 0px 50px 0px 0px;font-size: 22px;margin:0 0 20px 0;
+                    &:after{width: 34px;height: 34px;border-top:5px solid #626262;border-right:5px solid #626262;right:10px;top:calc(50% - 15px);}
+                }
+                .pub-date{padding:0;font-size: 24px;}
+            }
+        }
+        .title-col{text-align: left;
+            h3{font-size: 42px;font-weight: 600;}
+        }
+        .button-col{margin-top: 40px;
+            a{font-size: 24px;padding-top: 10px;padding-bottom: 8px;
+                &:before{height: 46px;}
+                &:after{width: 34px;height: 34px;border-width: 5px 5px 0 0;top:6px;}
+            }
+        }
+
+        .event, .careers{display: block;max-width: 340px;width: 100%;margin:0 auto 100px auto;}
+
+        .banner{width: 100%;height: 340px;margin-bottom: 48px;
+            h5{text-align: left;border-width: 5px;
+                p{font-size: 38px;}
+            }
+            p{font-size: 27px;font-weight: 100;text-align: left;line-height: 1.25;}
+        }
+
+        .col{
+            .col-wrap-sample{margin-bottom: 30px;}
+            .banner-line{padding-left: 20px;text-align: left;font-size: 26px;font-weight: 300;margin-bottom: 10px;
+                .banner-img-line{margin-right: 10px;
+                    img{max-width: none;}
+                }
+                span{width: calc(100% - 40px);}
+            }
+        }
+
+        .button{max-width: 300px;height: 55px;
+            a{max-width: 300px;height: 55px;font-size: 24px;line-height: 55px;}
+        }
+
+    }
+
 }
+
 @media screen and (max-width: 530px){
     .title-filter {
         .title{ float: none; margin-bottom: 20px;}
         .menu-filter {width: 100%;float: none;}
     }
 }
+
 @media screen and (max-width: 479px){
+
+    header{
+        .logo{width: 175px;}
+        .butter{left:0;}
+    }
 
     .expertise{
         .title-filter{
@@ -335,6 +424,82 @@
                 }
             }
         }
+    }
+
+    .partners{padding:65px 0 65px 0;
+        .mbox{
+
+            .title-filter{padding:0 0 35px 0;
+                .title{padding-bottom: 30px;margin-bottom: 34px;
+                    h2{font-size: 30px;}
+                }
+                .menu-filter{
+                    li{margin-bottom: 5px;
+                        .txt{font-size: 18px;}
+                    }
+                }
+            }
+
+            .slider-wrap{padding:0 15px;
+                .slick-prev{left:-25px;}
+                .slick-next{right:-25px;}
+            }
+
+        }
+    }
+
+    .news{
+
+        .event, .careers{margin: 0 auto 60px auto;}
+
+        .news-b{margin:0 auto 60px auto;
+            .big-banner{
+                .img{height: 140px;}
+                &:hover{
+                    .txt{
+                        &:after{right:0px;}
+                    }
+                }
+            }
+            .big-banner-wrap{padding:20px 10px 30px 15px;
+                .title{font-size: 28px;}
+                .txt{font-size: 18px;
+                    &:after{width: 25px;height: 25px;right: 19px;border-width: 4px;}
+                }
+                .pub-date{font-size: 20px;}
+            }
+        }
+
+        .title-col{
+            h3{font-size: 34px;}
+        }
+
+        .button-col{
+            a{font-size: 20px;padding-top: 8px;
+                &:before{height: 35px;}
+                &:after{width: 25px;height: 25px;border-width: 4px;}
+            }
+        }
+
+        .banner{height: 240px;
+            h5{border-width: 3px;
+                p{font-size:26px;}
+            }
+            p{font-size: 20px;}
+        }
+
+        .col{
+            .banner-line{font-size: 20px;
+                .banner-img-line{
+                    img{max-width: 20px;}
+                }
+            }
+        }
+
+        .button{height: 37px;max-width: 200px;
+            a{height: 37px;font-size: 18px;line-height: 37px;max-width: 200px;}
+        }
+
     }
 
 }

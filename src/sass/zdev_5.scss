@@ -4,12 +4,11 @@
         .mbox{max-width: 1040px;}
         .row{ display: flex; justify-content: space-around; flex-wrap: wrap;}
         .col{ margin-bottom: 112px;
-            .place{color:#777; font:300 18px/1.2 'Roboto'; padding-left: 23px; padding-bottom: 30px;
-                img{ margin-right: 22px;}
-            }
-            .date{color:#777; font:300 18px/1.2 'Roboto';  padding-left: 21px; padding-bottom: 30px;
-                img{ margin-right: 22px;}
-
+            .banner-line{display: flex;justify-content: flex-start;align-items: center;color:#777; font:300 18px/1.2 'Roboto';margin-bottom: 30px;padding-left: 22px;
+                .banner-img-line{width: 30px;display: flex;align-items: center;justify-content: center;
+                    img{max-width: 15px;}
+                }
+                span{width: calc(100% - 30px);}
             }
 
         }
