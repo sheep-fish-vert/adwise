@@ -210,7 +210,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
                 &.item-2{width: 57%;
                     ul{margin:0;padding: 0;list-style-type: none;
                         li{position: relative;padding-left: 32px;font-family: 'ProximaNovaScOsf';font-weight: 100;line-height: 1.4;font-size: 18px;white-space: pre;
-                            &:after{position: absolute;content: '';border-left:3px solid #c1c2c3;border-bottom: 3px solid #c1c2c3;height: 9px;width: 9px;left: 3px;top: 13px;transform: translateY(0%) rotate(-136deg);}
+                            &:after{position: absolute;content: '';border-left:3px solid #c1c2c3;border-bottom: 3px solid #c1c2c3;height: 9px;width: 9px;left: 3px;top: 9px;transform: translateY(0%) rotate(-136deg);}
                         }
                     }
                 }
