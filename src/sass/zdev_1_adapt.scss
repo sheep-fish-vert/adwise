@@ -308,7 +308,7 @@
                     .column-list-main{
                         ul{
                             li{
-                                a{color:#fff;
+                                a{
                                     &:hover{color:#cecece;}
                                 }
                             }
@@ -553,6 +553,21 @@
 }
 @media screen and (max-width: 666px){
 
+    /* column-list */
+
+        .column-list-wrap{
+            .column-list{
+                .column-list-title{}
+                .column-list-main{
+                    ul{flex-direction: column;
+                        li{margin:0;width: 75%;text-align: center;}
+                    }
+                }
+            }
+        }
+
+    /* /column-list */
+
     /* news-list */
 
         .news-list{
@@ -604,6 +619,26 @@
     /* services */
 
         .services-page{
+            .left-column{
+                .column-title h1{font-size: 60px;}
+                .column-list-wrap{
+                    .column-list{
+                        .column-list-main {
+                            ul{
+                                li{margin:0;
+                                    &.active{
+                                        &:before{opacity: 1;}
+                                        a{color: white;}
+                                    }
+                                    &:before{background-color: #efc137;width: 100%;}
+                                    a{font-size: 35px;padding:  19px 15px 20px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             .right-column{
 
                 .services-websites{
@@ -618,19 +653,31 @@
                     }
                 }
 
-                .services-geos{
+                .services-geos{margin-bottom: 15px;
                     .services-geos-slider{
                         .slider-item{
                             .slider-item-main{
-                                .slider-title{font-size: 34px;margin:-15px 0 30px 0;}
+                                .slider-title{font-size: 54px;margin: -50px auto 43px auto;max-width: 73%;}
                                 .slider-info{flex-wrap:wrap;
-                                    .slider-col{width: 50%;margin-bottom: 10px;}
+                                    .slider-col{width: 100%;margin-bottom: 10px;display: flex;align-items: center;
+                                        .slider-value{width: 35%;text-align: right;font-size: 32px;margin-bottom: 0;}
+                                        .slider-text{width: 60%;font-size: 20px;}
+                                    }
                                 }
                             }
                         }
                     }
-                    .services-geos-bottom{flex-direction:column;align-items: center;justify-content: flex-start;padding: 0;
-                        .right{padding-left: 0;text-align: center;}
+                    .services-geos-bottom{flex-direction:column;align-items: center;justify-content: flex-start;padding: 0;align-items: flex-start;
+                        .left{
+                            .num{font-size: 77px;}
+                            .text{font-size: 36px;}
+                        }
+                        .right{padding-left: 0;
+                            .text{font-size: 24px;padding-top: 20px;margin-bottom: 70px;}
+                            .button-wrap{padding-left: 0;
+                                .button{max-width: 300px;height: 55px;font-size: 24px;line-height: 52px;}
+                            }
+                        }
                     }
                 }
 
