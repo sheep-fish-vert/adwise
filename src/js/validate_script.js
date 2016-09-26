@@ -440,15 +440,15 @@ function fancyboxForm(){
                     {
                         breakpoint:666,
                         settings:{
-                            slidesToShow:2,
+                            slidesToShow:1,
                             slidesToScroll:1,
-                            vertical:false
+                            vertical:true
                         }
                     },
                     {
                         breakpoint:479,
                         settings:{
-                            slidesToShow:3,
+                            slidesToShow:1,
                             slidesToScroll:1,
                             vertical:true
                         }
