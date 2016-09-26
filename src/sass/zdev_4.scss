@@ -226,7 +226,6 @@ a.button-next{padding-left: 0;padding-right: 32px;
 }
 
 
-
 // asian market old
 // .market-old{color: white;padding-bottom: 105px;
 //     p{margin:0;}
@@ -607,7 +606,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
     .parallax-block .parallax-blur{transform: translate(0, 700px);border-top: 1px solid rgba(255,255,255,.5);
         img{transform: translate(-50%, -680px);}
     }
-    .parallax-image-top img{top: -290px;width: 100%;}
+    .parallax-image-top img{top: -290px;}
 
 }
 .ad-formats{position: relative;
@@ -628,7 +627,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
             .item-title{color: black;font-family: 'ProximaNovaScOsf';font-size: 34px;font-weight: 600;padding-top: 45px;
                 p{margin:0;}
             }
-            .item-img{min-height: 185px;display: flex;align-items: center;justify-content: center;}
+            .item-img{min-height: 185px;display: flex;align-items: center;justify-content: center;padding:0 30px;}
             .item-button{padding-top: 35px;transform: translate(0, 100%);transition:all ease-out .3s;
                 a{background-color: #c37051;border-radius: 14px;color: #fefefe;font-family: 'ProximaNovaScOsf';font-size: 14px;font-weight: 300;height: 28px;text-decoration: none;display: flex;align-items: center;justify-content: center;padding: 0 32px;transition:all ease .2s;cursor: pointer;
                     &:hover{background-color: #ab6449;}
