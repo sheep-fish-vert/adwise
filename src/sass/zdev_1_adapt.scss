@@ -620,7 +620,7 @@
 
         .services-page{
             .left-column{
-                .column-title h1{font-size: 60px;}
+                .column-list-wrap .column-title h1{font-size: 60px;}
                 .column-list-wrap{
                     .column-list{
                         .column-list-main {
@@ -642,17 +642,50 @@
             .right-column{
 
                 .services-websites{
+                    .left{
+                        .slider-wrap{
+                            .slider.slick-slider {
+                                .slick-arrow.slick-next{top: calc(100% + 23px);}
+                                .slider-item {padding: 5px 10px;
+                                    &.slick-current{background-color: transparent;}
+                                    .slider-img{width: auto;padding: 0 10px;}
+                                    .slider-text{font-size: 30px;}
+                                }
+                            }
+                        }
+                        .services-websites-count{display: none;}
+                    }
                     .right{
                         .right-wrap{
-                            .white-block{
-                                .img-wrap{
-                                    .img-item{width: 50%;}
+                            .white-block{box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);margin: 0px -15px 55px;padding: 25px 0 35px 0;
+                                .img-wrap{max-width: 100%;font-weight: nowrap;align-items: flex-end;justify-content: center;
+                                    .img-item{width: auto;margin-bottom: 15px;
+                                        .img-item-text{font-size: 17px;font-weight: 700;font-family: "ProximaNovaNew";}
+                                    }
                                 }
+                                .value-wrap .value-main .value-item .value-item-text{font-size: 23px;}
+                            }
+                            .services-websites-count{display: flex;justify-content: flex-start;padding-left: 34px;
+                                .service-websites-num{font-size: 88px;}
+                                .services-websites-text{font-size: 28px;}
+                            }
+                            .right-text{text-align: left;font-size: 24px;}
+                            .right-button{text-align: left;
+                                .button.button-cofee{max-width: 300px;height: 55px;font-size: 24px;line-height: 52px;}
                             }
                         }
                     }
                 }
+                //3th tab
+                .creatives-wrap .web-mobile{
+                    .wrap-info{
+                        &:first-child{max-width: 400px;}
+                    }
+                    .text-wrap{text-align: left;font-size: 28px;
 
+                        h4{font-size: 36px;}
+                    }
+                }
                 .services-geos{margin-bottom: 15px;
                     .services-geos-slider{
                         .slider-item{
@@ -981,20 +1014,39 @@
     /* services */
 
         .services-page{
+
+            .left-column{
+                .column-list-wrap{
+                    .column-title h1{font-size: 40px;}
+                    .column-list{
+                        .column-list-main {
+                            ul{
+                                li{
+                                    a{font-size: 29px;padding: 11px 15px 13px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             .right-column{
 
                 .creatives-wrap{padding:0;
-                    .tab-item{
+                    .tab-item{padding-bottom: 40px;
                         .text-wrap{font-size: 16px;}
                     }
                 }
 
-                .services-websites{
+                .services-websites{margin-bottom: 40px;
+                    .left {
+                        .slider-wrap .slider.slick-slider .slider-item .slider-text{font-size: 23px;}
+                    }
                     .right{
                         .right-wrap{
-                            .white-block{
+                            .white-block{margin:0 0 55px;
                                 .img-wrap{
-                                    .img-item{width: 100%;}
+                                    .img-item{width: 50%;}
                                 }
                                 .value-wrap{padding:15px 0;
                                     .value-main{flex-wrap:wrap;
@@ -1004,18 +1056,29 @@
                                     }
                                 }
                             }
+                            .services-websites-count{padding-left: 0;
+                                .service-websites-num{font-size: 67px;padding-right: 10px;}
+                                .services-websites-text{font-size: 22px;}
+                            }
+                            .right-text{padding-left: 0;font-size: 17px;}
+                            .right-button{padding-left: 0;
+                                .button.button-cofee{}
+                            }
                         }
                     }
                 }
 
                 .services-geos{
 
-                    .services-geos-slider{
-                        .slider-item{
+                    .services-geos-slider{margin-bottom: 40px;
+                        .slider-item{padding-bottom: 25px;
                             .slider-item-main{
-                                .slider-title{font-size: 24px;}
+                                .slider-title{font-size: 26px;margin:-26px auto 43px auto;}
                                 .slider-info{
-                                    .slider-col{width: 100%;}
+                                    .slider-col{width: 100%;
+                                        .slider-value{font-size: 23px;}
+                                        .slider-text{font-size: 15px;padding: 0 5px;}
+                                    }
                                 }
                             }
                         }
@@ -1028,7 +1091,21 @@
                             }
                         }
                     }
+                    .services-geos-bottom{
+                        .left{
+                            .num{font-size: 50px;margin-right: 10px;}
+                            .text{font-size: 22px;}
+                        }
+                        .right{
+                            .text{font-size: 17px;padding-top: 10px;margin-bottom: 50px;}
+                            .button-wrap{text-align: center;
+                                .button{height: 37px;line-height: 37px;font-size: 19px;max-width: 200px;margin:0 auto;display: inline-block;}
+                            }
+                        }
+                    }
                 }
+
+
 
             }
         }
@@ -1037,5 +1114,22 @@
 
 }
 @media screen and (max-width: 320px){
+    /* services */
 
+        .services-page{
+
+            .left-column{
+                .column-list-wrap{
+                    .column-list{
+                        .column-list-main {
+                            ul{
+                                li{width: 90%;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /services */
 }
