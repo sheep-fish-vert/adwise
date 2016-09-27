@@ -415,7 +415,6 @@
 }
 @media screen and (max-width: 767px){
 
-
     /* column-list */
 
         .column-list-wrap{
@@ -557,7 +556,6 @@
 
         .column-list-wrap{
             .column-list{
-                .column-list-title{}
                 .column-list-main{
                     ul{flex-direction: column;
                         li{margin:0;width: 75%;text-align: center;}
@@ -566,7 +564,93 @@
             }
         }
 
+        .news-list-page, .events-list-page, .careers-list-page, .services-page, .vacancy-page{
+
+            .main-wrap{
+                .left-column{width: 100%;}
+                .right-column{max-width: 500px;margin:0 auto;
+                    .news-list{padding-top: 80px;margin-bottom: 100px;
+                        .news-list-items-wrap{margin-bottom: 80px;
+                            .news-list-item{margin-bottom: 70px;
+                                &:last-child{margin-bottom: 0;}
+                                &:hover{
+                                    .news-list-item-content-main{
+                                        .news-list-item-content-wrap{
+                                            .news-list-item-arrow{
+                                                span{top:0;left:5px;}
+                                            }
+                                        }
+                                    }
+                                }
+                                .news-list-img{height: 250px;
+                                    img{min-width: 100%;}
+                                }
+                                .news-list-item-content-main{padding:40px 20px 75px 20px;display: flex;justify-content: flex-start;align-items: center;flex-direction:column;
+                                    .news-list-item-title{max-width: 410px;margin-bottom: 30px;
+                                        h6{font-size: 40px;padding-left: 30px;}
+                                        span{width: 6px;}
+                                    }
+                                    .news-list-item-content-wrap{max-width: 410px;display: flex;
+                                        .news-item-list-content{
+                                            .news-item-list-text{font-size: 22px;margin-bottom: 25px;}
+                                            .news-item-list-date{font-size: 22px;}
+                                        }
+                                        .news-list-item-arrow{margin-bottom: 0;
+                                            span{transform:rotate(45deg);width: 38px;height: 38px;border-top:6px solid #626262;border-right:6px solid #626262;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .column-list-wrap{width: 100%;padding-top: 50px;
+                .column-title{
+                    h2{font-size: 60px;}
+                }
+                .column-list{padding-top: 0;
+                    .column-list-main{
+                        ul{
+                            li{width: 75%;
+                                a{font-size: 35px;padding:19px 15px 20px;
+                                    &:before{width: calc(100% + 10px);}
+                                    &.active{color:#fff;
+                                        &:before{background-color: #efc137;}
+                                    }
+                                    &:hover{
+                                        &:not(.active){
+                                            &:before{opacity: .25;background-color: #efc137;}
+                                        }
+                                    }
+                                    span{width: calc(100% + 10px);height: 100%;top:0;border-width: 0 0 3px 0;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
     /* /column-list */
+
+    /* paginator */
+
+        .paginator{
+            .paginator-arrow{
+                a, span{width: 38px;height: 38px;border-width: 6px;}
+            }
+            .paginator-nav{padding:0 5px;
+                ul{
+                    li{padding:0 10px;
+                        a, span{font-size:28px;}
+                    }
+                }
+            }
+        }
+
+    /* /paginator */
 
     /* news-list */
 
@@ -931,9 +1015,30 @@
 
             .slider-background{
                 .slider-class{
-                    &.second-slider{left:-5%;
+                    &.second-slider{left:5%;
                         .slider-item{
-                            img{left:5%;}
+                            img{left:-5%;}
+                        }
+                    }
+                }
+            }
+
+        }
+
+    /* /video-block new */
+
+}
+@media screen and (max-width: 535px){
+
+    /* video-block new */
+
+        .video-block{
+
+            .slider-background{
+                .slider-class{
+                    &.second-slider{left:0;
+                        .slider-item{
+                            img{left:0;}
                         }
                     }
                 }
@@ -946,11 +1051,78 @@
 }
 @media screen and (max-width: 479px){
 
+    /* column-list */
+
+        .news-list-page, .events-list-page, .careers-list-page, .services-page, .vacancy-page{
+
+            .column-list-wrap{
+                .column-title{
+                    h2{font-size: 40px;}
+                }
+                .column-list{
+                    .column-list-main{
+                        ul{
+                            li{
+                                a{font-size: 29px;padding:11px 15px 13px;}
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main-wrap{
+                .right-column{
+                    .news-list{padding-top: 40px;margin-bottom: 60px;
+                        .news-list-items-wrap{margin-bottom: 55px;
+                            .news-list-item{margin-bottom: 50px;
+                                .news-list-img{height: 130px;}
+                                .news-list-item-content-main{padding:20px 10px 25px 10px;
+                                    .news-list-item-title{margin-bottom: 20px;
+                                        h6{font-size: 24px;padding-left: 10px;}
+                                        span{width: 3px;}
+                                    }
+                                    .news-list-item-content-wrap{
+                                        .news-item-list-content{
+                                            .news-item-list-text{font-size: 18px;margin-bottom: 15px;}
+                                            .news-item-list-date{font-size: 16px;}
+                                        }
+                                        .news-list-item-arrow{position: relative;left:-5px;
+                                            span{width: 22px;height: 22px;border-top:4px solid #626262;border-right:4px solid #626262;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    /* /column-list */
+
+    /* paginator */
+
+        .paginator{
+            .paginator-arrow{
+                span, a{width: 22px;height: 22px;border-width: 4px;}
+            }
+            .paginator-nav{padding:0;
+                ul{
+                    li{
+                        a, span{font-size: 16px;}
+                    }
+                }
+            }
+        }
+
+    /* /paginator */
+
     /* event-list, careers-list */
 
         .info-list{
 
-            .info-list-wrap{
+            .info-list-wrap{left:0;
                 .info-list-item{width: 100%;margin-right: 0;
                     &:nth-child(3n){margin-right: 0;}
                 }
@@ -1052,9 +1224,9 @@
 
             .slider-background{
                 .slider-class{
-                    &.second-slider{left:-35%;top: -30%;transform:scale(.35);
+                    &.second-slider{left:-5%;top: -30%;transform:scale(.35);
                         .slider-item{transform:scale(2.85);
-                            img{left:19%;top:30%;}
+                            img{left:4%;top:30%;}
                         }
                     }
                 }
@@ -1205,6 +1377,7 @@
     /* /services */
 
     /* vacancy */
+
         .vacancy-page{
             .column-list-wrap{
                 .column-title{
@@ -1246,7 +1419,65 @@
                 }
             }
         }
+
     /* /vacancy */
+
+}
+@media screen and (max-width: 450px){
+
+    /* video-block new */
+
+        .video-block{
+            .slider-background{
+                .slider-class{
+                    &.second-slider{left:-15%;
+                        .slider-item{
+                            img{left:10%;}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /video-block new */
+
+}
+@media screen and (max-width: 395px){
+
+    /* video-block new */
+
+        .video-block{
+            .slider-background{
+                .slider-class{
+                    &.second-slider{left:-25%;
+                        .slider-item{
+                            img{left:17%;}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /video-block new */
+
+}
+@media screen and (max-width: 350px){
+
+    /* video-block new */
+
+        .video-block{
+            .slider-background{
+                .slider-class{
+                    &.second-slider{left:-32%;
+                        .slider-item{
+                            img{left:18%;}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /video-block new */
 
 }
 @media screen and (max-width: 320px){

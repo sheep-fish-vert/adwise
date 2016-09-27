@@ -194,7 +194,7 @@
 
 /*partners----------------------------------------------------------*/
 
-    .partners{ background-color: #dbdbdb;padding: 92px 0 65px;
+    .partners{padding: 92px 0 65px;
         .mbox{max-width: 1120px;
             .title-filter{padding-left: 30px;}
         }
@@ -396,13 +396,13 @@
             &:hover{
                 &:after{opacity: 1;}
             }
-            &:before{background-image: url(../images/audio-hover.png); width: 95px; height: 74px;left: calc(50% - 47px); top: calc(50% - 37px); z-index: 10;}
+            &:before{background-image: url(../images/audio-hover.svg); width: 95px; height: 74px;left: calc(50% - 47px); top: calc(50% - 37px); z-index: 10;}
             &:after{ content: ''; background-color: rgba(0,0,0,0.5); position: absolute; left: 0; top: 0; width: 100%; height: 100%;opacity: 0;transition: opacity 300ms;}
         }
     }
     .item-voiceover{
         a{
-            &:before{background-image: url(../images/audio-hover.png); width: 95px; height: 74px;left: calc(50% - 47px); top: calc(50% - 37px);}
+            &:before{background-image: url(../images/audio-hover.svg); width: 95px; height: 74px;left: calc(50% - 47px); top: calc(50% - 37px);}
         }
     }
 
