@@ -641,7 +641,7 @@
 
             .right-column{
 
-                .services-websites{
+                .services-websites{padding-top: 20px;
                     .left{
                         .slider-wrap{
                             .slider.slick-slider {
@@ -679,11 +679,20 @@
                 //3th tab
                 .creatives-wrap .web-mobile{
                     .wrap-info{
+                        &.align-top{align-items: flex-start;}
                         &:first-child{max-width: 400px;}
+                        .text-wrap ul{align-items: flex-start;
+                            li{max-width: 100%;}
+                        }
+                        .wrap-text-icon img {max-width: 100%;}
                     }
                     .text-wrap{text-align: left;font-size: 28px;
 
                         h4{font-size: 36px;}
+                        .button-wrap{
+                            .button{max-width: 300px;height: 55px;font-size: 24px;line-height: 52px;}
+                        }
+
                     }
                 }
                 .services-geos{margin-bottom: 15px;
@@ -714,6 +723,26 @@
                     }
                 }
 
+                // 4th tab
+                .creatives-wrap .tab-item.pr-reputation{padding-top: 70px;
+                    .wrap-info{flex-direction: row;text-align: left;
+                        &:first-child{
+                            .text-wrap{text-align: center;width: 100%;margin:0 auto;}
+                        }
+                        &:nth-child(2){
+                            img{max-height: 100%;}
+                        }
+                        &:nth-child(7){
+                            img{max-width: 100%;}
+                        }
+                        .text-wrap{width: 70%;font-size: 27px;text-align: left;}
+                        h3{font-size: 36px;}
+
+                    }
+                    .wrap-text-icon{width: 40%;
+                        img{max-width: 100%;}
+                    }
+                }
             }
         }
 
@@ -814,10 +843,48 @@
     /* vacancy */
 
         .vacancy-page{
+            .column-list-wrap{
+                .column-title{max-width: 320px;margin:0 auto;
+                    h2{color: white;font-size: 60px;line-height: 1.2;}
+                }
+                .column-list{
+                    .column-list-main.scroll-list{
+                        ul{
+                            li{padding: 23px 12px 24px 12px;margin-right: 0;
+                                &:hover,&.active{background-color: rgba(0,0,0, .5);}
+                                p,span{font-size: 28px;color: white;font-weight: 400;}
+                            }
+                        }
+                    }
+                }
+            }
 
             .content-wrap{
-                .row-for-all{flex-direction:column;align-items: center;
-                    .button-part{margin-bottom: 20px;}
+                .content-wrap-main{
+                    .topper{
+                        .ext{display: flex;align-items: center;
+                            span{font-family: "Roboto";font-weight: 100;font-size: 28px;}
+                            img{width: 28px;}
+                        }
+                    }
+                    .scroll-content{font-size: 28px;
+                        li{
+                            .t-page{}
+                            .after-block{
+                                ul {
+                                    li{padding-left: 35px;
+                                        &:before{border-top: 2px solid #62ec5e;border-left: 2px solid #62ec5e;top: 4px;left: -4px;width: 20px;height: 20px;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .row-for-all{flex-direction:column;align-items: center;
+                        .button-part{margin-bottom: 20px;
+                            .buttoner{width: 300px;height: 55px;font-size: 24px;line-height: 52px;}
+                        }
+                        .soc-part{display: none;}
+                    }
                 }
             }
 
@@ -1034,7 +1101,7 @@
 
                 .creatives-wrap{padding:0;
                     .tab-item{padding-bottom: 40px;
-                        .text-wrap{font-size: 16px;}
+                        .text-wrap{font-size: 17px;}
                     }
                 }
 
@@ -1062,9 +1129,34 @@
                             }
                             .right-text{padding-left: 0;font-size: 17px;}
                             .right-button{padding-left: 0;
-                                .button.button-cofee{}
+                                .button.button-cofee{max-width: 200px;height: 37px;line-height: 36px;font-size: 19px;display: block;margin:0 auto;}
                             }
                         }
+                    }
+                }
+                //3th tab
+                .creatives-wrap .tab-item.web-mobile{padding-bottom: 75px;
+                    .text-wrap{
+                        h4{font-size: 25px;}
+                        .button-wrap{
+                            .button{height: 37px;line-height: 36px;font-size: 19px;max-width: 200px;margin:0 auto;display: inline-block;}
+                        }
+
+                    }
+                }
+
+                // 4th tab
+                .creatives-wrap .tab-item.pr-reputation{padding-top: 70px;
+                    .wrap-info{flex-direction: column;text-align: center;
+                        .text-wrap{width: 100%;font-size: 17px;text-align: center;}
+                        h3{font-size: 25px;}
+
+                    }
+                    .wrap-text-icon{width: 100%;
+                        img{max-width: 100%;}
+                    }
+                    .button-wrap{margin-bottom: 20px;
+                        .button{height: 37px;line-height: 36px;font-size: 19px;max-width: 200px;margin:0 auto;display: inline-block;}
                     }
                 }
 
@@ -1099,7 +1191,7 @@
                         .right{
                             .text{font-size: 17px;padding-top: 10px;margin-bottom: 50px;}
                             .button-wrap{text-align: center;
-                                .button{height: 37px;line-height: 37px;font-size: 19px;max-width: 200px;margin:0 auto;display: inline-block;}
+                                .button{height: 37px;line-height: 36px;font-size: 19px;max-width: 200px;margin:0 auto;display: inline-block;}
                             }
                         }
                     }
@@ -1111,6 +1203,50 @@
         }
 
     /* /services */
+
+    /* vacancy */
+        .vacancy-page{
+            .column-list-wrap{
+                .column-title{
+                    h2{font-size: 40px;}
+                }
+                .column-list{
+                    .column-list-main.scroll-list{
+                        ul{
+                            li{width: 90%;}
+                        }
+                    }
+                }
+            }
+            .content-wrap{
+                .content-wrap-main{
+                    .topper{margin-bottom: 40px;
+                        .ext{
+                            span{font-size: 21px;}
+                            img{width: 22px;}
+                        }
+                    }
+                    .scroll-content{font-size: 18px;
+                        li{margin-bottom: 35px;
+                            .t-page{margin-bottom: 15px;}
+                            .after-block{
+                                ul {
+                                    li{padding-left: 15px;
+                                        &:before{top: 4px;left: -8px;width: 13px;height: 13px;border-top: 1px solid #62ec5e;border-left: 1px solid #62ec5e;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .row-for-all{
+                        .button-part{
+                            .buttoner{height: 37px;line-height: 36px;font-size: 19px;max-width: 200px;margin:0 auto;display: inline-block;text-align: center;}
+                        }
+                    }
+                }
+            }
+        }
+    /* /vacancy */
 
 }
 @media screen and (max-width: 320px){
