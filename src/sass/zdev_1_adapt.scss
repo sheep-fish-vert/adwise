@@ -1015,9 +1015,30 @@
 
             .slider-background{
                 .slider-class{
-                    &.second-slider{left:-5%;
+                    &.second-slider{left:5%;
                         .slider-item{
-                            img{left:5%;}
+                            img{left:-5%;}
+                        }
+                    }
+                }
+            }
+
+        }
+
+    /* /video-block new */
+
+}
+@media screen and (max-width: 535px){
+
+    /* video-block new */
+
+        .video-block{
+
+            .slider-background{
+                .slider-class{
+                    &.second-slider{left:0;
+                        .slider-item{
+                            img{left:0;}
                         }
                     }
                 }
@@ -1203,9 +1224,9 @@
 
             .slider-background{
                 .slider-class{
-                    &.second-slider{left:-35%;top: -30%;transform:scale(.35);
+                    &.second-slider{left:-5%;top: -30%;transform:scale(.35);
                         .slider-item{transform:scale(2.85);
-                            img{left:19%;top:30%;}
+                            img{left:4%;top:30%;}
                         }
                     }
                 }
@@ -1400,6 +1421,63 @@
         }
 
     /* /vacancy */
+
+}
+@media screen and (max-width: 450px){
+
+    /* video-block new */
+
+        .video-block{
+            .slider-background{
+                .slider-class{
+                    &.second-slider{left:-15%;
+                        .slider-item{
+                            img{left:10%;}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /video-block new */
+
+}
+@media screen and (max-width: 395px){
+
+    /* video-block new */
+
+        .video-block{
+            .slider-background{
+                .slider-class{
+                    &.second-slider{left:-25%;
+                        .slider-item{
+                            img{left:17%;}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /video-block new */
+
+}
+@media screen and (max-width: 350px){
+
+    /* video-block new */
+
+        .video-block{
+            .slider-background{
+                .slider-class{
+                    &.second-slider{left:-32%;
+                        .slider-item{
+                            img{left:18%;}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /video-block new */
 
 }
 @media screen and (max-width: 320px){
