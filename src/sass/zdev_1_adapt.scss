@@ -991,9 +991,9 @@
             }
 
             .video-block-info{
-                .video-block-info-wrap{min-height: 980px;padding-top: 60px;max-width: 500px;margin:0 auto;
+                .video-block-info-wrap{min-height: 960px;padding-top: 0px;max-width: 500px;margin:0 auto;
                     .video-block-info-main{
-                        .video-block-title{font-size: 45px;max-width: 425px;margin:0 auto;}
+                        .video-block-title{font-size: 45px;max-width: 425px;margin:0 auto 20px auto;}
                         .video-block-text{font-size: 24px;}
                         .video-block-buttons{flex-direction:column;
                             .button{width: 100%;max-width: 380px;margin-bottom: 20px;height: 50px;line-height: 50px;font-size: 27px;}
@@ -1233,10 +1233,10 @@
             }
 
             .video-block-info{
-                .video-block-info-wrap{padding-top: 150px;padding-bottom: 100px;min-height: 600px;
+                .video-block-info-wrap{padding-top: 80px;padding-bottom: 100px;min-height: 600px;
                     .video-block-info-main{
                         .video-block-title{font-size: 26px;}
-                        .video-block-text{font-size: 14px;}
+                        .video-block-text{font-size: 14px;margin-bottom: 45px;}
                         .video-block-buttons{flex-direction:column;
                             .button{margin-bottom: 15px;width: 100%;font-size: 18px;height: 37px;line-height: 37px;
                                 &:last-child{margin-bottom: 0;}
