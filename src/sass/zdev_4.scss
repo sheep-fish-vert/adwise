@@ -63,6 +63,9 @@ a.button-next{padding-left: 0;padding-right: 32px;
             img{min-width: 100%;min-height: 100%;display: block;max-width: none;position: relative;left: 50%;top: 50%;transform: translate(-50%,-50%);}
         }
     }
+    .news-image-mobile{display: none;
+        img{min-width: 100%;text-align: center;}
+    }
     .news-page-title{margin:0 auto;max-width: 1050px;padding: 55px 15px 70px;width: 100%;
         .news-page-title-wrap{position: relative;padding: 2px;
             &.blue{background: linear-gradient(to right, rgba(28,220,255,1) 0%,rgba(1,255,144,1) 100%);
