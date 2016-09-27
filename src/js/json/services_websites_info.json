@@ -1,23 +1,23 @@
 {
     "images":[
         {
-            "image":"<img src='images/services-websites-img1.png' alt=''>",
+            "image":"<img src='images/services-websites-img1.svg' alt=''>",
             "text":"banners"
         },
         {
-            "image":"<img src='images/services-websites-img2.png' alt=''>",
+            "image":"<img src='images/services-websites-img2.svg' alt=''>",
             "text":"brandings"
         },
         {
-            "image":"<img src='images/services-websites-img3.png' alt=''>",
+            "image":"<img src='images/services-websites-img3.svg' alt=''>",
             "text":"clickunders"
         },
         {
-            "image":"<img src='images/services-websites-img4.png' alt=''>",
+            "image":"<img src='images/services-websites-img4.svg' alt=''>",
             "text":"pre-rolls"
         },
         {
-            "image":"<img src='images/services-websites-img5.png' alt=''>",
+            "image":"<img src='images/services-websites-img5.svg' alt=''>",
             "text":"mobile"
         }
     ],
