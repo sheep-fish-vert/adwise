@@ -763,6 +763,17 @@
                         }
                     }
                 }
+                .creatives-wrap{
+                    .tab-item{
+                        .text-wrap{
+                            ul{
+                                li{
+                                    &;before{width: 12px;height: 18px;}
+                                }
+                            }
+                        }
+                    }
+                }
                 //3th tab
                 .creatives-wrap .web-mobile{
                     .wrap-info{
@@ -1321,7 +1332,13 @@
 
                 .creatives-wrap{padding:0;
                     .tab-item{padding-bottom: 40px;
-                        .text-wrap{font-size: 17px;}
+                        .text-wrap{font-size: 17px;
+                            ul{
+                                li{
+                                    &:before{width: 8px;height: 11px;}
+                                }
+                            }
+                        }
                     }
                 }
 

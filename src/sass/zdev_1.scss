@@ -403,7 +403,7 @@
                     .text-wrap{font-family: 'Roboto', sans-serif;font-weight: 300;color:#000000;font-size: 18px;font-family: 'ProximaNovaScOsf', sans-serif;
                         ul{list-style:none;margin:0 0 20px 0;padding:0;
                             li{position: relative;padding-left: 20px;margin-bottom: 5px;
-                                &:before{content:'';position: absolute;left:2px;top:7px;width: 8px;height: 11px;background-image: url(../images/black-small-arrow.png);background-repeat: no-repeat;}
+                                &:before{content:'';position: absolute;left:2px;top:7px;width: 8px;height: 11px;background-image: url(../images/black-small-arrow.svg);background-repeat: no-repeat;}
                             }
                         }
                         .button-wrap{padding-top: 35px;
@@ -536,7 +536,9 @@
                             .value-wrap{background-color: #f5eeda;padding:5px 0px;
                                 .value-main{max-width:460px;width: 100%;margin:0 auto;display: flex;justify-content: space-between;
                                     .value-item{padding:0 10px;display: flex;justify-content: flex-start;align-items: center;width: 33.33%;
-                                        .value-item-img{margin-right: 16px;}
+                                        .value-item-img{margin-right: 16px;max-width: 30px;
+                                            img{width: 100%;}
+                                        }
                                         .value-item-text{font-size: 18px;color:rgba(0,0,0,1);font-weight: 300;font-family: 'Roboto', sans-serif;}
                                     }
                                 }

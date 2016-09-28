@@ -66,6 +66,7 @@
 
 	.social-conteiner{
 		a{margin-right: 10px;transition:all 300ms ease; text-decoration: none;
+			img{width: 100%;max-width: 80px;}
 			&:hover{opacity:.8;}
 		}
 	}
