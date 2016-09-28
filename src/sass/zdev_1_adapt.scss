@@ -1169,8 +1169,8 @@
                         }
                     }
                     .info-list-item-bottom{
-                        .info-list-item-content{margin-bottom: 20px;
-                            p{justify-content: center;font-size: 18px;}
+                        .info-list-item-content{margin-bottom: 20px;max-width: 200px;margin-left:auto;margin-right: auto;
+                            p{font-size: 18px;}
                         }
                         .info-list-item-button{
                             .button{max-width: 200px;height: 37px;line-height: 37px;margin:0 auto;font-size: 18px;}
