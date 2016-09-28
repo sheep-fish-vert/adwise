@@ -1006,6 +1006,36 @@
 
     /* /video-block new */
 
+    /* event-list, careers-list */
+
+        .info-list{
+            .info-list-wrap{left:0;padding-top: 45px;margin-bottom: 115px;
+                .info-list-item{width: 100%;margin-right: 0;margin-bottom: 75px;
+                    &:last-child{margin-bottom: 0;}
+                    &:nth-child(3n){margin-right: 0;}
+                }
+                .info-list-item-wrap{max-width: 340px;
+                    .info-list-item-top{
+                        a{width: 340px;height: 340px;}
+                        .info-list-top-text{padding:45px 30px 0 30px;
+                            .info-list-top-title{font-size: 38px;min-height: 102px;border-bottom:6px solid #aaaaaa;margin-bottom: 15px;}
+                            .info-list-top-text-wrap{font-size: 27px;line-height: 1.25;}
+                        }
+                    }
+                    .info-list-item-bottom{padding: 0 20px;
+                        .info-list-item-content{padding-left: 0;margin-bottom: 40px;
+                            p{margin: 0 0 20px 0;}
+                        }
+                        .info-list-item-button{text-align: center;
+                            .button{max-width: 300px;height: 54px;line-height: 54px;font-size: 24px;font-weight: 400;}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /event-list, careers-list */
+
 }
 @media screen and (max-width: 600px){
 
@@ -1122,14 +1152,22 @@
 
         .info-list{
 
-            .info-list-wrap{left:0;
-                .info-list-item{width: 100%;margin-right: 0;
-                    &:nth-child(3n){margin-right: 0;}
-                }
-                .info-list-item-wrap{
+            .info-list-wrap{left:0;padding-top: 25px;margin-bottom: 60px;
+                .info-list-item{width: 100%;margin-right: 0;margin-bottom: 45px;}
+                .info-list-item-wrap{max-width: 250px;
+                    .info-list-item-top{margin-bottom: 30px;
+                        a{width: 250px;height: 250px;}
+                        .info-list-top-text{padding: 25px 15px 0 15px;
+                            .info-list-top-title{font-size: 30px;min-height: 75px;border-bottom:3px solid #aaaaaa;}
+                            .info-list-top-text-wrap{font-size: 22px;}
+                        }
+                    }
                     .info-list-item-bottom{
-                        .info-list-item-content{
+                        .info-list-item-content{margin-bottom: 20px;
                             p{justify-content: center;}
+                        }
+                        .info-list-item-button{
+                            .button{max-width: 200px;height: 37px;line-height: 37px;margin:0 auto;font-size: 18px;}
                         }
                     }
                 }
