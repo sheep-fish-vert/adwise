@@ -605,7 +605,7 @@
                     .slider-wrap{
                         &.slick-slider{margin-bottom: 0;
                             .slick-arrow{width: 23px;height: 42px;font-size: 0;color:transparent;top:calc(50% + 20px);max-height:none;
-                                &:before, &:after{content:'';display: block;position: absolute;left:0;top:0;width: 100%;height: 100%;background-image: url(../images/services-geo-slider-arrows.png);padding:0;margin:0;transition:all 300ms ease;}
+                                &:before, &:after{content:'';display: block;position: absolute;left:0;top:0;width: 100%;height: 100%;padding:0;margin:0;background-size:23px 42px;background-repeat: no-repeat;transition:all 300ms ease;}
                                 &:before{opacity: 1;}
                                 &:after{opacity: 0;}
                                 &:hover{
@@ -613,12 +613,12 @@
                                     &:after{opacity: 1;}
                                 }
                                 &.slick-prev{left:auto;right:calc(100% - 4px);
-                                    &:before{background-position: left top;}
-                                    &:after{background-position: left bottom;}
+                                    &:before{background-image: url(../images/slick-left.svg);}
+                                    &:after{background-image: url(../images/slick-left-hover.svg);}
                                 }
                                 &.slick-next{right:auto;left:calc(100% - 2px);
-                                    &:before{background-position: right top;}
-                                    &:after{background-position: right bottom;}
+                                    &:before{background-image: url(../images/slick-right.svg);}
+                                    &:after{background-image: url(../images/slick-right-hover.svg);}
                                 }
                             }
                         }

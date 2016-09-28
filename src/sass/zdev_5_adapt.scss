@@ -369,7 +369,7 @@
             .col-wrap-sample{margin-bottom: 30px;}
             .banner-line{padding-left: 20px;text-align: left;font-size: 26px;font-weight: 300;margin-bottom: 10px;
                 .banner-img-line{margin-right: 10px;
-                    img{max-width: none;}
+                    img{max-width: 30px;}
                 }
                 span{width: calc(100% - 40px);}
             }
@@ -481,7 +481,7 @@
             }
         }
 
-        .banner{height: 240px;
+        .banner{height: 240px;width: 240px;margin-left: auto;margin-right: auto;
             h5{border-width: 3px;
                 p{font-size:26px;}
             }
@@ -489,7 +489,7 @@
         }
 
         .col{
-            .banner-line{font-size: 20px;
+            .banner-line{font-size: 20px;max-width: 200px;padding-left: 0;margin: 0 auto 10px auto;
                 .banner-img-line{
                     img{max-width: 20px;}
                 }
