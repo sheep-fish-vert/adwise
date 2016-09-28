@@ -475,6 +475,17 @@
 
 /* services-geo */
 
+/* remove page preloader */
+
+    function removePagePreloader(){
+        setTimeout(function(){
+            $('body').removeClass('loading');
+        },2000);
+
+    };
+
+/* /remove page preloader */
+
 
 $(document).ready(function(){
 
@@ -495,6 +506,8 @@ $(window).load(function(){
     leftColumnScroll();
 
     scrollingTabs();
+
+    removePagePreloader();
 
 });
 
