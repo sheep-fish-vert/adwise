@@ -153,13 +153,13 @@
 
     /* footer */
 
-        .footer{padding:50px 0 30px 0;
+        .footer{padding:65px 0 30px 0;
 
-            .footer-top{
+            .footer-top{margin-bottom: 30px;
 
-                .left-side-menu{margin:0 auto 25px auto;
-                    .link-wrapper-main{margin:0 auto 20px auto;max-width: 300px;}
-                    .link-wrapper{margin-bottom: 10px;
+                .left-side-menu{margin:0 auto 45px auto;
+                    .link-wrapper-main{margin:0 auto 30px auto;max-width: 300px;}
+                    .link-wrapper{margin-bottom: 15px;
                         .images-wrapper{width: 30px;}
                         a{font-size: 18px;}
                     }
@@ -168,15 +168,15 @@
                     }
                 }
 
-                .middle-part-menu{margin-bottom: 15px;text-align:center;
-                    .social-conteiner{justify-content: center;
+                .middle-part-menu{margin-bottom: 40px;text-align:center;
+                    .social-conteiner{justify-content: center;margin-bottom: 26px;
                         img{max-width: 50px;}
                     }
-                    .heading{font-size: 22px;margin:0 0 10px 0;}
+                    .heading{font-size: 18px;margin:0 0 0 0;}
                 }
 
-                .right-side-menu{padding-top: 0;margin:0 -10px 10px -10px;width: calc(100% + 20px);
-                    .some-links{margin-bottom: 15px;padding:0 5px;
+                .right-side-menu{padding-top: 0;margin:0 -10px 0px -10px;width: calc(100% + 20px);
+                    .some-links{margin-bottom: 10px;padding:0 5px;
                         a{font-size: 16px;}
                     }
                 }
@@ -185,7 +185,7 @@
 
             .footer-bottom{padding-top:0px;
                 ul{
-                    li{margin-bottom: 5px;}
+                    li{margin-bottom: 12px;}
                     a{font-size: 18px;}
                 }
             }
