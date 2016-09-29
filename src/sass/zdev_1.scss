@@ -952,7 +952,7 @@
                         .after-block{font-weight: 200;line-height: 1.2;
                             ul{list-style:none;padding:0;margin:0;
                                 li{padding:0 0 0 25px;margin:0 0 15px 0;position: relative;
-                                    &:before{content:'';display: block;position:absolute;top: 4px;left: 0;width: 15px;height: 15px;border-top: 1px solid #62ec5e;border-left: 1px solid #62ec5e;transform: rotate(135deg);}
+                                    &:before{content:'';display: block;position:absolute;top: 4px;left: 0;width: 15px;height: 15px;border-top: 1px solid #ecd050;border-left: 1px solid #ecd050;transform: rotate(135deg);}
                                     &:last-child{margin:0;}
                                 }
                             }
@@ -962,7 +962,7 @@
 
                 .row-for-all{display: flex;justify-content: space-between;align-items: center;flex-wrap:wrap;text-align: center;
                     .button-part{width: 100%;margin-bottom: 20px;
-                        .buttoner{margin:0 auto;display:flex;justify-content: center;align-items: center;width: 200px;height: 37px;text-decoration: none;  font-size: 16px;color:#000;background-color: #ecd050;font-family:'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);font-weight: 600;transition:all 300ms ease;
+                        .buttoner{margin:0 auto;display:flex;justify-content: center;align-items: center;width: 200px;height: 37px;text-decoration: none;  font-size: 16px;color:#fff;background-color: #ecd050;font-family:'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);font-weight: 600;transition:all 300ms ease;
                             &:hover{background-color: #fce166;}
                         }
                     }
