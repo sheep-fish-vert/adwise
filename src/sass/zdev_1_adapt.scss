@@ -1340,7 +1340,15 @@
 
                 .services-websites{margin-bottom: 40px;
                     .left {
-                        .slider-wrap .slider.slick-slider .slider-item .slider-text{font-size: 23px;}
+                        .slider-wrap .slider.slick-slider .slider-item .slider-text{font-size: 19px;}
+                        .slider-wrap .slider.slick-slider .slider-item .slider-img{width: 29px;padding: 0 5px;}
+                        .slider-wrap .slider.slick-slider{padding: 0 25px;
+                            .slick-arrow{
+                                &.slick-prev{left: 0;}
+                                &.slick-next{right: 0;}
+                            }
+
+                        }
                     }
                     .right{
                         .right-wrap{
