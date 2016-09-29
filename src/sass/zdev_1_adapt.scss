@@ -728,11 +728,14 @@
                 .services-websites{padding-top: 20px;
                     .left{
                         .slider-wrap{
-                            .slider.slick-slider {
-                                .slick-arrow.slick-next{top: calc(100% + 23px);}
+                            .slider.slick-slider {padding: 0 50px;
+                                .slick-arrow{
+                                    &.slick-next{top: calc(50% - 10px);transform: translate(0, 0) rotate(-90deg);left: auto;right: 25px;}
+                                    &.slick-prev{top: calc(50% - 10px);transform: translate(0, 0) rotate(-90deg);left: 25px;}
+                                }
                                 .slider-item {padding: 5px 10px;
                                     &.slick-current{background-color: transparent;}
-                                    .slider-img{width: auto;padding: 0 10px;}
+                                    .slider-img{width: 48px;padding: 0 10px;}
                                     .slider-text{font-size: 30px;}
                                 }
                             }

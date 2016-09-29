@@ -442,7 +442,7 @@ function fancyboxForm(){
                         settings:{
                             slidesToShow:1,
                             slidesToScroll:1,
-                            vertical:true
+                            vertical:false
                         }
                     },
                     {
@@ -450,7 +450,7 @@ function fancyboxForm(){
                         settings:{
                             slidesToShow:1,
                             slidesToScroll:1,
-                            vertical:true
+                            vertical:false
                         }
                     }
                 ]
