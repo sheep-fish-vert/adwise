@@ -458,9 +458,6 @@ function fancyboxForm(){
 
         });
 
-
-
-
         function reloadServicesWebsitesContent(parent, siteName){
 
             parent.find('.right').addClass('loading');
