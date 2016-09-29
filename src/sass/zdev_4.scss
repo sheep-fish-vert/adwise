@@ -113,6 +113,15 @@ a.button-next{padding-left: 0;padding-right: 32px;
             .news-page-pagination{display: flex;align-items: center;justify-content: space-between;}
         }
     }
+
+    &.news-page-mono{
+        a{
+            &.button-prev, &.button-next{
+                &:after{border-right:4px solid #ecd050;border-top:4px solid #ecd050;}
+            }
+        }
+    }
+
 }
 
 // advertising
