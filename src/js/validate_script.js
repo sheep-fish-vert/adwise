@@ -1061,6 +1061,9 @@ $(document).ready(function(){
     eventPage();
     geoPage();
 
-   servicesWebsitesScripts();
 
+
+});
+$(window).load(function() {
+    servicesWebsitesScripts();
 });
