@@ -307,7 +307,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
         }
     }
 
-    .button.button-yellow{font-size: 16px;background-color: #dfc24f;text-decoration: none;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: normal;line-height: 37px;height: 37px;text-shadow:  0 3px 7px rgba(0, 0, 0, 0.35);
+    .button.button-yellow{font-size: 15px;background-color: #dfc24f;text-decoration: none;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: normal;line-height: 37px;height: 37px;text-shadow:  0 3px 7px rgba(0, 0, 0, 0.35);
         &:hover{background-color: #c5aa3e;}
     }
     p{margin:0;}
@@ -333,7 +333,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
         .market-middle-text{color: white;min-height: 1246px;
             .middle-text{padding-top: 360px;
                 .item-title{
-                    h2{margin:0;font-size: 40px;font-family: 'ProximaNovaScOsf';font-weight: 600;text-transform: uppercase;}
+                    h2{margin:0;font-size: 36px;font-family: 'ProximaNovaScOsf';font-weight: 600;text-transform: uppercase;}
                 }
                 .item-text{font-size: 18px;font-weight: 100;font-family: 'ProximaNovaScOsf';line-height: 1.2;max-width: 680px;padding-top: 35px;text-transform: uppercase;}
             }
@@ -342,9 +342,9 @@ a.button-next{padding-left: 0;padding-right: 32px;
                     .item-wrap{width: 240px;height: 155px;background:transparent url('../images/market-middle-text-bg.svg') center top no-repeat;position: relative;}
                     .item-big-number{font-size: 62px;font-family: 'CoreSans',sans-serif;font-weight: 700;position: absolute;left: -25px;top: 37px;width: 95px;text-align: center;}
 
-                    .item-title{position: absolute;top: 40px;right: 32px;
-                        p{font-size: 37px;text-transform: uppercase;font-weight: 300;}
-                        span{text-transform: uppercase;font-weight: 300;font-size: 15px;}
+                    .item-title{position: absolute;top: 44px;right: 32px;
+                        p{font-size: 33px;text-transform: uppercase;font-weight: 300;}
+                        span{text-transform: uppercase;font-weight: 300;font-size: 13px;}
                     }
                     .item-text{padding-left: 30px;padding-top: 15px;font-size: 23px;font-weight: 600;padding-right: 15px;}
                 }
@@ -354,15 +354,15 @@ a.button-next{padding-left: 0;padding-right: 32px;
     .market-bottom{background-color: #c0a263;
         &.first{background-color: #f0f0f0;padding-top: 125px;
             .item-title{text-align: center;margin-bottom: 50px;
-                h2{margin:0;font-size: 32px;font-family: 'ProximaNovaScOsf';font-weight: 600;color: #000;text-transform: uppercase;}
+                h2{margin:0;font-size: 28px;font-family: 'ProximaNovaScOsf';font-weight: 600;color: #000;text-transform: uppercase;}
             }
             .items-list{position: relative;max-width: 720px;width: 100%;margin:0 auto;margin-bottom: 230px;
                 .item-center{height: 345px;width: 390px;background: url(../images/market-bottom-img.png) center center no-repeat; background-size: contain;margin:0 auto;position: relative;
-                    b{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);max-width: 225px;font-family: 'ProximaNovaScOsf';font-weight: 700;color: #000;text-align: center;text-transform: uppercase;}
+                    b{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);max-width: 225px;font-family: 'ProximaNovaScOsf';font-weight: 700;color: #000;text-align: center;text-transform: uppercase;font-size: 20px;}
                 }
                 .item-list{
                     ul{list-style-type: none;padding: 0;margin:0;}
-                    li{position: absolute;max-width: 120px;font-family: 'ProximaNovaScOsf';font-size: 20px;font-weight: 300;color: #000;text-align: center;text-transform: uppercase;
+                    li{position: absolute;max-width: 120px;font-family: 'ProximaNovaScOsf';font-size: 18px;font-weight: 300;color: #000;text-align: center;text-transform: uppercase;
                         &:nth-child(1){left: 0;top: 46%;}
                         &:nth-child(2){left: 12%;bottom: -7%;}
                         &:nth-child(3){left: 42%;bottom: -32%;}
@@ -377,14 +377,14 @@ a.button-next{padding-left: 0;padding-right: 32px;
             .middle-text{width: 42%;
                 .item-title{position: relative;margin-bottom: 53px;
                     &:after{background-color: #f1f1f1;position: absolute;height: 3px;width: 100%;bottom: -23px;left: 0;content: '';}
-                    h2{margin: 0;font-size: 50px;line-height: 1.2;font-family: 'ProximaNovaScOsf';font-weight: 600;text-transform: uppercase;}
+                    h2{margin: 0;font-size: 42px;line-height: 1.2;font-family: 'ProximaNovaScOsf';font-weight: 600;text-transform: uppercase;}
                 }
-                .item-text{
-                    p{font-family: "Roboto";font-weight: 100;font-size: 16px;margin-bottom: 25px;}
-                    b{font-family: 'ProximaNovaScOsf';font-weight: 500;font-size: 20px;text-transform: uppercase;}
+                .item-text{text-transform: uppercase;
+                    p{font-family: 'ProximaNovaScOsf';font-size: 18px;margin-bottom: 25px;font-weight: 300;}
+                    b{font-family: 'ProximaNovaScOsf';font-weight: 500;font-size: 20px;}
                 }
                 .item-button{padding-top: 55px;
-                    .button{background-color: #f75757;font-family: 'ProximaNovaScOsf';font-weight: 400;line-height: 37px;height: 37px;text-shadow:  0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;
+                    .button{background-color: #f75757;font-family: 'ProximaNovaScOsf';font-weight: 400;line-height: 37px;height: 37px;text-shadow:  0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;font-size: 15px;
                         &:hover{background-color: #be4848;}
                     }
                 }
