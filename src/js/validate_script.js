@@ -141,7 +141,6 @@ function popNext(popupId, popupWrap){
     */
 }
 
-
 /*маска на инпуте*/
 function Maskedinput(){
     if($('.tel-mask')){
@@ -1061,9 +1060,10 @@ $(document).ready(function(){
     eventPage();
     geoPage();
 
-
-
 });
+
 $(window).load(function() {
+
     servicesWebsitesScripts();
+
 });
