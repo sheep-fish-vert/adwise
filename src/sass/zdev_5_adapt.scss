@@ -61,10 +61,10 @@
         .menu{
             .menu-wrap{
                 li{
-                    a{padding:10px 15px 10px 15px;font-size: 14px;}
+                    a{padding:10px 15px 10px 15px;font-size: 12px;}
                 }
                 .second-level{
-                    .mobile-arrow{right: 0;}
+                    .mobile-arrow{right: 0;top:35%;}
                     ul{top:calc(100% + 9px);}
                 }
             }
@@ -72,14 +72,15 @@
 
         .laguages-wrap{
             .language-choose{
-                a{font-size: 14px;}
+                &:first-child{
+                    &:after{top:3px;}
+                }
+                a{font-size: 12px;}
             }
         }
 
         .login-wrap{
-            a{font-size: 14px;
-                .log-in-icon{}
-            }
+            a{font-size: 12px;}
         }
 
     }
@@ -96,7 +97,7 @@
                 }
             }
             .row-wrap{
-                .left-col{width:280px;height: 280px;}
+                .left-col{width:280px;height: auto;}
                 .right-col{width: calc(100% - 280px);}
                 &.row-reverse{
                     .left-col{width: calc(100% - 400px);}

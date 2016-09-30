@@ -12,7 +12,7 @@
             }
 
         }
-        .title-col{font: 600 28px/1.2 'ProximaNovaScOsf'; color: #777; padding-bottom: 29px;
+        .title-col{font: 600 28px/1.2 'ProximaNovaScOsf'; color: #777; padding-bottom: 29px;text-transform: uppercase;
             h3{ margin: 0; }
         }
         .news-b{width: 380px;
@@ -59,7 +59,7 @@
         }
         .button-col{text-align: right; width: 100%; margin-top: 72px; /*padding-right: 61px;*/
             p{display: block;text-align: right;}
-            a{ text-decoration: none;  color: #777;font: 300 20px/1.2 'ProximaNovaScOsf'; position: relative;right:25px;padding-top: 5px;padding-bottom: 6px;padding-right: 36px;transform:translateZ(0);backface-visibility:hidden;transition:all 300ms ease;
+            a{ text-decoration: none;  color: #777;font: 300 20px/1.2 'ProximaNovaScOsf';text-transform: uppercase; position: relative;right:25px;padding-top: 5px;padding-bottom: 6px;padding-right: 36px;transform:translateZ(0);backface-visibility:hidden;transition:all 300ms ease;
                 &:after{content: ''; display: inline-block; width: 25px; height: 25px; background-color: transparent; border-top:4px solid #626262;border-right:4px solid #626262; transform:rotate(45deg) translateZ(0px);backface-visibility:hidden; position: absolute; right: 5px;transition:all 300ms ease;}
                 &:before{content:'';display: block;position: absolute;right:0px;top:0;width: 35px;height: 35px;background-color: transparent;transform:translateZ(0px);backface-visibility:hidden;transition:all 300ms ease;}
                 &:hover{
@@ -86,7 +86,7 @@
 
                 li{ display: inline-block;transition:all 300ms ease;
                     p{margin:0;}
-                    a{font: 300 18px/1.5 'ProximaNovaScOsf'; color: #000;text-decoration: none; position: relative;text-decoration: none;padding:16px 30px 17px 30px;display: block;font-weight: 300;
+                    a{font: 300 18px/1.5 'ProximaNovaScOsf'; color: #000;text-decoration: none; position: relative;text-decoration: none;padding:16px 30px 17px 30px;display: block;font-weight: 300;text-transform: uppercase;
                         .link-wrap{position: relative;display: inline;
                             &.unactive{text-decoration: none;color:#807f7f;
                                 &:after{background-color: #807f7f;transform:scale(1);}
@@ -135,7 +135,7 @@
                 &:first-child{
                     &:after{content:'';display: block;position: absolute;top: 8px;right: 0;height: 12px;width: 1px;background-color: #000;}
                 }
-                a{text-decoration: none;color:#807f7f;font-family: 'ProximaNovaScOsf', sans-serif;font-size: 18px;line-height: 1.5;font-weight: 300;cursor:default;transition:all 300ms ease;
+                a{text-decoration: none;color:#807f7f;font-family: 'ProximaNovaScOsf', sans-serif;font-size: 18px;line-height: 1.5;font-weight: 300;cursor:default;text-transform: uppercase;transition:all 300ms ease;
                     .link-wrap{position: relative;transition:all 300ms ease;
                         &:after{content:'';display: block;position: absolute;left:0;top:100%;height: 1px;width: 100%;background-color: #807f7f;transform:scale(1);transition:all 300ms ease;}
                     }
@@ -162,7 +162,7 @@
                         &.hover{opacity: 0;position: absolute;left:0;top:0;}
                     }
                 }
-                .log-in-text{position: relative;margin-top: -2px;
+                .log-in-text{position: relative;margin-top: -2px;text-transform: uppercase;
                     &:after{content:'';display: block;position: absolute;left:0;top:100%;width: 100%;height: 1px;background-color: #969696;transition:all 300ms ease;}
                 }
                 &:hover{color:#ca8000;
@@ -240,7 +240,7 @@
             ul { list-style-type: none; display: flex; justify-content: space-around; margin: 0; padding: 0; }
             li {
                 a,
-                .txt { font: 100 18px/1.5 'ProximaNovaScOsf'; color: #505050; cursor: pointer;
+                .txt { font: 100 18px/1.5 'ProximaNovaScOsf'; color: #505050; cursor: pointer;text-transform: uppercase;
                     &:hover { color: #ca8000; }
                 }
                 input { opacity: 0; visibility: hidden; }
@@ -305,7 +305,7 @@
                 }*/
             }
 
-            .txt{background-color: #fff;font: 100 18px/1.26 'ProximaNovaScOsf';color: #424346; padding-top: 32px; padding-bottom: 19px;
+            .txt{background-color: #fff;font: 100 18px/1.26 'ProximaNovaScOsf';color: #424346; padding-top: 32px; padding-bottom: 19px;text-transform: uppercase;
                 &.right-col{/*box-shadow:inset 50px 0 50px -50px #333;*/ padding-left: 50px; padding-right: 50px;}
                 &.left-col{/*box-shadow:inset -50px 0 50px -50px #333;*/ padding-left: 50px; padding-right: 50px;}
                 p{ margin: 0 0 19px 0;}
@@ -414,8 +414,6 @@
 .video-wrap{ width: 100%; position: relative;
     video{ width: 100%; height: 100%;}
 }
-
-
 
 
 #waveform{ width: 100%;}
