@@ -641,8 +641,10 @@ a.button-next{padding-left: 0;padding-right: 32px;
             .item-title{color: black;font-family: 'ProximaNovaScOsf';font-size: 34px;font-weight: 600;padding-top: 45px;
                 p{margin:0;}
             }
-            .item-img{height: 185px;display: flex;align-items: center;justify-content: center;padding:0 30px;
-                img{max-height:100%;width: 100%;}
+            .item-img{height: 185px;display: flex;align-items: center;justify-content: center;padding:0 30px;position: relative;
+                img{max-height:100%;width: 100%;position: relative;z-index: 1;
+                    &.fon{position: absolute;z-index: 0;max-width: calc(100% - 60px);}
+                }
             }
             .item-button{padding-top: 35px;transform: translate(0, 100%);transition:all ease-out .3s;
                 a{background-color: #c37051;border-radius: 14px;color: #fefefe;font-family: 'ProximaNovaScOsf';font-size: 14px;font-weight: 300;height: 28px;text-decoration: none;display: flex;align-items: center;justify-content: center;padding: 0 32px;transition:all ease .2s;cursor: pointer;
