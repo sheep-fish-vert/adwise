@@ -569,7 +569,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
     }
     .monetization-text,.monetization-bottom-text{max-width: 600px;padding: 0 10px;width: 100%;margin:0 auto;font-size: 16px;line-height: 1.2;text-align: center;padding-bottom: 60px;font-weight: 300;text-transform: uppercase;
     }
-    .monetization-bottom-text{font-size: 17px;font-weight: 100;padding-top: 115px;padding-bottom: 80px;max-width: 445px;position: relative;
+    .monetization-bottom-text{font-size: 18px;font-weight: 100;padding-top: 115px;padding-bottom: 80px;max-width: 445px;position: relative;
         &:after,&:before{position: absolute;top: 75px;max-width: 300px;width: 100%;left: 50%;transform: translateX(-50%);height: 3px;border-radius: 5px;content: '';background-color: #fff;border-radius: 17%;}
             &:before{top: auto;bottom: 40px;}
         p{color:#fff;}
@@ -593,18 +593,18 @@ a.button-next{padding-left: 0;padding-right: 32px;
     }
     .monetization-bottom{display: flex;flex-direction: column;align-items: center;
         .title{
-            h1, h2, h3, .h1, .h2, .h3{font-size: 34px;color:#fff;}
+            h1, h2, h3, .h1, .h2, .h3{font-size: 30px;color:#fff;}
             &:after{display: none;}
         }
         .monetization-list{padding-top: 40px;text-transform: uppercase;
             ul{list-style-type: none;padding-left: 0px;margin-top: 10px;margin-bottom: 10px;
-                li{font-size: 17px;color: white;font-weight: 300;line-height: 1.5;padding-left: 40px;position: relative;color:#fff;
-                    &:after{position: absolute;height: 6px;width: 6px;border-left: 2px solid #fff;border-bottom: 2px solid #fff;content: '';left: 0;transform: translateY(-50%) rotate(-136deg);top: 13px;}
+                li{font-size: 15px;color: white;font-weight: 300;line-height: 1.5;padding-left: 40px;position: relative;color:#fff;
+                    &:after{position: absolute;height: 6px;width: 6px;border-left: 2px solid #fff;border-bottom: 2px solid #fff;content: '';left: 0;transform: translateY(-50%) rotate(-136deg);top: 12px;}
                 }
             }
         }
         .monetization-button{padding-top: 50px;margin:0 auto;width: 100%;max-width: 430px;display: flex;justify-content: space-between;
-            .button{text-decoration: none;font-size: 16px;line-height: 37px;height: 37px;background-color: #d6c688;max-width: 201px;font-family: 'ProximaNovaScOsf', sans-serif;text-transform: none;text-shadow:0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;
+            .button{text-decoration: none;font-size: 15px;line-height: 37px;height: 37px;background-color: #d6c688;max-width: 201px;font-family: 'ProximaNovaScOsf', sans-serif;text-transform: none;text-shadow:0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;
                 &:hover{background-color: #b5a76e;}
                 &.button-red{background-color: #dea88e;
                     &:hover{background-color: #c49279;}
