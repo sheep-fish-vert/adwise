@@ -119,12 +119,12 @@ input, textarea{
 }
 
 //  example -> @include font-face('PFDinTextPro', 'PFDinTextPro-Bold', 700, italic);
-@include font-face('ProximaNovaScOsf', 'ProximaNovaScOsfThin', 100);
-@include font-face('ProximaNovaScOsf', 'ProximaNovaScOsfLight', 300);
-@include font-face('ProximaNovaScOsf', 'ProximaNovaScOsfRegular', 400);
-@include font-face('ProximaNovaScOsf', 'ProximaNovaScOsfSemibold', 600);
-@include font-face('ProximaNovaScOsf', 'Proxima Nova ScOsf Bold', 700);
-@include font-face('ProximaNovaScOsf', 'Proxima Nova ScOsf Condensed Black', 900);
+@include font-face('ProximaNovaScOsf', 'Mark Simonson - Proxima Nova Thin', 100);
+@include font-face('ProximaNovaScOsf', 'Mark Simonson - Proxima Nova Light', 300);
+@include font-face('ProximaNovaScOsf', 'Mark Simonson - Proxima Nova Regular', 400);
+@include font-face('ProximaNovaScOsf', 'Mark Simonson - Proxima Nova Semibold', 600);
+@include font-face('ProximaNovaScOsf', 'Mark Simonson - Proxima Nova Bold', 700);
+@include font-face('ProximaNovaScOsf', 'Mark Simonson - Proxima Nova Black', 900);
 
 
 @include font-face('ProximaNovaNew', 'Proxima Nova ScOsf Extra Condensed Bold', 700);
@@ -132,8 +132,8 @@ input, textarea{
 @include font-face('ProximaNovaNew', 'Proxima Nova ScOsf Extra Condensed Thin', 100);
 // @include font-face('ProximaNovaNew', 'Proxima Nova ScOsf Extra Condensed Black', 900);
 
-@include font-face('Proxima Nova', 'proximanova-light', 300);
-@include font-face('Proxima Nova', 'ProximaNova-Semibold', 600);
+@include font-face('Proxima Nova', 'Mark Simonson - Proxima Nova Light', 300);
+@include font-face('Proxima Nova', 'Mark Simonson - Proxima Nova Semibold', 600);
 
 @include font-face('RBNo2', 'RBNo2Light', 300);
 @include font-face('Proxima Nova Condenced', 'proximanovacond-light', 300);
