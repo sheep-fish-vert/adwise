@@ -653,18 +653,18 @@
         .ad-formats-text{margin-bottom: 75px;
             .title{padding-bottom: 0;margin-bottom: 30px;
                 &:after{display: none;}
-                h1{font-size: 60px;}
+                h1{font-size: 52px;}
             }
-            p{font-size: 24px;line-height: 1.25;font-weight: 300;}
+            p{font-size: 28px;line-height: 1.25;font-weight: 300;}
         }
 
         .ad-formats-items{
             .item{width: 100%;padding-top: 45px;height: auto;margin-bottom: 90px;
                 &:last-child{margin-bottom: 0;}
                 .item-img{display: block;margin-bottom: 60px;}
-                .item-title{padding-top: 0;font-size: 42px;margin-bottom: 50px;}
+                .item-title{padding-top: 0;font-size: 37px;margin-bottom: 50px;}
                 .item-button{padding-top: 0;padding-bottom: 0;margin-bottom: 75px;
-                    a{width: 250px;height: 43px;border-radius:50px;font-size: 22px;font-weight: 100;background-color: #e0957a;
+                    a{width: 250px;height: 43px;border-radius:50px;font-size: 18px;font-weight: 100;background-color: #e0957a;
                         &:hover{background-color: #c37051;}
                     }
                 }
@@ -679,11 +679,11 @@
                     }
                     &.left{
                         .item-title{
-                            h2{margin:0 0 25px 0;font-size: 42px;}
+                            h2{margin:0 0 25px 0;font-size: 37px;}
                         }
-                        .item-text{font-size: 24px;font-weight: 100;line-height: 1.25;font-family: 'Proxima Nova', sans-serif;margin-bottom: 55px;}
+                        .item-text{font-size: 28px;font-weight: 100;line-height: 1.25;font-family: 'Proxima Nova', sans-serif;margin-bottom: 55px;text-transform: lowercase;}
                         .item-button{padding-top: 0;
-                            a{max-width: 300px;height:55px;font-size: 24px;line-height: 55px;font-weight: 400;}
+                            a{max-width: 300px;height:55px;font-size: 25px;line-height: 55px;font-weight: 400;}
                         }
                     }
                 }
