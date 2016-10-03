@@ -51,7 +51,7 @@ function constructSlides(slides){
             slider.find('.item').remove();
 
             for (var i = 0; i < filteredArray.length; i++) {
-                var oneSlide = '<div class="item"><div class="item-link-wrap"><a href="'+filteredArray[i].href+'" class="item-link"><img src="'+filteredArray[i].img+'" alt="'+filteredArray[i].name+'"><span class="hover"></span></a></div></div>';
+                var oneSlide = '<div class="item"><div class="item-link-wrap"><a href="'+filteredArray[i].href+'" class="item-link"><img src="'+filteredArray[i].img+'" alt="'+filteredArray[i].name+'"><span class="hover-wrap"><span class="hover"></span></span></a></div></div>';
                     slider.append(oneSlide);
             }
 

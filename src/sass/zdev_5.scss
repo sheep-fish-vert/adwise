@@ -212,11 +212,12 @@
             //.slide{  width: 200px;  }
             .item{ background-color: transparent; display: block; width: 200px; margin-bottom: 6px; position: relative;
                 .item-link-wrap{width: calc(100% - 10px);margin:0 auto;perspective: 500px; perspective-origin: 50% 50%;transform-style: preserve-3d;
-                    .item-link{display: block;height: 110px;background-color:#fff;width:100%;position:relative; overflow: hidden;transform-origin: center center;transform-style: preserve-3d;backface-visibility:hidden;transform:translateZ(0px);transition:all 200ms ease;
+                    .item-link{display: block;height: 110px;background-color:#fff;width:100%;position:relative; overflow: visible;transform-origin: center center;/*transform-style: preserve-3d;*/backface-visibility:hidden;transform:translateZ(0px);transition:all 200ms ease;
                         .hover{ position: absolute; left: 0%; top: 0%; width: 1px; height: 1px; box-shadow: 0 0 80px 20px rgba(0,0,0,0.3);opacity: 0; transition: opacity 200ms ease;z-index: -1;}
                         &.hovered{
                             .hover{opacity: 1;}
                         }
+                        .hover-wrap{position: absolute;top:0;left:0; overflow: hidden;height: 100%;width: 100%;}
                         .hover{pointer-events:none;}
                     }
                 }
