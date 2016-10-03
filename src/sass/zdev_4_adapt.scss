@@ -681,7 +681,7 @@
                         .item-title{
                             h2{margin:0 0 25px 0;font-size: 37px;}
                         }
-                        .item-text{font-size: 28px;font-weight: 100;line-height: 1.25;font-family: 'Proxima Nova', sans-serif;margin-bottom: 55px;text-transform: lowercase;}
+                        .item-text{font-size: 28px;font-weight: 100;line-height: 1.25;font-family: 'Proxima Nova', sans-serif;margin-bottom: 55px;}
                         .item-button{padding-top: 0;
                             a{max-width: 300px;height:55px;font-size: 25px;line-height: 55px;font-weight: 400;}
                         }
@@ -699,7 +699,7 @@
 
             &>.title{padding-top: 75px;padding-bottom: 0;margin-bottom: 40px;
                 &:after{display: none;}
-                h1{font-size: 60px;}
+                h1{font-size: 52px;}
             }
 
             .advertising-text{max-width: 520px;padding:0 10px;font-size: 28px;font-weight: 100;margin-bottom: 210px;}
@@ -719,7 +719,7 @@
                         .item-img-wrap{top:-110px;
                             img{max-width: none;}
                         }
-                        .item-img-text{font-size: 42px;left: 60px;bottom:60px;text-transform: uppercase;}
+                        .item-img-text{font-size: 37px;left: 60px;bottom:60px;text-transform: uppercase;}
                     }
                     &.item-1, &.item-2, &.item-3{
                         .item-img{
@@ -731,13 +731,13 @@
                     }
                     .item-text{max-width: 460px;width: 100%;margin-bottom: 65px;display: block;
                         p{margin-bottom: 20px;}
-                        p, a{font-size: 36px;}
+                        p, a{font-size: 30px;}
                     }
                     .item-button{
-                        .button{max-width: 300px;height: 56px;font-size: 24px;line-height: 56px;text-transform: capitalize;font-weight: 300;}
+                        .button{max-width: 300px;height: 56px;font-size: 25px;line-height: 56px;text-transform: capitalize;font-weight: 300;}
                     }
                     ul{
-                        li{font-size: 36px;
+                        li{font-size: 30px;
                             &:after{width: 15px;height: 15px;border-left:5px solid #000;border-bottom:5px solid #000;}
                         }
                     }
@@ -746,7 +746,7 @@
         }
 
         .advertising-bottom{padding-top: 130px;padding-bottom: 150px;
-            .advertising-bottom-text{font-size: 24px;max-width: 500px;}
+            .advertising-bottom-text{font-size: 20px;max-width: 500px;}
             .advertising-big-text{justify-content:flex-start;align-items:center;margin-bottom: 75px;
                 .item{max-width: 500px;
                     .item-wrap{width: 100%;}
@@ -755,15 +755,15 @@
                     }
                     &.item-2{
                         ul{padding-left: 20px;
-                            li{font-size: 28px;
-                                &:after{width: 15px;height: 15px;border-left:5px solid #c1c2c3;border-bottom:5px solid #c1c2c3;top:13px;}
+                            li{font-size: 24px;
+                                &:after{width: 15px;height: 15px;border-left:5px solid #c1c2c3;border-bottom:5px solid #c1c2c3;top:8px;}
                             }
                         }
                     }
                 }
             }
             .advertising-bottom-button{padding-top: 0;padding-bottom: 0;
-                .button{max-width: 300px;height: 56px;font-size: 24px;line-height: 56px;}
+                .button{max-width: 300px;height: 56px;font-size: 25px;line-height: 56px;}
             }
         }
 
