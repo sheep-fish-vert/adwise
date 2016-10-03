@@ -390,7 +390,7 @@
                 &:before{opacity: 1;}
             }
             &:before{ width: 71px; height: 76px; content: ''; display: block; background-image: url(../images/video-hover.png); position: absolute; left: calc(50% - 38px); top:40px; opacity: 0; transition: opacity 300ms;background-repeat: no-repeat;}
-            .title-item{ height: 30px; text-align: center; background-color: rgba(0,0,0,0.5); position: absolute; width: 100%; bottom: 0; left: 0; font: 100 16px/30px 'ProximaNovaScOsf'; color: #fff;
+            .title-item{ height: 30px; text-align: center; background-color: rgba(0,0,0,0.5); position: absolute; width: 100%; bottom: 0; left: 0; font: 100 16px/30px 'ProximaNovaCondensed'; color: #fff;
                 p{ margin: 0;}
             }
         }
