@@ -704,7 +704,7 @@
 
         .services-page{
             .left-column{
-                .column-list-wrap .column-title h1{font-size: 60px;}
+                .column-list-wrap .column-title h1{font-size: 52px;}
                 .column-list-wrap{
                     .column-list{
                         .column-list-main {
@@ -715,14 +715,14 @@
                                         a{color: white;}
                                     }
                                     &:before{background-color: #efc137;width: 100%;}
-                                    a{font-size: 35px;padding:  19px 15px 20px;}
+                                    a{font-size: 31px;padding:  19px 15px 20px;}
                                 }
                             }
                         }
                     }
                 }
             }
-
+            .main-wrap .right-column{max-width: 100%;}
             .right-column{
 
                 .services-websites{padding-top: 20px;
@@ -736,7 +736,7 @@
                                 .slider-item {padding: 5px 10px;
                                     &.slick-current{background-color: transparent;}
                                     .slider-img{width: 48px;padding: 0 10px;}
-                                    .slider-text{font-size: 30px;}
+                                    .slider-text{font-size: 30px;text-transform: uppercase;}
                                 }
                             }
                         }
@@ -745,9 +745,9 @@
                     .right{
                         .right-wrap{
                             .white-block{box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);margin: 0px -15px 55px;padding: 25px 0 35px 0;
-                                .img-wrap{max-width: 100%;flex-wrap: nowrap;align-items: flex-end;justify-content: center;padding: 0 30px;
-                                    .img-item{margin-bottom: 15px;width: auto;
-                                        .img-item-text{font-size: 17px;font-weight: 700;font-family: "ProximaNovaNew";}
+                                .img-wrap{max-width: 100%;flex-wrap: nowrap;align-items: flex-end;justify-content: center;padding: 0 12px;
+                                    .img-item{margin-bottom: 15px;width: auto;padding: 0 3px;
+                                        .img-item-text{font-size: 20px;font-weight: 700;font-family: "ProximaNovaNew";}
                                         .img-item-wrap{
                                             img{max-height: 55px;width: 100%;max-width: 95px;}
                                         }
@@ -755,13 +755,13 @@
                                 }
                                 .value-wrap .value-main .value-item .value-item-text{font-size: 23px;}
                             }
-                            .services-websites-count{display: flex;justify-content: flex-start;padding-left: 34px;
+                            .services-websites-count{display: flex;justify-content: flex-start;padding-left: 34px;padding-bottom: 15px;
                                 .service-websites-num{font-size: 88px;}
-                                .services-websites-text{font-size: 28px;}
+                                .services-websites-text{font-size: 30px;}
                             }
-                            .right-text{text-align: left;font-size: 24px;}
+                            .right-text{text-align: left;font-size: 28px;}
                             .right-button{text-align: left;
-                                .button.button-cofee{max-width: 300px;height: 55px;font-size: 24px;line-height: 52px;}
+                                .button.button-cofee{max-width: 300px;height: 55px;font-size: 25px;line-height: 52px;}
                             }
                         }
                     }
@@ -780,18 +780,23 @@
                 //3th tab
                 .creatives-wrap .web-mobile{
                     .wrap-info{
+                        p{font-size: 28px;text-transform: uppercase;}
                         &.align-top{align-items: flex-start;}
                         &:first-child{max-width: 400px;}
                         .text-wrap ul{align-items: flex-start;
-                            li{max-width: 100%;}
+                            li{max-width: 100%;
+                                &:before{top: 8px;}
+                            }
                         }
-                        .wrap-text-icon img {max-width: 100%;}
+                        .wrap-text-icon{margin-bottom: 40px;
+                            img {max-width: 100%;}
+                        }
                     }
                     .text-wrap{text-align: left;font-size: 28px;
 
                         h4{font-size: 36px;}
                         .button-wrap{
-                            .button{max-width: 300px;height: 55px;font-size: 24px;line-height: 52px;}
+                            .button{max-width: 300px;height: 55px;font-size: 25px;line-height: 55px;}
                         }
 
                     }
@@ -813,12 +818,12 @@
                     .services-geos-bottom{flex-direction:column;align-items: center;justify-content: flex-start;padding: 0;align-items: flex-start;
                         .left{
                             .num{font-size: 77px;}
-                            .text{font-size: 36px;}
+                            .text{font-size: 30px;}
                         }
                         .right{padding-left: 0;
-                            .text{font-size: 24px;padding-top: 20px;margin-bottom: 70px;}
+                            .text{font-size: 28px;padding-top: 20px;margin-bottom: 70px;}
                             .button-wrap{padding-left: 0;
-                                .button{max-width: 300px;height: 55px;font-size: 24px;line-height: 52px;}
+                                .button{max-width: 300px;height: 55px;font-size: 25px;line-height: 54px;}
                             }
                         }
                     }
@@ -830,7 +835,7 @@
                         &:first-child{
                             .text-wrap{text-align: center;width: 100%;margin:0 auto;}
                         }
-                        .text-wrap{width: 70%;font-size: 27px;text-align: left;}
+                        .text-wrap{width: 70%;font-size: 28px;text-align: left;}
                         h3{font-size: 36px;}
                         .wrap-text-icon{width: 40%;
                             img{max-width: 100%;max-height: 110px;}
@@ -1379,6 +1384,7 @@
                 }
                 //3th tab
                 .creatives-wrap .tab-item.web-mobile{padding-bottom: 75px;
+                    .wrap-info p{font-size: 18px;}
                     .text-wrap{
                         h4{font-size: 25px;}
                         .button-wrap{
