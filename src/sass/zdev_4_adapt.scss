@@ -507,12 +507,12 @@
             &:after{display: none;}
         }
 
-        .sub-title{font-size: 28px;max-width: 500px;text-transform: lowercase;}
+        .sub-title{font-size: 28px;max-width: 500px;}
 
         .market-top-text{margin:0 auto;
             .item{
                 &.left{margin-bottom: 65px;}
-                &.right{font-size: 28px;padding-top: 0;max-width: 500px;padding-left: 0;padding-right: 0;margin:0 auto;text-transform: lowercase;}
+                &.right{font-size: 28px;padding-top: 0;max-width: 500px;padding-left: 0;padding-right: 0;margin:0 auto;}
             }
         }
 
@@ -535,7 +535,7 @@
                     .item-title{max-width: 450px;width: 100%;margin:0 0 40px 0;
                         h2{font-size: 44px;}
                     }
-                    .item-text{font-size: 28px;text-transform: lowercase;}
+                    .item-text{font-size: 28px;}
                 }
                 .middle-items{position: relative;padding-bottom: 135px;padding-top: 135px;
                     &:before{content:'';display: block;position: absolute;top:0;left:-20px;z-index:0;width: calc(100% + 40px);height: 100%;background-image: url(../images/market-middle-bg.png);background-size:auto 100%;background-position: top center;}
@@ -624,7 +624,7 @@
         .contact-text{
             .title{margin-bottom: 40px;padding-bottom: 0;
                 &:after{display: none;}
-                h1{font-size: 60px;}
+                h1{font-size: 52px;}
             }
             p{font-weight: 100;font-size: 28px;line-height: 1.5;max-width: none;}
         }
@@ -641,7 +641,7 @@
             .errorText{position: relative;left: auto;top: auto;transform: translateY(0px);}
 
             &.submit{padding-top: 97px;
-                button{width: 300px;height: 67px;font-size: 27px;}
+                button{width: 300px;height: 67px;font-size: 25px;}
             }
 
         }
@@ -777,7 +777,7 @@
                 &.reverse{
                     .column-list-wrap{
                         .column-title{border:none;padding-bottom: 0;margin-bottom: 65px;
-                            h1{font-size: 60px;}
+                            h1{font-size: 52px;}
                         }
                     }
                 }
@@ -793,7 +793,7 @@
                             &.active{
                                 &:after{background-color: #fff;}
                             }
-                            a{font-size: 30px;height: auto;justify-content: center;}
+                            a{font-size: 25px;height: auto;justify-content: center;}
                         }
                     }
                 }

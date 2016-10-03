@@ -845,6 +845,7 @@
     /* event-page */
 
         .event-page{
+            .event-page-title{font-size: 30px;}
             .event-page-main{
                 .event-page-slider-main{padding:90px 50px 0 50px;
                     .event-page-slider-wrap{max-width: 500px;width: 100%;margin:0 auto;
@@ -899,11 +900,11 @@
                         .form_row{margin-bottom: 35px;
                             &.form_submit{padding-top: 40px;
                                 button{max-width: 300px;height: 60px;
-                                    span{font-size: 24px;font-weight: 400;}
+                                    span{font-size: 25px;font-weight: 400;}
                                 }
                             }
                         }
-                        .event-page-title{font-size: 36px;margin-bottom: 45px;}
+                        .event-page-title{font-size: 30px;margin-bottom: 45px;}
                         input, textarea{font-size: 24px;font-family: 'RobotoCondensed', sans-serif;font-weight: 300;
                             &::-webkit-input-placeholder {font-family:'RobotoCondensed', sans-serif;font-weight: 300;}
                             &:-moz-placeholder {font-family:'RobotoCondensed', sans-serif;font-weight: 300;opacity:1;}
@@ -1197,6 +1198,7 @@
     /* event-page */
 
         .event-page{
+            .event-page-title{font-size: 24px;}
             .event-page-main{
 
                 .event-page-slider-main{
