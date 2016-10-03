@@ -503,21 +503,21 @@
     .asian-market-page{
 
         .title{padding-bottom:15px;
-            h1{font-size: 60px;}
+            h1{font-size: 52px;}
             &:after{display: none;}
         }
 
-        .sub-title{font-size: 28px;max-width: 500px;}
+        .sub-title{font-size: 28px;max-width: 500px;text-transform: lowercase;}
 
         .market-top-text{margin:0 auto;
             .item{
                 &.left{margin-bottom: 65px;}
-                &.right{font-size: 28px;padding-top: 0;max-width: 500px;padding-left: 0;padding-right: 0;margin:0 auto;}
+                &.right{font-size: 28px;padding-top: 0;max-width: 500px;padding-left: 0;padding-right: 0;margin:0 auto;text-transform: lowercase;}
             }
         }
 
         .button{
-            &.button-yellow{max-width: 300px;height: 65px;font-size: 24px;line-height: 65px;}
+            &.button-yellow{max-width: 300px;height: 65px;font-size: 25px;line-height: 65px;text-transform: uppercase;}
         }
 
         .market-top-text{
@@ -533,9 +533,9 @@
             .market-middle-text{
                 .middle-text{text-align: left;max-width: 500px;width: 100%;margin:0 auto 105px auto;padding-top: 0;color:#000;
                     .item-title{max-width: 450px;width: 100%;margin:0 0 40px 0;
-                        h2{font-size: 50px;}
+                        h2{font-size: 44px;}
                     }
-                    .item-text{font-size: 28px;}
+                    .item-text{font-size: 28px;text-transform: lowercase;}
                 }
                 .middle-items{position: relative;padding-bottom: 135px;padding-top: 135px;
                     &:before{content:'';display: block;position: absolute;top:0;left:-20px;z-index:0;width: calc(100% + 40px);height: 100%;background-image: url(../images/market-middle-bg.png);background-size:auto 100%;background-position: top center;}
@@ -543,8 +543,8 @@
                         .item-wrap{background-size: 240px;height: 190px;
                             .item-big-number{font-size: 75px;top:45px;left:-47px;}
                             .item-title{right:15px;top:42px;
-                                p{font-size: 56px;text-transform: none;letter-spacing:-2.5px;}
-                                span{font-size: 22px;text-transform: none;}
+                                p{font-size: 49px;text-transform: none;letter-spacing:-2.5px;}
+                                span{font-size: 19px;text-transform: none;}
                             }
                         }
                         .item-text{font-size: 36px;text-align: left;}
@@ -559,16 +559,16 @@
                 &:before{display: none;}
                 .middle-text{max-width: none;}
                 .item-title{margin-bottom: 90px;
-                    h2{font-size: 50px;}
+                    h2{font-size: 42px;}
                 }
                 .items-list{margin-bottom: 0;
                     .item-center{line-height: 1.25;
-                        b{font-size: 28px;}
+                        b{font-size: 24px;}
                     }
 
                     .item-list{margin-bottom: 0;
                         ul{list-style-type:none;
-                            li{text-align: center;font-size: 28px;}
+                            li{text-align: center;font-size: 24px;}
                         }
                     }
 
@@ -582,10 +582,10 @@
                     }
                     .item-text{margin-bottom:70px;
                         p{font-size: 24px;line-height: 1.25;margin-bottom: 25px;}
-                        b{font-size: 30px;}
+                        b{font-size: 26px;}
                     }
                     .item-button{padding-top: 0;
-                        .button{max-width: 300px;height: 57px;font-size: 24px;line-height: 57px;}
+                        .button{max-width: 300px;height: 57px;font-size: 25px;line-height: 57px;}
                     }
                 }
             }
