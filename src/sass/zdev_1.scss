@@ -56,14 +56,14 @@
         }
         .column-list-wrap{padding-top: 139px;width: 210px;
             .column-title{border-width: 0;min-height: 85px;
-                h1, h2{font-size: 40px;}
+                h1, h2{font-size: 38px;}
             }
             .column-list{padding-top: 29px;
                 .column-list-title{font-weight: 600;font-size: 24px;padding-left: 0;}
                 .column-list-main{
                     ul{margin-left: 0px;
                         li{margin-bottom: 0;
-                            a{font-weight: 600;padding-left: 18px;line-height: 1;padding:14px 5px 17px 18px;text-transform: uppercase;
+                            a{font-weight: 600;padding-left: 18px;line-height: 1;padding:14px 5px 17px 18px;text-transform: uppercase;font-size: 21px;
                                 &:before{transition:all 300ms ease;border-radius: 0;}
                                 &.active{
                                     &:before{background-color: rgba(255, 255, 255, .5);}
@@ -161,7 +161,7 @@
                         }
                     }
                     .info-list-item-button{
-                        .button{display: flex;font-size: 16px;width:100%;height:38px;background-color: #fcc939;justify-content: center;align-items: center;color:#fff;text-decoration: none;font-family:'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;transition:all 300ms ease;
+                        .button{display: flex;font-size: 15px;width:100%;height:38px;background-color: #fcc939;justify-content: center;align-items: center;color:#fff;text-decoration: none;font-family:'ProximaNovaScOsf', sans-serif;font-weight: 400;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;transition:all 300ms ease;
                             &:hover{background-color: #daa100;}
                         }
                     }
