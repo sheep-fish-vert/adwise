@@ -366,7 +366,7 @@
     .item{ background-color: transparent; display: block; width: 320px; margin-bottom: 46px; position: relative;
         .item-link-wrap{width:calc(100% - 20px); margin:0 auto;perspective: 500px; perspective-origin: 50% 50%;transform-style: preserve-3d;
             .item-link{display: block;height: 154px;background-color:#fff;width:100%;position:relative; overflow: hidden;transform-origin: center center;transform-style: preserve-3d;transition:all 200ms ease;
-                .hover{ position: absolute; left: 0; top: 0; width: 1px; height: 1px; box-shadow: 0 0 80px 20px rgba(255,255,255,0.4);opacity: 0; transition: opacity 200ms ease;}
+                .hover{ position: absolute; left: 0; top: 0; width: 1px; height: 1px; box-shadow: 0 0 80px 20px rgba(0, 0, 0, 0.3);opacity: 0; transition: opacity 200ms ease;}
                 &.hovered{
                     .hover{opacity: 1;}
                 }
