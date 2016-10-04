@@ -570,12 +570,12 @@
                 }
                 .items-list{margin-bottom: 0;
                     .item-center{line-height: 1.25;
-                        b{font-size: 24px;}
+                        b{font-size: 28px;}
                     }
 
                     .item-list{margin-bottom: 0;
                         ul{list-style-type:none;
-                            li{text-align: center;font-size: 24px;}
+                            li{text-align: center;font-size: 28px;}
                         }
                     }
 
@@ -588,8 +588,8 @@
                         &:after{height: 6px;}
                     }
                     .item-text{margin-bottom:70px;
-                        p{font-size: 24px;line-height: 1.25;margin-bottom: 25px;}
-                        b{font-size: 26px;}
+                        p{font-size: 28px;line-height: 1.25;margin-bottom: 25px;}
+                        b{font-size: 28px;}
                     }
                     .item-button{padding-top: 0;
                         .button{max-width: 340px;height: 60px;font-size: 25px;line-height: 59px;}
@@ -648,7 +648,7 @@
             .errorText{position: relative;left: auto;top: auto;transform: translateY(0px);}
 
             &.submit{padding-top: 97px;
-                button{width: 340px;height: 65px;font-size: 25px;}
+                button{width: 340px;height: 60px;font-size: 25px;}
             }
 
         }
@@ -948,7 +948,7 @@
         .market-middle-text-wrapper{
             .market-middle-text{
                 .middle-text{
-                    .item-text{font-size: 16px;}
+                    .item-text{font-size: 18px;}
                 }
             }
         }
@@ -993,11 +993,11 @@
                 .item-title{margin-bottom: 30px;}
                 .items-list{margin-bottom: 0;
                     .item-center{
-                        b{font-size: 20px;}
+                        b{font-size: 18px;}
                     }
                     .item-list{
                         ul{
-                            li{font-size: 20px;}
+                            li{font-size: 18px;}
                         }
                     }
                 }
@@ -1010,7 +1010,7 @@
                     }
                     .item-text{margin-bottom: 40px;
                         p{font-size: 18px;}
-                        b{font-size: 20px;}
+                        b{font-size: 18px;}
                     }
                     .item-button{
                         .button{max-width: 200px;height: 37px;line-height: 37px;font-size: 17px;}
