@@ -52,6 +52,10 @@
 
     }
 
+    // fancybox
+    .fancybox-prev{left: -8%;}
+    .fancybox-next{right: -8%;}
+
 }
 @media screen and (min-width: 1200px) and (max-width: 1450px) {
     // advertising
@@ -84,6 +88,10 @@
             .slick-next{right: calc(50% - 50px)}
         }
     }
+
+    // fancybox
+    .fancybox-prev{left: -1%;}
+    .fancybox-next{right: -1%;}
 }
 @media screen and (min-width: 993px) and (max-width: 1280px){
     // creatives
@@ -92,6 +100,7 @@
             .item .item-img .item-img-wrap{height: 140px;width: 140px;}
         }
     }
+
 }
 @media screen and (max-width: 1024px){
     // new page
@@ -150,9 +159,7 @@
 
 }
 @media screen and (max-width: 992px){
-    // fancybox
-    .fancybox-prev{left: -15%;}
-    .fancybox-next{right: -15%;}
+
 
     // new page
     .news-page{
