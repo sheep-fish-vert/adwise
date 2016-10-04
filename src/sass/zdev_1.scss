@@ -992,8 +992,8 @@
 
                 &.second-slider{display: none;}
                 @supports(-webkit-background-clip: text){
-                    &.second-slider{display: block;left:21%;top:8%;clip-path:url(#eagle);overflow: hidden;min-width: 570px;transform:scale(0.975);
-                        img{z-index: 1;position: absolute;left:-21.1%;top:-8.5%;}
+                    &.second-slider{display: block;left:20.9%;top:13.3%;clip-path:url(#eagle);overflow: hidden;min-width: 570px;
+                        img{z-index: 1;position: absolute;left:-20.9%;top:-13.3%;}
                     }
                 }
             }
@@ -1010,14 +1010,14 @@
         }
 
         .video-block-info{position: relative;z-index: 4;text-align: right;
-            .video-block-info-wrap{display: flex;justify-content: flex-end;align-items: flex-start;min-height: calc(100vh - 60px);position: relative;padding-top: 85px;
+            .video-block-info-wrap{display: flex;justify-content: flex-end;align-items: flex-start;min-height: calc(100vh - 60px);position: relative;padding-top: 13.7%;
                 .video-owl-wrap{position: absolute;left:30px;top:65px;
                     .video-owl{z-index: 1;fill:rgba(203, 86, 0, .65);}
                 }
-                .video-block-info-main{width: calc(100% - 465px);
-                    .video-block-title{margin:0 0 70px 0;font-size: 50px;font-weight: 700;color:#202020;text-transform: uppercase;}
-                    .video-block-text{font-size: 14px;color:#202020;line-height: 1.75;margin-bottom: 75px;text-transform: uppercase;}
-                    .video-block-buttons{display: flex;justify-content: space-between;align-items: center;
+                .video-block-info-main{width: calc(100% - 410px);position: relative;right: 7.2%;display: flex;align-items: flex-end;flex-direction: column;
+                    .video-block-title{margin:0 0 40px 0;font-size: 50px;font-weight: 700;color:#202020;text-transform: uppercase;line-height: 1.2;}
+                    .video-block-text{font-size: 14px;color:#202020;line-height: 1.75;margin-bottom: 72px;text-transform: uppercase;max-width: 450px;width: 100%;}
+                    .video-block-buttons{display: flex;justify-content: space-between;align-items: center;width: 100%;
                         .button{font-size: 15px;width: calc(50% - 10px);max-width: none;text-shadow:0 3px 7px rgba(0,0,0, .35);font-family:'ProximaNovaScOsf', sans-serif;font-weight: 400;text-transform: uppercase;}
                     }
                 }
