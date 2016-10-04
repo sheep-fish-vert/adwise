@@ -1,23 +1,17 @@
 // fancy standart skin
-.fancybox-prev span,.fancybox-next span{background-image:none;background-position: 50% 50%;visibility: visible;right: 18px;
-    &:after{width: 25px;height: 25px;background-color: transparent;border-top: 4px solid #fff;border-right: 4px solid #fff;transform: rotate(45deg);position: absolute;content: '';right: 6px;top: 4px;z-index: 2;}
-}
-.fancybox-prev span:after{transform: rotate(225deg);}
-.fancybox-prev span:before{top: -3.5px;right: 2px;}
-.fancybox-prev span{left: 18px;}
-
+.fancybox-prev span,.fancybox-next span{display: none;}
 .fancybox-nav{height: 65px;width: 65px;background-color: rgba(255,255,255,.5);border-radius: 50%;top: calc(50% - 32px)}
-.fancybox-prev{left: -45%;}
-.fancybox-next{right: -45%;}
+.fancybox-prev{left: -45%;background-image: url(../images/arrow_mid_left_circle.svg);}
+.fancybox-next{right: -45%;background-image: url(../images/arrow_mid_right_circle.svg);}
 .fancy-gallery{
-    .fancybox-prev{left: -35px; background-color: #fff;}
-    .fancybox-next{right: -35px; background-color: #fff;}
-    .fancybox-prev span,.fancybox-next span {
-        &:after { border-top: 4px solid #000;border-right: 4px solid #000;}
-    }
+    // .fancybox-prev{left: -35px; background-color: #fff;}
+    // .fancybox-next{right: -35px; background-color: #fff;}
+    // .fancybox-prev span,.fancybox-next span {
+    //     &:after { border-top: 4px solid #000;border-right: 4px solid #000;}
+    // }
 }
-.fancybox-close{background-image: none;top: -50px;right: 0;background-color: rgba(255, 255, 255, 0.50);
-    &:after,&:before{width: 30px;height: 4px;background-color: #fff;transform: rotate(45deg);position: absolute;content: '';top: 16px;left: 4px;}
+.fancybox-close{background-image: none;top: -50px;right: 0;background-color: rgba(255, 255, 255, 0.9);
+    &:after,&:before{width: 30px;height: 4px;background-color: #000;transform: rotate(45deg);position: absolute;content: '';top: 16px;left: 4px;}
     &:before{transform: rotate(-45deg);}
 }
 
