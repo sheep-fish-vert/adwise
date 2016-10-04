@@ -463,7 +463,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
                     &:hover,&.active{
                         &:after{opacity: 1;visibility: visible;}
                     }
-                    a{display: flex;padding-left: 0;height: 55px;width: 100%;align-items: center;color: #676767;font-size: 20px;font-weight: 300;position: relative;z-index: 2;text-transform: uppercase;
+                    a{display: flex;padding-left: 0;height: 55px;width: 100%;align-items: center;color: #676767;font-size: 18px;font-weight: 300;position: relative;z-index: 2;text-transform: uppercase;
                         &:hover{text-shadow:none;color: inherit;}
                     }
                 }
@@ -678,7 +678,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 .fancy-login{}
 #login{background:#fff url('../images/login-popup-bg.jpg') center center no-repeat;background-size: cover;width: 900px;height: 500px;
     .login-wrap{padding-top: 57px;padding-left: 20px;padding-right: 20px;padding-bottom: 20px;}
-    .login-buttons{display: flex;align-items: center;justify-content: center;padding-bottom: 55px;
+    .login-buttons{display: flex;align-items: center;justify-content: center;padding-bottom: 64px;text-transform: uppercase;
         a{font-size: 33px;font-weight: 600;color: #000;text-decoration: none;margin:0 55px;
             span{position: relative;
                 &:after{height: 3px;width: 100%;background-color: #000;bottom:-10px;content: '';position: absolute;left: 0;transition:all ease .2s;opacity: 0;}
@@ -695,8 +695,8 @@ a.button-next{padding-left: 0;padding-right: 32px;
     }
 
     .item-form{
-        .item-form-title{font-size: 27px;color: #000;font-weight: 300;margin-bottom: 30px;}
-        input{height: 45px;border:none;background-color: transparent;border-bottom: 1px solid #000;text-align: center;display: flex;align-items: center;justify-content: center;width: 100%;max-width: 360px;margin:0 auto 10px;
+        .item-form-title{color: #000;font-weight: 300;font-size: 15px;text-transform: uppercase;max-width: 350px;margin:0 auto 27px auto;line-height: 1.25;}
+        input{height: 45px;border:none;background-color: transparent;border-bottom: 1px solid #000;text-align: center;display: flex;align-items: center;justify-content: center;width: 100%;max-width: 360px;margin:0 auto 6px;
             &::-webkit-input-placeholder {color:#939393;}
             &:-moz-placeholder {color:#939393;opacity:1;}
             &::-moz-placeholder {color:#939393;opacity:1;}
@@ -715,9 +715,10 @@ a.button-next{padding-left: 0;padding-right: 32px;
                 &:-ms-input-placeholder {color:#ff7878;}
             }
         }
-        .contact-form-row.submit{padding-top: 55px;}
+        .contact-form-row.submit{padding-top: 52px;}
         .errorText{display: none !important;}
     }
+    .button-round{text-transform: uppercase;}
 }
 
 // button-round
