@@ -524,7 +524,7 @@
         }
 
         .button{
-            &.button-yellow{max-width: 300px;height: 65px;font-size: 25px;line-height: 65px;text-transform: uppercase;}
+            &.button-yellow{max-width: 340px;height: 60px;font-size: 25px;line-height: 59px;text-transform: uppercase;}
         }
 
         .market-top-text{
@@ -550,8 +550,8 @@
                         .item-wrap{background-size: 240px;height: 190px;
                             .item-big-number{font-size: 75px;top:45px;left:-47px;}
                             .item-title{right:15px;top:42px;
-                                p{font-size: 49px;text-transform: none;letter-spacing:-2.5px;}
-                                span{font-size: 19px;text-transform: none;}
+                                p{font-size: 49px;letter-spacing:-2.5px;}
+                                span{font-size: 19px;}
                             }
                         }
                         .item-text{font-size: 36px;text-align: left;}
@@ -592,7 +592,7 @@
                         b{font-size: 26px;}
                     }
                     .item-button{padding-top: 0;
-                        .button{max-width: 300px;height: 57px;font-size: 25px;line-height: 57px;}
+                        .button{max-width: 340px;height: 60px;font-size: 25px;line-height: 59px;}
                     }
                 }
             }
@@ -633,7 +633,7 @@
                 &:after{display: none;}
                 h1{font-size: 52px;}
             }
-            p{font-weight: 100;font-size: 28px;line-height: 1.5;max-width: none;}
+            p{font-weight: 300;font-size: 28px;line-height: 1.5;max-width: none;}
         }
         .contact-form-row{margin-bottom: 25px;
             &:last-child{margin-bottom: 0;}
@@ -648,7 +648,7 @@
             .errorText{position: relative;left: auto;top: auto;transform: translateY(0px);}
 
             &.submit{padding-top: 97px;
-                button{width: 300px;height: 67px;font-size: 25px;}
+                button{width: 340px;height: 65px;font-size: 25px;}
             }
 
         }
@@ -688,9 +688,9 @@
                         .item-title{
                             h2{margin:0 0 25px 0;font-size: 37px;}
                         }
-                        .item-text{font-size: 28px;font-weight: 100;line-height: 1.25;font-family: 'Proxima Nova', sans-serif;margin-bottom: 55px;}
+                        .item-text{font-size: 28px;line-height: 1.25;font-family: 'Proxima Nova', sans-serif;margin-bottom: 55px;}
                         .item-button{padding-top: 0;
-                            a{max-width: 300px;height:55px;font-size: 25px;line-height: 55px;font-weight: 400;}
+                            a{max-width: 340px;height:60px;font-size: 25px;line-height: 59px;font-weight: 400;}
                         }
                     }
                 }
@@ -964,7 +964,7 @@
         }
 
         .button{
-            &.button-yellow{max-width: 200px;height: 37px;line-height: 37px;font-size: 18px;}
+            &.button-yellow{max-width: 200px;height: 37px;line-height: 37px;font-size: 17px;}
         }
 
         .market-middle-text-wrapper{padding-top: 50px;
@@ -1013,7 +1013,7 @@
                         b{font-size: 20px;}
                     }
                     .item-button{
-                        .button{max-width: 200px;height: 37px;line-height: 37px;font-size: 18px;}
+                        .button{max-width: 200px;height: 37px;line-height: 37px;font-size: 17px;}
                     }
                 }
             }
@@ -1057,7 +1057,7 @@
                         }
                         .item-text{font-size: 18px;margin-bottom: 35px;}
                         .item-button{
-                            a{max-width: 200px;height: 37px;line-height: 38px;font-size: 15px;}
+                            a{max-width: 200px;height: 37px;line-height: 38px;font-size: 17px;}
                         }
                     }
                 }
@@ -1094,7 +1094,7 @@
                 input{font-size: 18px;}
             }
             &.submit{padding-top: 40px;
-                button{width: 200px;height: 37px;font-size: 16px;}
+                button{width: 200px;height: 37px;font-size: 17px;}
             }
         }
     }
