@@ -143,7 +143,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
         &>.title{padding-top: 0px;padding-bottom: 30px;margin-bottom: 35px;position: relative;
             &:after{content: '';position: absolute;bottom: 0px;left: 50%;background-color: #000;height: 3px;max-width: 300px;width: 100%;transform: translateX(-50%);}
         }
-        .advertising-text{max-width: 600px;padding: 0 10px;width: 100%;margin: 0 auto;font-size: 18px;line-height: 1.2;text-align: center;padding-bottom: 60px;font-weight: 300;text-transform: uppercase;
+        .advertising-text{max-width: 600px;padding: 0 10px;width: 100%;margin: 0 auto;font-size: 18px;line-height: 1.2;text-align: center;padding-bottom: 60px;font-weight: 300;
             p{color:#000;margin:0;}
         }
     }
@@ -211,7 +211,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
         .advertising-big-text{max-width: 760px;width: 100%;margin:0 auto;padding: 0 10px;display: flex;justify-content: center;
             .item{display: flex;align-items: center;justify-content: center;
                 &.item-1{width: 43%;
-                    b{font-family: 'ProximaNovaScOsf';font-weight: 900;font-size: 85px;line-height: 0.9;}
+                    b{font-family: 'ProximaNovaScOsf';font-weight: 900;font-size: 80px;line-height: 0.9;}
                 }
                 &.item-2{width: 57%;
                     ul{margin:0;padding: 0;list-style-type: none;
@@ -310,13 +310,14 @@ a.button-next{padding-left: 0;padding-right: 32px;
         &:after{height: 3px;padding: 0 10px;max-width: 560px;width: 100%;position: absolute;bottom: 0px;left: 50%;transform: translateX(-50%);content: '';background-color: #000;}
     }
     .title h1, .title h2, .title h3, .title .h1, .title .h2, .title .h3{color: #000;}
-    .sub-title{max-width: 570px;margin:0 auto;width: 100%;font-size: 18px;color: #000000;font-weight: 100;font-family: 'ProximaNovaScOsf';line-height: 1.2;text-align: center;margin-bottom: 70px;text-transform: uppercase;}
+    .sub-title{max-width: 570px;margin:0 auto;width: 100%;font-size: 18px;color: #000000;font-weight: 100;font-family: 'ProximaNovaScOsf';line-height: 1.2;text-align: center;margin-bottom: 70px;}
 
     .market-top-text{display: flex;justify-content: space-between;max-width: 740px;width: 100%;margin:0 auto 70px;
         .item{
             &.left{width: 45%;}
-            &.right{width: 55%;padding-left: 9%;padding-top: 40px;font-size: 18px;color: #000000;font-weight: 100;font-family: 'ProximaNovaScOsf';line-height: 1.2;text-transform: uppercase;
+            &.right{width: 55%;padding-left: 9%;padding-top: 40px;font-size: 18px;color: #000000;font-weight: 100;font-family: 'ProximaNovaScOsf';line-height: 1.2;
                 p{margin-bottom: 30px;}
+                .button{text-transform: uppercase;}
             }
         }
     }
@@ -329,7 +330,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
                 .item-title{
                     h2{margin:0;font-size: 36px;font-family: 'ProximaNovaScOsf';font-weight: 600;text-transform: uppercase;}
                 }
-                .item-text{font-size: 18px;font-weight: 100;font-family: 'ProximaNovaScOsf';line-height: 1.2;max-width: 680px;padding-top: 35px;text-transform: uppercase;}
+                .item-text{font-size: 18px;font-weight: 100;font-family: 'ProximaNovaScOsf';line-height: 1.2;max-width: 680px;padding-top: 35px;}
             }
             .middle-items{display: flex;flex-wrap: wrap;justify-content: space-between;padding-top: 120px;
                 .item{
@@ -561,9 +562,9 @@ a.button-next{padding-left: 0;padding-right: 32px;
             &:after{position: absolute;content: '';background-color: #000;height: 3px;max-width: 300px;width: 100%;bottom: 0px;left: 50%;transform: translateX(-50%);}
         }
     }
-    .monetization-text,.monetization-bottom-text{max-width: 600px;padding: 0 10px;width: 100%;margin:0 auto;font-size: 16px;line-height: 1.2;text-align: center;padding-bottom: 60px;font-weight: 300;text-transform: uppercase;
+    .monetization-text,.monetization-bottom-text{max-width: 600px;padding: 0 10px;width: 100%;margin:0 auto;font-size: 18px;line-height: 1.2;text-align: center;padding-bottom: 60px;font-weight: 300;
     }
-    .monetization-bottom-text{font-size: 18px;font-weight: 100;padding-top: 115px;padding-bottom: 80px;max-width: 445px;position: relative;
+    .monetization-bottom-text{font-size: 18px;padding-top: 115px;padding-bottom: 80px;max-width: 445px;position: relative;margin-bottom: 50px;
         &:after,&:before{position: absolute;top: 75px;max-width: 300px;width: 100%;left: 50%;transform: translateX(-50%);height: 3px;border-radius: 5px;content: '';background-color: #fff;border-radius: 17%;}
             &:before{top: auto;bottom: 40px;}
         p{color:#fff;}
@@ -586,11 +587,11 @@ a.button-next{padding-left: 0;padding-right: 32px;
         }
     }
     .monetization-bottom{display: flex;flex-direction: column;align-items: center;
-        .title{
+        .title{margin-bottom: 0;
             h1, h2, h3, .h1, .h2, .h3{font-size: 30px;color:#fff;}
             &:after{display: none;}
         }
-        .monetization-list{padding-top: 40px;text-transform: uppercase;
+        .monetization-list{padding-top: 0px;text-transform: uppercase;
             ul{list-style-type: none;padding-left: 0px;margin-top: 10px;margin-bottom: 10px;
                 li{font-size: 15px;color: white;font-weight: 300;line-height: 1.5;padding-left: 40px;position: relative;color:#fff;
                     &:after{position: absolute;height: 6px;width: 6px;border-left: 2px solid #fff;border-bottom: 2px solid #fff;content: '';left: 0;transform: translateY(-50%) rotate(-136deg);top: 12px;}

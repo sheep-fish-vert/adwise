@@ -35,6 +35,25 @@
 @media screen and (max-width: 1920px){
 
 }
+@media screen and (max-width:1700px){
+
+    /* video-block new */
+
+        .video-block{
+            .slider-background{
+                .slider-class{
+                    @supports(-webkit-background-clip: text){
+                        &.second-slider{left:8.9%;
+                            img{left:-8.9%;}
+                        }
+                    }
+                }
+            }
+        }
+
+    /* /video-block new */
+
+}
 @media screen and (max-width: 1600px){
 
 }
@@ -45,8 +64,10 @@
         .video-block{
             .slider-background{
                 .slider-class{
-                    &.second-slider{left:15%;
-                        img{left:-15%;}
+                    @supports(-webkit-background-clip: text){
+                        &.second-slider{left:2%;
+                            img{left:-2%;}
+                        }
                     }
                 }
             }
@@ -125,11 +146,9 @@
     /* video-block new */
 
         .video-block{
-            .slider-background{
-                .slider-class{
-                    &.second-slider{left:5%;
-                        img{left:-5%;}
-                    }
+            .video-block-info{
+                .video-block-info-wrap{
+                    .video-block-info-main{width: calc(100% - 450px);}
                 }
             }
         }
@@ -389,9 +408,11 @@
 
             .slider-background{
                 .slider-class{
-                    &.second-slider{transform:scale(.5);left:10%;top:-23%;
-                        .slider-item{transform:scale(2);
-                            img{left:-10%;top:23%;}
+                    @supports(-webkit-background-clip: text){
+                        &.second-slider{transform:scale(.5);left:10%;top:-23%;
+                            .slider-item{transform:scale(2);
+                                img{left:-10%;top:23%;}
+                            }
                         }
                     }
                 }
@@ -399,11 +420,11 @@
 
             .video-block-info{
                 .video-block-info-wrap{padding-top: 0;align-items: center;
-                    .video-block-info-main{width: 100%;
+                    .video-block-info-main{width: 100%;right: 0;align-items: center;
                         .video-block-title{text-align: center;
                             br{display: none;}
                         }
-                        .video-block-text{text-align: center;}
+                        .video-block-text{text-align: center;max-width: 600px;}
                     }
                 }
             }
