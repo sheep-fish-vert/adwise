@@ -289,9 +289,18 @@
 
         };
 
+
         $(document).on('click', '.tabs li', function(){
 
             leftColumnScrolling();
+
+            if($(window).width() <= 666){
+
+                var scrollBoobs = $('.creatives-wrap').offset().top - $('header').height();
+                $(scroller).stop().animate({scrollTop:scrollBoobs},300);
+
+            }
+
 
         });
 
