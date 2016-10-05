@@ -201,11 +201,14 @@ function menuSecondLevelHover(){
         }
     );
 
+    $('header .menu .second-level>p>a').click(function(event) {  //new fix for fix
+        event.preventDefault();
+    });
+
     $(document).on('click', function(e){
         if($(window).width() <= 992){
 
-            if($(e.target).is('.mobile-arrow')){
-
+            if($(e.target).is('.mobile-arrow') || $(e.target).is('.second-level .link-wrap-main a span')){
                 var parent = $(e.target).parents('.second-level');
 
                 if(parent.is('.hovered')){
