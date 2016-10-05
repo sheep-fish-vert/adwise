@@ -1008,10 +1008,16 @@
                         }
                     }
                     .row-for-all{flex-direction:column;align-items: center;
-                        .button-part{margin-bottom: 20px;
+                        .button-part{
                             .buttoner{width: 340px;height: 60px;font-size: 25px;line-height: 58px;margin:0 auto;}
                         }
-                        .soc-part{display: none;}
+                        .soc-part{
+                            .social-conteiner{text-align: center;
+                                a{
+                                    img{max-width: 70px;}
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1516,6 +1522,13 @@
                     .row-for-all{
                         .button-part{
                             .buttoner{height: 37px;line-height: 36px;font-size: 17px;max-width: 200px;margin:0 auto;display: inline-block;text-align: center;}
+                        }
+                        .soc-part{
+                            .social-conteiner{text-align: left;
+                                a{
+                                    img{max-width: 50px;}
+                                }
+                            }
                         }
                     }
                 }
