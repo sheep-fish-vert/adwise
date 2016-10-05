@@ -12,14 +12,17 @@ $.scrollbarWidth=function(){var a,b,c;if(c===undefined){a=$('<div style="width:5
 /* scrollUp */
 function scrollUp(block,targetBlock) {
 
-    $(block).click(function(e){
-        var target = $(targetBlock).offset().top;
+  $(block).click(function(e){
 
-        $(scroller).stop().animate({scrollTop:target},800);
-        return false;
+    var target = $(targetBlock).offset().top;
 
-        e.preventDefault();
-    });
+    $(scroller).stop().animate({scrollTop:target},800);
+    return false;
+
+    e.preventDefault();
+
+  });
+
 }
 
 function oneHeightItems(){
@@ -157,14 +160,14 @@ function headeButer(menuMobile,toggleMenu){
 /* /expresion for numbers with spaces */
 
 
-
-
 /* DOCUMENT READY  */
 $(document).ready(function() {
 
     $('.footer_placeholder').height($('.footer').outerHeight());
 
     //goTo();
+
+    scrollUp('.scroll-page-to-top', 'body');
 
     // fancybox standart
     $('.fancybox').fancybox({

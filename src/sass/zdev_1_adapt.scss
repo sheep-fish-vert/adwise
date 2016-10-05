@@ -1087,6 +1087,12 @@
 
     /* /event-list, careers-list (info-list) */
 
+    /* scroll-page-to-top */
+
+        .scroll-page-to-top{display: flex;}
+
+    /* /scroll-page-to-top */
+
 }
 @media screen and (max-width: 600px){
 
@@ -1537,6 +1543,14 @@
         }
 
     /* /vacancy */
+
+    /* scroll-page-to-top */
+
+        .scroll-page-to-top{width: 76px;height: 76px;right: 20px;bottom:50px;
+            img{max-width: 30px;}
+        }
+
+    /* /scroll-page-to-top */
 
 }
 @media screen and (max-width: 450px){
