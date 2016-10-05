@@ -296,7 +296,8 @@
 
             if($(window).width() <= 666){
 
-                var scrollBoobs = $('.creatives-wrap').offset().top - $('header').height();
+                var scrollBoobs =$('.left-column').height();
+
                 $(scroller).stop().animate({scrollTop:scrollBoobs},300);
 
             }
