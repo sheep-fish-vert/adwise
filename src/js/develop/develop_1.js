@@ -240,6 +240,13 @@
                 $('.parallax-tab-item').removeClass('active');
                 $(this).addClass('active');
 
+                if($(window).width() <= 666){
+
+                    var scrollBoobs = $('.left-column').height();
+                    $(scroller).stop().animate({scrollTop:scrollBoobs}, 1000);
+
+                }
+
             });
 
         }
@@ -293,15 +300,6 @@
         $(document).on('click', '.tabs li', function(){
 
             leftColumnScrolling();
-
-            if($(window).width() <= 666){
-
-                var scrollBoobs =$('.left-column').height();
-
-                $(scroller).stop().animate({scrollTop:scrollBoobs},300);
-
-            }
-
 
         });
 

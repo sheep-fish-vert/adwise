@@ -724,6 +724,7 @@
     /* services */
 
         .services-page{
+
             .left-column{
                 .column-list-wrap .column-title h1{font-size: 52px;}
                 .column-list-wrap{
@@ -748,7 +749,7 @@
 
                 .services-websites{padding-top: 20px;
                     .left{
-                        .slider-wrap{
+                        .slider-wrap{padding:33px 0 54px 0;
                             .slider.slick-slider {padding: 0 50px;
                                 .slick-arrow{
                                     &.slick-next{top: calc(50% - 10px);transform: translate(0, 0) rotate(-90deg);left: auto;right: 25px;}
