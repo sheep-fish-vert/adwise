@@ -160,7 +160,6 @@
 }
 @media screen and (max-width: 992px){
 
-
     // new page
     .news-page{
         .news-images-massonry{
@@ -549,7 +548,7 @@
                     .item{position: relative;z-index: 1;margin-bottom: 60px;
                         .item-wrap{background-size: 240px;height: 190px;
                             .item-big-number{font-size: 75px;top:45px;left:-47px;}
-                            .item-title{right:15px;top:42px;
+                            .item-title{right:15px;top:45px;
                                 p{font-size: 49px;letter-spacing:-2.5px;}
                                 span{font-size: 19px;}
                             }
@@ -976,7 +975,7 @@
                     .item{
                         .item-wrap{height: 155px;background-size: auto auto;
                             .item-big-number{font-size: 62px;top:41px;left:-28px;}
-                            .item-title{right:45px;
+                            .item-title{right:30px;top:45px;
                                 p{font-size: 36px;}
                                 span{font-size: 16px;}
                             }
