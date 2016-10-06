@@ -1546,7 +1546,7 @@
 
     /* scroll-page-to-top */
 
-        .scroll-page-to-top{width: 56px;height: 56px;right: 20px;bottom:50px;
+        .scroll-page-to-top{width: 56px;height: 56px;right: calc(50% - 28px);bottom:calc(100% - 28px);
             img{max-width: 30px;}
         }
 
