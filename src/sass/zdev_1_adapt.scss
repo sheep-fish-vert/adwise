@@ -634,16 +634,23 @@
                     .column-list-main{
                         ul{
                             li{width: 75%;
+                                &.active{
+                                    a{color:#fff;}
+                                    a:before{background-color: #efc137;}
+                                }
+                                &:hover{
+                                    &:not(.active){
+                                        a:before{opacity: .25;background-color: #efc137;}
+                                    }
+                                    &.active{
+                                        a{color: white;}
+                                        a:before{background-color: #efc137;}
+                                    }
+                                }
                                 a{font-size: 31px;padding:19px 15px 20px;
                                     &:before{width: calc(100% + 10px);}
-                                    &.active{color:#fff;
-                                        &:before{background-color: #efc137;}
-                                    }
-                                    &:hover{
-                                        &:not(.active){
-                                            &:before{opacity: .25;background-color: #efc137;}
-                                        }
-                                    }
+
+
                                     span{width: calc(100% + 10px);height: 100%;top:0;border-width: 0 0 3px 0;}
                                 }
                             }
