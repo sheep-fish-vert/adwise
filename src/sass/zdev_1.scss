@@ -754,24 +754,23 @@
                             &.active-month{position: relative;opacity: 1;z-index:2;}
                             .calendar-row{display: flex;justify-content: space-around;align-items: center;padding:8px 0;
                                 .calendar-col{width: calc(100% / 7);text-align: center;
-                                    .outside-date-wrap{font-family: 'Proxima Nova Condensed', 'ProximaNovaScOsf', sans-serif;font-weight: 300;color:#fff;font-size: 16px;position: relative;cursor: pointer;
+                                    .outside-date-wrap{font-family: 'Proxima Nova Condensed', 'ProximaNovaScOsf', sans-serif;font-weight: 300;color:#fff;font-size: 16px;position: relative;
                                         &:before{content:'';display: block;position: absolute;left:50%;top:50%;z-index:0;width:30px;height: 30px;border-radius: 50%;background-color:rgba(138, 138, 138, .5);transform:translate(-50%, -50%) scale(0);transition:all 300ms ease;}
                                         .inside-date-wrap{position: relative;z-index: 1;}
-                                        &:not(.current-day):not(.event-day):hover{
-                                            &:before{transform:translate(-50%, -50%) scale(1);}
-                                        }
-                                        &.current-day{
-                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: #edc142;}
-                                        }
-                                        &.event-day{
-                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: rgba(235, 87, 118, .5);}
+
+                                        &.event-day{cursor: pointer;
+                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: #88505f;}
                                             &.chossen-day{
-                                                &:before{background-color: #994f5f;}
+                                                &:before{background-color: #d72b52;}
+                                            }
+                                            &:hover:not(.chossen-day):not(.current-day){
+                                                &:before{background-color: #cb4c6a;}
+                                            }
+                                            &.current-day{
+                                                &:before{background-color: #edc142;}
                                             }
                                         }
-                                        &.chossen-day{
-                                            &:before{transform:translate(-50%, -50%) scale(1);background-color: #b84059;}
-                                        }
+
                                     }
                                 }
                             }
