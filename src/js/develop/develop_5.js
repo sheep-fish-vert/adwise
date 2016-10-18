@@ -652,10 +652,13 @@ function tabsCreativePae() {
             event.preventDefault();
             $('.main-wrap.tabs .column-list-main li').removeClass('active').eq($(this).index()).addClass('active');
             $('.tab-item').removeClass('show').eq($(this).index()).addClass('show');
-            setTimeout(function () {
-                loadTab();
-            },100);
-        }).eq(0).addClass('active');
+            if(!$(this).hasClass('loaded')){
+                setTimeout(function () {
+                    loadTab();
+                },100);
+                $(this).addClass('loaded');
+            }
+        }).eq(0).addClass('active').addClass('loaded');
 
 }
 
