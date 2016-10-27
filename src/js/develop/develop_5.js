@@ -181,14 +181,14 @@ function constructSlides(slides){
 
 function menuSecondLevelHover(){
 
-    var secondLevelIndex = $('.second-level').length;
+    var secondLevelIndex = $('.has-children').length;
 
-    $('.second-level').each(function(){
+    $('.has-children').each(function(){
         $(this).css({'z-index':secondLevelIndex});
         secondLevelIndex--;
     });
 
-    $('.second-level').hover(
+    $('.has-children').hover(
         function(){
             if($(window).width() > 992){
                 $(this).addClass('hovered').find('ul').stop().slideDown(300);
@@ -201,15 +201,15 @@ function menuSecondLevelHover(){
         }
     );
 
-    $('header .menu .second-level>p>a').click(function(event) {  //new fix for fix
+    $('header .menu .has-children>p>a').click(function(event) {  //new fix for fix
         event.preventDefault();
     });
 
     $(document).on('click', function(e){
         if($(window).width() <= 992){
 
-            if($(e.target).is('.mobile-arrow') || $(e.target).is('.second-level .link-wrap-main a span')){
-                var parent = $(e.target).parents('.second-level');
+            if($(e.target).is('.mobile-arrow') || $(e.target).is('.has-children .link-wrap-main a span')){
+                var parent = $(e.target).parents('.has-children');
 
                 if(parent.is('.hovered')){
                     parent.removeClass('hovered').find('ul').stop().slideUp(300);
@@ -217,10 +217,10 @@ function menuSecondLevelHover(){
                     parent.addClass('hovered').find('ul').stop().slideDown(300);
                 }
 
-            }else if(!$(e.target).is('.second-level-list') && !$(e.target).parents('.second-level-list').length){
+            }else if(!$(e.target).is('.has-children ul') && !$(e.target).parents('.has-children').find('ul').length){
 
-                if($('.second-level').is('.hovered')){
-                    $('.second-level').removeClass('hovered').find('ul').stop().slideUp(300);
+                if($('.has-children').is('.hovered')){
+                    $('.has-children').removeClass('hovered').find('ul').stop().slideUp(300);
                 }
 
             }
@@ -229,10 +229,10 @@ function menuSecondLevelHover(){
 
     $(window).resize(function(){
 
-        $('.second-level-list').css('height','auto');
+        $('.has-children ul').css('height','auto');
         if($(window).width() > 992){
-            $('.second-level-list').removeAttr('style');
-            $('.second-level').removeClass('hovered');
+            $('.has-children ul').removeAttr('style');
+            $('.has-children').removeClass('hovered');
         }
     });
 

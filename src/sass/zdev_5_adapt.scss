@@ -63,7 +63,7 @@
                 li{
                     a{padding:10px 15px 10px 15px;font-size: 12px;}
                 }
-                .second-level{
+                .has-children{
                     .link-wrap-main{
                         &:after{width: 7px;height: 7px;right: 0px;top:calc(50% - 5px);}
                     }
@@ -194,7 +194,7 @@
                         .fa-exclamation-circle{font-size: 22px;color:#fff;}
                     }
                 }
-                .second-level{
+                .has-children{
                     .link-wrap-main{display: flex;align-items: center;justify-content: flex-start;
                         a{
                             .link-wrap{padding-right: 50px;}
