@@ -639,7 +639,7 @@ function fancyboxForm(){
 
                 for(var i = 0;i < calendarLength;i++){
 
-                        monthNumArray[i] = {};
+                    monthNumArray[i] = {};
 
                     if(firstSliderMonth == (-2)){
                         monthNumArray[i].month = 10;
@@ -842,7 +842,7 @@ function fancyboxForm(){
 
             // chosse day for something
 
-                $(document).on('click', '.outside-date-wrap:not(.current-day)', function(){
+                $(document).on('click', '.outside-date-wrap.event-day:not(.current-day)', function(){
 
                     if(!$(this).is('.chossen-day')){
 
