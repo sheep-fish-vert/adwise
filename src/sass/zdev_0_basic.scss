@@ -48,7 +48,7 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 
     body{
         &.customize-support{
-            .wp-panel-show{top:46px;}
+            .wp-panel-show, header.wp-panel-show{top:46px;}
         }
     }
 
