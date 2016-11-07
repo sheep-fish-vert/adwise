@@ -296,7 +296,8 @@
                 .img-wrap{text-align: left;}
             }
             .txt{
-                &.right-col, &.left-col{padding:50px 10px 10px 60px;}
+                &.right-col, &.left-col{padding:50px 10px 10px 25px;}
+                h3,h2,h4,h5,h1{ font-size: 21px;}
                 b{font-size: 40px;line-height: 1;}
                 p{font-size: 22px;font-weight: 100;}
                 ul{font-size: 24px;
