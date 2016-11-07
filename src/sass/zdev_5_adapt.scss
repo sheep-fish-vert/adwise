@@ -304,6 +304,9 @@
                     a{padding-left: 20px;
                         .fa{top:9px;}
                     }
+                    li{
+                        &:before{top:7px;}
+                    }
                 }
                 p{
                     a{display: inline-block;font-size: 22px;margin-left:20px;}
@@ -440,6 +443,7 @@
                 }
                 ul{
                     li{font-size: 18px;
+                        &:before{top:3px;}
                         a{
                             .fa{top:6px;}
                         }
