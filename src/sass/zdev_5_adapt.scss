@@ -42,7 +42,10 @@
 
 @media screen and (max-width: 1024px){
     .title-filter {
-        .title{ padding-right:20px; width: 210px;}
+        .title{ padding-right:20px; width: 210px;
+            h2{font-size: 30px;}
+            &:after{right: -10px;top: -25px;height: 98px;}
+        }
         .menu-filter {width: calc(100% - 210px); padding-right: 0;
             ul {flex-wrap: wrap; }
             li{ padding: 0 15px;}
