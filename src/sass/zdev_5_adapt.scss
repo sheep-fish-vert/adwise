@@ -15,6 +15,17 @@
                             }
                         }
                     }
+                    &.has-children{
+                        &>.link-wrap-main {
+                            a {
+                                &:hover {
+                                    span{
+                                        &:after{transform:scale(0);}
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
