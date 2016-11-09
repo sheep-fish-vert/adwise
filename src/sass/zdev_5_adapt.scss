@@ -93,7 +93,7 @@
     .expertise{
         .content{
             .img{
-                .img-wrap{height: 280px;
+                .img-wrap{
                     .img-wrap-text{
                         p{font-size: 38px;
                             b{font-size: 26px;}
@@ -106,9 +106,7 @@
                 .right-col{width: calc(100% - 280px);}
                 &.row-reverse{
                     .left-col{width: calc(100% - 400px);}
-                    .right-col{width: 400px;height: 260px;
-                        .img-wrap{height: 260px;}
-                    }
+                    .right-col{width: 400px;}
                 }
             }
         }
@@ -131,11 +129,11 @@
 
     .expertise {
 
-        .content{
+        .content{ max-width:460px;margin:0 auto;
             .row{flex-wrap: wrap; min-height: 1px;}
             .img{ width: 100%; height: auto;
                 img{ position: relative; top: auto; left: auto; transform: none;}
-                .img-wrap{ position: relative; top: auto; height: auto; text-align: center;}
+                .img-wrap{ position: relative; top: auto; height: auto; text-align: left;}
                 &:hover{
                     img{
                         &.col-img-bg{transform:none; }
