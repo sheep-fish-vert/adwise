@@ -17,7 +17,7 @@
                     }
                     &.has-children{
                         &>.link-wrap-main {
-                            a {
+                            a {color:#000;
                                 &:hover {
                                     span{
                                         &:after{transform:scale(0);}
