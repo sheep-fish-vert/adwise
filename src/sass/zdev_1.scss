@@ -648,14 +648,14 @@
                         .num{font-family: 'CoreSansCn', sans-serif;font-size: 62px;margin-right: 17px;}
                         .text{font-size: 24px;line-height: 1;padding-top: 1px;text-transform: uppercase;}
                     }
-                    .right{padding-left:36px;
+                    .right{padding-left:36px; width:100%;
                         .text{margin-bottom: 27px;font-size: 18px;
                             a{color:#000;transition:all 300ms ease;
                                 &:hover{color:#ce7a02;}
                             }
                         }
                         .button-wrap{padding-left: 8px;
-                            .button{text-transform: none;font-weight: 400;font-size: 15px;line-height: 37px;height: 37px;font-family: 'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;
+                            .button{text-transform: none;font-weight: 400;font-size: 15px;line-height: 37px;height: 37px;font-family: 'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;padding:0 15px; max-width:none;width:auto;
                                 &:hover{color:#fff;}
                             }
                         }
