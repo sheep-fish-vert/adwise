@@ -18,12 +18,13 @@
                     &.has-children{
                         &>.link-wrap-main {
                             a {color:#000;
-                                &:hover {
+                                &:hover {color:#ca8000;
                                     span{
                                         &:after{transform:scale(0);}
                                     }
                                 }
                             }
+                            &:after{pointer-events:none;}
                         }
                     }
                 }
