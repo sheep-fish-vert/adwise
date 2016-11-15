@@ -1041,11 +1041,51 @@ function fancyboxForm(){
 
 /* /geo-page */
 
+    function validationCallDocument(form){
+
+        var thisForm = $(form);
+        var formData = new FormData($(form)[0]);
+
+        formData.append('file', thisForm.find('input[type=file]')[0].files[0]);
+
+        $.ajax({
+            url: thisForm.attr('action'),
+            type: "POST",
+            data: formData,
+            contentType:false,
+            processData:false,
+            cache:false,
+            success: function(response) {
+                thisForm.trigger("reset");
+                $('.write-message-file div').removeClass('active');
+                // $.fancybox.close();
+                popNext("#call_success", "call-popup");
+            }
+        });
+
+    }
+
+    function selectFilePopup(){
+        var preload = true;
+        $('.form_input_file input[type="file"]').on('change',function() {
+            if (preload == true){
+                $('.write-message-file .item-uploaded').removeClass('active');
+                $('.write-message-file .item-uploading').addClass('active');
+                setTimeout(function () {
+                    $('.write-message-file .item-uploading').removeClass('active');
+                    $('.write-message-file .item-uploaded').addClass('active');
+                },2000)
+            }
+        })
+    }
+
+
 $(document).ready(function(){
 
     validate('.contact-form form', {submitFunction:validationCall});
 
     validate('.popup-join-us-form', {submitFunction:validationCall});
+    validate('.popup-write-message', {submitFunction:validationCallDocument});
     validate('.popup-login-form', {submitFunction:validationCall});
 
     //validate('.get-in-t', {submitFunction:validationCall});
@@ -1059,6 +1099,7 @@ $(document).ready(function(){
 
     eventPage();
     geoPage();
+    selectFilePopup();
 
 });
 

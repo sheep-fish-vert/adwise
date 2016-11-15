@@ -676,7 +676,26 @@ a.button-next{padding-left: 0;padding-right: 32px;
 
 // login popup
 .fancy-login{}
-#login{background:#fff url('../images/login-popup-bg.jpg') center center no-repeat;background-size: cover;width: 900px;height: 500px;
+.login{background:#fff url('../images/login-popup-bg.jpg') center center no-repeat;background-size: cover;width: 900px;height: 500px;
+  .form_input_file{ display:flex; align-items:center; justify-content:center; position:relative;
+  	input[type='file']{width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1;}
+	label{ font-size:16px; color:#000000;cursor:pointer; text-decoration:underline; width:100px; text-align:center;
+		&:hover{ text-decoration:none;}
+	}
+  }
+  	&.write-message-popap{
+	  .item-form .item-form-title{max-width: 359px;}
+	  
+	  .write-message-file{ position:absolute; left:62%; top:-2px;
+		&>div{ display:none;align-items:center;
+		  &.active{ display:flex;}
+		  img{ margin-right:3px;}
+		}
+		
+		.svg{ height:19px; width:19px;}
+	  }
+	  
+	}
     .login-wrap{padding-top: 57px;padding-left: 20px;padding-right: 20px;padding-bottom: 20px;}
     .login-buttons{display: flex;align-items: center;justify-content: center;padding-bottom: 64px;text-transform: uppercase;
         a{font-size: 33px;font-weight: 600;color: #000;text-decoration: none;margin:0 55px;
@@ -688,6 +707,9 @@ a.button-next{padding-left: 0;padding-right: 32px;
             }
         }
     }
+    .write-message-title{ font-size:33px; color:#000000; font-family:ProximaNovaScOsf; font-weight:600; text-align:center; text-transform:uppercase; margin-bottom:30px;
+		h2{margin:0;}
+	}
     .login-items{width: 100%;max-width: 490px;padding: 0 10px;margin:0 auto;text-align: center;
         p{margin:0 0 33px;font-size: 17px;font-weight: 300;color: #000;max-width: 440px;margin:0 auto 33px;line-height: 1.2;}
         .item-button{padding-top: 25px;}
@@ -696,7 +718,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 
     .item-form{
         .item-form-title{color: #000;font-weight: 300;font-size: 15px;text-transform: uppercase;max-width: 350px;margin:0 auto 27px auto;line-height: 1.25;}
-        input{height: 45px;border:none;background-color: transparent;border-bottom: 1px solid #000;text-align: center;display: flex;align-items: center;justify-content: center;width: 100%;max-width: 360px;margin:0 auto 6px;
+        input:not([type='file']){height: 45px;border:none;background-color: transparent;border-bottom: 1px solid #000;text-align: center;display: flex;align-items: center;justify-content: center;width: 100%;max-width: 360px;margin:0 auto 6px;
             &::-webkit-input-placeholder {color:#939393;}
             &:-moz-placeholder {color:#939393;opacity:1;}
             &::-moz-placeholder {color:#939393;opacity:1;}
