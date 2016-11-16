@@ -1052,7 +1052,6 @@ function fancyboxForm(){
             url: thisForm.attr('action'),
             type: "POST",
             data: formData,
-            contentType:false,
             processData:false,
             cache:false,
             success: function(response) {
