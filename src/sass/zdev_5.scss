@@ -313,7 +313,7 @@
                         }
                     }
 
-                    img{ max-width:none; min-height:100%;}
+                    img{ max-width:none; /*min-height:100%;*/}
 
                 }
                 /*img{ position: absolute;left: 50%; top: 50%; transform:translate(-50%, -50%) translateZ(0px) scale(1); backface-visibility: hidden; transition: transform 200ms;z-index: 2;}
