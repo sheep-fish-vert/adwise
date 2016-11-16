@@ -100,7 +100,7 @@
             .item .item-img .item-img-wrap{height: 140px;width: 140px;}
         }
     }
-
+    
 }
 @media screen and (max-width: 1024px){
     // new page
@@ -320,7 +320,11 @@
     }
 
     // login popup
-    #login{width: 490px;}
+    .login{width: 100%;min-width:100%;
+	  &.write-message-popap .write-message-file{ position:static;}
+	  .login-buttons a{margin: 0 31px;}
+	}
+    
 }
 @media screen and (max-width: 800px){
     // asian-market-page
@@ -608,7 +612,7 @@
     }
 
     // login popup
-    #login{width: 390px;
+    .login{width: 360px; height:auto;margin:0 auto;
         .login-buttons a{margin:0 18px;}
     }
 
@@ -1065,7 +1069,7 @@
 
     }
 
-    #login{width: 100%;
+    .login{width: 100%;
         .login-wrap{padding-left: 15px;padding-right: 15px;padding-top: 35px;
 
 
@@ -1254,6 +1258,8 @@
         }
 
     }
+  
+  .login .write-message-title{ font-size:20px;}
 
 }
 @media screen and (max-width: 390px){

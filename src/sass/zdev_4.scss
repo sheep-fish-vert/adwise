@@ -676,7 +676,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 
 // login popup
 .fancy-login{}
-.login{background:#fff url('../images/login-popup-bg.jpg') center center no-repeat;background-size: cover;width: 900px;height: 500px;
+.login{background:#fff url('../images/login-popup-bg.jpg') center center no-repeat;background-size: cover;min-width: 900px;min-height: 440px;
   .form_input_file{ display:flex; align-items:center; justify-content:center; position:relative;
   	input[type='file']{width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1;}
 	label{ font-size:16px; color:#000000;cursor:pointer; text-decoration:underline; width:100px; text-align:center;
@@ -696,7 +696,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 	  }
 	  
 	}
-    .login-wrap{padding-top: 57px;padding-left: 20px;padding-right: 20px;padding-bottom: 20px;}
+    .login-wrap{padding-top: 35px;padding-left: 20px;padding-right: 20px;padding-bottom: 30px;}
     .login-buttons{display: flex;align-items: center;justify-content: center;padding-bottom: 64px;text-transform: uppercase;
         a{font-size: 33px;font-weight: 600;color: #000;text-decoration: none;margin:0 55px;
             span{position: relative;
