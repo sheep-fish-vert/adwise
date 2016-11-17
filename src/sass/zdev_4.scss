@@ -406,6 +406,25 @@ a.button-next{padding-left: 0;padding-right: 32px;
         p{color: #000;font-size: 18px;line-height: 1.2;max-width: 465px;margin:0 auto;font-weight: 300;}
     }
     .contact-form-row{margin-bottom: 18px;
+        
+        &.row-radio{ overflow:hidden; padding-top:30px; margin-bottom:15px;
+            .form_input{ display:flex; align-items:center; justify-content:center;
+                label{margin:0 5%; display:flex; align-items:center;cursor:pointer;
+                    &>div{ width:20px; height:20px; position:relative;border:1px solid #808080;border-radius:50%; margin-right:14px;
+                        &:after{ position:absolute; top:50%;left:50%; transform:translate(-50%, -50%); background-color:#808080;border-radius:50%; content:''; opacity:0; visibility:hidden; height:11px; width:11px;}
+                    }
+                }
+                span{ font-size:16px; color:#808080; font-family:Roboto; font-weight:300;}
+                input{ border-bottom:none; width:0; height:0; opacity:0;
+                    &:checked + div:after{ opacity:1; visibility:visible;}
+                    &.error{
+                        &+div{border-color:#ff7878;}
+                        &+div+span{ color:#ff7878;}
+                    }
+                }
+            }
+        }
+        
         .form_input{position: relative;}
         .errorText{position: absolute;left: calc(100% + 20px);top: 50%;transform: translateY(-50%);color: #ff7878;white-space: pre;}
 

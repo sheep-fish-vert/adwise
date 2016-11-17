@@ -1093,6 +1093,11 @@
         }
         .contact-form{padding-top: 40px;}
         .contact-form-row{margin-bottom: 10px;
+            &.row-radio{
+                .form_input{ flex-direction:column;
+                    label{margin:0 0 15px;}
+                }
+            }
             .form_input{
                 input{font-size: 18px;}
             }
