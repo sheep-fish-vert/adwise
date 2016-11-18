@@ -1046,7 +1046,7 @@ function fancyboxForm(){
         var thisForm = $(form);
         var formData = new FormData($(form)[0]);
 
-        formData.append('file', thisForm.find('input[type=file]')[0].files[0]);
+        //formData.append('file', thisForm.find('input[type=file]')[0].files[0]);
 
         $.ajax({
             url: thisForm.attr('action'),
@@ -1086,6 +1086,7 @@ $(document).ready(function(){
     validate('.popup-join-us-form', {submitFunction:validationCall});
     validate('.popup-write-message', {submitFunction:validationCallDocument});
     validate('.popup-login-form', {submitFunction:validationCall});
+    validate('.write-message-popap-write-vacancy', {submitFunction:validationCallDocument});
 
     //validate('.get-in-t', {submitFunction:validationCall});
     validate('.login-form', {submitFunction:validationCall});

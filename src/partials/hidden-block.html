@@ -154,7 +154,8 @@
                             To apply for this job make to put your e-mail contact and upload yor CV
                             down below:
                         </div>
-                        <form class="popup-write-message" action="ajax.php" enctype="multipart/form-data">
+                        <form class="popup-write-message" action="ajax.php"
+                              enctype="multipart/form-data">
                             <div class="contact-form-row">
                                 <div class="form_input">
                                     <input type="email" name="write_message[email]"
@@ -170,7 +171,82 @@
                             <div class="contact-form-row">
                                 <div class="form_input form_input_file">
                                     <label for="form_input_file">Прикрепить файл</label>
-                                    <input type="file" id="form_input_file" name="write_message[file]" value="">
+                                    <input type="file" id="form_input_file"
+                                           name="write_message[file]" value="">
+                                    <div class="write-message-file">
+                                        <div class="item-uploading">
+                                            <div class="svg">
+                                                <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#7b7b7b" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform
+         attributeName="transform"
+         attributeType="XML"
+         type="rotate"
+         dur="1s"
+         from="0 50 50"
+         to="360 50 50"
+         repeatCount="indefinite" /></path></svg>
+                                            </div>
+                                            <span>uploading...</span>
+                                        </div>
+                                        <div class="item-uploaded">
+                                            <div class="item-img">
+                                                <img src="images/item-uploaded.png" alt="">
+                                            </div>
+                                            <span>uploaded</span>
+                                        </div>
+                                        <div class="item-fail">
+                                            <div class="item-img">
+                                                <img src="images/item-fail.png" alt="">
+                                            </div>
+                                            <span>upload failed, try again</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-form-row submit">
+                                <div class="contact-form-item">
+                                    <button type="submit" class="contact-submit button-round">
+                                        <span>Apply for job</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="login write-message-popap" id="write-vacancy">
+        <div class="login-wrap">
+            <div class="write-message-title">
+                <h2>Write your massage</h2>
+            </div>
+            <div class="login-items">
+                <div class="write-message">
+                    <div class="item-form">
+                        <div class="item-form-title">
+                            To apply for this job make to put your e-mail contact and upload yor CV
+                            down below:
+                        </div>
+                        <form class="write-message-popap-write-vacancy" action="ajax.php"
+                              enctype="multipart/form-data">
+                            <div class="contact-form-row">
+                                <div class="form_input">
+                                    <input type="email" name="write_message[email]"
+                                           required="required" value="" placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="contact-form-row">
+                                <div class="form_input">
+                                    <input type="text" name="write_message[message]"
+                                           required="required" value="" placeholder="Your massage">
+                                </div>
+                            </div>
+                            <div class="contact-form-row">
+                                <div class="form_input form_input_file">
+                                    <label for="form_input_file">Прикрепить файл</label>
+                                    <input type="file" id="form_input_file"
+                                           name="write_message[file]" value="">
                                     <div class="write-message-file">
                                         <div class="item-uploading">
                                             <div class="svg">
