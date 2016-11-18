@@ -1075,7 +1075,12 @@ function fancyboxForm(){
                     $('.write-message-file .item-uploaded').addClass('active');
                 },2000)
             }
-        })
+        });
+
+        $(document).on('click', '.form_input_file_span span', function(event) {
+            event.preventDefault();
+            $(this).siblings('input').click();
+        });
     }
 
 

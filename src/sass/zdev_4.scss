@@ -696,7 +696,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 // login popup
 .fancy-login{}
 .login{background:#fff url('../images/login-popup-bg.jpg') center center no-repeat;background-size: cover;min-width: 900px;min-height: 440px;
-  .form_input_file{ display:flex; align-items:center; justify-content:center; position:relative;
+  .form_input_file{ display:flex; align-items:center; justify-content:center; position:relative; margin-top:10px;
   	input[type='file']{width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1;}
 	label{ font-size:16px; color:#000000;cursor:pointer; text-decoration:underline; width:135px; text-align:center;
 		&:hover{ text-decoration:none;}
@@ -704,7 +704,10 @@ a.button-next{padding-left: 0;padding-right: 32px;
   }
   	&.write-message-popap{
 	  .item-form .item-form-title{max-width: 359px;}
-	  
+        .form_input_file_span{
+            span{cursor:pointer;}
+            input{ position:absolute; opacity:0;}
+        }
 	  .write-message-file{ position:absolute; left:67%; top:-2px;
 		&>div{ display:none;align-items:center;
 		  &.active{ display:flex;}
