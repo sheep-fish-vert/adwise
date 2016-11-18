@@ -721,7 +721,12 @@ a.button-next{padding-left: 0;padding-right: 32px;
     .login-wrap{padding-top: 35px;padding-left: 20px;padding-right: 20px;padding-bottom: 30px;}
     .login-buttons{display: flex;align-items: center;justify-content: center;padding-bottom: 64px;text-transform: uppercase;
         a{font-size: 33px;font-weight: 600;color: #000;text-decoration: none;margin:0 55px;
-            span{position: relative;
+            &:not(.active):hover{
+                span{ color:#ca8000;
+                    &:after{ background-color:#ca8000; opacity:1;}
+                }
+            }
+            span{position: relative;transition:all ease .2s;
                 &:after{height: 3px;width: 100%;background-color: #000;bottom:-10px;content: '';position: absolute;left: 0;transition:all ease .2s;opacity: 0;}
             }
             &.active{

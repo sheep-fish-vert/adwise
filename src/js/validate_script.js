@@ -1089,8 +1089,10 @@ $(document).ready(function(){
     validate('.contact-form form', {submitFunction:validationCall});
 
     validate('.popup-join-us-form', {submitFunction:validationCall});
+
     validate('.popup-write-message', {submitFunction:validationCallDocument});
-    validate('.popup-login-form', {submitFunction:validationCall});
+
+    validate('.popup-login-form');
     validate('.write-message-popap-write-vacancy', {submitFunction:validationCallDocument});
 
     //validate('.get-in-t', {submitFunction:validationCall});
