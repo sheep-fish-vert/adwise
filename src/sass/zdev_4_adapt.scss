@@ -353,7 +353,7 @@
         }
 
         .market-bottom{
-            &.first{
+            &.first{ padding-bottom: 0;
                 .items-list{margin-bottom: 100px;
                     .item-center{width: 100%;height: auto;background:none;text-align: center;
                         b{position: static;transform:none;font-size: 22px;}
