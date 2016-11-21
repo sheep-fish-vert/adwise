@@ -670,7 +670,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
     }
     .ad-formats-yellow-block{background-color: #ffda10;margin-top: 191px;
         .mbox{max-width: 1100px;padding: 0 20px;}
-        .ad-formats-yellow-block-wrap{display: flex;justify-content: space-between;margin-bottom: 70px;
+        .ad-formats-yellow-block-wrap{display: flex;justify-content: space-between;padding-bottom: 70px;
             .item{
                 &.left{width: 61%;
                     .item-title{padding-top: 71px;
@@ -723,7 +723,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
         a{font-size: 33px;font-weight: 600;color: #000;text-decoration: none;margin:0 55px;
             &:not(.active):hover{
                 span{ color:#ca8000;
-                    &:after{ background-color:#ca8000; opacity:1;}
+                    &:after{}
                 }
             }
             span{position: relative;transition:all ease .2s;
