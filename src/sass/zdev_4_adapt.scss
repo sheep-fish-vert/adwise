@@ -203,7 +203,7 @@
         .advertising-bottom{padding-top: 80px;
             .advertising-big-text{flex-wrap: wrap;flex-direction: column;
                 .item{
-                    &.item-1{width: 100%;margin-bottom: 20px;text-align: center;
+                    &.item-1{width: 100%;margin-bottom: 20px;text-align: center; justify-content:center; padding-right:0;
                         b br{display: none;}
                     }
                     &.item-2{width: 100%;
