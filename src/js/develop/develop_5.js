@@ -4,18 +4,18 @@ function butter() {
         e.preventDefault();
         $(this).toggleClass('active');
         if($(this).hasClass('active')){
-            $('.menu').stop().slideDown();
+            $('.butter ~ .menu').stop().slideDown();
         } else{
-            $('.menu').stop().slideUp();
+            $('.butter ~ .menu').stop().slideUp();
         }
     });
 
     $(document).on('click touchstart',function (event){
         if($('.butter').css('display') == 'block') {
-            var div = $('.menu');
+            var div = $('.butter ~ .menu');
             if (!div.is(event.target) && div.has(event.target).length === 0 && !$('.butter').is(event.target) && $('.butter').has(event.target).length === 0)
             {
-                $('.menu').slideUp();
+                $('.butter ~ .menu').slideUp();
                 $('.butter').removeClass('active');
             }
         }
@@ -218,7 +218,7 @@ function menuSecondLevelHover(){
                 }
 
             }else if(!$(e.target).is('.has-children ul') && !$(e.target).parents('.has-children').find('ul').length){
-                
+
                 if($('.has-children').is('.hovered')){
                     $('.has-children').removeClass('hovered').find('ul').stop().slideUp(300);
                 }
