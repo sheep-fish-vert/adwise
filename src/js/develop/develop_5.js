@@ -218,7 +218,7 @@ function menuSecondLevelHover(){
                 }
 
             }else if(!$(e.target).is('.has-children ul') && !$(e.target).parents('.has-children').find('ul').length){
-
+                
                 if($('.has-children').is('.hovered')){
                     $('.has-children').removeClass('hovered').find('ul').stop().slideUp(300);
                 }
