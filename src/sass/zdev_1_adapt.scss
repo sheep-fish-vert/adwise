@@ -1386,6 +1386,7 @@
 
                 .creatives-wrap{padding:0;
                     .tab-item{padding-bottom: 40px;
+                        &.show{ padding-left: 10px; padding-right: 10px;}
                         .text-wrap{font-size: 17px;
                             ul{
                                 li{
@@ -1428,7 +1429,7 @@
                             }
                             .right-text{padding-left: 0;font-size: 17px;}
                             .right-button{padding-left: 0;
-                                .button.button-cofee{max-width: 200px;height: 37px;line-height: 36px;font-size: 17px;display: block;margin:0 auto;}
+                                .button.button-cofee{max-width: 100%;height: auto;line-height: 19px;font-size: 17px;display: block;margin:0 auto;padding:10px 0 8px 0;}
                             }
                         }
                     }
@@ -1439,7 +1440,7 @@
                     .text-wrap{
                         h4{font-size: 25px;}
                         .button-wrap{
-                            .button{height: 37px;line-height: 36px;font-size: 17px;max-width: 200px;margin:0 auto;display: inline-block;}
+                            .button{height: auto;line-height: 19px;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0;}
                         }
 
                     }
@@ -1455,7 +1456,7 @@
                         }
                     }
                     .button-wrap{margin-bottom: 20px;
-                        .button{height: 37px;line-height: 36px;font-size: 17px;max-width: 200px;margin:0 auto;display: inline-block;}
+                        .button{height: auto;line-height: 19px;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0;}
                     }
                 }
 
@@ -1490,7 +1491,7 @@
                         .right{
                             .text{font-size: 17px;padding-top: 10px;margin-bottom: 50px;}
                             .button-wrap{text-align: center;
-                                .button{height: 37px;line-height: 36px;font-size: 17px;max-width: 200px;margin:0 auto;display: inline-block;}
+                                .button{height: auto;font-size: 17px; line-height: 19px;max-width: 100%; width:100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0;}
                             }
                         }
                     }
