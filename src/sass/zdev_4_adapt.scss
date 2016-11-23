@@ -968,7 +968,7 @@
 	}
 
 	.button {
-	  &.button-yellow { max-width: 200px; height: 37px; line-height: 37px; font-size: 17px; }
+	  &.button-yellow { max-width: 100%; height: auto; line-height: 19px; font-size: 17px;padding:10px 0; }
 	}
 
 	.market-middle-text-wrapper { padding-top: 50px;
@@ -1017,7 +1017,7 @@
 			b { font-size: 18px; }
 		  }
 		  .item-button {
-			.button { max-width: 200px; height: 37px; line-height: 37px; font-size: 17px; }
+			.button { max-width: 100%; height: auto; line-height: 19px; font-size: 17px; padding:10px 0; }
 		  }
 		}
 	  }
@@ -1045,8 +1045,8 @@
 			}
 		  }
 		  .item-title { font-size: 24px; margin-bottom: 20px; }
-		  .item-button { margin-bottom: 30px;
-			a { width: 200px; height: 37px; font-size: 16px; }
+		  .item-button { margin-bottom: 30px; width:calc(100% - 30px);
+			a { width: 100%; height: auto; font-size: 16px;line-height:19px;padding:10px 0px 8px 0px; }
 		  }
 		}
 	  }
