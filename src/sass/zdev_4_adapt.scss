@@ -318,7 +318,7 @@
   // login popup
   .login { width: 100%; min-width: 100%;
 	&.write-message-popap .write-message-file { position: static; }
-	.login-buttons a { margin: 0 31px; }
+	.login-buttons a {margin: 0 31px;font-size: 30px;}
   }
 
 }
@@ -1074,7 +1074,7 @@
 	.login-wrap { padding-left: 15px; padding-right: 15px; padding-top: 35px;
 
 	  .login-buttons { justify-content: space-around; padding-bottom: 35px;
-		a { margin: 0; font-size:24px;padding:0 5px;}
+		a { margin: 0; font-size:22px;padding:0 5px;}
 	  }
 	  .login-items {
 		p, .item-hr { margin-bottom: 23px; }
