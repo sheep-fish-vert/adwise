@@ -428,8 +428,9 @@ a.button-next{padding-left: 0;padding-right: 32px;
         .form_input{position: relative;}
         .errorText{position: absolute;left: calc(100% + 20px);top: 50%;transform: translateY(-50%);color: #ff7878;white-space: pre;}
 
-        &.submit{padding-top: 50px;display: flex;justify-content: center;align-items: center;
+        &.submit{padding-top: 50px;display: flex;justify-content: center;align-items: center; text-align:center;
             button{display: flex;align-items: center;justify-content: center;height: 37px;width: 200px;color: white;font-size: 15px;font-family: 'ProximaNovaScOsf', sans-serif;background-color: #fcc939;text-shadow:0 3px 7px rgba(0, 0, 0, 0.35);border:none;text-transform: uppercase;transition:all 300ms ease;
+                span{ width:100%;}
                 &:hover{background-color: #ddad24;}
             }
         }
@@ -647,10 +648,11 @@ a.button-next{padding-left: 0;padding-right: 32px;
         p{max-width: 550px;margin:0 auto;width: 100%;font-size: 18px;line-height: 1.25;}
     }
     .ad-formats-items{max-width: 900px;width: 100%;margin:0 auto;display: flex;justify-content: space-between;flex-wrap: wrap;
-        .item{height: 420px;display: flex;flex-direction: column;align-items: center;text-align: center;width: 48.9%;background-color: transparent;transition:all ease .2s;padding-top: 60px;margin-bottom: 15px;overflow: hidden;text-transform: uppercase;
+        .item{height: 420px;display: flex;flex-direction: column;align-items: center;text-align: center;width: 48.9%;background-color: transparent;transition:all ease .2s;margin-bottom: 15px;overflow: hidden;text-transform: uppercase;
             &:hover{box-shadow: 0 3px 16px rgba(0, 0, 0, 0.34);background-color: #fff;
                 .item-button{transform: translate(0, 0);}
             }
+		  a{display: flex;flex-direction: column;align-items: center;text-align: center; text-decoration:none;padding-top: 60px; width:100%; height:100%;}
 
             .item-title{color: black;font-family: 'ProximaNovaScOsf';font-size: 28px;font-weight: 600;padding-top: 45px;
                 p{margin:0;}
@@ -661,7 +663,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
                 }
             }
             .item-button{padding-top: 38px;transform: translate(0, 100%);transition:all ease-out .3s;
-                a{background-color: #c37051;border-radius: 14px;color: #fefefe;font-family: 'ProximaNovaScOsf';font-size: 13px;font-weight: 300;height: 28px;text-decoration: none;display: flex;align-items: center;justify-content: center;padding: 0 32px;transition:all ease .2s;cursor: pointer;
+                div{background-color: #c37051;border-radius: 14px;color: #fefefe;font-family: 'ProximaNovaScOsf';font-size: 13px;font-weight: 300;height: 28px;text-decoration: none;display: flex;align-items: center;justify-content: center;padding: 0 32px;transition:all ease .2s;cursor: pointer;
                     &:hover{background-color: #ab6449;}
                 }
             }

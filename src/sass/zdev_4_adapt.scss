@@ -412,7 +412,8 @@
   //ad-formats
   .ad-formats {
 	.ad-formats-items {
-	  .item { height: 380px; padding-top: 40px; background-color: #fff; box-shadow: 0 3px 16px rgba(0, 0, 0, .34);
+	  .item { height: 380px;background-color: #fff; box-shadow: 0 3px 16px rgba(0, 0, 0, .34);
+		a{ padding-top: 40px; }
 		.item-title { font-size: 22px; padding-top: 15px; }
 		.item-button { padding-bottom: 10px; }
 	  }
@@ -666,12 +667,13 @@
 	}
 
 	.ad-formats-items {
-	  .item { width: 100%; padding-top: 45px; height: auto; margin-bottom: 90px;
+	  .item { width: 100%; height: auto; margin-bottom: 90px;
+		a{ padding-top: 45px;}
 		&:last-child { margin-bottom: 0; }
 		.item-img { display: block; margin-bottom: 60px; }
 		.item-title { padding-top: 0; font-size: 37px; margin-bottom: 50px; }
 		.item-button { padding-top: 0; padding-bottom: 0; margin-bottom: 75px;
-		  a { width: 250px; height: 43px; border-radius: 50px; font-size: 18px; font-weight: 100; background-color: #e0957a;
+		  div { width: 250px; height: 43px; border-radius: 50px; font-size: 18px; font-weight: 100; background-color: #e0957a;
 			&:hover { background-color: #c37051; }
 		  }
 		}
@@ -1046,7 +1048,7 @@
 		  }
 		  .item-title { font-size: 24px; margin-bottom: 20px; }
 		  .item-button { margin-bottom: 30px; width:calc(100% - 30px);
-			a { width: 100%; height: auto; font-size: 16px;line-height:19px;padding:10px 0px 8px 0px; }
+			div { width: 100%; height: auto; font-size: 16px;line-height:19px;padding:10px 0px 8px 0px; }
 		  }
 		}
 	  }
