@@ -337,9 +337,11 @@ a.button-next{padding-left: 0;padding-right: 32px;
                     .item-wrap{width: 240px;height: 155px;background:transparent url('../images/market-middle-text-bg.svg') center top no-repeat;position: relative;}
                     .item-big-number{font-size: 62px;font-family: 'CoreSansCn',sans-serif;font-weight: 700;position: absolute;left: -25px;top: 37px;width: 95px;text-align: center;}
 
-                    .item-title{position: absolute;top: 44px;right: 32px;
-                        p{font-size: 33px;text-transform: uppercase;font-weight: 300;}
-                        span{text-transform: uppercase;font-weight: 300;font-size: 13px;}
+                    .item-title{position: absolute;top: 44px;right: auto;left:77px;
+                        p{font-size: 33px;text-transform: uppercase;font-weight: 300;
+                            &:last-child{ font-size:16px;}
+                        }
+                        span{text-transform: uppercase;font-weight: 300;font-size: 13px;max-width: 130px;display: inline-block;}
                     }
                     .item-text{padding-left: 30px;padding-top: 15px;font-size: 23px;font-weight: 600;padding-right: 15px;}
                 }
@@ -374,9 +376,9 @@ a.button-next{padding-left: 0;padding-right: 32px;
                     &:after{background-color: #f1f1f1;position: absolute;height: 3px;width: 100%;bottom: -23px;left: 0;content: '';}
                     h2{margin: 0;font-size: 42px;line-height: 1.2;font-family: 'ProximaNovaScOsf';font-weight: 600;text-transform: uppercase;}
                 }
-                .item-text{text-transform: uppercase;
+                .item-text{
                     p{font-family: 'ProximaNovaScOsf';font-size: 18px;margin-bottom: 25px;font-weight: 300;}
-                    b{font-family: 'ProximaNovaScOsf';font-weight: 500;font-size: 20px;}
+                    b{font-family: 'ProximaNovaScOsf';font-weight: 500;font-size: 20px;text-transform: uppercase;}
                 }
                 .item-button{padding-top: 55px;
                     .button{background-color: #f75757;font-family: 'ProximaNovaScOsf';font-weight: 400;line-height: 37px;height: 37px;text-shadow:  0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;font-size: 15px;
@@ -468,7 +470,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
 
 .main-wrap{
     &.tabs{  // табы в лефом меню
-        .left-column{position: relative;width: 270px;padding-right: 30px;}
+        .left-column{position: relative;width: 300px;padding-right: 30px;}
     }
     &.reverse{  // коричневый бок с кор текстом
         .left-column:after{position: absolute;right: 0;height: 3000px;width: 5000px;pointer-events:none;background-color: #d6d6d6;content: '';top: 0;z-index: 1;}
@@ -484,7 +486,7 @@ a.button-next{padding-left: 0;padding-right: 32px;
                         &:after{opacity: 1;visibility: visible;}
                     }
                     a{display: flex;padding-left: 0;height: 55px;width: 100%;align-items: center;color: #676767;font-size: 18px;font-weight: 300;position: relative;z-index: 2;text-transform: uppercase;
-                        &:hover{text-shadow:none;color: inherit;}
+                        &:hover{text-shadow:none;}
                     }
                 }
             }
@@ -598,10 +600,10 @@ a.button-next{padding-left: 0;padding-right: 32px;
                 &.item-3 .item-title:after{background-color: #917763;}
             }
             .item-img{width: 100%;height: 320px;display: flex;align-items: center;justify-content: center;}
-            .item-title{color: #000;font-size: 27px;font-weight: 700;font-family: 'ProximaNovaNew';padding-bottom: 50px;position: relative;
+            .item-title{color: #000;font-size: 27px;font-weight: 700;font-family: 'ProximaNovaNew',sans-serif;padding-bottom: 50px;position: relative;
                 &:after{content: '';height: 4px;width: 40px;position: absolute;left: 50%;transform: translateX(-50%);bottom: 25px;background-color: #fff;background-color: #a28e59;}
             }
-            .sub-title {font-weight: 300;font-family: 'ProximaNovaNew';font-size: 20px;margin-bottom: 35px;padding: 0 8px;
+            .sub-title {font-weight: 300;font-family: 'ProximaNovaNew',sans-serif;font-size: 20px;margin-bottom: 35px;padding: 0 8px;
                 p{color: #000;}
             }
         }

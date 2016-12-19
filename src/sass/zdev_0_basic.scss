@@ -28,7 +28,15 @@
 /* base styles*/
 *,*:before, *:after{box-sizing:border-box;outline:none;}
 *,body,html{-webkit-text-size-adjust: none;-webkit-appearance: none;max-height: 9001em;}
-html{height:100%;}
+html{height:100%}
+
+.desktop.fancybox-margin {
+    margin-right: 15px !important;
+}
+.desktop.fancybox-lock body {
+    overflow: hidden !important;
+}
+
 body{min-height:100%; background-color: #515151;width:100%;min-width:320px;font-family:'ProximaNovaScOsf', arial,sans-serif;color:#777;position:relative;font-size: 16px;line-height: 1;margin:0;
 
     /* styles for wp-admin panel */

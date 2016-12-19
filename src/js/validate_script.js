@@ -460,6 +460,7 @@ function fancyboxForm(){
         function reloadServicesWebsitesContent(parent, siteName){
 
             parent.find('.right').addClass('loading');
+            parent.find('.white-block').addClass('loading');
 
             var contentNumId = parent.attr('data-services');
 
@@ -487,9 +488,10 @@ function fancyboxForm(){
                         parent.find('.value-item.people .value-item-text').text(dataParsed.people_value);
                         parent.find('.value-item.female .value-item-text').text(dataParsed.female_value);
                         parent.find('.value-item.male .value-item-text').text(dataParsed.male_value);
-                        parent.find('.right-text').text(dataParsed.main_text);
+                        //parent.find('.right-text').text(dataParsed.main_text);
 
                         parent.find('.right').removeClass('loading');
+                        parent.find('.white-block').removeClass('loading');
 
                     }
                 });

@@ -536,13 +536,14 @@
                         }
                         .services-websites-count{justify-content: center;
                             .service-websites-num, .services-websites-text{width: auto;}
-                            .services-websites-text{font-size: 24px;padding-left: 10px;}
+                            .services-websites-text{font-size: 24px;}
                         }
                     }
                     .right{
                         .right-wrap{
                             .right-text{text-align: center;}
                             .right-button{text-align: center;}
+                            
                         }
                     }
                 }
@@ -776,7 +777,7 @@
                     }
                     .right{
                         .right-wrap{
-                            .white-block{box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);margin: 0px -15px 55px;padding: 25px 0 35px 0;
+                            .white-block{box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);margin: 0px -15px 55px;padding: 25px 0 35px 0;min-height:230px;
                                 .img-wrap{max-width: 100%;flex-wrap: nowrap;align-items: flex-end;justify-content: center;padding: 0 12px;
                                     .img-item{margin-bottom: 15px;width: auto;padding: 0 3px;
                                         .img-item-text{font-size: 20px;font-weight: 700;font-family: "ProximaNovaNew";}
@@ -1440,7 +1441,7 @@
                     .text-wrap{
                         h4{font-size: 25px;}
                         .button-wrap{
-                            .button{height: auto;line-height: 19px;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0;}
+                            .button{height: auto;line-height: 19px;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0; width:100%;}
                         }
 
                     }
@@ -1456,7 +1457,7 @@
                         }
                     }
                     .button-wrap{margin-bottom: 20px;
-                        .button{height: auto;line-height: 19px;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0;}
+                        .button{height: auto;line-height: 19px;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0; width:100%;}
                     }
                 }
 
