@@ -344,8 +344,9 @@ header{ background-color:#fff; height:60px; position:fixed; width:100%; z-index:
 		}
 	  }
 	  h3, h2, h4, h5, h1{ font:600 24px/1.26 'ProximaNovaScOsf'; margin:0; margin-bottom:19px; }
-	  a{ color:#424346; display:flex; justify-content:flex-start; align-items:center; font-weight:400;
-		&:hover{ color:#ca8000;
+	  a{ color:#424346; display:flex; justify-content:flex-start; align-items:center; font-weight:400; transform:translateZ(0);
+		&:hover{
+		  .col-text{color:#ca8000;}
 		  .col-icon{
 			img{ opacity:0;
 			  &.hover-img{ opacity:1; }
