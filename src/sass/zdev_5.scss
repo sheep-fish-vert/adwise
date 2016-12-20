@@ -75,7 +75,7 @@
 /* header----------------------------------------------------------*/
 
 //fancyfix
-html.desktop header.fancybox-margin{ margin-right:0 !important; left:-8px; }
+//html.desktop header.fancybox-margin{ margin-right:0 !important; left:-8px; }
 header{ background-color:#fff; height:60px; position:fixed; width:100%; z-index:100; top:0; backface-visibility:hidden;
   &.fancybox-margin{ }
   .mbox{ max-width:1060px; }
@@ -260,7 +260,7 @@ header{ background-color:#fff; height:60px; position:fixed; width:100%; z-index:
 	&:after{ display:block; content:''; width:3px; height:98px; background-color:#505050; right:-15px; top:-19px; position:absolute; }
   }
   .menu-filter{ display:block; width:64%; float:right; padding-top:14px; padding-right:15px;
-	ul{ list-style-type:none; display:flex; justify-content:space-around; margin:0; padding:0; }
+	ul{ list-style-type:none; display:flex; justify-content:space-around; margin:0; padding:0;}
 	li{
 	  a,
 	  .txt{ font:300 15px/1.5 'ProximaNovaScOsf'; color:#505050; cursor:pointer; text-transform:uppercase;
@@ -344,9 +344,8 @@ header{ background-color:#fff; height:60px; position:fixed; width:100%; z-index:
 		}
 	  }
 	  h3, h2, h4, h5, h1{ font:600 24px/1.26 'ProximaNovaScOsf'; margin:0; margin-bottom:19px; }
-	  a{ color:#424346; display:flex; justify-content:flex-start; align-items:center; font-weight:400; transform:translateZ(0);
-		&:hover{
-		  .col-text{color:#ca8000;}
+	  a{ color:#424346; display:flex; justify-content:flex-start; align-items:center; font-weight:400;
+		&:hover{ color:#ca8000;
 		  .col-icon{
 			img{ opacity:0;
 			  &.hover-img{ opacity:1; }

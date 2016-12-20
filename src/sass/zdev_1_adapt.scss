@@ -186,6 +186,10 @@
         }
 
     /* /event-page */
+  
+  /* service page */
+  .services-page .right-column .services-websites{ margin-left:10px;}
+  /* /service page */
 
 }
 @media screen and (max-width: 992px){
@@ -295,7 +299,9 @@
     /* /websites-page */
 
     /* services */
-
+    
+    .news-list-page .main-wrap .right-column, .events-list-page .main-wrap .right-column, .careers-list-page .main-wrap .right-column, .services-page .main-wrap .right-column, .vacancy-page .main-wrap .right-column{ width:100%;}
+    
         .services-page{
 
             &.parallax-page.second-type .parallax-block .parallax-blur{display: block;left:0!important;width: 100%!important;
@@ -778,7 +784,7 @@
                     .right{
                         .right-wrap{
                             .white-block{box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);margin: 0px -15px 55px;padding: 25px 0 35px 0;min-height:230px;
-                                .img-wrap{max-width: 100%;flex-wrap: nowrap;align-items: flex-end;justify-content: center;padding: 0 12px;
+                                .img-wrap{max-width: 100%;flex-wrap: nowrap;align-items: flex-end;justify-content: center;padding: 0 12px;min-height:114px;
                                     .img-item{margin-bottom: 15px;width: auto;padding: 0 3px;
                                         .img-item-text{font-size: 20px;font-weight: 700;font-family: "ProximaNovaNew";}
                                         .img-item-wrap{
@@ -794,7 +800,7 @@
                             }
                             .right-text{text-align: left;font-size: 28px;}
                             .right-button{text-align: left;
-                                .button.button-cofee{max-width: 340px;height: 60px;font-size: 25px;line-height: 60px;}
+                                .button.button-cofee{max-width: 340px;min-height: 60px;font-size: 25px;}
                             }
                         }
                     }
@@ -829,7 +835,7 @@
 
                         h4{font-size: 36px;}
                         .button-wrap{
-                            .button{max-width: 340px;height: 60px;font-size: 25px;line-height: 60px;}
+                            .button{max-width: 340px;min-height: 60px;font-size: 25px;}
                         }
 
                     }
@@ -856,7 +862,7 @@
                         .right{padding-left: 0;
                             .text{font-size: 28px;padding-top: 20px;margin-bottom: 70px;}
                             .button-wrap{padding-left: 0;
-                                .button{max-width: 340px;height: 60px;font-size: 25px;line-height: 60px;}
+                                .button{max-width: 340px;min-height: 60px;font-size: 25px;}
                             }
                         }
                     }
@@ -875,7 +881,7 @@
                         }
                     }
                     .button-wrap{
-                        .button{max-width: 425px;height: auto;line-height: 27px;font-size: 25px;padding:10px 0 10px 0;}
+                        .button{max-width: 340px;height: auto;font-size: 25px;padding:10px 25px 10px 0;min-height:60px;}
                     }
                 }
             }
@@ -1430,7 +1436,7 @@
                             }
                             .right-text{padding-left: 0;font-size: 17px;}
                             .right-button{padding-left: 0;
-                                .button.button-cofee{max-width: 100%;height: auto;line-height: 19px;font-size: 17px;display: block;margin:0 auto;padding:10px 0 8px 0;}
+                                .button.button-cofee{max-width: 100%;height: auto;font-size: 17px;display: block;margin:0 auto;padding:10px 0 8px 0;min-height: auto;}
                             }
                         }
                     }
@@ -1441,7 +1447,7 @@
                     .text-wrap{
                         h4{font-size: 25px;}
                         .button-wrap{
-                            .button{height: auto;line-height: 19px;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0; width:100%;}
+                            .button{height: auto;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0; width:100%;min-height: auto;}
                         }
 
                     }
@@ -1457,7 +1463,7 @@
                         }
                     }
                     .button-wrap{margin-bottom: 20px;
-                        .button{height: auto;line-height: 19px;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0; width:100%;}
+                        .button{height: auto;font-size: 17px;max-width: 100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0; width:100%;min-height: auto;}
                     }
                 }
 
@@ -1492,7 +1498,7 @@
                         .right{
                             .text{font-size: 17px;padding-top: 10px;margin-bottom: 50px;}
                             .button-wrap{text-align: center;
-                                .button{height: auto;font-size: 17px; line-height: 19px;max-width: 100%; width:100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0;}
+                                .button{height: auto;font-size: 17px;max-width: 100%; width:100%;margin:0 auto;display: inline-block;padding:10px 0 8px 0;min-height: auto;}
                             }
                         }
                     }

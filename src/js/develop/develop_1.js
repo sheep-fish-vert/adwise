@@ -160,7 +160,7 @@
                 leftColWidth = $('.left-column').outerWidth() + parseInt($('.mbox').css('padding-left'));
                 rightColWidth = $('.right-column').outerWidth() + parseInt($('.mbox').css('padding-left'));
 
-                var freeSpace = (windowWidth - wrapperWidth) / 2;
+                var freeSpace = (windowWidth - wrapperWidth) / 1.90;
 
                 var leftParallaxWidth = freeSpace + leftColWidth;
 

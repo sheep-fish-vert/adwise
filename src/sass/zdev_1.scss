@@ -427,7 +427,7 @@
                             }
                         }
                         .button-wrap{padding-top: 35px;
-                            .button{font-size:15px;text-transform: none;font-weight: 400;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);font-family: 'ProximaNovaScOsf', sans-serif;line-height: 37px;text-transform: uppercase; width:auto; padding:0 25px;
+                            .button{font-size:15px;font-weight: 400;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);font-family: 'ProximaNovaScOsf', sans-serif;line-height: 1;text-transform: uppercase; width:auto; padding:5px 25px; display:flex; align-items:center; justify-content:center;min-height:37px;max-width:250px; height:auto;
                                 &:hover{color:#fff;}
                             }
                         }
@@ -472,8 +472,9 @@
                         }
 
                         .button-wrap{padding:35px 0 0 90px;margin-bottom: 100px;
-                            .button{text-transform: none;font-size: 16px;color:#fff;font-weight: 400;line-height: 37px;font-family: 'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase; width:auto; padding:0 25px;
+                            .button{font-size: 16px;color:#fff;font-weight: 400;line-height:1;font-family: 'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase; width:auto; padding:5px 25px;min-height:37px; display:flex; align-content:center; justify-content:center;max-width:250px;
                                 &:hover{color:#fff;}
+                                span{ display:flex; align-items:center; justify-content:center;}
                             }
                         }
 
@@ -549,7 +550,7 @@
                                 .value-wrap{ opacity:0;}
                             }
                             
-                            .img-wrap{display: flex;justify-content: flex-start;align-items: flex-start;flex-wrap:wrap;max-width: 480px;margin:0 auto 10px auto;transition:all 300ms ease;
+                            .img-wrap{display: flex;justify-content: flex-start;align-items: flex-start;flex-wrap:wrap;max-width: 480px;margin:0 auto 10px auto;transition:all 300ms ease;min-height:272px;
                                 .img-item{padding:0 5px;text-align: center;width: 33.33%;margin-bottom: 33px;
                                     .img-item-wrap{margin-bottom: 19px;
                                         img{max-width: 95px;max-height: 66px;}
@@ -571,7 +572,7 @@
                         .right-text{font-size: 18px;color:rgba(0,0,0,1);font-weight: 300;line-height: 1.2;margin-bottom: 40px;padding-left: 34px;}
                         .right-button{padding-left: 32px;
                             .button{
-                                &.button-cofee{width: auto;height: 37px;text-transform: none;line-height: 37px;font-size: 16px;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: 400;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;padding:0 25px;
+                                &.button-cofee{width: auto;height: auto;text-transform: none;line-height: 1;font-size: 16px;font-family: 'ProximaNovaScOsf', sans-serif;font-weight: 400;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;padding:5px 25px;min-height:37px;    display: flex;align-items: center;justify-content: center;
                                     &:hover{color:#fff;}
                                 }
                             }
@@ -664,7 +665,7 @@
                             }
                         }
                         .button-wrap{padding-left: 8px;
-                            .button{text-transform: none;font-weight: 400;font-size: 15px;line-height: 37px;height: 37px;font-family: 'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase;padding:0 25px; max-width:none;width:auto;
+                            .button{font-weight: 400;font-size: 15px;line-height: 1;height: auto;font-family: 'ProximaNovaScOsf', sans-serif;text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);text-transform: uppercase; max-width:250px;width:auto;padding:5px 25px;min-height:37px;    display: flex;align-items: center;justify-content: center;
                                 &:hover{color:#fff;}
                             }
                         }
