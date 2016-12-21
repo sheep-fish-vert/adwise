@@ -1,5 +1,4 @@
 function butter() {
-
     $('.butter').click(function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
@@ -9,7 +8,6 @@ function butter() {
             $('.menu').stop().slideUp();
         }
     });
-
     $(document).on('click touchstart',function (event){
         if($('.butter').css('display') == 'block') {
             var div = $('.menu');
@@ -20,49 +18,35 @@ function butter() {
             }
         }
     });
-
     $(window).resize(function(){
         if($(window).width() > 666){
             $('header .menu').removeAttr('style');
             $('.butter').removeClass('active');
         }
     });
-
 }
-
 function constructSlides(slides){
-
     var slider = $('.slider-partners');
     var filterValue = $('.menu-filter input:checked').val();
     var filteredArray = [];
-
     radioChangeFilter();
     filteringSlds();
     addSlidesINSlider();
     hoverItmes();
-
     // reinit & markuping slider
-
     function addSlidesINSlider(){
         if(slider.hasClass('slick-initialized')){
             slider.slick('unslick');
         }
-
         slider.find('.item').remove();
-
         for (var i = 0; i < filteredArray.length; i++) {
             var oneSlide = '<div class="item"><div class="item-link-wrap"><a href="'+filteredArray[i].href+'" class="item-link"><img src="'+filteredArray[i].img+'" alt="'+filteredArray[i].name+'"><span class="hover-wrap"><span class="hover"></span></span></a></div></div>';
             slider.append(oneSlide);
         }
-
         initSliderPartners(slider);
-
     };
-
     // /reinit & markuping slider
-
     // radio change func
-
     function radioChangeFilter() {
         $('.menu-filter').on('change','input',function () {
             filterValue = $('.menu-filter input:checked').val();
@@ -72,11 +56,8 @@ function constructSlides(slides){
             //hoverItmes();
         });
     };
-
     // /radio change func
-
     // adding slides in array
-
     function filteringSlds(){
         if(filterValue != "all") {
             for (var i = 0; i < slides.length; i++) {
@@ -95,13 +76,9 @@ function constructSlides(slides){
             filteredArray = slides;
         }
     };
-
     // /adding slides in array
-
     // init slider when filter change
-
     function initSliderPartners(obj) {
-
         obj.slick({
             infinite: false,
             slidesToScroll: 1,
@@ -135,21 +112,14 @@ function constructSlides(slides){
                 }
             ]
         });
-
     };
-
     // /init slider when filter change
-
     // hover items anim
-
     function hoverItmes(){
-
         $(document).on('mouseenter', '.item-link-wrap', function(){
             $(this).find('.item-link').addClass('hovered');
         });
-
         $(document).on('mousemove','.item-link-wrap', function(e){
-
             var linkWrap = $(this);
             var offsetX = e.offsetX;
             var offsetY = e.offsetY;
@@ -159,35 +129,24 @@ function constructSlides(slides){
             var titlLimit = 15;
             var positionX = (linkHeight - offsetY) * (titlLimit / linkHeight);
             var positionY = (linkWidth - offsetX) * (titlLimit / linkWidth) * (-1);
-
             linkWrap.find('.item-link').css({'transform': 'rotateX( ' + positionX + 'deg ) rotateY( ' + positionY + 'deg )'});
-
             linkWrap.find('.hover').css({'transform': 'translate3d( ' + offsetX + 'px, ' + offsetY + 'px, '  + '0 )'});
-
         });
-
         $(document).on('mouseleave', '.item-link-wrap', function(){
-
             $(this).find('.item-link').removeClass('hovered');
             $(this).find('.item-link').removeAttr('style');
-
         });
-
     };
 //debugger;
     // /hover items anim
 
 };
-
 function menuSecondLevelHover(){
-
     var secondLevelIndex = $('.has-children').length;
-
     $('.has-children').each(function(){
         $(this).css({'z-index':secondLevelIndex});
         secondLevelIndex--;
     });
-
     $('.has-children').hover(
         function(){
             if($(window).width() > 992){
@@ -200,11 +159,9 @@ function menuSecondLevelHover(){
             }
         }
     );
-
     $('header .menu .has-children>p>a').click(function(event) {  //new fix for fix
         event.preventDefault();
     });
-
     $(document).on('click', function(e){
         if($(window).width() <= 992){
 
@@ -356,17 +313,13 @@ function audioFancyOpen() {
             $('.play-bttn').unbind();
             $('.stop-bttn').unbind();
             var src = $(this).data('src');
-
-
             $('#waveform').html('');
-
             var wavesurfer = WaveSurfer.create({
                 container: '#waveform',
                 waveColor: 'violet',
                 progressColor: 'purple'
             });
             wavesurfer.load(src);
-
             $.fancybox.open('#audio-popup', {
                 'closeBtn': false,
                 padding:0,
@@ -374,11 +327,13 @@ function audioFancyOpen() {
                     wavesurfer.stop();
                 }
             });
+            $('#audio-popup .title').text($(this).data('title'));
             var hasHour;
             wavesurfer.on('ready', function () {    //ивент определения  возможности проигрования
                 hasHours = (wavesurfer.getDuration() / 3600) >= 1.0;
                 $('#audio-popup .total-time').text(formatTime(wavesurfer.getDuration(), hasHours));
                 $('#audio-popup .curent-time').text(formatTime(0), hasHours);
+
 
             });
             wavesurfer.on('audioprocess', function () {
@@ -510,16 +465,13 @@ if(!bus){
     if(!$('.tab-item.show').hasClass('full')){
         ajaxFunc($('.tab-item.show').data('tab'), $('.main-wrap.tabs .column-list-main li.active').attr('data-page'));
     }
-
     var timer_load = setInterval(function () {
         var cont = $('.main-wrap').height();
         var win = $(window).height() - $('header').height() - $('footer').outerHeight();
-        
         if(win > cont && !$('.tab-item.show').hasClass('full')){
             if(!bus){
                 loadTab();
             }
-           
         }else{
             return false;
             clearInterval(timer_load);
@@ -565,13 +517,11 @@ function ajaxFunc(tab, page) {
         dataType:'json',
         type:'POST',
         success : function(data){
-
             console.log(data);
             var content = data.items;
             $('.tab-item[data-tab='+tab+']').append(content);
             page++;
             $('.main-wrap.tabs .column-list-main li.active').attr('data-page',page);
-            
             if(data.meta.count_left<1){$('.tab-item[data-tab='+tab+']').addClass('full');}
             bus=false;
         },

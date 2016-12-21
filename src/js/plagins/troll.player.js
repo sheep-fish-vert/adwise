@@ -169,6 +169,7 @@
         pauseV:function (options, objects) { // метод паузы видео
             objects.player.pause();
             objects.ctrl.play.removeClass('paused');
+            objects.bigPlay.removeClass('paused');
             state = 2;
         },
         togglePlay:function (options, objects) { // метод "переключатель" play/pause

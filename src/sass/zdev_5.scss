@@ -61,7 +61,7 @@
   .button-col{ text-align:right; width:100%; margin-top:72px; /*padding-right: 61px;*/
 	p{ display:block; text-align:right; }
 	a{ text-decoration:none; color:#777; font:300 16px/1.2 'ProximaNovaScOsf'; text-transform:uppercase; position:relative; right:25px; padding-top:5px; padding-bottom:6px; padding-right:36px; transform:translateZ(0); backface-visibility:hidden; transition:all 300ms ease;
-	  &:after{ content:''; display:inline-block; width:25px; height:25px; background-color:transparent; border-top:4px solid #626262; border-right:4px solid #626262; transform:rotate(45deg) translateZ(0px); backface-visibility:hidden; position:absolute; right:5px; top:0; transition:all 300ms ease; }
+	  &:after{ content:''; display:inline-block; width:25px; height:25px; background-color:transparent; border-top:4px solid #626262; border-right:4px solid #626262; transform:rotate(45deg) translateZ(0px); backface-visibility:hidden; position:absolute; right:5px; top:2px; transition:all 300ms ease; }
 	  &:before{ content:''; display:block; position:absolute; right:0px; top:-5px; width:35px; height:35px; background-color:transparent; transform:translateZ(0px); backface-visibility:hidden; transition:all 300ms ease; }
 	  &:hover{
 		&:after{ right:-15px; }
