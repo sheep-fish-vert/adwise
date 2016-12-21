@@ -616,4 +616,4 @@ $(window).load(function(){
 
 $(window).resize(function(){
     if(!$('.butter').css('display') == 'block'){$('.menu').removeAttr('style');}
-});
+});//*wedf
