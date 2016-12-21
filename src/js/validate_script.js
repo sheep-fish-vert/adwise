@@ -460,6 +460,7 @@ function fancyboxForm(){
         function reloadServicesWebsitesContent(parent, siteName){
 
             parent.find('.right').addClass('loading');
+            parent.find('.white-block').addClass('loading');
 
             var contentNumId = parent.attr('data-services');
 
@@ -487,9 +488,10 @@ function fancyboxForm(){
                         parent.find('.value-item.people .value-item-text').text(dataParsed.people_value);
                         parent.find('.value-item.female .value-item-text').text(dataParsed.female_value);
                         parent.find('.value-item.male .value-item-text').text(dataParsed.male_value);
-                        parent.find('.right-text').text(dataParsed.main_text);
+                        //parent.find('.right-text').text(dataParsed.main_text);
 
                         parent.find('.right').removeClass('loading');
+                        parent.find('.white-block').removeClass('loading');
 
                     }
                 });
@@ -1041,12 +1043,59 @@ function fancyboxForm(){
 
 /* /geo-page */
 
+    function validationCallDocument(form){
+
+        var thisForm = $(form);
+        var formData = new FormData($(form)[0]);
+
+        //formData.append('file', thisForm.find('input[type=file]')[0].files[0]);
+
+        $.ajax({
+            url: thisForm.attr('action'),
+            type: "POST",
+            data: formData,
+            processData:false,
+            cache:false,
+            success: function(response) {
+                thisForm.trigger("reset");
+                $('.write-message-file div').removeClass('active');
+                // $.fancybox.close();
+                popNext("#call_success", "call-popup");
+            }
+        });
+
+    }
+
+    function selectFilePopup(){
+        var preload = true;
+        $('.form_input_file input[type="file"]').on('change',function() {
+            if (preload == true){
+                $('.write-message-file .item-uploaded').removeClass('active');
+                $('.write-message-file .item-uploading').addClass('active');
+                setTimeout(function () {
+                    $('.write-message-file .item-uploading').removeClass('active');
+                    $('.write-message-file .item-uploaded').addClass('active');
+                },2000)
+            }
+        });
+
+        $(document).on('click', '.form_input_file_span span', function(event) {
+            event.preventDefault();
+            $(this).siblings('input').click();
+        });
+    }
+
+
 $(document).ready(function(){
 
     validate('.contact-form form', {submitFunction:validationCall});
 
     validate('.popup-join-us-form', {submitFunction:validationCall});
-    validate('.popup-login-form', {submitFunction:validationCall});
+
+    validate('.popup-write-message', {submitFunction:validationCallDocument});
+
+    validate('.popup-login-form');
+    validate('.write-message-popap-write-vacancy', {submitFunction:validationCallDocument});
 
     //validate('.get-in-t', {submitFunction:validationCall});
     validate('.login-form', {submitFunction:validationCall});
@@ -1059,6 +1108,7 @@ $(document).ready(function(){
 
     eventPage();
     geoPage();
+    selectFilePopup();
 
 });
 

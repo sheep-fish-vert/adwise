@@ -199,6 +199,12 @@ $(document).ready(function() {
       fitToView:true,
       padding:'0'
     });
+
+    //superfix to fancybox - dragging on opened modal window
+    if(device.desktop()){
+        $("<style type='text/css'>"+".desktop.fancybox-margin{margin-right:"+$.scrollbarWidth()+"px;" +"}.desktop.fancybox-lock body{overflow: hidden !important;}html.desktop header.fancybox-margin{ margin-right:0 !important; left:-"+($.scrollbarWidth()/2)+"px; }</style>").appendTo("head");
+    }
+
 });
 
 $(window).load(function(){

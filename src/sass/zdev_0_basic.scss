@@ -28,13 +28,21 @@
 /* base styles*/
 *,*:before, *:after{box-sizing:border-box;outline:none;}
 *,body,html{-webkit-text-size-adjust: none;-webkit-appearance: none;max-height: 9001em;}
-html{height:100%;}
+html{height:100%}
+
+//.desktop.fancybox-margin {
+//    margin-right: 15px !important;
+//}
+//.desktop.fancybox-lock body {
+//    overflow: hidden !important;
+//}
+
 body{min-height:100%; background-color: #515151;width:100%;min-width:320px;font-family:'ProximaNovaScOsf', arial,sans-serif;color:#777;position:relative;font-size: 16px;line-height: 1;margin:0;
 
     /* styles for wp-admin panel */
 
     &.customize-support{
-        .wp-panel-show{top:32px;} //fixed elements (if their has top:0) must has class .wp-panel-show
+        .wp-panel-show, header.wp-panel-show{top:32px;} //fixed elements (if their has top:0) must has class .wp-panel-show
     }
 
     /* /styles for wp-admin panel */
@@ -48,7 +56,7 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 
     body{
         &.customize-support{
-            .wp-panel-show{top:46px;}
+            .wp-panel-show, header.wp-panel-show{top:46px;}
         }
     }
 
@@ -75,7 +83,6 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 }
 
 /* /wraps styling*/
-
 
 .footer_placeholder{height: 200px;position: relative;}
 .footer{position:absolute;bottom:0;left:0;width:100%;z-index:2;overflow:hidden;}
@@ -127,6 +134,8 @@ input, textarea{
 @include font-face('ProximaNovaScOsf', 'Mark Simonson - Proxima Nova Black', 900);
 
 @include font-face('ProximaNovaCondensed', 'Mark Simonson - Proxima Nova Condensed Thin', 100);
+@include font-face('ProximaNovaCondensed', 'Mark Simonson - Proxima Nova Condensed Light', 300);
+@include font-face('ProximaNovaCondensed', 'Mark Simonson - Proxima Nova Condensed Black', 900);
 
 @include font-face('ProximaNovaExtraCondensed', 'Mark Simonson - Proxima Nova Extra Condensed Bold', 700);
 

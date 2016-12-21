@@ -2,16 +2,16 @@
 
     <div id="call_success">
         <div class="call-success">
-             <div class="call_success">
-                 <div class="call-title">Thank you for your application!</div>
-                 <div class="call-subtitle">We will contact you shortly.</div>
-             </div>
+            <div class="call_success">
+                <div class="call-title">Thank you for your application!</div>
+                <div class="call-subtitle">We will contact you shortly.</div>
+            </div>
         </div>
     </div>
     <div id="video-popup">
         <div class="popup-wrap">
             <div class="video-wrap trollPlayer">
-                <video src=""  poster=""></video>
+                <video src="" poster=""></video>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
         <div class="popup-wrap">
             <div class="voiceover-container">
                 <div class="video-wrap trollPlayer">
-                    <video src=""  poster=""></video>
+                    <video src="" poster=""></video>
                 </div>
                 <div class="audio-wrap">
                     <div class="waves">
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div id="login">
+    <div class="login" id="login">
         <div class="login-wrap">
             <div class="login-buttons">
                 <a href="#" class="active"><span>Join us</span></a>
@@ -78,12 +78,14 @@
                         <form class="popup-join-us-form" action="ajax.php">
                             <div class="contact-form-row">
                                 <div class="form_input">
-                                    <input type="text" name="login[message]" required="required" value="" placeholder="Your massage">
+                                    <input type="text" name="login[message]" required="required"
+                                           value="" placeholder="Your massage">
                                 </div>
                             </div>
                             <div class="contact-form-row">
                                 <div class="form_input">
-                                    <input type="email" name="login[email]" required="required" value="" placeholder="E-mail">
+                                    <input type="email" name="login[email]" required="required"
+                                           value="" placeholder="E-mail">
                                 </div>
                             </div>
                             <div class="contact-form-row submit">
@@ -115,18 +117,169 @@
                         <form class="popup-login-form" action="ajax.php">
                             <div class="contact-form-row">
                                 <div class="form_input">
-                                    <input type="text" name="login[name]" required="required" value="" placeholder="Name">
+                                    <input type="text" name="login[name]" required="required"
+                                           value="" placeholder="Name">
                                 </div>
                             </div>
                             <div class="contact-form-row">
                                 <div class="form_input">
-                                    <input type="password" name="login[pass]" required="required" value="" placeholder="Password">
+                                    <input type="password" name="login[pass]" required="required"
+                                           value="" placeholder="Password">
                                 </div>
                             </div>
                             <div class="contact-form-row submit">
                                 <div class="contact-form-item">
                                     <button type="submit" class="contact-submit button-round">
                                         <span>enter</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="login write-message-popap" id="write-message">
+        <div class="login-wrap">
+            <div class="write-message-title">
+                <h2>Write your massage</h2>
+            </div>
+            <div class="login-items">
+                <div class="write-message">
+                    <div class="item-form">
+                        <div class="item-form-title">
+                            To apply for this job make to put your e-mail contact and upload yor CV
+                            down below:
+                        </div>
+                        <form class="popup-write-message" action="ajax.php"
+                              enctype="multipart/form-data">
+                            <div class="contact-form-row">
+                                <div class="form_input">
+                                    <input type="email" name="write_message[email]"
+                                           required="required" value="" placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="contact-form-row">
+                                <div class="form_input">
+                                    <input type="text" name="write_message[message]"
+                                           required="required" value="" placeholder="Your massage">
+                                </div>
+                            </div>
+                            <div class="contact-form-row">
+                                <div class="form_input form_input_file">
+                                    <div class="form_input_file_span">
+                                        <span>Прикрепить файл</span>
+                                        <input type="file" id="form_input_file" name="myfile" ></div>
+                                    <div class="write-message-file">
+                                        <div class="item-uploading">
+                                            <div class="svg">
+                                                <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#7b7b7b" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform
+         attributeName="transform"
+         attributeType="XML"
+         type="rotate"
+         dur="1s"
+         from="0 50 50"
+         to="360 50 50"
+         repeatCount="indefinite" /></path></svg>
+                                            </div>
+                                            <span>uploading...</span>
+                                        </div>
+                                        <div class="item-uploaded">
+                                            <div class="item-img">
+                                                <img src="images/item-uploaded.png" alt="">
+                                            </div>
+                                            <span>uploaded</span>
+                                        </div>
+                                        <div class="item-fail">
+                                            <div class="item-img">
+                                                <img src="images/item-fail.png" alt="">
+                                            </div>
+                                            <span>upload failed, try again</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-form-row submit">
+                                <div class="contact-form-item">
+                                    <button type="submit" class="contact-submit button-round">
+                                        <span>Apply for job</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="login write-message-popap" id="write-vacancy">
+        <div class="login-wrap">
+            <div class="write-message-title">
+                <h2>Write your massage</h2>
+            </div>
+            <div class="login-items">
+                <div class="write-message">
+                    <div class="item-form">
+                        <div class="item-form-title">
+                            To apply for this job make to put your e-mail contact and upload yor CV
+                            down below:
+                        </div>
+                        <form class="write-message-popap-write-vacancy" action="ajax.php"
+                              enctype="multipart/form-data">
+                            <div class="contact-form-row">
+                                <div class="form_input">
+                                    <input type="email" name="write_message[email]"
+                                           required="required" value="" placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="contact-form-row">
+                                <div class="form_input">
+                                    <input type="text" name="write_message[message]"
+                                           required="required" value="" placeholder="Your massage">
+                                </div>
+                            </div>
+                            <div class="contact-form-row">
+                                <div class="form_input form_input_file">
+                                    <div class="form_input_file_span">
+                                        <span>Прикрепить файл</span>
+                                        <input type="file" id="form_input_file2" name="myfile" ></div>
+                                    <div class="write-message-file">
+                                        <div class="item-uploading">
+                                            <div class="svg">
+                                                <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#7b7b7b" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform
+         attributeName="transform"
+         attributeType="XML"
+         type="rotate"
+         dur="1s"
+         from="0 50 50"
+         to="360 50 50"
+         repeatCount="indefinite" /></path></svg>
+                                            </div>
+                                            <span>uploading...</span>
+                                        </div>
+                                        <div class="item-uploaded">
+                                            <div class="item-img">
+                                                <img src="images/item-uploaded.png" alt="">
+                                            </div>
+                                            <span>uploaded</span>
+                                        </div>
+                                        <div class="item-fail">
+                                            <div class="item-img">
+                                                <img src="images/item-fail.png" alt="">
+                                            </div>
+                                            <span>upload failed, try again</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-form-row submit">
+                                <div class="contact-form-item">
+                                    <button type="submit" class="contact-submit button-round">
+                                        <span>Apply for job</span>
                                     </button>
                                 </div>
                             </div>
