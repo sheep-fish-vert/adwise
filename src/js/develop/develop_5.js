@@ -558,9 +558,9 @@ $(document).ready(function(){
     voiceoverFancyOpen();
     menuSecondLevelHover();
 
-    //$.getJSON(ajaxUrl,function (data) {
-   //     constructSlides(data);
-    //});
+    $.getJSON(ajaxUrl2,function (data) {
+       constructSlides(data);
+    });
 
     headerMobile();
 
